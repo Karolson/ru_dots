@@ -1,0 +1,11 @@
+// Non-race-specific upgrades
+// glyph of fortification
+[Rgfo]
+Name=Коралловые стены,Хитиновые стены,Костяные стены
+EditorSuffix= (усовершенствование 1), (усовершенствование 2), (усовершенствование 3)
+
+// glyph of ultravision
+[Rguv]
+Name=Ночное зрение
+EditorSuffix= (усовершенствование)
+
