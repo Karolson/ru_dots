@@ -1,3 +1,10 @@
+## testo-build24:
+
+    Butthole Cream:
+        Стоимость 170->120
+        Восстанавливает 450->400хп
+        Длится 8->10 секунд
+
 ## testo-build23:
 
     Butthole Cream:
