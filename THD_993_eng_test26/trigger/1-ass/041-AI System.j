@@ -1,0 +1,2 @@
+function InitTrig_AI_System takes nothing returns nothing
+endfunction
