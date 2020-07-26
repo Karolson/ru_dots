@@ -1,0 +1,2 @@
+function InitTrig_Temp takes nothing returns nothing
+endfunction

@@ -1,2 +1,0 @@
-function InitTrig_CSS takes nothing returns nothing
-endfunction

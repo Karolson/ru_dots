@@ -1,0 +1,2 @@
+function InitTrig_Ping takes nothing returns nothing
+endfunction

@@ -1,0 +1,58 @@
+function Trig_Initial_ReisenN_Actions takes nothing returns nothing
+    local unit h = GetCharacterHandle('O016')
+    if h == null then
+        return
+    endif
+    call DebugMsg(GetHeroProperName(h) + " skill initialization completed")
+    if not udg_Repick then
+        call DestroyTrigger(GetTriggeringTrigger())
+    endif
+    call SetHeroLifeIncreaseValue(h, 31)
+    call SetHeroManaIncreaseValue(h, 1)
+    call SetHeroManaBaseRegenValue(h, 0.4)
+    call UnitInitAddAttack(h)
+    call DisableTrigger(gg_trg_ReisenN_Attack)
+    call DestroyTrigger(gg_trg_ReisenN_Attack)
+    set gg_trg_ReisenN_Attack = CreateTrigger()
+    call RegisterAnyUnitDamage(gg_trg_ReisenN_Attack)
+    call TriggerRegisterPlayerUnitEvent(gg_trg_ReisenN_Attack, GetOwningPlayer(h), EVENT_PLAYER_UNIT_SUMMON, null)
+    call TriggerAddCondition(gg_trg_ReisenN_Attack, Condition(function Trig_ReisenN_Attack_Conditions))
+    call TriggerAddAction(gg_trg_ReisenN_Attack, function Trig_ReisenN_Attack_Actions)
+    call DisableTrigger(gg_trg_ReisenN01)
+    call DestroyTrigger(gg_trg_ReisenN01)
+    set gg_trg_ReisenN01 = CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_ReisenN01, h, EVENT_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ReisenN01, Condition(function Trig_ReisenN01_Conditions))
+    call TriggerAddAction(gg_trg_ReisenN01, function Trig_ReisenN01_Actions)
+    call DisableTrigger(gg_trg_ReisenN02)
+    call DestroyTrigger(gg_trg_ReisenN02)
+    set gg_trg_ReisenN02 = CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_ReisenN02, h, EVENT_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ReisenN02, Condition(function Trig_ReisenN02_Conditions))
+    call TriggerAddAction(gg_trg_ReisenN02, function Trig_ReisenN02_Actions)
+    set gg_trg_ReisenN03 = CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_ReisenN03, h, EVENT_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ReisenN03, Condition(function Trig_ReisenN03_Conditions))
+    call TriggerAddAction(gg_trg_ReisenN03, function Trig_ReisenN03_Actions)
+    call DisableTrigger(gg_trg_ReisenN04)
+    call DestroyTrigger(gg_trg_ReisenN04)
+    set gg_trg_ReisenN04 = CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_ReisenN04, h, EVENT_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ReisenN04, Condition(function Trig_ReisenN04_Conditions))
+    call TriggerAddAction(gg_trg_ReisenN04, function Trig_ReisenN04_Actions)
+    call AddingLBuff(0, 'A12H', 'B06N')
+    call AddingLBuff(0, 'A12I', 'B06N')
+    call AddingLBuff(0, 'A12J', 'B06N')
+    call AddingLBuff(0, 'A12K', 'B06N')
+    call FirstAbilityInit('A000')
+    call FirstAbilityInit('A12E')
+    call FirstAbilityInit('A12F')
+    call FirstAbilityInit('A12G')
+    call FirstAbilityInit('A067')
+    call FirstAbilityInit('A06B')
+endfunction
+
+function InitTrig_Initial_ReisenN takes nothing returns nothing
+    set gg_trg_Initial_ReisenN = CreateTrigger()
+    call TriggerAddAction(gg_trg_Initial_ReisenN, function Trig_Initial_ReisenN_Actions)
+endfunction
