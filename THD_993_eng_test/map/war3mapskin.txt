@@ -1,0 +1,49 @@
+[CustomSkin]
+GoldIcon=Point.blp
+IdlePeon=ReplaceableTextures\CommandButtons\BTNitemYukkuri.blp
+LumberIcon=Spirit.blp
+SupplyIcon=Power.blp
+[Errors]
+Deathcoiltarget=This unit cannot be targeted.
+Emptycontrolgroup= 
+Herodeath=_,_,_,_
+Holybolttarget=This unit cannot be targeted.
+Invalidcontrolgroup= 
+Nogold=Not enough points.
+Nolumber=Not enough faith.
+Nonunitincontrolgroup= 
+Targetancient=This unit cannot be targeted.
+[FrameDef]
+COLON_FOOD=Power:
+COLON_GOLD=Points:
+COLON_GOLD_INCOME_RATE=|c00121A26
+COLON_LUMBER=Faith:
+GAMEOVER_DISCONNECTED=You've been exiled from Gensokyo.
+GOLD=Points
+LUMBER=Faith
+PLAYER_DEFEATED=%s lost...
+PLAYER_VICTORIOUS=%s |cffffcc00WON!|r
+RESOURCE_UBERTIP_GOLD=Points are automatically added to your stock every second in-game. Also occasionally dropped by enemy creeps.
+RESOURCE_UBERTIP_LUMBER=Faith is automatically added to your team's stock every minute. Your team gains 5 faith every minute. Killing enemy girl grants +5 faith.
+RESOURCE_UBERTIP_SUPPLY=Power drops randomly from creeps. Increases a girl's primary attribute by 1 up to a maximum of 30.  You lose 1/3 of power upon death. Half of lost power is dropped on the ground.
+RESOURCE_UBERTIP_UPKEEP=v0.993 testo-build29 by Karolson, Metakimi|nSpecial edition for thdots.ru|n
+RESOURCE_UBERTIP_UPKEEP_INFO=Press ALT+H to see information about translation|n
+REVIVE_AT_ALTAR=You can spend up some points to revive from the shrine.
+UPKEEP_LOW=993 testo-build29
+UPKEEP_NONE=993 testo-build29
+[Terrain]
+MaxHeight=3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712
+MaxSlope=90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90
+MinHeight=-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048
+[WorldEditMisc]
+MaximumMapSize=480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480
+MinimumMapSize=32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
+[WorldEditStrings]
+WESTRING_MODULE_AI=AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor
+WESTRING_MODULE_CAMPAIGN=Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor
+WESTRING_MODULE_IMPORT=Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager
+WESTRING_MODULE_OBJEDIT=Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor
+WESTRING_MODULE_OBJMAN=Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager
+WESTRING_MODULE_SCRIPTS=Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor
+WESTRING_MODULE_SOUND=Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor
+WESTRING_MODULE_TERRAIN=Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor

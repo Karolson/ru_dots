@@ -1,0 +1,3275 @@
+MMD_GOAL_NONE: integer
+    Def   : 101
+MMD_GOAL_HIGH: integer
+    Def   : 102
+MMD_GOAL_LOW: integer
+    Def   : 103
+MMD_TYPE_STRING: integer
+    Def   : 101
+MMD_TYPE_REAL: integer
+    Def   : 102
+MMD_TYPE_INT: integer
+    Def   : 103
+MMD_OP_ADD: integer
+    Def   : 101
+MMD_OP_SUB: integer
+    Def   : 102
+MMD_OP_SET: integer
+    Def   : 103
+MMD_SUGGEST_NONE: integer
+    Def   : 101
+MMD_SUGGEST_TRACK: integer
+    Def   : 102
+MMD_SUGGEST_LEADERBOARD: integer
+    Def   : 103
+MMD_FLAG_DRAWER: integer
+    Def   : 101
+MMD_FLAG_LOSER: integer
+    Def   : 102
+MMD_FLAG_WINNER: integer
+    Def   : 103
+MMD_FLAG_LEAVER: integer
+    Def   : 104
+MMD_FLAG_PRACTICING: integer
+    Def   : 105
+MMD__chars: string
+    Def   : 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-+= \!@#$^&*()/?>.<,;:''"{}[]|`~'
+MMD__num_chars: integer
+    Def   : 94
+MMD__flags: string
+    Array : 1
+MMD__goals: string
+    Array : 1
+MMD__ops: string
+    Array : 1
+MMD__types: string
+    Array : 1
+MMD__suggestions: string
+    Array : 1
+MMD__initialized: boolean
+    Def   : false
+MMD__gc: gamecache
+MMD__ESCAPED_CHARS: string
+    Def   : ' \'
+MMD__CURRENT_VERSION: integer
+    Def   : 1
+MMD__MINIMUM_PARSER_VERSION: integer
+    Def   : 1
+MMD__FILENAME: string
+    Def   : MMD.Dat
+MMD__M_KEY_VAL: string
+    Def   : 'val:'
+MMD__M_KEY_CHK: string
+    Def   : 'chk:'
+MMD__NUM_SENDERS_NAIVE: integer
+    Def   : 1
+MMD__NUM_SENDERS_SAFE: integer
+    Def   : 3
+MMD__num_senders: integer
+    Def   : 1
+MMD__num_msg: integer
+    Def   : 0
+MMD__clock: timer
+MMD__q_head: integer
+    Def   : 0
+MMD__q_tail: integer
+    Def   : 0
+STATS_OFFSET: integer
+    Def   : 20
+STATS_DTYPE_ABS: integer
+    Def   : 1
+STATS_DTYPE_MAGIC: integer
+    Def   : 2
+STATS_DTYPE_PHYS: integer
+    Def   : 3
+STATS_DD_HERO_ABS: integer
+    Def   : 1
+STATS_DD_HERO_MAGIC: integer
+    Def   : 2
+STATS_DD_HERO_PHYS: integer
+    Def   : 3
+STATS_DD_UNIT_ABS: integer
+    Def   : 4
+STATS_DD_UNIT_MAGIC: integer
+    Def   : 5
+STATS_DD_UNIT_PHYS: integer
+    Def   : 6
+STATS_DD_BLD_ABS: integer
+    Def   : 7
+STATS_DD_BLD_MAGIC: integer
+    Def   : 8
+STATS_DD_BLD_PHYS: integer
+    Def   : 9
+STATS_DT_ABS: integer
+    Def   : 10
+STATS_DT_MAGIC: integer
+    Def   : 11
+STATS_DT_PHYS: integer
+    Def   : 12
+Stats_Damage: real
+    Array : 1
+si__MMD__QueueNode_F: integer
+    Def   : 0
+si__MMD__QueueNode_I: integer
+    Def   : 0
+si__MMD__QueueNode_V: integer
+    Array : 1
+s__MMD__QueueNode_timeout: real
+    Array : 1
+s__MMD__QueueNode_msg: string
+    Array : 1
+s__MMD__QueueNode_checksum: integer
+    Array : 1
+s__MMD__QueueNode_key: string
+    Array : 1
+s__MMD__QueueNode_next: integer
+    Array : 1
+st__MMD__QueueNode_onDestroy: trigger
+AAHiddenModeOn: boolean
+    Array : 12
+    Def   : false
+AllPlayerSound: boolean
+    Array : 16
+    Def   : true
+BanModeBanOrPick: boolean
+    Array : 1
+    Def   : false
+CCSystem_WordsOn: boolean
+    Array : 1
+CSS2_BanSelected: boolean
+    Array : 11
+    Def   : false
+DMRepick: boolean
+    Array : 11
+    Def   : false
+FixSight: boolean
+    Array : 16
+    Def   : false
+GameDrawValue: boolean
+    Array : 16
+    Def   : false
+GameSurrendingValue: boolean
+    Array : 16
+    Def   : false
+HeroAvailability: boolean
+    Array : 1
+    Def   : false
+HeroBan: boolean
+    Array : 200
+    Def   : false
+ItemAddFix: boolean
+    Array : 16
+    Def   : true
+LunchBoxToggle: boolean
+    Array : 11
+    Def   : false
+Ping_Struct_ToDestroy: boolean
+    Array : 1
+    Def   : false
+PlayerHeroFlag: boolean
+    Array : 16
+    Def   : false
+PlayerPrepared: boolean
+    Array : 1
+    Def   : false
+Ran03_Struct_ToDestroy: boolean
+    Array : 1
+    Def   : false
+RandomPicked: boolean
+    Array : 11
+    Def   : false
+SE_Stat: boolean
+    Array : 12
+    Def   : true
+SK_BLTalismanicAvaliable: boolean
+    Array : 16
+    Def   : false
+SK_BLTalismanicCoolDown: boolean
+    Array : 16
+    Def   : false
+SK_Lyrica02_Attack: boolean
+    Array : 16
+    Def   : false
+SK_Lyrica02_Defend: boolean
+    Array : 16
+    Def   : false
+SK_Sakuya04_Switch: boolean
+    Array : 16
+    Def   : false
+SK_SakuyaEX_ClockSwitch: boolean
+    Array : 16
+    Def   : false
+Smileys: boolean
+    Array : 1
+    Def   : false
+Swap: boolean
+    Array : 99
+    Def   : false
+VE_Stat: boolean
+    Array : 16
+    Def   : true
+YuyukoBool: boolean
+    Array : 13
+    Def   : false
+runaway: boolean
+    Array : 1
+ACDShow: boolean
+    Def   : false
+AUD_FirstRun: boolean
+    Def   : false
+AUD_hasInit: boolean
+    Def   : false
+Akyu_Ex: boolean
+    Def   : true
+Budu__b: boolean
+CSS2_Enabled: boolean
+    Def   : false
+CSS2_HeroSelectionEnded: boolean
+    Def   : false
+DamageSystem_WordsOn: boolean
+    Def   : false
+DebugMode: boolean
+    Def   : false
+FlagFirst: boolean
+    Def   : false
+GameStart: boolean
+    Def   : false
+HC_Lock: boolean
+    Def   : false
+Hina02_Hit: boolean
+    Def   : false
+InitYuuGiveItem: boolean
+    Def   : false
+IsGameOver: boolean
+    Def   : false
+KengDie: boolean
+    Def   : true
+MVP: boolean
+    Def   : false
+MugetsuEx_InEffect: boolean
+    Def   : false
+NewDebuffSys: boolean
+    Def   : false
+NewMid: boolean
+    Def   : false
+NewWeather_InWeather: boolean
+    Def   : false
+OBBCheck: boolean
+    Def   : false
+ObserverMode: boolean
+    Def   : false
+Orin_suicide_check: boolean
+    Def   : false
+Recycle: boolean
+    Def   : false
+RecycleDebug: boolean
+    Def   : false
+RecycleGroupDebug: boolean
+    Def   : false
+Repick: boolean
+    Def   : false
+Run2: boolean
+    Def   : false
+Run: boolean
+    Def   : false
+SK_Chen02_Stun: boolean
+    Def   : false
+SK_EirinD: boolean
+    Def   : false
+SK_EyeBugModeOn: boolean
+    Def   : false
+SK_Hina03_Broke: boolean
+    Def   : false
+SK_HinaEx_Timer: boolean
+    Def   : false
+SK_Kogasa04_Stun: boolean
+    Def   : false
+SK_Koishi04_value: boolean
+    Def   : false
+SK_MugetsuEX: boolean
+    Def   : false
+SK_Nazrin04_ON: boolean
+    Def   : false
+SK_Nazrin_Pick: boolean
+    Def   : false
+SK_Nitori_Load: boolean
+    Def   : false
+SK_Pachi04_Attacking: boolean
+    Def   : false
+SK_ParseeEx_CD: boolean
+    Def   : false
+SK_Reisen02: boolean
+    Def   : false
+SK_Reisen02_ON: boolean
+    Def   : false
+SK_Remilia02_Return: boolean
+    Def   : false
+SK_Toramaru01_CoolDown: boolean
+    Def   : false
+SK_Twei03_Moving: boolean
+    Def   : false
+SK_TweiEx: boolean
+    Def   : false
+SK_Youmu02_Illusion_Count: boolean
+    Def   : false
+SK_Yuugi_Roar_CD: boolean
+    Def   : false
+SU_SP_First: boolean
+    Def   : false
+ShiftPlayer: boolean
+    Def   : false
+ShuffledPlayers: boolean
+    Def   : false
+TestMode: boolean
+    Def   : false
+TestMode_Close: boolean
+    Def   : false
+UtopianFlag: boolean
+    Def   : false
+smodestat: boolean
+    Def   : false
+FLIFF: boolexpr
+    Array : 1
+Captain_Select_Button: button
+    Array : 1
+ModeSelectButtons: button
+    Array : 1
+yd_NullTempCam: camerasetup
+Captain_Select: dialog
+ModeSelectDialog: dialog
+SK_Lyrica02_Effect: effect
+    Array : 1
+SK_SakuyaEX_Effect: effect
+    Array : 1
+SK_Kisume03_Effect: effect
+SK_Toramaru01_Effect: effect
+AI_Players: force
+OnlinePlayers: force
+SK_Medi_Team: force
+TeamA: force
+TeamB: force
+TeamOB: force
+TeamS: force
+TeamSpawnA: force
+TeamSpawnB: force
+TempTeamA: force
+TempTeamB: force
+GC: gamecache
+    Array : 1
+AI_Groups: group
+    Array : 4
+DummyCastersAll: group
+    Array : 11
+DummyCastersLeft: group
+    Array : 11
+DummyVisionCastersAll: group
+    Array : 11
+DummyVisionCastersLeft: group
+    Array : 11
+Groups: group
+    Array : 1
+Ran03_Struct_Group: group
+    Array : 1
+SpecialDummyCastersAll: group
+    Array : 11
+SpecialDummyCastersLeft: group
+    Array : 11
+AUD_heroGroup: group
+Budu__g: group
+CameraUnits: group
+CameraUnitsStart: group
+KnockedBack: group
+PS_OnHit_Group: group
+SK_AliceDollsCountingGroup: group
+SK_Hina02_Group: group
+SK_Letty02_Group: group
+SK_MikoEx_Group: group
+SK_Soga01efgroup: group
+SK_Soga02efgroup: group
+SK_Soga03efgroup: group
+SK_Soga04efgroup: group
+SK_Utsuho04_Group: group
+SK_Wriggle03_Group: group
+SK_Yukari_Gap: group
+Sanae03GroupEnum: group
+Sanae03OldGroup: group
+TowerAIGroup: group
+TowerGroup2: group
+TowerGroup3: group
+TowerGroup: group
+Weather_SpellGroup: group
+smodehs: group
+yd_NullTempGroup: group
+SK_Tokiko03_Hashtable: hashtable
+    Array : 1
+SK_Tokiko03_Hashtable02: hashtable
+    Array : 1
+DSHashtable: hashtable
+GroupSys: hashtable
+Hashtable: hashtable
+Hashtable_CDForKeine: hashtable
+Hashtable_CDInReimu: hashtable
+Hashtable_CastSq: hashtable
+Hashtable_CastSq_Id: hashtable
+Hashtable_Data: hashtable
+Hashtable_Slow: hashtable
+Hashtable_UnitStatus: hashtable
+HeroDatabase: hashtable
+ItemDatabase: hashtable
+SK_Shikieiki_Count: hashtable
+StatusEffect: hashtable
+StatusSys: hashtable
+TimerSys: hashtable
+cssht: hashtable
+db: hashtable
+ht: hashtable
+sht: hashtable
+AI_DataBase: integer
+    Array : 1600
+    Def   : 0
+AI_States: integer
+    Array : 16
+    Def   : 0
+AI_register: integer
+    Array : 8
+    Def   : 0
+AllianceSwitch: integer
+    Array : 50
+    Def   : 0
+BanModeToDisplay: integer
+    Array : 1
+    Def   : 0
+BanModeToPick: integer
+    Array : 1
+    Def   : 0
+BinarySys: integer
+    Array : 12
+    Def   : 0
+BonusAgi: integer
+    Array : 12
+    Def   : 0
+BonusArm: integer
+    Array : 12
+    Def   : 0
+BonusAspd: integer
+    Array : 12
+    Def   : 0
+BonusDmg: integer
+    Array : 12
+    Def   : 0
+BonusInt: integer
+    Array : 12
+    Def   : 0
+BonusStr: integer
+    Array : 12
+    Def   : 0
+CE_state: integer
+    Array : 8
+    Def   : 0
+CameraState: integer
+    Array : 16
+    Def   : 0
+CardState: integer
+    Array : 16
+    Def   : 0
+CounterGH_MoneyNow: integer
+    Array : 16
+    Def   : 0
+CounterGH_MoneyRecord: integer
+    Array : 16
+    Def   : 0
+CounterGH_MoneyTrans: integer
+    Array : 16
+    Def   : 0
+DMXP: integer
+    Array : 11
+    Def   : 0
+DraftModeToPick: integer
+    Array : 1
+    Def   : 0
+FixSightValue: integer
+    Array : 16
+    Def   : 0
+FlagAssist: integer
+    Array : 16
+    Def   : 0
+FlagDeath: integer
+    Array : 16
+    Def   : 0
+FlagFarm: integer
+    Array : 16
+    Def   : 0
+FlagKill: integer
+    Array : 16
+    Def   : 0
+FlagPerfect: integer
+    Array : 16
+    Def   : 0
+FlagTk: integer
+    Array : 16
+    Def   : 0
+FlagUnusualDeath: integer
+    Array : 16
+    Def   : 0
+GIB_HeroBan: integer
+    Array : 7
+    Def   : 0
+GIB_PlayerRow: integer
+    Array : 16
+    Def   : 0
+GIB_PlayerScoreForSolo: integer
+    Array : 13
+    Def   : 0
+GameSetting_Gold: integer
+    Array : 1
+    Def   : 0
+GameSetting_Power: integer
+    Array : 1
+    Def   : 0
+GameSetting_Spirit: integer
+    Array : 6
+    Def   : 0
+GameSurrenderTeamValue: integer
+    Array : 2
+    Def   : 0
+HC_Database_01: integer
+    Array : 2001
+    Def   : 0
+HC_register: integer
+    Array : 40
+    Def   : 0
+HeroButton: integer
+    Array : 1
+HeroCloth01: integer
+    Array : 1
+HeroCloth02: integer
+    Array : 1
+HeroCloth03: integer
+    Array : 1
+HeroClothChangeTo: integer
+    Array : 16
+    Def   : 0
+HeroClothChangeToB: integer
+    Array : 16
+    Def   : -1
+HeroPickA: integer
+    Array : 1
+    Def   : 0
+HeroPickB: integer
+    Array : 1
+    Def   : 0
+HeroType: integer
+    Array : 1
+LBuff_abilityid: integer
+    Array : 100
+    Def   : 0
+LBuff_bookid: integer
+    Array : 100
+    Def   : 0
+LBuff_buffid: integer
+    Array : 100
+    Def   : 0
+MU_Assist: integer
+    Array : 1
+MU_Die: integer
+    Array : 1
+MU_Kill: integer
+    Array : 1
+MU_MKill: integer
+    Array : 1
+MU_NKill: integer
+    Array : 1
+NPC_attackArrayNext: integer
+    Array : 1
+    Def   : 0
+NeutralCreatePeriod: integer
+    Array : 16
+    Def   : 0
+NeutralLifes: integer
+    Array : 44
+    Def   : 0
+NeutralTypes: integer
+    Array : 1
+NewWeather_Count: integer
+    Array : 16
+    Def   : 0
+Ping_Count: integer
+    Array : 11
+    Def   : 5
+Ping_RecycleNext: integer
+    Array : 1
+    Def   : 0
+Ping_Struct_Count: integer
+    Array : 1
+    Def   : 0
+PlayerColorB: integer
+    Array : 16
+    Def   : 0
+PlayerColorG: integer
+    Array : 16
+    Def   : 0
+PlayerColorR: integer
+    Array : 16
+    Def   : 0
+PlayerCurrentGold: integer
+    Array : 16
+    Def   : 0
+PlayerHeroList: integer
+    Array : 1
+PlayerNonItemGoldLoss: integer
+    Array : 16
+    Def   : 0
+PlayerPower: integer
+    Array : 64
+    Def   : 0
+PlayerTotalGoldIncome: integer
+    Array : 16
+    Def   : 0
+PlayerTotalGoldLoss: integer
+    Array : 16
+    Def   : 0
+Player_GoldRemnant: integer
+    Array : 15
+    Def   : 0
+Ran03_Stack: integer
+    Array : 1
+    Def   : 0
+Ran03_Struct_Count: integer
+    Array : 1
+    Def   : 0
+Record: integer
+    Array : 1
+SK_Aya03_Count: integer
+    Array : 16
+    Def   : 0
+SK_FireWing: integer
+    Array : 16
+    Def   : 0
+SK_Kafziel: integer
+    Array : 16
+    Def   : 0
+SK_Kaguya01_RGB: integer
+    Array : 21
+    Def   : 0
+SK_Li_Shoe01_Red: integer
+    Array : 16
+    Def   : 0
+SK_Li_Shoe02_Green: integer
+    Array : 16
+    Def   : 0
+SK_Lonesome: integer
+    Array : 16
+    Def   : 0
+SK_LunasaEx_Count: integer
+    Array : 16
+    Def   : 0
+SK_Meirin_RGB: integer
+    Array : 36
+    Def   : 0
+SK_Mokou02: integer
+    Array : 1
+SK_Mokou02_Count: integer
+    Array : 16
+    Def   : 0
+SK_Nazrin04New_Attacked: integer
+    Array : 16
+    Def   : 0
+SK_Reisen: integer
+    Array : 1
+    Def   : 0
+SK_Sakuya04_Mana01: integer
+    Array : 16
+    Def   : 0
+SK_Sakuya04_Mana02: integer
+    Array : 16
+    Def   : 0
+SK_Sakuya04_Mana03: integer
+    Array : 16
+    Def   : 0
+SK_Sakuya04_Mana04: integer
+    Array : 16
+    Def   : 0
+SK_Sakuya04_Time: integer
+    Array : 16
+    Def   : 0
+SK_Spider04_Hero: integer
+    Array : 1
+    Def   : 0
+SK_YYY: integer
+    Array : 16
+    Def   : 0
+SK_YoumuNewEx: integer
+    Array : 16
+    Def   : 0
+SK_YoumuNewExLast: integer
+    Array : 16
+    Def   : 0
+SUA_ID_A: integer
+    Array : 1
+SUA_ID_B: integer
+    Array : 1
+SU_ID_A: integer
+    Array : 1
+SU_ID_B: integer
+    Array : 1
+SU_No_A: integer
+    Array : 1
+    Def   : 0
+SU_No_B: integer
+    Array : 1
+    Def   : 0
+ScoreSpirit: integer
+    Array : 1
+    Def   : 0
+SmileysLast: integer
+    Array : 1
+    Def   : 0
+TeamPlayer: integer
+    Array : 1
+TeleportType: integer
+    Array : 11
+    Def   : 0
+Weather_TriggerItem: integer
+    Array : 1
+YuuGiveItem: integer
+    Array : 1
+    Def   : 0
+smode_jc: integer
+    Array : 16
+    Def   : 0
+AIUtsuho03_Time: integer
+    Def   : 0
+AUD_LimitEventCount: integer
+    Def   : 5000
+AUD_LimitRunTimes: integer
+    Def   : 10
+AUD_eventCount: integer
+    Def   : 0
+AUD_runCount: integer
+    Def   : 0
+CSS2_AI_Count: integer
+    Def   : 0
+CSS2_BanTotal: integer
+    Def   : 0
+CSS2_PreparedSum: integer
+    Def   : 0
+CSS2_Tick: integer
+    Def   : 0
+DMModeLives: integer
+    Def   : 10
+GameMode: integer
+    Def   : 0
+GameModeIsTurbo: boolean
+    Def   : false
+GameModeIsTurboButton: button
+    Def   : 
+GameSetting_Gold_A: integer
+    Def   : 0
+GameSetting_Gold_B: integer
+    Def   : 0
+GameTime: integer
+    Def   : 0
+Game_BattleBeginTime: integer
+    Def   : 0
+GroupIndex: integer
+    Def   : 200
+HostPlayerId: integer
+    Def   : 0
+ItemFormulasCount: integer
+    Def   : 0
+ItemsCount: integer
+    Def   : 0
+LBuff_Max: integer
+    Def   : 0
+LoseScore: integer
+    Def   : 0
+MaxExp: integer
+    Def   : 0
+NPC_attackArrayEnd: integer
+    Def   : 0
+NPC_attackArrayTop: integer
+    Def   : 1
+NPC_cycleIndex: integer
+    Def   : 0
+NeutralCampsCount: integer
+    Def   : 0
+NeutralFirstSpawnTime: integer
+    Def   : 0
+NewWeather_C: integer
+    Def   : 0
+NewWeather_ChangeTime: integer
+    Def   : 0
+NewWeather_Round: integer
+    Def   : 0
+NewWeather_WID: integer
+    Def   : 0
+Nitori_RealInt: integer
+    Def   : 0
+OnlinePlayerSum: integer
+    Def   : 0
+PS_Pointer: integer
+    Def   : 0
+Ping_InstanceCount: integer
+    Def   : 0
+Ping_Recycle: integer
+    Def   : 0
+PlayerNumber: integer
+    Def   : 0
+Ran03_Allocate: integer
+    Def   : 0
+Ran03_Instance: integer
+    Def   : 0
+SK_AliceDollsCounting: integer
+    Def   : 0
+SK_BlinkDestructCount: integer
+    Def   : 0
+SK_Cirno02_Count: integer
+    Def   : 0
+SK_Cirno03_Count: integer
+    Def   : 0
+SK_Cirno_Baga: integer
+    Def   : 0
+SK_Futo02: integer
+    Def   : 0
+SK_Kaguya_Rewind: integer
+    Def   : 0
+SK_Kaguya_RewindIncre: integer
+    Def   : 0
+SK_Keine04_count: integer
+    Def   : 0
+SK_Keine_Str: integer
+    Def   : 0
+SK_Keine_Wolf: integer
+    Def   : 0
+SK_KisumeEX_Count: integer
+    Def   : 0
+SK_Kumoi03: integer
+    Def   : 0
+SK_Letty02_Hit: integer
+    Def   : 0
+SK_Letty02_Level: integer
+    Def   : 0
+SK_Letty02_Max: integer
+    Def   : 0
+SK_Letty02_i: integer
+    Def   : 0
+SK_Lyrica02_Count: integer
+    Def   : 0
+SK_Lyrica04_Maximum: integer
+    Def   : 0
+SK_LyricaEx_Count: integer
+    Def   : 0
+SK_MeirinStar: integer
+    Def   : 0
+SK_MerlinEx_Count: integer
+    Def   : 0
+SK_MerlinEx_Kills: integer
+    Def   : 0
+SK_MikoEx: integer
+    Def   : 0
+SK_Mystia_Double_Record: integer
+    Def   : 0
+SK_Mystia_K_Record: integer
+    Def   : 0
+SK_Mystia_Last: integer
+    Def   : 0
+SK_Nazrin04New_Level: integer
+    Def   : 0
+SK_NazrinEX_team: integer
+    Def   : 0
+SK_ReimuEx_Record_KillGold: integer
+    Def   : 0
+SK_ReimuEx_Record_Salary: integer
+    Def   : 0
+SK_Reisen04_Light_i: integer
+    Def   : 0
+SK_Reisen04_On: integer
+    Def   : 0
+SK_Reisen201I: integer
+    Def   : 0
+SK_Renko_LastSpell: integer
+    Def   : 0
+SK_Rumia04_Life: integer
+    Def   : 0
+SK_ShuzuhaEx: integer
+    Def   : 0
+SK_Spider04I: integer
+    Def   : 0
+SK_Suika02_Count: integer
+    Def   : 0
+SK_Toramaru03_Counter: integer
+    Def   : 0
+SK_ToramaruDB_Count: integer
+    Def   : 0
+SK_Twei02_switch: integer
+    Def   : 0
+SK_Twei03_Iff: integer
+    Def   : 0
+SK_Yamame04: integer
+    Def   : 0
+SK_Yukari_Count: integer
+    Def   : 0
+SK_Yuugi02I: integer
+    Def   : 0
+SK_Yuugi03_Count: integer
+    Def   : 0
+SK_YuugiEX: integer
+    Def   : 0
+SK_nue_nightmare_buff: integer
+    Def   : 0
+SK_nue_nightmare_insc: integer
+    Def   : 0
+SK_uuz03_switch: integer
+    Def   : 0
+SK_uuzre_switch: integer
+    Def   : 0
+SU_SP_Loop_i: integer
+    Def   : 0
+SU_SP_Loop_j: integer
+    Def   : 0
+TeamWorkingModeA: integer
+    Def   : 0
+TeamWorkingModeB: integer
+    Def   : 0
+TimerIndex: integer
+    Def   : 300
+WeatherDuration: integer
+    Def   : 0
+Weather_Type: integer
+    Def   : 0
+WinScore: integer
+    Def   : 0
+smode_EndTime: integer
+    Def   : -1
+DMItems: item
+    Array : 1
+Rune: item
+    Array : 1
+yd_NullTempItem: item
+AI_Waypoints: location
+    Array : 1
+BirthPoint: location
+    Array : 1
+RecoverPoint: location
+    Array : 1
+RevivePoint: location
+    Array : 1
+SpawnLocA: location
+    Array : 1
+SpawnLocB: location
+    Array : 1
+SpawnRouteA: location
+    Array : 1
+SpawnRouteB: location
+    Array : 1
+BackStage: location
+CommonPoint: location
+SK_TempLocation: location
+BanPickBoard: multiboard
+GIB: multiboard
+PlayerA: player
+    Array : 1
+PlayerB: player
+    Array : 1
+Ran03_Struct_Player: player
+    Array : 1
+SK_Remilia02_Killer: player
+    Array : 1
+SpawnPlayer: player
+    Array : 1
+HostPlayer: player
+PS_Source_Player: player
+SK_MugetsuEXP: player
+SK_Remilia_Player: player
+SK_nue_rscd_player: player
+CE_Response: real
+    Array : 16
+    Def   : 0
+CE_register: real
+    Array : 32
+    Def   : 0
+CSS2_IconX: real
+    Array : 1
+    Def   : 0
+CSS2_IconY: real
+    Array : 1
+    Def   : 0
+DMG_AllDamage: real
+    Array : 16
+    Def   : 1.
+DMG_AllItemArmor: real
+    Array : 16
+    Def   : 0
+DMG_AllItemAttack: real
+    Array : 16
+    Def   : 0
+DMG_AllItemAttackSpeed: real
+    Array : 16
+    Def   : 0
+DMG_AllItemCoolDownReset: real
+    Array : 16
+    Def   : 1.
+DMG_AllItemMagicResist: real
+    Array : 16
+    Def   : 0
+DMG_AllItemPhysicalDrink: real
+    Array : 16
+    Def   : 1.
+DMG_AllMagicDamage: real
+    Array : 16
+    Def   : 1.
+DMG_AllMagicDamageOut: real
+    Array : 16
+    Def   : 1.
+DMG_AllPhyscialDamage: real
+    Array : 16
+    Def   : 1.
+DMG_AllUnitDamageReduce: real
+    Array : 16
+    Def   : 1.
+DamageTime: real
+    Array : 1
+HeroRevivePenalty: real
+    Array : 12
+    Def   : 0
+NPC_attackArrayTime: real
+    Array : 1
+    Def   : 0
+PlayerTax: real
+    Array : 16
+    Def   : 0
+Ran03_Struct_Damage: real
+    Array : 1
+    Def   : 0
+Ran03_Struct_Range: real
+    Array : 1
+    Def   : 0
+Ran03_Struct_tx: real
+    Array : 1
+    Def   : 0
+Ran03_Struct_ty: real
+    Array : 1
+    Def   : 0
+ReviveTime: real
+    Array : 1
+    Def   : 0
+SK_Lunasa02_Buff: real
+    Array : 16
+    Def   : 0
+SK_Lyrica04_Pointx: real
+    Array : 99
+    Def   : 0
+SK_Lyrica04_Pointy: real
+    Array : 99
+    Def   : 0
+SK_ReisenNew_a: real
+    Array : 6
+    Def   : 0
+SK_Remilia02_Diex: real
+    Array : 16
+    Def   : 0
+SK_Remilia02_Diey: real
+    Array : 16
+    Def   : 0
+TP_Response: real
+    Array : 16
+    Def   : 0
+TeleportX: real
+    Array : 11
+    Def   : 0
+TeleportY: real
+    Array : 11
+    Def   : 0
+YukkuriTeleX: real
+    Array : 1
+    Def   : 0
+YukkuriTeleY: real
+    Array : 1
+    Def   : 0
+YuyukoTimer: real
+    Array : 13
+    Def   : 0
+AIParseeWind_Time: real
+    Def   : 0
+Kumoi04_SK: real
+    Def   : 0
+MRS_ResistDecreaseValue: real
+    Def   : 0
+NPC_AttackMaxTime: real
+    Def   : 3.
+NPC_GetCycle: real
+    Def   : .33
+NPC_Lowlife: real
+    Def   : .2
+Near__D: real
+Near__L: real
+Near__X: real
+Near__Y: real
+PS_CurrentX: real
+    Def   : 0
+PS_CurrentY: real
+    Def   : 0
+SK_Akyu01: real
+    Def   : 0
+SK_BlinkPlace_d: real
+    Def   : 0
+SK_BlinkPlace_x: real
+    Def   : 0
+SK_BlinkPlace_y: real
+    Def   : 0
+SK_Byakuren02_Record: real
+    Def   : 0
+SK_Cirno03Cast_Armor: real
+    Def   : 0
+SK_HinaEx_Count: real
+    Def   : 0
+SK_Kisume03_Count: real
+    Def   : 0
+SK_Letty02_Distance: real
+    Def   : 0
+SK_Letty02_angle: real
+    Def   : 0
+SK_Letty02_in: real
+    Def   : 0
+SK_Lunar03_PointX: real
+    Def   : 0
+SK_Lunar03_PointY: real
+    Def   : 0
+SK_LyricaEx_Buff: real
+    Def   : 0
+SK_Parsee01: real
+    Def   : 0
+SK_Reisen04_value: real
+    Def   : 0
+SK_Reisen203_ExtraDam: real
+    Def   : 0
+SK_Reisen2Ex_Time: real
+    Def   : 0
+SK_Soga01ox: real
+    Def   : 0
+SK_Soga01oy: real
+    Def   : 0
+SK_Soga01tx: real
+    Def   : 0
+SK_Soga01ty: real
+    Def   : 0
+SK_Soga02tx: real
+    Def   : 0
+SK_Soga02ty: real
+    Def   : 0
+SK_Soga03tx: real
+    Def   : 0
+SK_Soga03ty: real
+    Def   : 0
+SK_Soga04tx: real
+    Def   : 0
+SK_Soga04ty: real
+    Def   : 0
+NeutralCamps: rect
+    Array : 1
+MapRegion: rect
+MapRegionScreen: rect
+Weather_Region: rect
+yd_NullTempRegion: region
+HeroBgm: sound
+    Array : 1
+SE_Kill: sound
+SE_MISS: sound
+ACSII: string
+    Array : 128
+    Def   : 
+BGM: string
+    Array : 1
+    Def   : 
+GameModeName: string
+    Array : 1
+    Def   : 
+HeroBrief: string
+    Array : 200
+    Def   : 
+HeroIcon: string
+    Array : 200
+    Def   : 
+ItemFormulas: string
+    Array : 1
+    Def   : 
+Miko01_Stand: string
+    Array : 16
+    Def   : 
+NeutralCampTypes: string
+    Array : 1
+    Def   : 
+NeutralGroups: string
+    Array : 1
+    Def   : 
+NewWeather_WeatherInfo: string
+    Array : 16
+    Def   : 
+NewWeather_WeatherName: string
+    Array : 16
+    Def   : 
+OriginalPlayerName: string
+    Array : 12
+    Def   : 
+PN: string
+    Array : 16
+    Def   : 
+PerfectText: string
+    Array : 10
+    Def   : 
+PlayerCharacterSkillString: string
+    Array : 16
+    Def   : 
+PlayerCharacterString: string
+    Array : 16
+    Def   : 
+PlayerColors: string
+    Array : 16
+    Def   : 
+PlayerName: string
+    Array : 16
+    Def   : 
+SK_Shikieiki_Degree: string
+    Array : 13
+    Def   : 
+AAHiddenModeChat: string
+    Def   : 
+DefaultBGM: string
+    Def   : 
+TimeStringAfterBattleBegin: string
+    Def   : 
+TimeStringReviveTimer: string
+    Def   : 
+NewWeather_HWT: timer
+    Array : 16
+Timers: timer
+    Array : 1
+Weather_Timer: timer
+    Array : 4
+CSS2_CountdownTimer: timer
+CSS2_HeroSelectionTimer: timer
+CSS2_MainTimer: timer
+CSS2_SPModeTimer: timer
+MainTimer: timer
+NPC_cycleTimer: timer
+NewWeather_CT: timer
+NewWeather_T: timer
+TimeTimer: timer
+smode_timer: timer
+NewWeather_TD: timerdialog
+AUD_trgArray: trigger
+    Array : 1
+HeroCloth01Init: trigger
+    Array : 1
+HeroCloth02Init: trigger
+    Array : 1
+HeroCloth03Init: trigger
+    Array : 1
+HeroInit: trigger
+    Array : 1
+MU_DamageHero: trigger
+    Array : 1
+MU_KillHero: trigger
+    Array : 1
+neutralCreepsTriggers: trigger
+    Array : 1
+AUD_anyUnitDamageTrigger: trigger
+Budu__tg: trigger
+A_AbsDamageUnit: unit
+    Array : 1
+A_DelDamageUnit: unit
+    Array : 1
+A_MagicDamageUnit: unit
+    Array : 1
+A_PhysicalAbilityDamageUnit: unit
+    Array : 1
+A_PhysicalDamageUnit: unit
+    Array : 1
+A_PhysicalItemDamageUnit: unit
+    Array : 1
+A_SpellMoveBannedUnit: unit
+    Array : 1
+A_SpellNormalBannedUnit: unit
+    Array : 1
+BaseA: unit
+    Array : 1
+BaseB: unit
+    Array : 1
+BaseUnit: unit
+    Array : 1
+BlinkEnableUnit: unit
+    Array : 1
+Caster: unit
+    Array : 1
+Hero: unit
+    Array : 1
+NPC_attackArrayAim: unit
+    Array : 1
+NPC_attackArrayUnit: unit
+    Array : 1
+PlayerHeroes: unit
+    Array : 64
+PlayerHeroesBan: unit
+    Array : 64
+PlayerReviveHouse: unit
+    Array : 1
+Ran03_Struct_Caster: unit
+    Array : 1
+Ran03_Struct_Target: unit
+    Array : 1
+SK_Hina01_Item: unit
+    Array : 1
+SK_Lyrica02_Unit: unit
+    Array : 1
+SK_Momizi01: unit
+    Array : 1
+SK_Mystia: unit
+    Array : 1
+SK_Reisen04_Light: unit
+    Array : 1
+SK_ShanghaiJSA: unit
+    Array : 1
+SK_Tokiko: unit
+    Array : 1
+SK_Utsuho03_Units: unit
+    Array : 1
+SK_Utsuho04_Sun: unit
+    Array : 1
+TowerA: unit
+    Array : 1
+TowerB: unit
+    Array : 1
+ADebuffSource: unit
+ADebuffTarget: unit
+AIParsee04_Target: unit
+AI_KillTargetA: unit
+AI_KillTargetB: unit
+AI_KillTargetC: unit
+AI_KillTargetD: unit
+A_DamagingUnit: unit
+Near__U: unit
+NewWeather_AuraUnit: unit
+ObjectsDoll: unit
+PS_Source: unit
+PS_Target: unit
+SK_Akyu: unit
+SK_Akyu_Ghost: unit
+SK_Caption04_Hero: unit
+SK_Caption04_Ship: unit
+SK_Chen02: unit
+SK_Chen04: unit
+SK_Chen: unit
+SK_Cirno_Cirno: unit
+SK_Eirin: unit
+SK_Hina01_Unit: unit
+SK_HinaUnit01: unit
+SK_HinaUnit02: unit
+SK_Keine: unit
+SK_Kogasa: unit
+SK_Lunar: unit
+SK_Lyrica: unit
+SK_Merlin04_Target: unit
+SK_Merlin: unit
+SK_Miko: unit
+SK_Minoriko: unit
+SK_Mystia_Unit: unit
+SK_Nazirin: unit
+SK_Nazrin04: unit
+SK_Nazrin04New_Caster: unit
+SK_Nazrin04New_Target: unit
+SK_Neet: unit
+SK_Parsee: unit
+SK_Ran01: unit
+SK_Ran: unit
+SK_Reisen01_Target: unit
+SK_Reisen201U1: unit
+SK_Reisen201U2: unit
+SK_Remilia: unit
+SK_Shikieiki: unit
+SK_Shinki: unit
+SK_Shizuha: unit
+SK_Toramaru: unit
+SK_Twei04_Twei: unit
+SK_Yuka: unit
+SK_Yuka_Unit: unit
+SK_Yuugi02U1: unit
+SK_Yuugi02U2: unit
+SK_Yuugi: unit
+Sanae: unit
+TowerAI_Tower: unit
+Weather_Shrine02: unit
+Weather_Shrine: unit
+smode_jcu: unit
+Weather_Effect: weathereffect
+    Array : 1
+WE_FallingLeaves: weathereffect
+WE_SunShine: weathereffect
+ReimuMother_CODE: integer
+    Def   : '''H02E'''
+ReimuMother__ReimuMotherAll_CD_BASE: real
+    Def   : 9
+ReimuMother__ReimuMotherAll_CD_DECREASE: real
+    Def   : 1
+ReimuMother__ReimuMotherAll_DAMAGE_BASE: real
+    Def   : 30
+ReimuMother__ReimuMotherAll_DAMAGE_INC: real
+    Def   : 20
+ReimuMother__ReimuMotherAll_DAMAGE_SCALE: real
+    Def   : 1
+ReimuMother__ReimuMotherAll_StunTime: real
+    Def   : .5
+ReimuMother__ReimuMotherAll_StunTime_INC: real
+    Def   : .2
+ReimuMother__ReimuMotherAll_AOE: real
+    Def   : 200
+ReimuMother__ReimuMotherEx2: integer
+    Def   : '''A1G2'''
+ReimuMother__ReimuMotherEx: integer
+    Def   : '''A1C1'''
+ReimuMother__ReimuMotherEx_SPEED: real
+    Def   : 1600.
+ReimuMother__ReimuMother01: integer
+    Def   : '''A1C0'''
+ReimuMother__ReimuMother02: integer
+    Def   : '''A1C2'''
+ReimuMother__ReimuMother02_SPEED: real
+    Def   : 500.
+ReimuMother__ReimuMother03: integer
+    Def   : '''A1C4'''
+ReimuMother__ReimuMother03_SPEED: real
+    Def   : 500.
+ReimuMother__ReimuMother04: integer
+    Def   : '''A1C3'''
+ReimuMother__ReimuMother04_FLYRATE: real
+    Def   : 1500.
+ReimuMother__ReimuMotherULT01: integer
+    Def   : '''A1C5'''
+ReimuMother__ReimuMotherULT01_DAMAGE_BASE: real
+    Def   : 200
+ReimuMother__ReimuMotherULT01_DAMAGE_INC: real
+    Def   : 50
+ReimuMother__ReimuMotherULT01_DAMAGE_SCALE: real
+    Def   : 1.8
+ReimuMother__ReimuMother_ULT01_SPEED: real
+    Def   : 2000.
+ReimuMother__ReimuMother_ULT01_WIDTH: real
+    Def   : 250.
+ReimuMother__ReimuMotherULT02: integer
+    Def   : '''A1C6'''
+ReimuMother__ReimuMotherULT02_DAMAGE_BASE: real
+    Def   : 100
+ReimuMother__ReimuMotherULT02_DAMAGE_INC: real
+    Def   : 20
+ReimuMother__ReimuMotherULT02_DAMAGE_SCALE: real
+    Def   : 1
+ReimuMother__ReimuMother_ULT02_SPEED: real
+    Def   : 1000.
+ReimuMother__ReiMotherULT02_SHOT: integer
+    Def   : '''e03S'''
+ReimuMother__ReimuMotherULT03: integer
+    Def   : '''A1C7'''
+ReimuMother__ReimuMotherULT03_AOE: real
+    Def   : 800.
+ReimuMother__ReimuMotherULT03_TIME: real
+    Def   : 5.
+ReimuMother__ReimuMother_ULT03_DAMAGESCALE: real
+    Def   : 10
+ReimuMother__ReimuMotherULT04: integer
+    Def   : '''A1C8'''
+ReimuMother__ReimuMotherULT04_DAMAGE_BASE: real
+    Def   : 150
+ReimuMother__ReimuMotherULT04_DAMAGE_INC: real
+    Def   : 50
+ReimuMother__ReimuMotherULT04_DAMAGE_SCALE: real
+    Def   : 1
+ReimuMother__ReimuMotherULT05: integer
+    Def   : '''A1C9'''
+ReimuMother__ReimuMotherULT05_DAMAGE_BASE: real
+    Def   : 200
+ReimuMother__ReimuMotherULT05_DAMAGE_INC: real
+    Def   : 50
+ReimuMother__ReimuMotherULT05_DAMAGE_SCALE: real
+    Def   : 1.6
+ReimuMother__ReimuMotherULT05_AOE: real
+    Def   : 500.
+ReimuMother__ReimuMotherULT05_FLYRATE: real
+    Def   : 1500.
+ReimuMother__ReimuMotherULT06: integer
+    Def   : '''A1CA'''
+ReimuMother__ReimuMotherULT06_DAMAGE_BASE: real
+    Def   : 200
+ReimuMother__ReimuMotherULT06_DAMAGE_INC: real
+    Def   : 20
+ReimuMother__ReimuMotherULT06_DAMAGE_SCALE: real
+    Def   : .5
+ReimuMother__ReimuMotherULT06_COUNT: real
+    Def   : 5.
+ReimuMother: unit
+skilltime: real
+    Def   : 0
+skillname: string
+    Def   : ul
+YoumuNew_CODE: integer
+    Def   : '''O019'''
+YoumuNew__YoumuNewEx: integer
+    Def   : '''A1D4'''
+YoumuNew__YoumuNewEx_CD_BASE: real
+    Def   : 2.
+YoumuNew__YoumuNewEx_CD_DECREASE: real
+    Def   : 0.
+YoumuNew__YoumuNewEx2: integer
+    Def   : '''A1D5'''
+YoumuNew__YoumuNewEx2_CD_BASE: real
+    Def   : 18.
+YoumuNew__YoumuNewEx2_CD_DECREASE: real
+    Def   : 0.
+YoumuNew__YoumuNew01: integer
+    Def   : '''A1D0'''
+YoumuNew__YoumuNew01_DAMAGE_BASE: real
+    Def   : 30
+YoumuNew__YoumuNew01_DAMAGE_INC: real
+    Def   : 30
+YoumuNew__YoumuNew01_CD_BASE: real
+    Def   : 9
+YoumuNew__YoumuNew01_CD_DECREASE: real
+    Def   : 1
+YoumuNew__YoumuNew01_DAMAGE_SCALE: real
+    Def   : .5
+YoumuNew__YoumuNew01_AOE: real
+    Def   : 300
+YoumuNew__YoumuNew01_SPEED: real
+    Def   : 800
+YoumuNew__YoumuNew01_FLYRATE: real
+    Def   : 800
+YoumuNew__YoumuNew02: integer
+    Def   : '''A1D1'''
+YoumuNew__YoumuNew02_DAMAGE_BASE: real
+    Def   : 30
+YoumuNew__YoumuNew02_DAMAGE_INC: real
+    Def   : 40
+YoumuNew__YoumuNew02_CD_BASE: real
+    Def   : 16
+YoumuNew__YoumuNew02_CD_DECREASE: real
+    Def   : 2
+YoumuNew__YoumuNew02_DAMAGE_SCALE: real
+    Def   : .9
+YoumuNew__YoumuNew02_STUNTIME_BASE: real
+    Def   : 1.5
+YoumuNew__YoumuNew02_STUNTIME_INC: real
+    Def   : 0
+YoumuNew__YoumuNew02_AOE: real
+    Def   : 300
+YoumuNew__YoumuNew03: integer
+    Def   : '''A1D2'''
+YoumuNew__YoumuNew03_PROB_BASE: real
+    Def   : 15
+YoumuNew__YoumuNew03_PROB_INCREASE: real
+    Def   : 5
+YoumuNew__YoumuNew03_DAMAGE_BASE: real
+    Def   : 60
+YoumuNew__YoumuNew03_DAMAGE_INCREASE: real
+    Def   : 10
+YoumuNew__YoumuNew04: integer
+    Def   : '''A1D3'''
+YoumuNew__YoumuNew04_DAMAGE_BASE: real
+    Def   : 130
+YoumuNew__YoumuNew04_DAMAGE_INC: real
+    Def   : 130
+YoumuNew__YoumuNew04_DAMAGE_SCALE: real
+    Def   : 1.6
+YoumuNew__YoumuNew04_CD_BASE: real
+    Def   : 80
+YoumuNew__YoumuNew04_CD_DECREASE: real
+    Def   : 20
+YoumuNew__YoumuNew04_AOE: real
+    Def   : 300
+YoumuNew: unit
+YoumuNew_int: integer
+ReisenNew_CODE: integer
+    Def   : '''O016'''
+ReisenNew___ReisenNewEx_EFFECTUNIT: integer
+    Def   : '''o017'''
+ReisenNew___ReisenNewEx_NUMBER: integer
+    Def   : 1
+ReisenNew___ReisenNewEx_SCALE: real
+    Def   : .07
+ReisenNew___ReisenNew01: integer
+    Def   : '''A1BJ'''
+ReisenNew___ReisenNew01_DAMAGE_BASE: real
+    Def   : 30
+ReisenNew___ReisenNew01_DAMAGE_INC: real
+    Def   : 40
+ReisenNew___ReisenNew01_CD_BASE: real
+    Def   : 9
+ReisenNew___ReisenNew01_CD_DECREASE: real
+    Def   : 1
+ReisenNew___ReisenNew01_DAMAGE_SCALE: real
+    Def   : 1.
+ReisenNew___ReisenNew01_BACK_SPEED: real
+    Def   : 800
+ReisenNew___ReisenNew01_SHOT_SPEED: real
+    Def   : 800
+ReisenNew___ReisenNew02: integer
+    Def   : '''A1BH'''
+ReisenNew___ReisenNew02_BUFF: integer
+    Def   : '''B09H'''
+ReisenNew___ReisenNew02_EFFECT: integer
+    Def   : '''e03Q'''
+ReisenNew___ReisenNew02_DAMAGE_BASE: real
+    Def   : 30
+ReisenNew___ReisenNew02_DAMAGE_INC: real
+    Def   : 20
+ReisenNew___ReisenNew02_DAMAGE_SCALE: real
+    Def   : 0.
+ReisenNew___ReisenNew02_STUNTIME_BASE: real
+    Def   : .3
+ReisenNew___ReisenNew02_STUNTIME_INC: real
+    Def   : .2
+ReisenNew___ReisenNew02_AOE: real
+    Def   : 200
+ReisenNew___ReisenNew03: integer
+    Def   : '''A1BK'''
+ReisenNew___ReisenNew03_EFFECTUNIT: integer
+    Def   : '''e03Q'''
+ReisenNew___ReisenNew03_DAMAGE_BASE: real
+    Def   : 40
+ReisenNew___ReisenNew03_DAMAGE_INC: real
+    Def   : 40
+ReisenNew___ReisenNew03_DAMAGE_SCALE: real
+    Def   : .8
+ReisenNew___ReisenNew03_CD_BASE: real
+    Def   : 15
+ReisenNew___ReisenNew03_CD_DECREASE: real
+    Def   : 0
+ReisenNew___ReisenNew04: integer
+    Def   : '''A1BI'''
+ReisenNew___ReisenNew04_SHOT: integer
+    Def   : '''e03R'''
+ReisenNew___ReisenNew04_DAMAGE_BASE: real
+    Def   : 40
+ReisenNew___ReisenNew04_DAMAGE_INC: real
+    Def   : 40
+ReisenNew___ReisenNew04_DAMAGE_SCALE: real
+    Def   : 1.
+ReisenNew___ReisenNew04_CD_BASE: real
+    Def   : 7
+ReisenNew___ReisenNew04_CD_DECREASE: real
+    Def   : 1
+ReisenNew___ReisenNew04_SLOW_SPEED: real
+    Def   : 10
+ReisenNew___ReisenNew04_SLOW_ACCESS: real
+    Def   : .4
+ReisenNew___ReisenNew04_ACCESS_ACCESS: real
+    Def   : 3.2
+ReisenNew: unit
+Kaguya03: integer
+    Def   : '''A17V'''
+Kaguya03ManaDamageRangeBase: real
+    Def   : 400.
+Kaguya03ManaDamageRangeInc: real
+    Def   : 50.
+DAIYOUSEI_CODE: integer
+    Def   : '''H029'''
+Daiyousei__DAIYOUSEIEX: integer
+    Def   : '''A0FT'''
+Daiyousei__DAIYOUSEIEX_EFFECT: string
+    Def   : Abilities\Weapons\BansheeMissile\BansheeMissile.mdl
+Daiyousei__DAIYOUSEIEX_DMG_FACTOR: real
+    Def   : .5
+Daiyousei__DAIYOUSEI01: integer
+    Def   : '''A0FJ'''
+Daiyousei__DAIYOUSEI01_CD_BASE: real
+    Def   : 11.
+Daiyousei__DAIYOUSEI01_CD_DECREASE: real
+    Def   : 2.
+Daiyousei__DAIYOUSEI01_EFFECT: string
+    Def   : Abilities\Spells\NightElf\Blink\BlinkCaster.mdl
+Daiyousei__DAIYOUSEI01_HEAL: real
+    Def   : 100.
+Daiyousei__DAIYOUSEI02: integer
+    Def   : '''A0FN'''
+Daiyousei__DAIYOUSEI02_CD_BASE: real
+    Def   : 15.
+Daiyousei__DAIYOUSEI02_CD_DECREASE: real
+    Def   : 2.
+Daiyousei__DAIYOUSEI02_ENSNARE: integer
+    Def   : '''A0FU'''
+Daiyousei__DAIYOUSEI02_ENSNARE_ORDER: string
+    Def   : ensnare
+Daiyousei__DAIYOUSEI02_ENSNARE_BUFF: integer
+    Def   : '''B07N'''
+Daiyousei__DAIYOUSEI02_ENSNARE_DURATION: real
+    Def   : 2.5
+Daiyousei__DAIYOUSEI02_AOE: real
+    Def   : 300.
+Daiyousei__DAIYOUSEI02_DAMAGE: real
+    Def   : 20.
+Daiyousei__DAIYOUSEI02_DAMAGE_INC: real
+    Def   : 40.
+Daiyousei__DAIYOUSEI02_DAMAGE_SCALE: real
+    Def   : .75
+Daiyousei__DAIYOUSEI03: integer
+    Def   : '''A0FP'''
+Daiyousei__DAIYOUSEI03_CD_BASE: real
+    Def   : 13.
+Daiyousei__DAIYOUSEI03_CD_DECREASE: real
+    Def   : 0.
+Daiyousei__DAIYOUSEI03_BONUS_DURATION: real
+    Def   : 7.
+Daiyousei__DAIYOUSEI03_EFFECT: string
+    Def   : Abilities\Spells\Items\AIda\AIdaTarget.mdl
+Daiyousei__DAIYOUSEI03_ATK_BONUS: integer
+    Def   : 10
+Daiyousei__DAIYOUSEI03_ATK_BONUS_INC: integer
+    Def   : 10
+Daiyousei__DAIYOUSEI03_ARMOR_BONUS: integer
+    Def   : 11
+Daiyousei__DAIYOUSEI03_ARMOR_BONUS_INC: integer
+    Def   : 5
+Daiyousei__DAIYOUSEI04: integer
+    Def   : '''A0FS'''
+Daiyousei__DAIYOUSEI04_PERM_INVIS: integer
+    Def   : '''A0G0'''
+Daiyousei__DAIYOUSEI04_PROJECTILE: string
+    Def   : Abilities\Weapons\KeeperGroveMissile\KeeperGroveMissile.mdl
+Daiyousei__DAIYOUSEI04_GROUND_EFFECT: string
+    Def   : UltimateWindFlash
+Daiyousei__DAIYOUSEI04_PROJECTILE_SPEED: real
+    Def   : 1400.
+Daiyousei__DAIYOUSEI04_PERM_INVIS_DURATION: real
+    Def   : 6.
+Daiyousei__DAIYOUSEI04_CD_BASE: real
+    Def   : 75.
+Daiyousei__DAIYOUSEI04_CD_DECREASE: real
+    Def   : 15.
+Daiyousei__DAIYOUSEI04_AOE: real
+    Def   : 450.
+Daiyousei__DAIYOUSEI04_DAMAGE: real
+    Def   : 60.
+Daiyousei__DAIYOUSEI04_DAMAGE_INC: real
+    Def   : 60.
+Daiyousei__DAIYOUSEI04_DAMAGE_SCALE: real
+    Def   : 1.7
+DAIYOUSEIEX_ACTIVE: boolean
+    Def   : false
+DAIYOUSEIEX_ACTIVE_EFFECT: effect
+Daiyousei: unit
+Daiyousei__ensnaretotal: integer
+    Def   : 0
+Daiyousei__ensnaredunit: integer
+    Array : 1
+Daiyousei__ensnaretimer: timer
+BlackMeiling__BlackMeilingType: integer
+    Def   : '''E03W'''
+BlackMeiling__BMEX_Skill: integer
+    Def   : '''A1DA'''
+BlackMeiling__BM01_Skill: integer
+    Def   : '''A1D6'''
+BlackMeiling__BM02_Skill: integer
+    Def   : '''A1D7'''
+BlackMeiling__BM03_Skill: integer
+    Def   : '''A1D8'''
+BlackMeiling__BM04_Skill: integer
+    Def   : '''A1D9'''
+BlackMeiling__BMEX_LightningFX: string
+    Def   : CLPB
+BlackMeiling__BMEX_LightningFadeTime: real
+    Def   : .3
+BlackMeiling__BMEX_LightningDamage: real
+    Def   : 30.
+BlackMeiling__BMEX_LightningScaleFactor: real
+    Def   : .3
+BlackMeiling__BM01_Speed: real
+    Def   : 1000.
+BlackMeiling__BM01_KnockbackDistance: real
+    Def   : 300.
+BlackMeiling__BM01_KnockbackSpeed: real
+    Def   : 800.
+BlackMeiling__BM01_Animation: string
+    Def   : 'stand alternate'
+BlackMeiling__BM01_BaseDamage: real
+    Def   : 30.
+BlackMeiling__BM01_DamageScaleFactor: real
+    Def   : .6
+BlackMeiling__BM02_Effect: string
+    Def   : Abilities\Spells\Undead\DarkRitual\DarkRitualTarget.mdl
+BlackMeiling__BM02_LaunchMaxHeight: real
+    Def   : 1000.
+BlackMeiling__BM02_FlyTime: real
+    Def   : 1.
+BlackMeiling__BM02_Delay: real
+    Def   : 2.
+BlackMeiling__BM02_Radius: real
+    Def   : 300.
+BlackMeiling__BM02_BaseDamage: real
+    Def   : 60.
+BlackMeiling__BM02_PerLvlDamage: real
+    Def   : 30.
+BlackMeiling__BM02_DamageScaleFactor: real
+    Def   : 1.6
+BlackMeiling__BM03_Destructable: integer
+    Def   : '''B01X'''
+BlackMeiling__BM03_EffectLeft: string
+    Def   : Abilities\Spells\Undead\DarkRitual\DarkRitualTarget.mdl
+BlackMeiling__BM03_EffectRight: string
+    Def   : Abilities\Spells\Undead\DarkRitual\DarkRitualTarget.mdl
+BlackMeiling__BM03_Duration: real
+    Def   : 4.
+BlackMeiling__BM03_DamageRadius: real
+    Def   : 64.
+BlackMeiling__BM03_BaseDamage: real
+    Def   : 60.
+BlackMeiling__BM03_PerLvlDamage: real
+    Def   : 40.
+BlackMeiling__BM03_DamageScaleFactor: real
+    Def   : 1.6
+BlackMeiling__BM03_BaseStunDuration: real
+    Def   : 1.5
+BlackMeiling__BM03_PerLvlStunDuration: real
+    Def   : .5
+BlackMeiling__BM04_DarknessEffect: string
+    Def   : Abilities\Spells\Human\CloudOfFog\CloudOfFog.mdl
+BlackMeiling__BM04_StormDiameter: real
+    Def   : 500.
+BlackMeiling__BM04_BaseDuration: real
+    Def   : 2.
+BlackMeiling__BM04_PerLvlDuration: real
+    Def   : 1.
+BlackMeiling__BM04_BaseStrikeNumber: integer
+    Def   : 4
+BlackMeiling__BM04_PerLvlStrikeNumber: integer
+    Def   : 4
+FLANDRE2_CODE: integer
+    Def   : '''U00W'''
+Flandre2__FLANDRE2_01: integer
+    Def   : '''A1EH'''
+Flandre2__FLANDRE2_02: integer
+    Def   : '''A1EI'''
+Flandre2__FLANDRE2_02_ATTACK_DAMAGE_BASE: real
+    Def   : 0.50
+Flandre2__FLANDRE2_02_ATTACK_DAMAGE_SCALC: real
+    Def   : .5
+Flandre2__FLANDRE2_02_DOUBLE_SLOW_RANGE: real
+    Def   : 200.00
+Flandre2__FLANDRE2_02_SLOW_DURATION: real
+    Def   : 5.00
+Flandre2__FLANDRE2_03: integer
+    Def   : '''A1EJ'''
+Flandre2__FLANDRE2_03_RANGE: real
+    Def   : 300.
+Flandre2__FLANDRE2_03_DAMAGE_BASE: real
+    Def   : 45.
+Flandre2__FLANDRE2_03_DAMAGE_SCALC: real
+    Def   : 25.
+Flandre2__FLANDRE2_04: integer
+    Def   : '''A1EO'''
+Flandre2__FLANDRE2_04_DEBUFF: integer
+    Def   : '''A1EN'''
+Flandre2__FLANDRE2_04_UNIT_TYPEID: integer
+    Def   : '''U00Z'''
+Flandre2__FLANDRE2_04_DURATION: real
+    Def   : 10.
+Flandre2__FLANDRE2_04_CHECK_TARGET_LIFE_DURATION: real
+    Def   : 6.
+Flandre2__FLANDRE2_04_DAMAGE_BASE: real
+    Def   : 0.
+Flandre2__FLANDRE2_04_DAMAGE_SCALC: real
+    Def   : 100.
+Flandre2__FLANDRE2_04_DAMAGE_BONUS_ATTACK_BASE: real
+    Def   : .25
+Flandre2__FLANDRE2_04_DAMAGE_BONUS_ATTACK_SCALC: real
+    Def   : .25
+Flandre2__FLANDRE2_04_DAMAGE_BONUS_ILLUSION_BASE: real
+    Def   : 0.13
+Flandre2__FLANDRE2_04_DAMAGE_BONUS_ILLUSION_SCALC: real
+    Def   : 0.13
+Flandre2__IsInitSkill: boolean
+    Def   : false
+START04_ABILITYID: integer
+    Def   : '''A999'''
+START04_COLDDOWN_BASIC: integer
+    Def   : 120
+START04_COLDDOWN_INCOME: integer
+    Def   : 20
+START04_DAMMY: integer
+    Def   : '''n051'''
+Futo_CODE: integer
+    Def   : '''H02I'''
+Futo___FutoEx_ID: integer
+    Def   : '''A1DB'''
+Futo___Futo01_ID: integer
+    Def   : '''A1DC'''
+Futo___Futo01_PUSH: integer
+    Def   : '''A1E8'''
+Futo___Futo01_PUSH_ORDER: string
+    Def   : ensnare
+Futo___Futo01_PUSH_BUFF: integer
+    Def   : '''B09L'''
+Futo___Futo01_PUSH_DURATION: real
+    Def   : 1
+Futo___Futo01_ENSNARE: integer
+    Def   : '''A1DK'''
+Futo___Futo01_ENSNARE_ORDER: string
+    Def   : ensnare
+Futo___Futo01_ENSNARE_DURATION_BASE: real
+    Def   : .4
+Futo___Futo01_ENSNARE_DURATION_SCALC: real
+    Def   : .4
+Futo___Futo01_RANGE: real
+    Def   : 250
+Futo___Futo01_DOOR_RANGE: real
+    Def   : 50
+Futo___Futo01_DURATION: real
+    Def   : 6
+Futo___Futo01_RATE: real
+    Def   : .05
+Futo___Futo01_MOVE_ONCE: real
+    Def   : 12.5
+Futo___Futo01_DAMAGE_BASE: real
+    Def   : 40
+Futo___Futo01_DAMAGE_SCALC: real
+    Def   : 30
+Futo___Futo01_DAMAGE_INT: real
+    Def   : 1.
+Futo___Futo01_CD_BASE: real
+    Def   : 13
+Futo___Futo01_CD_DECREASE: real
+    Def   : 1
+Futo___Futo02_ID: integer
+    Def   : '''A1DD'''
+Futo___Futo02_WEAKEN_DAMAGE_BOOK_ID: integer
+    Def   : '''A119'''
+Futo___Futo02_WEAKEN_DAMAGE_ID: integer
+    Def   : '''A1EA'''
+Futo___Futo02_RANGE: real
+    Def   : 600
+Futo___Futo02_DURATION: real
+    Def   : 7
+Futo___Futo02_DAMAGE_RATE: real
+    Def   : 1
+Futo___Futo02_DAMAGE_BASE: real
+    Def   : 10
+Futo___Futo02_DAMAGE_SCALC: real
+    Def   : 5
+Futo___Futo02_DAMAGE_INT: real
+    Def   : .25
+Futo___Futo02_COUNTER_DAMAGE_BASE: real
+    Def   : 40
+Futo___Futo02_COUNTER_DAMAGE_SCALC: real
+    Def   : 20
+Futo___Futo02_COUNTER_DAMAGE_INT: real
+    Def   : 1.
+Futo___Futo02_COUNTER_STUN_DURATION: real
+    Def   : .3
+Futo___Futo02_PERIOD: real
+    Def   : 1
+Futo___Futo02_CD_BASE: real
+    Def   : 15
+Futo___Futo02_CD_DECREASE: real
+    Def   : 0
+Futo___Futo03_ID: integer
+    Def   : '''A0UB'''
+Futo___Futo03_SETLOC_ID: integer
+    Def   : '''A1DJ'''
+Futo___Futo03_SHIP_ID: integer
+    Def   : '''n059'''
+Futo___Futo03_HASHTABLE_OFFSET: integer
+    Def   : 8190*3
+Futo___Futo03_FLYUP_DURATION: real
+    Def   : 4.
+Futo___Futo03_MOVE_DURATION: real
+    Def   : .5
+Futo___Futo03_RANGE: real
+    Def   : 350
+Futo___Futo03_PROTECT_BASE: real
+    Def   : 50.
+Futo___Futo03_PROTECT_SCALC: real
+    Def   : 50.
+Futo___Futo03_PROTECT_INT: real
+    Def   : 1.
+Futo___Futo03_PROTECT_DURATION: real
+    Def   : 4.
+Futo___Futo03_CD_BASE: real
+    Def   : 40
+Futo___Futo03_CD_DECREASE: real
+    Def   : 4
+Futo___Futo04_ID: integer
+    Def   : '''A1DE'''
+Futo___Futo04_CAST_ID: integer
+    Def   : '''A1DH'''
+Futo___Futo04_EFFECT_UNIT_ID: integer
+    Def   : '''n05A'''
+Futo___Futo04_HASHTABLE_OFFSET: integer
+    Def   : 8190*4
+Futo___Futo04_READY_MAX_DURATION: real
+    Def   : 5
+Futo___Futo04_VALID_MAX_DURATION: real
+    Def   : 3
+Futo___Futo04_RANGE: real
+    Def   : 250
+Futo___Futo04_SPEED: real
+    Def   : 6
+Futo___Futo04_DAMAGE_BASE: real
+    Def   : 10
+Futo___Futo04_DAMAGE_SCALC: real
+    Def   : 30
+Futo___Futo04_DAMAGE_INT: real
+    Def   : 1.2
+Futo___Futo04_DAMAGE_DURATION_ADD: real
+    Def   : .25
+Futo___Futo04_DAMAGE_ADD_BASE: real
+    Def   : 30
+Futo___Futo04_DAMAGE_ADD_SCALC: real
+    Def   : 30
+Futo___Futo04_SLOW_MIN_BASE: real
+    Def   : 20
+Futo___Futo04_SLOW_MIN_SCALC: real
+    Def   : 5
+Futo___Futo04_SLOW_MAX_BASE: real
+    Def   : 35
+Futo___Futo04_SLOW_MAX_SCALC: real
+    Def   : 5
+Futo___Futo05_ID: integer
+    Def   : '''A0UC'''
+Futo___Futo05_FLAG_ID: integer
+    Def   : '''A11A'''
+Futo___Futo05_PERIOD: real
+    Def   : 5
+Futo___Futo05_DAMAGE_BASE: real
+    Def   : 10
+Futo___Futo05_DAMAGE_SCALC: real
+    Def   : 4
+Futo___Futo05_DAMAGE_INT: real
+    Def   : .2
+Futo___Futo05_GET_LIFE_DAMAGE_PERCENT: real
+    Def   : .75
+Futo___Futo05_DAMAGE_PERCENT_OTHERS_UNIT: real
+    Def   : .5
+Futo___Futo05_RANGE: real
+    Def   : 300
+Futo___Futo05_SPURTING_ANGLE_A: real
+    Def   : 1.57/2
+Futo___Futo05_SPURTING_ANGLE_B: real
+    Def   : .87/2
+Futo: unit
+Futo___Futo03_i: integer
+Futo___FutoEx_Flag: boolean
+    Def   : true
+Futo___Futo02_Now: integer
+MUGETSU_CODE: integer
+    Def   : '''E037'''
+Mugetsu__MUGETSU01: integer
+    Def   : '''A0G1'''
+Mugetsu__MUGETSU01_RANGE: real
+    Def   : 300.
+Mugetsu__MUGETSU01_CD_BASE: real
+    Def   : 6.
+Mugetsu__MUGETSU01_CD_DECREASE: real
+    Def   : 1.
+Mugetsu__MUGETSU01_AOE: real
+    Def   : 300.
+Mugetsu__MUGETSU01_DMG_BASE: real
+    Def   : 30.
+Mugetsu__MUGETSU01_DMG_INC: real
+    Def   : 30.
+Mugetsu__MUGETSU01_DMG_SCALE: real
+    Def   : .7
+Mugetsu__MUGETSU01_BONUS_DMG_BASE: integer
+    Def   : 10
+Mugetsu__MUGETSU01_BONUS_DMG_INC: integer
+    Def   : 10
+Mugetsu__MUGETSU01_BONUS_DURATION: real
+    Def   : 8.
+Mugetsu__MUGETSU02: integer
+    Def   : '''A0G2'''
+Mugetsu__MUGETSU02_RANGE: real
+    Def   : 300.
+Mugetsu__MUGETSU02_CD_BASE: real
+    Def   : 6.
+Mugetsu__MUGETSU02_CD_DECREASE: real
+    Def   : 1.
+Mugetsu__MUGETSU02_AOE: real
+    Def   : 300.
+Mugetsu__MUGETSU02_DMG_BASE: real
+    Def   : 30.
+Mugetsu__MUGETSU02_DMG_INC: real
+    Def   : 30.
+Mugetsu__MUGETSU02_DMG_SCALE: real
+    Def   : .7
+Mugetsu__MUGETSU02_BONUS_ASPD_BASE: integer
+    Def   : 10
+Mugetsu__MUGETSU02_BONUS_ASPD_INC: integer
+    Def   : 10
+Mugetsu__MUGETSU02_BONUS_DURATION: real
+    Def   : 8.
+Mugetsu__MUGETSU03: integer
+    Def   : '''A0G3'''
+Mugetsu__MUGETSU03_CD_BASE: real
+    Def   : 4.5
+Mugetsu__MUGETSU03_PROJECTILE_MODEL: string
+    Def   : Abilities\Spells\Items\PotionOfOmniscience\CrystalBallCaster.mdl
+Mugetsu__MUGETSU03_CD_DECREASE: real
+    Def   : .5
+Mugetsu__MUGETSU03_RANGE: real
+    Def   : 1200.
+Mugetsu__MUGETSU03_HITBOX_SIZE: real
+    Def   : 130.
+Mugetsu__MUGETSU03_SPEED: real
+    Def   : 800.
+Mugetsu__MUGETSU03_DMG_BASE: real
+    Def   : 90.
+Mugetsu__MUGETSU03_DMG_INC: real
+    Def   : 30.
+Mugetsu__MUGETSU03_DMG_SCALE: real
+    Def   : 1.15
+Mugetsu__MUGETSU03_SLOW_SKILL: integer
+    Def   : '''A0I8'''
+Mugetsu__MUGETSU03_SLOW_DEBUFF: integer
+    Def   : '''B085'''
+Mugetsu__MUGETSU03_SLOW_DURATION: real
+    Def   : 6.5
+Mugetsu__MUGETSU03_STONE_SKILL: integer
+    Def   : '''A0I9'''
+Mugetsu__MUGETSU03_STONE_DURATION: real
+    Def   : 2.5
+Mugetsu__MUGETSU04: integer
+    Def   : '''A0GK'''
+Mugetsu__MUGETSU04_CD_BASE: real
+    Def   : 120.
+Mugetsu__MUGETSU04_CD_DECREASE: real
+    Def   : 30.
+Mugetsu__MUGETSU04_UCD_BASE: real
+    Def   : 130.
+Mugetsu__MUGETSU04_UCD_DECREASE: real
+    Def   : 0.
+Mugetsu__MUGETSU04_BONUS_DMG: integer
+    Def   : 2
+Mugetsu__MUGETSU04_BONUS_INT: integer
+    Def   : 1
+Mugetsu__MUGETSU04_MULTI_BASE: real
+    Def   : 1.
+Mugetsu__MUGETSU04_MULTI_INC: real
+    Def   : 1.
+Mugetsu__MUGETSU04_LASTSPELL: integer
+    Def   : 0
+Mugetsu__MUGETSUEX_TIME: real
+    Def   : 6.
+Mugetsu__MUGETSUEX_PERCENT: real
+    Def   : .1
+Mugetsu__dmggroup: group
+Mugetsu__tmpgroup: group
+Mugetsu__skill01_timer: timer
+Mugetsu__skill02_timer: timer
+Mugetsu__skill04_timer: timer
+Mugetsu__skill01_counter: integer
+    Def   : 0
+Mugetsu__skill01_bonus: integer
+    Def   : 0
+Mugetsu__skill02_counter: integer
+    Def   : 0
+Mugetsu__skill02_bonus: integer
+    Def   : 0
+Mugetsu: unit
+Kulumi_CODE: integer
+    Def   : '''E03N'''
+Kulumi__Kulumi_InitedPassive: boolean
+    Def   : false
+Kulumi__KulumiEx: integer
+    Def   : '''A113'''
+Kulumi__KulumiEx_HEALTH: real
+    Def   : 12.
+Kulumi__Kulumi01: integer
+    Def   : '''A112'''
+Kulumi__Kulumi01_EFFECT: string
+    Def   : Objects\Spawnmodels\Human\HumanBlood\HumanBloodPeasant.mdl
+Kulumi__Kulumi01_DMG_BASE: real
+    Def   : 40.
+Kulumi__Kulumi01_DMG_INC: real
+    Def   : 40.
+Kulumi__Kulumi01_DMG_SCALE: real
+    Def   : .8
+Kulumi__Kulumi01_CD_BASE: real
+    Def   : 6.
+Kulumi__Kulumi01_CD_DECREASE: real
+    Def   : 0.
+Kulumi__Kulumi02: integer
+    Def   : '''A11E'''
+Kulumi__KulumiCoffin: integer
+    Def   : '''o00Y'''
+Kulumi__Kulumi02_CD_BASE: real
+    Def   : 30.
+Kulumi__Kulumi02_CD_DECREASE: real
+    Def   : 2.
+Kulumi__Kulumi02_AOE: real
+    Def   : 300.
+Kulumi__Kulumi02_HP_SCALE: real
+    Def   : 3.
+Kulumi__Kulumi03: integer
+    Def   : '''A11H'''
+Kulumi__Kulumi03_AOE: real
+    Def   : 150.
+Kulumi__Kulumi03_DMG_BASE: real
+    Def   : 5.
+Kulumi__Kulumi03_DMG_INC: real
+    Def   : 5.
+Kulumi__Kulumi03_DMG_SCALE: real
+    Def   : .3
+Kulumi__Kulumi04: integer
+    Def   : '''A11J'''
+Kulumi__Kulumi04_DMG_BASE: real
+    Def   : 70.
+Kulumi__Kulumi04_DMG_INC: real
+    Def   : 60.
+Kulumi__Kulumi04_DMG_SCALE: real
+    Def   : .2
+Kulumi__Kulumi04_DMG_SCALE_INC: real
+    Def   : .9
+Kulumi: unit
+Kulumi_i: integer
+    Def   : 0
+Kagerou_CODE: integer
+    Def   : '''O01C'''
+Kagerou__KagerouExBuff: integer
+    Def   : '''A1I7'''
+Kagerou__KagerouEx_CHECK_RANGE: real
+    Def   : 300.
+Kagerou__KagerouEx_CHECK_TIME: real
+    Def   : 2.
+Kagerou__KagerouEx2: integer
+    Def   : '''A1HN'''
+Kagerou__KagerouEx2_BUFF_CODE: integer
+    Def   : '''A1HS'''
+Kagerou__KagerouEx2_DURATION: real
+    Def   : 4.
+Kagerou__Kagerou01: integer
+    Def   : '''A1HO'''
+Kagerou__Kagerou01_DAMAGE_BASE: real
+    Def   : 30
+Kagerou__Kagerou01_DAMAGE_INC: real
+    Def   : 30
+Kagerou__Kagerou01_DAMAGE_SCALE: real
+    Def   : 1.
+Kagerou__Kagerou01_CD_BASE: real
+    Def   : 8
+Kagerou__Kagerou01_CD_DECREASE: real
+    Def   : 1
+Kagerou__Kagerou01_AOE: real
+    Def   : 300
+Kagerou__Kagerou01_SPEED: real
+    Def   : 800
+Kagerou__Kagerou01_FLYRATE: real
+    Def   : 800
+Kagerou__Kagerou02: integer
+    Def   : '''A1HP'''
+Kagerou__Kagerou02_EFFECT_UNIT_CODE: integer
+    Def   : '''h01P'''
+Kagerou__Kagerou02_CD_BASE: real
+    Def   : 12
+Kagerou__Kagerou02_CD_DECREASE: real
+    Def   : 2
+Kagerou__Kagerou02_DAMAGE_BASE: real
+    Def   : 30
+Kagerou__Kagerou02_DAMAGE_INC: real
+    Def   : 40
+Kagerou__Kagerou02_DAMAGE_SCALE: real
+    Def   : 1.5
+Kagerou__Kagerou02_SPEED: real
+    Def   : 1300
+Kagerou__Kagerou02_RANGE: real
+    Def   : 800
+Kagerou__Kagerou02_HITBOX_SIZE: real
+    Def   : 120
+Kagerou__Kagerou02_SPEED_EX: real
+    Def   : 1500
+Kagerou__Kagerou02_RANGE_EX: real
+    Def   : 1200
+Kagerou__Kagerou02_HITBOX_SIZE_EX: real
+    Def   : 150
+Kagerou__Kagerou03: integer
+    Def   : '''A1HQ'''
+Kagerou__Kagerou03_BUFF_CODE: integer
+    Def   : '''A0RV'''
+Kagerou__Kagerou03_HIT_COUNT: integer
+    Def   : 3
+Kagerou__Kagerou03_BUFF_DURATION: real
+    Def   : 8.
+Kagerou__Kagerou03_STUNTIME_BASE: real
+    Def   : 1.
+Kagerou__Kagerou03_STUNTIME_INC: real
+    Def   : .3
+Kagerou__Kagerou03_DAMAGE_BASE: real
+    Def   : 10
+Kagerou__Kagerou03_DAMAGE_INC: real
+    Def   : 10
+Kagerou__Kagerou03_DAMAGE_BASE_EX: real
+    Def   : 20
+Kagerou__Kagerou03_DAMAGE_INC_EX: real
+    Def   : 20
+Kagerou__Kagerou04: integer
+    Def   : '''A1HR'''
+Kagerou__Kagerou04_CD_BASE: real
+    Def   : 80
+Kagerou__Kagerou04_CD_DECREASE: real
+    Def   : 20
+Kagerou__Kagerou04_DAMAGE_BASE: real
+    Def   : 130
+Kagerou__Kagerou04_DAMAGE_INC: real
+    Def   : 130
+Kagerou__Kagerou04_DAMAGE_SCALE: real
+    Def   : 1.6
+Kagerou__KagerouEx2_Unit_Hashkey: integer
+    Def   : -895719523
+Kagerou__KagerouEx2_Timer_Hashkey: integer
+    Def   : -1898725611
+Kagerou__Kagerou03_Timer_Hashkey: integer
+    Def   : -1741613138
+Kagerou: unit
+Kagerou_int: integer
+ItemID: integer
+    Def   : '''I031'''
+HiddenSpellBook: integer
+    Def   : '''A18X'''
+MovementBonusAbility: integer
+    Def   : '''A19V'''
+MovementBonusBuffId: integer
+    Def   : '''B099'''
+ReAddAbilityDelay: real
+    Def   : 8.
+GrayAlpacaCount: integer
+    Array : 1
+coinCount: integer
+    Array : 1
+s__soundresponse_u: unit
+    Array : 1
+s__soundresponse_ordertrg: trigger
+    Array : 1
+s__soundresponse_selecttrg: trigger
+    Array : 1
+s__soundresponse_t: timer
+    Array : 1
+s__soundresponse_canplay: boolean
+    Array : 1
+s__soundresponse_reborn: sound
+    Array : 1
+s__soundresponse_reborn_duration: real
+    Array : 1
+s__soundresponse_pissed1: sound
+    Array : 1
+s__soundresponse_pissed1_duration: real
+    Array : 1
+s__soundresponse_pissed2: sound
+    Array : 1
+s__soundresponse_pissed2_duration: real
+    Array : 1
+s__soundresponse_what1: sound
+    Array : 1
+s__soundresponse_what1_duration: real
+    Array : 1
+s__soundresponse_what2: sound
+    Array : 1
+s__soundresponse_what2_duration: real
+    Array : 1
+s__soundresponse_what3: sound
+    Array : 1
+s__soundresponse_what3_duration: real
+    Array : 1
+s__soundresponse_what4: sound
+    Array : 1
+s__soundresponse_what4_duration: real
+    Array : 1
+s__soundresponse_warcry1: sound
+    Array : 1
+s__soundresponse_warcry1_duration: real
+    Array : 1
+s__soundresponse_yes1: sound
+    Array : 1
+s__soundresponse_yes1_duration: real
+    Array : 1
+s__soundresponse_yes2: sound
+    Array : 1
+s__soundresponse_yes2_duration: real
+    Array : 1
+s__soundresponse_yes3: sound
+    Array : 1
+s__soundresponse_yes3_duration: real
+    Array : 1
+s__soundresponse_yes4: sound
+    Array : 1
+s__soundresponse_yes4_duration: real
+    Array : 1
+s__soundresponse_yesattack1: sound
+    Array : 1
+s__soundresponse_yesattack1_duration: real
+    Array : 1
+s__soundresponse_yesattack2: sound
+    Array : 1
+s__soundresponse_yesattack2_duration: real
+    Array : 1
+s__soundresponse_yesattack3: sound
+    Array : 1
+s__soundresponse_yesattack3_duration: real
+    Array : 1
+s__soundresponse_yesattack4: sound
+    Array : 1
+s__soundresponse_yesattack4_duration: real
+    Array : 1
+s__soundresponse_death: sound
+    Array : 1
+s__soundresponse_death_duration: real
+    Array : 1
+si__ReimuMother_e_F: integer
+    Def   : 0
+si__ReimuMother_e_I: integer
+    Def   : 0
+si__ReimuMother_e_V: integer
+    Array : 1
+s__ReimuMother_e_caster: unit
+    Array : 1
+s__ReimuMother_e_cx: real
+    Array : 1
+s__ReimuMother_e_cy: real
+    Array : 1
+s__ReimuMother_e_a: real
+    Array : 1
+s__ReimuMother_e_i: integer
+    Array : 1
+si__ReimuMother_d_F: integer
+    Def   : 0
+si__ReimuMother_d_I: integer
+    Def   : 0
+si__ReimuMother_d_V: integer
+    Array : 1
+s__ReimuMother_d_caster: unit
+    Array : 1
+s__ReimuMother_d_cx: real
+    Array : 1
+s__ReimuMother_d_cy: real
+    Array : 1
+s__ReimuMother_d_a: real
+    Array : 1
+s__ReimuMother_d_damage: real
+    Array : 1
+si__ReimuMother_f_F: integer
+    Def   : 0
+si__ReimuMother_f_I: integer
+    Def   : 0
+si__ReimuMother_f_V: integer
+    Array : 1
+s__ReimuMother_f_caster: unit
+    Array : 1
+s__ReimuMother_f_cx: real
+    Array : 1
+s__ReimuMother_f_cy: real
+    Array : 1
+s__ReimuMother_f_a: real
+    Array : 1
+s__ReimuMother_f_damage: real
+    Array : 1
+s__ReimuMother_f_i: integer
+    Array : 1
+s__ReimuMother_f_g: group
+    Array : 1
+si__ReimuMother_r_F: integer
+    Def   : 0
+si__ReimuMother_r_I: integer
+    Def   : 0
+si__ReimuMother_r_V: integer
+    Array : 1
+s__ReimuMother_r_caster: unit
+    Array : 1
+s__ReimuMother_r_cx: real
+    Array : 1
+s__ReimuMother_r_cy: real
+    Array : 1
+s__ReimuMother_r_a: real
+    Array : 1
+s__ReimuMother_r_damage: real
+    Array : 1
+s__ReimuMother_r_i: integer
+    Array : 1
+si__ReimuMother_w_F: integer
+    Def   : 0
+si__ReimuMother_w_I: integer
+    Def   : 0
+si__ReimuMother_w_V: integer
+    Array : 1
+s__ReimuMother_w_caster: unit
+    Array : 1
+s__ReimuMother_w_cx: real
+    Array : 1
+s__ReimuMother_w_cy: real
+    Array : 1
+s__ReimuMother_w_a: real
+    Array : 1
+s__ReimuMother_w_damage: real
+    Array : 1
+s__ReimuMother_w_h: real
+    Array : 1
+s__ReimuMother_w_i: integer
+    Array : 1
+s__ReimuMother_w_g: group
+    Array : 1
+si__ReimuMother_ULT01_F: integer
+    Def   : 0
+si__ReimuMother_ULT01_I: integer
+    Def   : 0
+si__ReimuMother_ULT01_V: integer
+    Array : 1
+s__ReimuMother_ULT01_caster: unit
+    Array : 1
+s__ReimuMother_ULT01_damage: real
+    Array : 1
+s__ReimuMother_ULT01_a: real
+    Array : 1
+s__ReimuMother_ULT01_i: integer
+    Array : 1
+s__ReimuMother_ULT01_g: group
+    Array : 1
+si__ReimuMother_ULT02_F: integer
+    Def   : 0
+si__ReimuMother_ULT02_I: integer
+    Def   : 0
+si__ReimuMother_ULT02_V: integer
+    Array : 1
+s__ReimuMother_ULT02_caster: unit
+    Array : 1
+s__ReimuMother_ULT02_u: unit
+    Array : 1
+s__ReimuMother_ULT02_cx: real
+    Array : 1
+s__ReimuMother_ULT02_cy: real
+    Array : 1
+s__ReimuMother_ULT02_a: real
+    Array : 1
+s__ReimuMother_ULT02_n: real
+    Array : 1
+s__ReimuMother_ULT02_damage: real
+    Array : 1
+s__ReimuMother_ULT02_g: group
+    Array : 1
+si__ReimuMother_ULT03_F: integer
+    Def   : 0
+si__ReimuMother_ULT03_I: integer
+    Def   : 0
+si__ReimuMother_ULT03_V: integer
+    Array : 1
+s__ReimuMother_ULT03_caster: unit
+    Array : 1
+s__ReimuMother_ULT03_i: integer
+    Array : 1
+si__ReimuMother_ULT04_F: integer
+    Def   : 0
+si__ReimuMother_ULT04_I: integer
+    Def   : 0
+si__ReimuMother_ULT04_V: integer
+    Array : 1
+si__ReimuMother_ULT05_F: integer
+    Def   : 0
+si__ReimuMother_ULT05_I: integer
+    Def   : 0
+si__ReimuMother_ULT05_V: integer
+    Array : 1
+s__ReimuMother_ULT05_caster: unit
+    Array : 1
+s__ReimuMother_ULT05_cx: real
+    Array : 1
+s__ReimuMother_ULT05_cy: real
+    Array : 1
+s__ReimuMother_ULT05_damage: real
+    Array : 1
+s__ReimuMother_ULT05_h: real
+    Array : 1
+s__ReimuMother_ULT05_i: integer
+    Array : 1
+si__ReimuMother_ULT06_F: integer
+    Def   : 0
+si__ReimuMother_ULT06_I: integer
+    Def   : 0
+si__ReimuMother_ULT06_V: integer
+    Array : 1
+s__ReimuMother_ULT06_caster: unit
+    Array : 1
+s__ReimuMother_ULT06_cx: real
+    Array : 1
+s__ReimuMother_ULT06_cy: real
+    Array : 1
+s__ReimuMother_ULT06_damage: real
+    Array : 1
+s__ReimuMother_ULT06_i: integer
+    Array : 1
+si__YoumuNew_d_F: integer
+    Def   : 0
+si__YoumuNew_d_I: integer
+    Def   : 0
+si__YoumuNew_d_V: integer
+    Array : 1
+s__YoumuNew_d_caster: unit
+    Array : 1
+s__YoumuNew_d_cx: real
+    Array : 1
+s__YoumuNew_d_cy: real
+    Array : 1
+s__YoumuNew_d_a: real
+    Array : 1
+s__YoumuNew_d_damage: real
+    Array : 1
+s__YoumuNew_d_i: integer
+    Array : 1
+s__YoumuNew_d_p: integer
+    Array : 1
+si__YoumuNew_w_F: integer
+    Def   : 0
+si__YoumuNew_w_I: integer
+    Def   : 0
+si__YoumuNew_w_V: integer
+    Array : 1
+s__YoumuNew_w_caster: unit
+    Array : 1
+s__YoumuNew_w_u: unit
+    Array : 1
+s__YoumuNew_w_cx: real
+    Array : 1
+s__YoumuNew_w_cy: real
+    Array : 1
+s__YoumuNew_w_a: real
+    Array : 1
+s__YoumuNew_w_damage: real
+    Array : 1
+s__YoumuNew_w_i: integer
+    Array : 1
+s__YoumuNew_w_p: integer
+    Array : 1
+s__YoumuNew_w_n: integer
+    Array : 1
+s__YoumuNew_w_iff: boolexpr
+    Array : 1
+s__YoumuNew_w_g2: group
+    Array : 1
+si__ReisenNew_projectile_F: integer
+    Def   : 0
+si__ReisenNew_projectile_I: integer
+    Def   : 0
+si__ReisenNew_projectile_V: integer
+    Array : 1
+s__ReisenNew_projectile_caster: unit
+    Array : 1
+s__ReisenNew_projectile_u: unit
+    Array : 1
+s__ReisenNew_projectile_cx: real
+    Array : 1
+s__ReisenNew_projectile_cy: real
+    Array : 1
+s__ReisenNew_projectile_a: real
+    Array : 1
+s__ReisenNew_projectile_n: real
+    Array : 1
+s__ReisenNew_projectile_damage: real
+    Array : 1
+s__ReisenNew_projectile_g: group
+    Array : 1
+si__ReisenNew_spell_F: integer
+    Def   : 0
+si__ReisenNew_spell_I: integer
+    Def   : 0
+si__ReisenNew_spell_V: integer
+    Array : 1
+s__ReisenNew_spell_caster: unit
+    Array : 1
+s__ReisenNew_spell_u: unit
+    Array : 1
+s__ReisenNew_spell_cx: real
+    Array : 1
+s__ReisenNew_spell_cy: real
+    Array : 1
+s__ReisenNew_spell_tx: real
+    Array : 1
+s__ReisenNew_spell_ty: real
+    Array : 1
+s__ReisenNew_spell_damage: real
+    Array : 1
+s__ReisenNew_spell_i: real
+    Array : 1
+s__ReisenNew_spell_a: real
+    Array : 1
+si__ReisenNew_laser_F: integer
+    Def   : 0
+si__ReisenNew_laser_I: integer
+    Def   : 0
+si__ReisenNew_laser_V: integer
+    Array : 1
+s__ReisenNew_laser_caster: unit
+    Array : 1
+s__ReisenNew_laser_u: unit
+    Array : 1
+s__ReisenNew_laser_i: real
+    Array : 1
+s__ReisenNew_laser_cx: real
+    Array : 1
+s__ReisenNew_laser_cy: real
+    Array : 1
+s__ReisenNew_laser_tx: real
+    Array : 1
+s__ReisenNew_laser_ty: real
+    Array : 1
+s__ReisenNew_laser_dx: real
+    Array : 1
+s__ReisenNew_laser_dy: real
+    Array : 1
+s__ReisenNew_laser_dis: real
+    Array : 1
+s__ReisenNew_laser_damage: real
+    Array : 1
+s__ReisenNew_laser_a: real
+    Array : 1
+s__ReisenNew_laser_g: group
+    Array : 1
+si__kaguya03_F: integer
+    Def   : 0
+si__kaguya03_I: integer
+    Def   : 0
+si__kaguya03_V: integer
+    Array : 1
+s__kaguya03_source: unit
+    Array : 1
+s__kaguya03_p: player
+    Array : 1
+s__kaguya03_prev: integer
+    Array : 1
+s__kaguya03_next: integer
+    Array : 1
+s__kaguya03_tm: timer
+s__kaguya03_enum: group
+si__ensnared_F: integer
+    Def   : 0
+si__ensnared_I: integer
+    Def   : 0
+si__ensnared_V: integer
+    Array : 1
+s__ensnared_u: unit
+    Array : 1
+s__ensnared_duration: real
+    Array : 1
+si__statbonus_F: integer
+    Def   : 0
+si__statbonus_I: integer
+    Def   : 0
+si__statbonus_V: integer
+    Array : 1
+s__statbonus_u: unit
+    Array : 1
+s__statbonus_e: effect
+    Array : 1
+s__statbonus_bonusatk: integer
+    Array : 1
+s__statbonus_bonusarm: integer
+    Array : 1
+si__fadelightning_F: integer
+    Def   : 0
+si__fadelightning_I: integer
+    Def   : 0
+si__fadelightning_V: integer
+    Array : 1
+s__fadelightning_l: lightning
+    Array : 1
+s__fadelightning_fadetime: real
+    Array : 1
+s__fadelightning_r: real
+    Array : 1
+s__fadelightning_g: real
+    Array : 1
+s__fadelightning_b: real
+    Array : 1
+s__fadelightning_timeleft: real
+    Array : 1
+s__fadelightning_t: timer
+    Array : 1
+si__flytotarget_F: integer
+    Def   : 0
+si__flytotarget_I: integer
+    Def   : 0
+si__flytotarget_V: integer
+    Array : 1
+s__flytotarget_source: unit
+    Array : 1
+s__flytotarget_target: unit
+    Array : 1
+s__flytotarget_d: real
+    Array : 1
+s__flytotarget_t: timer
+    Array : 1
+si__launchunits_F: integer
+    Def   : 0
+si__launchunits_I: integer
+    Def   : 0
+si__launchunits_V: integer
+    Array : 1
+s__launchunits_source: unit
+    Array : 1
+s__launchunits_g: group
+    Array : 1
+s__launchunits_t: timer
+    Array : 1
+s__launchunits_x: real
+    Array : 1
+s__launchunits_y: real
+    Array : 1
+s__launchunits_k: real
+    Array : 1
+s__launchunits_h: real
+    Array : 1
+s__launchunits_e: effect
+    Array : 1
+s__launchunits_timeleft: real
+    Array : 1
+si__celestialcage_F: integer
+    Def   : 0
+si__celestialcage_I: integer
+    Def   : 0
+si__celestialcage_V: integer
+    Array : 1
+s__celestialcage_source: unit
+    Array : 1
+s__celestialcage_target: unit
+    Array : 1
+s__celestialcage_d1: destructable
+    Array : 1
+s__celestialcage_d2: destructable
+    Array : 1
+s__celestialcage_d3: destructable
+    Array : 1
+s__celestialcage_d4: destructable
+    Array : 1
+s__celestialcage_lx: real
+    Array : 1
+s__celestialcage_ly: real
+    Array : 1
+s__celestialcage_rx: real
+    Array : 1
+s__celestialcage_ry: real
+    Array : 1
+s__celestialcage_le: effect
+    Array : 1
+s__celestialcage_re: effect
+    Array : 1
+s__celestialcage_t: timer
+    Array : 1
+s__celestialcage_timeleft: real
+    Array : 1
+si__darklightningstorm_F: integer
+    Def   : 0
+si__darklightningstorm_I: integer
+    Def   : 0
+si__darklightningstorm_V: integer
+    Array : 1
+s__darklightningstorm_source: unit
+    Array : 1
+s__darklightningstorm_e: effect
+    Array : 1
+s__darklightningstorm_x: real
+    Array : 1
+s__darklightningstorm_y: real
+    Array : 1
+s__darklightningstorm_strikenum: integer
+    Array : 1
+s__darklightningstorm_t: timer
+    Array : 1
+si__Flandre2_01_F: integer
+    Def   : 0
+si__Flandre2_01_I: integer
+    Def   : 0
+si__Flandre2_01_V: integer
+    Array : 1
+s__Flandre2_01_IllusionGroup: group
+s__Flandre2_01_trgAttack: trigger
+si__Flandre2_02_F: integer
+    Def   : 0
+si__Flandre2_02_I: integer
+    Def   : 0
+si__Flandre2_02_V: integer
+    Array : 1
+s__Flandre2_02_trgAttack: trigger
+si__Flandre2_03_F: integer
+    Def   : 0
+si__Flandre2_03_I: integer
+    Def   : 0
+si__Flandre2_03_V: integer
+    Array : 1
+si__Flandre2_04_F: integer
+    Def   : 0
+si__Flandre2_04_I: integer
+    Def   : 0
+si__Flandre2_04_V: integer
+    Array : 1
+s__Flandre2_04_AttackTrgUse: integer
+    Def   : 0
+s__Flandre2_04_trgAttack: trigger
+s__Flandre2_04_DeathTrgUse: integer
+    Def   : 0
+s__Flandre2_04_trgDeath: trigger
+si__FutoEx_F: integer
+    Def   : 0
+si__FutoEx_I: integer
+    Def   : 0
+si__FutoEx_V: integer
+    Array : 1
+s__FutoEx_FutoExEffectUnit: unit
+si__Futo01_F: integer
+    Def   : 0
+si__Futo01_I: integer
+    Def   : 0
+si__Futo01_V: integer
+    Array : 1
+s__Futo01_caster: unit
+    Array : 1
+s__Futo01_dx: real
+    Array : 1
+s__Futo01_dy: real
+    Array : 1
+s__Futo01_damage: real
+    Array : 1
+s__Futo01_face: real
+    Array : 1
+s__Futo01_radius: real
+    Array : 1
+s__Futo01_timercount: real
+    Array : 1
+s__Futo01_yinyang: boolean
+    Array : 1
+s__Futo01_alvl: integer
+    Array : 1
+s__Futo01_damagedG: group
+    Array : 1
+s__Futo01_pushG: group
+    Array : 1
+si__Futo02_F: integer
+    Def   : 0
+si__Futo02_I: integer
+    Def   : 0
+si__Futo02_V: integer
+    Array : 1
+s__Futo02_caster: unit
+    Array : 1
+s__Futo02_spelloruseitemTrg: trigger
+    Array : 1
+s__Futo02_alvl: integer
+    Array : 1
+s__Futo02_yinyang: boolean
+    Array : 1
+s__Futo02_dotTimercount: real
+    Array : 1
+s__Futo02_damageOnce: real
+    Array : 1
+s__Futo02_counterDamage: real
+    Array : 1
+s__Futo02_cando: boolean
+    Array : 1
+si__Futo03_F: integer
+    Def   : 0
+si__Futo03_I: integer
+    Def   : 0
+si__Futo03_V: integer
+    Array : 1
+s__Futo03_caster: unit
+    Array : 1
+s__Futo03_ship: unit
+    Array : 1
+s__Futo03_byship: group
+    Array : 1
+s__Futo03_alvl: integer
+    Array : 1
+s__Futo03_des: location
+    Array : 1
+s__Futo03_src: location
+    Array : 1
+s__Futo03_radian: real
+    Array : 1
+s__Futo03_speed: real
+    Array : 1
+s__Futo03_flyupTimercount: real
+    Array : 1
+s__Futo03_moveTimercount: real
+    Array : 1
+s__Futo03_protectValue: real
+    Array : 1
+s__Futo03_yinyang: boolean
+    Array : 1
+s__Futo03_setLoc: boolean
+    Array : 1
+si__Futo04_F: integer
+    Def   : 0
+si__Futo04_I: integer
+    Def   : 0
+si__Futo04_V: integer
+    Array : 1
+s__Futo04_caster: unit
+    Array : 1
+s__Futo04_effectU: unit
+    Array : 1
+s__Futo04_txt: texttag
+    Array : 1
+s__Futo04_alvl: integer
+    Array : 1
+s__Futo04_dx: real
+    Array : 1
+s__Futo04_dy: real
+    Array : 1
+s__Futo04_radian: real
+    Array : 1
+s__Futo04_damage: real
+    Array : 1
+s__Futo04_damageadd: real
+    Array : 1
+s__Futo04_slowpercent: integer
+    Array : 1
+s__Futo04_readyTimercount: real
+    Array : 1
+s__Futo04_speed: real
+    Array : 1
+s__Futo04_movetimes: integer
+    Array : 1
+s__Futo04_end: boolean
+    Array : 1
+s__Futo04_yinyang: boolean
+    Array : 1
+si__Futo05_F: integer
+    Def   : 0
+si__Futo05_I: integer
+    Def   : 0
+si__Futo05_V: integer
+    Array : 1
+s__Futo05_trg_attack: trigger
+si__mugetsu03_projectile_F: integer
+    Def   : 0
+si__mugetsu03_projectile_I: integer
+    Def   : 0
+si__mugetsu03_projectile_V: integer
+    Array : 1
+s__mugetsu03_projectile_source: unit
+    Array : 1
+s__mugetsu03_projectile_projectile: unit
+    Array : 1
+s__mugetsu03_projectile_p: player
+    Array : 1
+s__mugetsu03_projectile_e: effect
+    Array : 1
+s__mugetsu03_projectile_d: real
+    Array : 1
+s__mugetsu03_projectile_dmg: real
+    Array : 1
+s__mugetsu03_projectile_cx: real
+    Array : 1
+s__mugetsu03_projectile_cy: real
+    Array : 1
+s__mugetsu03_projectile_tx: real
+    Array : 1
+s__mugetsu03_projectile_ty: real
+    Array : 1
+s__mugetsu03_projectile_control: group
+    Array : 1
+s__mugetsu03_projectile_toslow: group
+    Array : 1
+s__mugetsu03_projectile_todestroy: boolean
+    Array : 1
+s__mugetsu03_projectile_multi: boolean
+    Array : 1
+si__Kulumi02_projectile_F: integer
+    Def   : 0
+si__Kulumi02_projectile_I: integer
+    Def   : 0
+si__Kulumi02_projectile_V: integer
+    Array : 1
+s__Kulumi02_projectile_u: unit
+    Array : 1
+s__Kulumi02_projectile_c: unit
+    Array : 1
+s__Kulumi02_projectile_e: unit
+    Array : 1
+s__Kulumi02_projectile_ux: real
+    Array : 1
+s__Kulumi02_projectile_uy: real
+    Array : 1
+s__Kulumi02_projectile_cx: real
+    Array : 1
+s__Kulumi02_projectile_cy: real
+    Array : 1
+s__Kulumi02_projectile_ufacing: real
+    Array : 1
+s__Kulumi02_projectile_cfacing: real
+    Array : 1
+s__Kulumi02_projectile_iff: boolexpr
+    Array : 1
+s__Kulumi02_projectile_g1: group
+    Array : 1
+s__Kulumi02_projectile_i: integer
+    Array : 1
+si__Kagerou_d_F: integer
+    Def   : 0
+si__Kagerou_d_I: integer
+    Def   : 0
+si__Kagerou_d_V: integer
+    Array : 1
+s__Kagerou_d_caster: unit
+    Array : 1
+s__Kagerou_d_cx: real
+    Array : 1
+s__Kagerou_d_cy: real
+    Array : 1
+s__Kagerou_d_a: real
+    Array : 1
+s__Kagerou_d_damage: real
+    Array : 1
+s__Kagerou_d_i: integer
+    Array : 1
+si__Kagerou_f_F: integer
+    Def   : 0
+si__Kagerou_f_I: integer
+    Def   : 0
+si__Kagerou_f_V: integer
+    Array : 1
+s__Kagerou_f_caster: unit
+    Array : 1
+s__Kagerou_f_ox: real
+    Array : 1
+s__Kagerou_f_oy: real
+    Array : 1
+s__Kagerou_f_tx: real
+    Array : 1
+s__Kagerou_f_ty: real
+    Array : 1
+s__Kagerou_f_radian: real
+    Array : 1
+s__Kagerou_f_damage: real
+    Array : 1
+s__Kagerou_f_i: integer
+    Array : 1
+s__Kagerou_f_dmggrp: group
+    Array : 1
+s__Kagerou_f_EffectUnit: unit
+    Array : 1
+s__Kagerou_f_speed: real
+    Array : 1
+s__Kagerou_f_range: real
+    Array : 1
+s__Kagerou_f_HitBox_Size: real
+    Array : 1
+s__Kagerou_f_isslow: boolean
+    Array : 1
+si__Kagerou_w_F: integer
+    Def   : 0
+si__Kagerou_w_I: integer
+    Def   : 0
+si__Kagerou_w_V: integer
+    Array : 1
+s__Kagerou_w_caster: unit
+    Array : 1
+s__Kagerou_w_u: unit
+    Array : 1
+s__Kagerou_w_ox: real
+    Array : 1
+s__Kagerou_w_oy: real
+    Array : 1
+s__Kagerou_w_tx: real
+    Array : 1
+s__Kagerou_w_ty: real
+    Array : 1
+s__Kagerou_w_a: real
+    Array : 1
+s__Kagerou_w_maxi: integer
+    Array : 1
+s__Kagerou_w_damage: real
+    Array : 1
+s__Kagerou_w_i: integer
+    Array : 1
+s__Kagerou_w_n: integer
+    Array : 1
+s__Kagerou_w_iff: boolexpr
+    Array : 1
+s__Kagerou_w_g2: group
+    Array : 1
+s__Kagerou_w_AoeStep: integer
+    Array : 1
+s__Kagerou_w_AoeDmgGrp: group
+    Array : 1
+s__Kagerou_w_EffectUnit: unit
+    Array : 1
+si__grayalpaca_F: integer
+    Def   : 0
+si__grayalpaca_I: integer
+    Def   : 0
+si__grayalpaca_V: integer
+    Array : 1
+s__grayalpaca_u: unit
+    Array : 1
+s__grayalpaca_t: timer
+    Array : 1
+s__grayalpaca_stack: integer
+    Array : 1
+si__coin_F: integer
+    Def   : 0
+si__coin_I: integer
+    Def   : 0
+si__coin_V: integer
+    Array : 1
+s__coin_u: unit
+    Array : 1
+s__coin_t: timer
+    Array : 1
+s__coin_stack: integer
+    Array : 1
+st__ReimuMother_e_eSkill_loop: trigger
+st__ReimuMother_d_dSkill_Action: trigger
+st__ReimuMother_f_fSkill_Action: trigger
+st__ReimuMother_r_rSkill_Action: trigger
+st__ReimuMother_w_wSkill_Action: trigger
+st__ReimuMother_ULT01_ULT01_loop: trigger
+st__ReimuMother_ULT02_startloop: trigger
+st__ReimuMother_ULT03_Clear: trigger
+st__ReimuMother_ULT05_ULT05_Action: trigger
+st__ReimuMother_ULT06_dSkill_Action: trigger
+st__YoumuNew_d_dSkill_Action: trigger
+st__YoumuNew_w_wSkill_Action: trigger
+st__ReisenNew_projectile_startloop: trigger
+st__ReisenNew_spell_skill01loop: trigger
+st__ReisenNew_laser_laserloop: trigger
+st__Flandre2_01_countIllusion: trigger
+st__Flandre2_01_RemoveIllusionFromGroup: trigger
+st__Flandre2_02_onSlow: trigger
+st__Flandre2_04_onClear: trigger
+st__Flandre2_04_onClearTargetDebuff: trigger
+st__FutoEx_follwLoop: trigger
+st__Futo01_timerPushFunc: trigger
+st__Futo01_timerMainFunc: trigger
+st__Futo01_onDestroy: trigger
+st__Futo02_dotLoop: trigger
+st__Futo02_trg_spelloruseitem_func: trigger
+st__Futo02_resetCando: trigger
+st__Futo02_clearTrg: trigger
+st__Futo02_onDestroy: trigger
+st__Futo03_ClearProtect: trigger
+st__Futo03_flyup: trigger
+st__Futo03_move: trigger
+st__Futo03_onDestroy: trigger
+st__Futo04_ready: trigger
+st__Futo04_cast: trigger
+st__Futo04_SlowTarget: trigger
+st__Futo04_onDestroy: trigger
+st__Futo05_EffectLoop: trigger
+st__Futo05_trg_attack_func: trigger
+st__Futo05_AddFlag: trigger
+st__Futo05_onDestroy: trigger
+st__Kulumi02_projectile_Kulumi02Sleep: trigger
+st__Kagerou_d_dSkill_Action: trigger
+st__Kagerou_f_fSkill_Action: trigger
+st__Kagerou_w_wSkill_Action: trigger
+st__Kagerou_w_wSkill_AOE_Action: trigger
+st__Kagerou_w_wSkill_AOE_Main: trigger
+f__arg_unit1: unit
+f__arg_integer1: integer
+f__arg_this: integer
+f__result_boolean: boolean
+GCU_ResultingGroup: group
+GCU_CurrentX: real
+GCU_CurrentY: real
+GCU_CurrentPick: unit
+GCU_AnyGroup: group
+GCU_CurrentDistance: real
