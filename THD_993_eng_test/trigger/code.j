@@ -3694,12 +3694,12 @@ function IsUnitInvulnerable takes unit u returns boolean
     if GetUnitAbilityLevel(u, 'Avul') > 0 or GetUnitAbilityLevel(u, 'Bvul') > 0 then
         return true
     endif
-    call SetWidgetLife(u, CurrentHealth + 0.001)
+    call SetWidgetLife(u, CurrentHealth + 0.01)
     if CurrentHealth != GetWidgetLife(u) then
-        call UnitDamageTarget(u, u, 0.001, false, true, null, null, null)
-        set k = GetWidgetLife(u) == CurrentHealth + 0.001
+        call UnitDamageTarget(u, u, 0.01, false, true, null, null, null)
+        set k = GetWidgetLife(u) == CurrentHealth + 0.01
     else
-        call UnitDamageTarget(u, u, 0.001, false, true, null, null, null)
+        call UnitDamageTarget(u, u, 0.01, false, true, null, null, null)
         set k = GetWidgetLife(u) == CurrentHealth
         call SetWidgetLife(u, CurrentHealth)
     endif

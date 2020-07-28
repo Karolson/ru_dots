@@ -216,6 +216,13 @@ function HC_FlushRegisters takes nothing returns nothing
         set i = i + 1
     exitwhen i >= 32
     endloop
+    set i = 100
+    loop
+        set udg_HC_register[i*2] = 0
+        set udg_HC_register[i*2+1] = 0
+        set i = i + 1
+    exitwhen i >= 106
+    endloop
 endfunction
 
 function HC_Formula_Begin takes integer GlobalSN, integer ID, integer Product returns nothing
@@ -278,7 +285,7 @@ function HC_Formula_End takes nothing returns nothing
     local integer c
     local integer n
     if SN < 0 or SN >= 200 then
-        call HC_FlushRegisters()
+        call ExecuteFunc("HC_FlushRegisters")
         return
     endif
     set i = 0
@@ -371,7 +378,7 @@ function HC_GetItemQuantity takes item w returns integer
     return n
 endfunction
 
-function HC_LocateMaterial takes unit h, integer c returns integer
+function HC_LocateMaterial takes unit h, unit yukkuri, integer c returns integer
     local integer i
     local item w
     set i = 0
@@ -386,51 +393,76 @@ function HC_LocateMaterial takes unit h, integer c returns integer
         set i = i + 1
     exitwhen i >= bj_MAX_INVENTORY
     endloop
+    if yukkuri != null then
+        set i = 0
+        loop
+            set w = UnitItemInSlot(yukkuri, i)
+            if w != null and GetItemTypeId(w) == c then
+                if udg_HC_register[(i + 100) * 2] == 0 then
+                    set w = null
+                    return i + 100
+                endif
+            endif
+            set i = i + 1
+        exitwhen i >= bj_MAX_INVENTORY
+        endloop
+    endif
     set w = null
     return -1
 endfunction
 
-function HC_CheckMaterials takes unit h returns boolean
+function HC_CheckMaterials takes unit hero, unit yukkuri returns boolean
     local integer slot
     local integer c
     local integer n
     local integer m
-    local integer i
+    local integer i = 0
     local integer CostA = udg_HC_register[18]
     local integer CostB = udg_HC_register[19]
-    if GetPlayerState(GetOwningPlayer(h), PLAYER_STATE_RESOURCE_GOLD) < CostA then
+    local item Item
+    if GetPlayerState(GetOwningPlayer(hero), PLAYER_STATE_RESOURCE_GOLD) < CostA then
         return false
     endif
-    if GetPlayerState(GetOwningPlayer(h), PLAYER_STATE_RESOURCE_LUMBER) < CostB then
+    if GetPlayerState(GetOwningPlayer(hero), PLAYER_STATE_RESOURCE_LUMBER) < CostB then
         return false
     endif
-    set i = 0
     loop
         set c = udg_HC_register[20 + 2 * i]
         set n = udg_HC_register[20 + 2 * i + 1]
     exitwhen c == 0
-        set slot = HC_LocateMaterial(h, c)
+        set slot = HC_LocateMaterial(hero, yukkuri, c)
         if slot < 0 then
             return false
+        elseif slot >= 100 then
+            set Item = UnitItemInSlot(yukkuri, slot - 100)
+        else
+            set Item = UnitItemInSlot(hero, slot)
         endif
         set udg_HC_register[slot * 2] = c
         set udg_HC_register[slot * 2 + 1] = 0
         if n > 0 then
-            set m = HC_GetItemQuantity(UnitItemInSlot(h, slot))
+            set m = HC_GetItemQuantity(Item)
+            if slot < 100 and YDWEUnitHasItemOfTypeBJNull(yukkuri, c) then
+                set m = m + HC_GetItemQuantity(YDWEGetItemOfTypeFromUnitBJNull(yukkuri, c))
+            endif
             if m < n then
                 return false
             endif
             set udg_HC_register[slot * 2 + 1] = n
         elseif n < 0 then
-            set udg_HC_register[slot * 2 + 1] = HC_GetItemQuantity(UnitItemInSlot(h, slot))
+            set udg_HC_register[slot * 2 + 1] = HC_GetItemQuantity(Item)
+            if slot < 100 and YDWEUnitHasItemOfTypeBJNull(yukkuri, c) then
+                set udg_HC_register[slot * 2 + 1] = udg_HC_register[slot * 2 + 1] + HC_GetItemQuantity(YDWEGetItemOfTypeFromUnitBJNull(yukkuri, c))
+            endif
         endif
         set i = i + 1
     exitwhen i >= 6
     endloop
+    set Item = null
     return true
 endfunction
 
-function HC_ActivateFormula takes unit h, item w1 returns boolean
+function HC_ActivateFormula takes unit hero, unit yukkuri, item w1 returns boolean
     local integer c
     local integer n
     local integer i
@@ -440,48 +472,75 @@ function HC_ActivateFormula takes unit h, item w1 returns boolean
     local integer CostA = udg_HC_register[18]
     local integer CostB = udg_HC_register[19]
     local boolean AllowRecursive = udg_HC_register[17] != 0
+    local item yukkuriItem
     if CostA > 0 then
-        call HC_SetResourceA(h, GetPlayerState(GetOwningPlayer(h), PLAYER_STATE_RESOURCE_GOLD) - CostA)
+        call HC_SetResourceA(hero, GetPlayerState(GetOwningPlayer(hero), PLAYER_STATE_RESOURCE_GOLD) - CostA)
     endif
     if CostB > 0 then
-        call HC_SetResourceB(h, GetPlayerState(GetOwningPlayer(h), PLAYER_STATE_RESOURCE_LUMBER) - CostB)
+        call HC_SetResourceB(hero, GetPlayerState(GetOwningPlayer(hero), PLAYER_STATE_RESOURCE_LUMBER) - CostB)
     endif
     set i = 0
     loop
+		if i > 5 and i < 101 then
+			set i = 100
+		endif
         set c = udg_HC_register[i * 2]
         if c != 0 then
             set n = udg_HC_register[i * 2 + 1]
-            set w = UnitItemInSlot(h, i)
+            if i < 6 then
+                set w = UnitItemInSlot(hero, i)
+            elseif yukkuri != null then
+                set w = UnitItemInSlot(yukkuri, i - 100)
+            else
+                set w = null
+            endif
             if w != null and n > 0 then
                 set m = GetItemCharges(w)
+                if i < 6 and YDWEUnitHasItemOfTypeBJNull(yukkuri, c) then
+                    set yukkuriItem = YDWEGetItemOfTypeFromUnitBJNull(yukkuri, c)
+                    set m = m + GetItemCharges(yukkuriItem)
+                endif
                 if m <= n then
                     if w != w1 then
-                        call UnitRemoveItem(h, w)
+                        if i < 6 then
+                            call UnitRemoveItem(hero, w)
+                        else
+                            call UnitRemoveItem(yukkuri, w)
+                        endif
                     endif
                     call RemoveItem(w)
                 else
-                    call SetItemCharges(w, m - n)
+                    if yukkuri != null and GetItemCharges(w) < m then
+                        if GetItemCharges(yukkuriItem) == (m - GetItemCharges(w)) then
+                            call UnitRemoveItem(yukkuri, yukkuriItem)
+                            call RemoveItem(yukkuriItem)
+                        else
+                            call SetItemCharges(yukkuriItem, m - GetItemCharges(w))
+                        endif
+                        call UnitRemoveItem(hero, w)
+                        call RemoveItem(w)
+                    else
+                        call SetItemCharges(w, m - n)
+                    endif
                 endif
             endif
         endif
         set i = i + 1
-    exitwhen i >= 6
+    exitwhen i >= 106
     endloop
-    if AllowRecursive then
-        set udg_HC_Lock = false
-    endif
-    set w = CreateItem(d, GetUnitX(h), GetUnitY(h))
-    call UnitAddItem(h, w)
+    set w = CreateItem(d, GetUnitX(hero), GetUnitY(hero))
+    call UnitAddItem(hero, w)
     set i = GetItemTypeId(w)
-    if i == 'I08H' or i == 'I08J' or i == 'I08E' or i == 'I030' or i == 'I08M' then
-        call BroadcastMessageFriend(udg_PN[GetPlayerId(GetOwningPlayer(h))] + " got " + GetItemName(w) + " (aura)", GetOwningPlayer(h))
-    else
-        call BroadcastMessageFriend(udg_PN[GetPlayerId(GetOwningPlayer(h))] + " got " + GetItemName(w), GetOwningPlayer(h))
-    endif
-    if not AllowRecursive then
-        set udg_HC_Lock = false
+    if GetItemName(w) != "" and w != null then
+        call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", hero, "origin"))
+        if i == 'I08H' or i == 'I08J' or i == 'I08E' or i == 'I030' or i == 'I08M' then
+            call BroadcastMessageFriend(udg_PN[GetPlayerId(GetOwningPlayer(hero))] + " got " + GetItemName(w) + " (aura)", GetOwningPlayer(hero))
+        else
+            call BroadcastMessageFriend(udg_PN[GetPlayerId(GetOwningPlayer(hero))] + " got " + GetItemName(w), GetOwningPlayer(hero))
+        endif
     endif
     set w = null
+    set yukkuriItem = null
     return true
 endfunction
 
@@ -502,7 +561,7 @@ function HCxGUIxFormulaSetMaterialB takes integer t4, integer n4, integer t5, in
 endfunction
 
 function HCxGUIxFormulaEnd takes nothing returns nothing
-    call HC_Formula_End()
+    call ExecuteFunc("HC_Formula_End")
 endfunction
 
 function InitTrig_HC_System takes nothing returns nothing

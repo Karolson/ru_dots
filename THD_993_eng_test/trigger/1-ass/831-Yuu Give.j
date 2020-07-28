@@ -401,24 +401,16 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(toUnit))
     local integer offset = 6000 + playerId * 100
     local integer hashkey = StringHash("GiveItem Player" + I2S(playerId))
-    local integer i
-    local integer j
+    local integer i = 0
+    local integer j = 0
     local integer retSN
     local item Item
-    set udg_YuuGiveItem[offset] = hashkey
-    call SaveUnitHandle(udg_ht, hashkey, 0, toUnit)
-    call YuuGive_ScanUnitsItem(offset, toUnit, fromUnit)
-    set udg_HC_Lock = true
-    set retSN = YuuGive_EnumFormula(offset)
-    if retSN > 0 then
-        call YuuGive_ActivateFormula(offset, retSN)
-    endif
-    set udg_HC_Lock = false
-    call YuuGive_ClearBufferData(offset)
-    set i = 0
-    set j = 0
+    local item array Items
+    local boolean b = false
+    local boolean b2 = false
     loop
         if UnitItemInSlot(toUnit, i) == null then
+            set j = 0
             loop
                 set Item = UnitItemInSlot(fromUnit, j)
                 set j = j + 1
@@ -433,8 +425,29 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
         set i = i + 1
     exitwhen i >= 6
     endloop
+    loop
+        set i = 0
+        loop
+            set Item = UnitItemInSlot(toUnit, i)
+            if b then
+                call Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
+            else
+                set b = Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
+            endif
+            set Item = UnitItemInSlot(fromUnit, i)
+            if b2 then
+                call Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
+            else
+                set b2 = Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
+            endif
+            set i = i + 1
+        exitwhen i >= 6
+        endloop
+        exitwhen not (b or b2)
+    endloop
     set toUnit = null
     set fromUnit = null
+    set Item = null
 endfunction
 
 function Trig_Yuu_Give_Conditions takes nothing returns boolean

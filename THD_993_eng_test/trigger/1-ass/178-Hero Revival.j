@@ -139,6 +139,13 @@ function Trig_Hero_Revival_Conditions takes nothing returns boolean
             call SaveBoolean(udg_Hashtable_UnitStatus, GetHandleId(hero), StringHash("IsNormalRevival"), false)
         else
             call DebugMsg("Buyback")
+            if GetHeroLevel(hero) >= 5 and GetHeroLevel(hero) <= 11 then
+                call THD_AddSpirit(GetOwningPlayer(hero), -5)
+            elseif GetHeroLevel(hero) >= 12 and GetHeroLevel(hero) <= 17 then
+                call THD_AddSpirit(GetOwningPlayer(hero), -10)
+            elseif GetHeroLevel(hero) > 17 then
+                call THD_AddSpirit(GetOwningPlayer(hero), -15)
+            endif
             call SetPlayerBuyBackCooldown_WW(hero)
         endif
         call System_Hero_SetHeroOnRevivalLocation_WW(hero, false, false)

@@ -162,24 +162,20 @@ function Trig_Item_System_Conditions takes nothing returns boolean
     elseif GetItemType(GetManipulatedItem()) == ITEM_TYPE_PURCHASABLE then
         call Trig_Item_Auto_Stack()
     endif
-    if udg_HC_Lock then
-        return false
-    endif
     return true
 endfunction
 
-function Trig_Item_System_Actions takes nothing returns nothing
-    local timer t = CreateTimer()
-    local integer task = GetHandleId(t)
-    local unit h = GetTriggerUnit()
-    local item w = GetManipulatedItem()
+function Trig_Item_System_Try_Craft takes unit hero, unit yukkuri, item w returns boolean
     local integer c = GetItemTypeId(w)
-    local integer i
+    local integer i = 0
     local integer n = udg_HC_Database_01[2000]
     local boolean k = false
+    if w == null then
+        return false
+    endif
+    call ExecuteFunc("HC_FlushRegisters")
     set udg_HC_Lock = true
-    call Teleport_FixDoubleClick(w, h, GetTriggeringTrigger())
-    set i = 0
+    call Teleport_FixDoubleClick(w, hero, GetTriggeringTrigger())
     loop
     exitwhen i >= n
         if not HC_IsValidSN(i) then
@@ -188,22 +184,21 @@ function Trig_Item_System_Actions takes nothing returns nothing
             set k = false
         elseif HC_PopFormula(i) == false then
             set k = false
-        elseif HC_CheckMaterials(h) == false then
+        elseif HC_CheckMaterials(hero, yukkuri) == false then
             set k = false
-        elseif HC_ActivateFormula(h, w) then
+        elseif HC_ActivateFormula(hero, yukkuri, w) then
             set k = true
         endif
     exitwhen k
         set i = i + 1
     endloop
-    if not k then
-        set udg_HC_Lock = false
-    else
-        call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", h, "origin"))
-        call DebugMsg("Item successfully synthesized!")
-    endif
-    set h = null
+    set udg_HC_Lock = false
     set w = null
+    return k
+endfunction
+
+function Trig_Item_System_Actions takes nothing returns nothing
+    call Trig_Item_System_Try_Craft(GetTriggerUnit(), null, GetManipulatedItem())
 endfunction
 
 function InitTrig_Item_System takes nothing returns nothing
