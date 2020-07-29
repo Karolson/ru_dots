@@ -10,6 +10,11 @@ function Trig_LiMa05_Blow_Actions takes nothing returns nothing
         set w = null
         return
     endif
+    call UnitRemoveAbility(caster, 'B01R')
+    call UnitRemoveAbility(caster, 'B04S')
+    call UnitRemoveAbility(caster, 'B07N')
+    call UnitRemoveAbility(caster, 'B09K')
+    call UnitRemoveAbility(caster, 'B09A')
     call UnitAddAbility(w, 'A17H')
     call IssueTargetOrder(w, "cyclone", caster)
     call UnitRemoveAbility(w, 'A17H')

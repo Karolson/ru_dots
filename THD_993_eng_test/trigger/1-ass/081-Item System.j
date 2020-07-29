@@ -181,7 +181,7 @@ function Trig_Item_System_Try_Craft takes unit hero, unit yukkuri, item w return
     endif
     call ExecuteFunc("HC_FlushRegisters")
     set udg_HC_Lock = true
-    //call Teleport_FixDoubleClick(w, hero, GetTriggeringTrigger())
+    call Teleport_FixDoubleClick(w, hero, GetTriggeringTrigger())
     loop
     exitwhen i >= n
         if not HC_IsValidSN(i) then

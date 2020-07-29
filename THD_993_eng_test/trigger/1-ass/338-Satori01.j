@@ -112,7 +112,7 @@ function Trig_Satori01_Main takes nothing returns nothing
                     call IssueTargetOrder(u, "move", target)
                 else
                     call SetUnitAbilityLevel(u, 'A08R', level)
-                    if GetUnitAbilityLevel(target, 'B097') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 then
+                    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 then
                         call IssueTargetOrder(u, "thunderbolt", target)
                     endif
                     call UnitApplyTimedLife(u, 'BTLF', 8.0)

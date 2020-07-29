@@ -12,6 +12,7 @@ function Trig_shizuha01_Actions takes nothing returns nothing
     local real Range = 158.0 + 25.0 * level
     local group g = CreateGroup()
     local boolexpr iff = udg_FLIFF[GetPlayerId(GetOwningPlayer(caster))]
+    local timer t
     call AbilityCoolDownResetion(caster, 'A0J8', 11)
     call TriggerSleepAction(0.4)
     set u = NewDummy(GetOwningPlayer(caster), x, y, 0)
@@ -25,7 +26,14 @@ function Trig_shizuha01_Actions takes nothing returns nothing
         call GroupRemoveUnit(g, v)
         if GetUnitAbilityLevel(v, 'A0AN') == 0 then
             if GetUnitCurrentOrder(v) != OrderId("metamorphosis") then
-                call UnitDebuffTarget(caster, v, 0.5 * I2R(level), 1, true, 'A0JD', level, 'B04S', "entanglingroots", 0, "")
+                call UnitDebuffTarget(caster, v, 0.5 * I2R(level), 1, true, 'A018', level, 'B04S', "ensnare", 0, "")
+                if GetUnitAbilityLevel(v, 'A17X') == 0 and GetUnitAbilityLevel(v, 'A0PF') == 0 and not IsUnitIllusion(v) and IsUnitType(v, UNIT_TYPE_HERO) and udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] != null then
+                    set t = CreateTimer()
+                    call RemoveUnit(udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))])
+                    set udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] = null
+                    call SaveUnitHandle(udg_ht, GetHandleId(t), 0, v)
+                    call TimerStart(t, DebuffDuration(v, 0.5 * I2R(level)), false, function ClearRestrictedMovement)
+                endif
                 call CCSystem_textshow("Root", v, DebuffDuration(v, 0.5 * I2R(level)))
                 call UnitMagicDamageTarget(caster, v, 30 * level - 10 + 3.6 * GetHeroInt(caster, true), 5)
             endif
@@ -40,6 +48,7 @@ function Trig_shizuha01_Actions takes nothing returns nothing
     set u = null
     set g = null
     set iff = null
+    set t = null
 endfunction
 
 function InitTrig_shizuha01 takes nothing returns nothing

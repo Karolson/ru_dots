@@ -92,7 +92,7 @@ function Trig_Defence_God_Actions takes nothing returns nothing
     set i = 0
     loop
         set h = udg_PlayerHeroes[i]
-        if h != null and IsUnitEnemy(h, PLY) and GetUnitAbilityLevel(h, 'B097') == 0 and GetUnitAbilityLevel(h, 'A0AN') == 0 and GetUnitCurrentOrder(h) != OrderId("metamorphosis") and IsUnitInvulnerable(h) == false then
+        if h != null and IsUnitEnemy(h, PLY) and GetUnitAbilityLevel(h, 'A17X') == 0 and GetUnitAbilityLevel(h, 'A0AN') == 0 and GetUnitCurrentOrder(h) != OrderId("metamorphosis") and IsUnitInvulnerable(h) == false then
             call UnitStunTarget(u, h, 1.0, 0, 0)
             set e = AddSpecialEffect("Abilities\\Weapons\\ChimaeraLightningMissile\\ChimaeraLightningMissile.mdl", GetUnitX(h), GetUnitY(h))
             call DestroyEffect(e)

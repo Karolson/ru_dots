@@ -419,6 +419,9 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
     local unit prev_udg_ADebuffTarget = udg_ADebuffTarget
     local item prev_udg_yd_NullTempItem = udg_yd_NullTempItem
     local boolean prev_udg_MMD__initialized = udg_MMD__initialized
+    if IsUnitDead(toUnit) then
+        return
+    endif
     set udg_MMD__initialized = false
     loop
         set i = 0

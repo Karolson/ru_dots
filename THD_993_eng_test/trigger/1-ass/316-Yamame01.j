@@ -31,7 +31,7 @@ function YAMAME01_WEB_ABILITY takes nothing returns integer
 endfunction
 
 function YAMAME01_WEB_ORDER_STRING takes nothing returns string
-    return "entanglingroots"
+    return "ensnare"
 endfunction
 
 function Yamame01_Filter takes nothing returns boolean
@@ -59,10 +59,13 @@ function Yamame01_Web_Area takes nothing returns nothing
     exitwhen v == null
         call GroupRemoveUnit(g, v)
         if not IsUnitInGroup(v, tmpgrp) then
-            if udg_NewDebuffSys then
-                call UnitDebuffTarget(caster, v, 0.8 + 0.4 * level, 0, true, 'A06W', 1, 'B01R', "entanglingroots", 0, "")
-            else
-                call UnitCurseTarget(caster, v, 0.8 + 0.4 * level, 'A08G', "entanglingroots")
+            call UnitDebuffTarget(caster, v, 0.8 + 0.4 * level, 0, true, 'A017', 1, 'B01R', "ensnare", 0, "")
+            if GetUnitAbilityLevel(v, 'A17X') == 0 and GetUnitAbilityLevel(v, 'A0PF') == 0 and not IsUnitIllusion(v) and IsUnitType(v, UNIT_TYPE_HERO) and udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] != null then
+                set t = CreateTimer()
+                call RemoveUnit(udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))])
+                set udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] = null
+                call SaveUnitHandle(udg_ht, GetHandleId(t), 0, v)
+                call TimerStart(t, DebuffDuration(v, 0.8 + 0.4 * level), false, function ClearRestrictedMovement)
             endif
             call CE_Input(caster, v, 150)
             call GroupAddUnit(tmpgrp, v)

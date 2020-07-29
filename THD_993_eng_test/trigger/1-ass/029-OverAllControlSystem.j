@@ -60,8 +60,16 @@ function ClearAllNegativeBuff takes unit u, boolean ult returns nothing
     if GetUnitAbilityLevel(u, 'B00D') >= 1 then
         call UnitRemoveAbility(u, 'B00D')
     endif
+    if GetUnitAbilityLevel(u, 'A0B0') >= 1 then
+        call UnitRemoveAbility(u, 'A0B0')
+    endif
     call UnitRemoveAbility(u, 'A0A1')
     call UnitRemoveAbility(u, 'A0V4')
+    call UnitRemoveAbility(u, 'B01R')
+    call UnitRemoveAbility(u, 'B04S')
+    call UnitRemoveAbility(u, 'B07N')
+    call UnitRemoveAbility(u, 'B09K')
+    call UnitRemoveAbility(u, 'B09A')
     if udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(u))] == null then
         call BroadcastMessage("Blink prohibition has been successfully lifted")
         set udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(u))] = CreateUnit(GetOwningPlayer(u), 'e036', -5344.0, -3968.0, 0)
@@ -121,7 +129,7 @@ endfunction
 function RestrictTarget takes unit source, unit target, real duration returns nothing
     local real time = duration + 0.01
     local timer t
-    if GetUnitAbilityLevel(target, 'B097') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
         return
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -144,7 +152,7 @@ function UnitCurseTarget takes unit caster, unit target, real time, integer abid
     local real outcometime = DebuffDuration(target, time)
     local integer outcomelevel
     local unit w
-    if GetUnitAbilityLevel(target, 'B097') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
         return
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -248,7 +256,7 @@ function UnitSlowTargetEx takes unit caster, unit target, real time, integer abi
     local integer j
     local integer k
     local boolean ret
-    if GetUnitAbilityLevel(target, 'B097') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
         return true
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -318,7 +326,7 @@ function UnitSlowTarget takes unit caster, unit target, real time, integer abili
     local integer i
     local integer j
     local integer k
-    if GetUnitAbilityLevel(target, 'B097') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
         return
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -550,7 +558,7 @@ endfunction
 function UnitRidiculeTarget takes unit caster, unit target, real time returns nothing
     local trigger trg
     local integer task
-    if GetUnitAbilityLevel(target, 'B097') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
         return
     endif
     call SelectUnit(target, false)
@@ -576,7 +584,7 @@ function UnitRidiculeTarget takes unit caster, unit target, real time returns no
 endfunction
 
 function UnitInjureTarget takes unit caster, unit target, real time returns nothing
-    if GetUnitAbilityLevel(target, 'B097') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 then
         return
     endif
     call UnitSlowTarget(caster, target, time, 'A0CW', 'B07H')

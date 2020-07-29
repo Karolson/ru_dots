@@ -12,6 +12,7 @@ function Trig_StrAgi04_Star_Main takes nothing returns nothing
     call UnitRemoveAbility(caster, 'A0A1')
     call UnitRemoveAbility(caster, 'A0V4')
     call SetUnitVertexColor(caster, 255, 255, R2I(150 - Sin(cnt * 3.6 * 0.017454) * 150), 255)
+    call DebugMsg(I2S(GetUnitAbilityLevel(caster, 'A17X')))
     if cnt >= 500 then
         call SetUnitVertexColor(caster, 255, 255, 255, 255)
         call SetUnitPathing(caster, true)

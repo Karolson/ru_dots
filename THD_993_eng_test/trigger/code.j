@@ -385,7 +385,7 @@ endfunction
 
 function CCSystem_textshow takes string s, unit target, real outcometime returns nothing
     local texttag e
-    if IsUnitVisible(target, GetLocalPlayer()) and GetWidgetLife(target) > 0.405 and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false and GetUnitAbilityLevel(target, 'Avul') == 0 and GetUnitAbilityLevel(target, 'B097') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if IsUnitVisible(target, GetLocalPlayer()) and GetWidgetLife(target) > 0.405 and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false and GetUnitAbilityLevel(target, 'Avul') == 0 and GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
         set e = CreateTextTag()
         call SetTextTagTextBJ(e, s + "! (" + R2SW(outcometime, 1, 1) + "s)", 10)
         call SetTextTagPos(e, GetUnitX(target), GetUnitY(target), 50.0)
