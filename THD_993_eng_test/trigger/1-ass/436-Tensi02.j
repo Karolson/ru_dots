@@ -11,17 +11,11 @@ function Trig_Tensi02_Active_Actions takes nothing returns nothing
     local unit target = GetTriggerUnit()
     local real px = GetUnitX(target)
     local real py = GetUnitY(target)
-    local unit u
     local integer level = GetUnitAbilityLevel(caster, 'A071')
     call DisableTrigger(gg_trg_Tensi02)
     call SetUnitAnimation(caster, "attack slam")
     call TriggerSleepAction(0.1)
-    set u = NewDummy(GetOwningPlayer(caster), GetUnitX(target), GetUnitY(target), 0.0)
-    call UnitAddAbility(u, 'A072')
-    call SetUnitAbilityLevel(u, 'A072', GetUnitAbilityLevel(caster, 'A071'))
-    call IssueImmediateOrder(u, "stomp")
-    call UnitRemoveAbility(u, 'A072')
-    call ReleaseDummy(u)
+    call UnitStunArea(caster, 0.2 + 0.1 * level, px, py, 260 + 40 * level, 0, 0)
     call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", px, py))
     if GetUnitAbilityLevel(caster, 'B003') != 0 then
         call UnitStunArea(caster, 0.6 + 0.45 + 0.15 * level, px, py, 260 + 40 * level, 0, 0)
@@ -36,7 +30,6 @@ function Trig_Tensi02_Active_Actions takes nothing returns nothing
     call SaveInteger(udg_sht, GetHandleId(caster), 0, 0)
     set caster = null
     set target = null
-    set u = null
 endfunction
 
 function Trig_Tensi02_Orbitting_Main takes nothing returns nothing
