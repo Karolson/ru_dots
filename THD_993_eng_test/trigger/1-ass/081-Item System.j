@@ -118,10 +118,16 @@ function Trig_Item_Auto_Stack takes nothing returns nothing
     local item temp = null
     local integer w = GetItemTypeId(pick)
     local integer get = GetItemCharges(pick)
-    local integer has = 99
-    local integer max = 12
-    local integer i
-    set i = 0
+    local integer has
+    local integer max
+    local integer i = 0
+    if w == 'dust' then
+        set max = 2
+        set has = 2
+    else
+        set max = 12
+        set has = 12
+    endif
     loop
     exitwhen i >= bj_MAX_INVENTORY
         set temp = UnitItemInSlot(u, i)
@@ -175,7 +181,7 @@ function Trig_Item_System_Try_Craft takes unit hero, unit yukkuri, item w return
     endif
     call ExecuteFunc("HC_FlushRegisters")
     set udg_HC_Lock = true
-    call Teleport_FixDoubleClick(w, hero, GetTriggeringTrigger())
+    //call Teleport_FixDoubleClick(w, hero, GetTriggeringTrigger())
     loop
     exitwhen i >= n
         if not HC_IsValidSN(i) then

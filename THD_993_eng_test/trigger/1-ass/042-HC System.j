@@ -531,7 +531,7 @@ function HC_ActivateFormula takes unit hero, unit yukkuri, item w1 returns boole
     set w = CreateItem(d, GetUnitX(hero), GetUnitY(hero))
     call UnitAddItem(hero, w)
     set i = GetItemTypeId(w)
-    if GetItemName(w) != "" and w != null then
+    if GetItemName(w) != "" and w != null and i != 0 then
         call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", hero, "origin"))
         if i == 'I08H' or i == 'I08J' or i == 'I08E' or i == 'I030' or i == 'I08M' then
             call BroadcastMessageFriend(udg_PN[GetPlayerId(GetOwningPlayer(hero))] + " got " + GetItemName(w) + " (aura)", GetOwningPlayer(hero))

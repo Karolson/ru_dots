@@ -397,19 +397,67 @@ function YuuGive_ClearBufferData takes integer offset returns nothing
     set udg_YuuGiveItem[offset + 1] = 0
 endfunction
 
+function threadedTryCraft takes nothing returns nothing
+    if udg_MMD__initialized then
+        call Trig_Item_System_Try_Craft(udg_ADebuffSource, udg_ADebuffTarget, udg_yd_NullTempItem)
+    else
+        set udg_MMD__initialized = Trig_Item_System_Try_Craft(udg_ADebuffSource, udg_ADebuffTarget, udg_yd_NullTempItem)
+    endif
+endfunction
+
 function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(toUnit))
     local integer offset = 6000 + playerId * 100
     local integer hashkey = StringHash("GiveItem Player" + I2S(playerId))
-    local integer i = 0
-    local integer j = 0
+    local integer i
+    local integer j
     local integer retSN
     local item Item
-    local item array Items
-    local boolean b = false
-    local boolean b2 = false
+    local integer chargesDelta
+    local integer max
+    local unit prev_udg_ADebuffSource = udg_ADebuffSource //should've made new variables
+    local unit prev_udg_ADebuffTarget = udg_ADebuffTarget
+    local item prev_udg_yd_NullTempItem = udg_yd_NullTempItem
+    local boolean prev_udg_MMD__initialized = udg_MMD__initialized
+    set udg_MMD__initialized = false
     loop
-        if UnitItemInSlot(toUnit, i) == null then
+        set i = 0
+        loop
+            set Item = UnitItemInSlot(toUnit, i)
+            set udg_ADebuffSource = toUnit
+            set udg_ADebuffTarget = fromUnit
+            set udg_yd_NullTempItem = Item
+            call ExecuteFunc("threadedTryCraft") //op limit is a bitch
+            set i = i + 1
+        exitwhen i >= 6
+        endloop
+    exitwhen not udg_MMD__initialized
+        set udg_MMD__initialized = false
+    endloop
+    set udg_ADebuffSource = prev_udg_ADebuffSource
+    set udg_ADebuffTarget = prev_udg_ADebuffTarget
+    set udg_yd_NullTempItem = prev_udg_yd_NullTempItem
+    set udg_MMD__initialized = prev_udg_MMD__initialized
+    set i = 0
+    loop
+        if GetItemCharges(UnitItemInSlot(toUnit, i)) > 0 then
+            if GetItemTypeId(UnitItemInSlot(toUnit, i)) == 'dust' then
+                set max = 2
+            else
+                set max = 12
+            endif
+            set Item = YDWEGetItemOfTypeFromUnitBJNull(fromUnit, GetItemTypeId(UnitItemInSlot(toUnit, i)))
+            if Item != null then
+                set chargesDelta = IMinBJ(GetItemCharges(Item), max - GetItemCharges(UnitItemInSlot(toUnit, i)))
+                call AddItemCharges(UnitItemInSlot(toUnit, i), chargesDelta)
+                if (GetItemCharges(Item) - chargesDelta) == 0 then
+                    call UnitRemoveItem(fromUnit, Item)
+                    call RemoveItem(Item)
+                else
+                    call AddItemCharges(Item, -chargesDelta)
+                endif
+            endif
+        elseif UnitItemInSlot(toUnit, i) == null then
             set j = 0
             loop
                 set Item = UnitItemInSlot(fromUnit, j)
@@ -424,26 +472,6 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
         endif
         set i = i + 1
     exitwhen i >= 6
-    endloop
-    loop
-        set i = 0
-        loop
-            set Item = UnitItemInSlot(toUnit, i)
-            if b then
-                call Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
-            else
-                set b = Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
-            endif
-            set Item = UnitItemInSlot(fromUnit, i)
-            if b2 then
-                call Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
-            else
-                set b2 = Trig_Item_System_Try_Craft(toUnit, fromUnit, Item)
-            endif
-            set i = i + 1
-        exitwhen i >= 6
-        endloop
-        exitwhen not (b or b2)
     endloop
     set toUnit = null
     set fromUnit = null

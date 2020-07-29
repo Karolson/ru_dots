@@ -16,16 +16,28 @@ endfunction
 
 function UnitAddItemTry takes unit u, integer id returns boolean
     local integer i = 0
+    local integer max
     local item it
+    if id == 'dust' then
+        set max = 2
+    else
+        set max = 12
+    endif
+    loop
+        set it = UnitItemInSlot(u, i)
+        if GetItemTypeId(it) == id and GetItemCharges(it) < max then
+            call AddItemCharges(it, 1)
+            set it = null
+            return true
+        endif
+    exitwhen i >= 5
+        set i = i + 1
+    endloop
+    set i = 0
     loop
         set it = UnitItemInSlot(u, i)
         if it == null then
             call UnitAddItemById(u, id)
-            set it = null
-            return true
-        endif
-        if GetItemTypeId(it) == id then
-            call AddItemCharges(it, 1)
             set it = null
             return true
         endif
