@@ -2,7 +2,7 @@ function UnitStunTarget takes unit caster, unit target, real time, integer a, in
     local real outcometime = time
     local integer outcomelevel
     local unit w
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return
     endif
     if udg_NewDebuffSys then

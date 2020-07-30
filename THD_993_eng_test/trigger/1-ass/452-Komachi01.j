@@ -29,23 +29,23 @@ function KomachiXO01_CallBack takes nothing returns nothing
     elseif i == 0 then
         set ox = GetUnitX(caster)
         set oy = GetUnitY(caster)
-       set tx = GetUnitX(target)
-      set ty = GetUnitY(target)
-      if GetWidgetLife(target) >= 0.405 and GetWidgetLife(caster) >= 0.405 then
+        set tx = GetUnitX(target)
+        set ty = GetUnitY(target)
+        if GetWidgetLife(target) >= 0.405 and GetWidgetLife(caster) >= 0.405 then
             call SetUnitX(caster, tx)
             call SetUnitY(caster, ty)
-           call SetUnitX(target, ox)
-           call SetUnitY(target, oy)
+            call SetUnitX(target, ox)
+            call SetUnitY(target, oy)
         endif
         call UnitRemoveAbility(caster, 'A1E3')
         call UnitRemoveAbility(target, 'A1E3')
         call IssueImmediateOrder(caster, "stop")
-       call FlushChildHashtable(udg_ht, task)
-       call PauseTimer(t)
-       call ReleaseTimer(t)
+        call FlushChildHashtable(udg_ht, task)
+        call PauseTimer(t)
+        call ReleaseTimer(t)
         set t = null
-       set caster = null
-       set target = null
+        set caster = null
+        set target = null
         return
    endif
     call SaveInteger(udg_ht, task, 1, i - 1)

@@ -129,7 +129,7 @@ endfunction
 function RestrictTarget takes unit source, unit target, real duration returns nothing
     local real time = duration + 0.01
     local timer t
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -152,7 +152,7 @@ function UnitCurseTarget takes unit caster, unit target, real time, integer abid
     local real outcometime = DebuffDuration(target, time)
     local integer outcomelevel
     local unit w
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -256,7 +256,7 @@ function UnitSlowTargetEx takes unit caster, unit target, real time, integer abi
     local integer j
     local integer k
     local boolean ret
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return true
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -326,7 +326,7 @@ function UnitSlowTarget takes unit caster, unit target, real time, integer abili
     local integer i
     local integer j
     local integer k
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return
     endif
     if GetUnitAbilityLevel(target, 'A0AC') > 0 and GetRandomInt(1, 100) <= 2 + 3 * GetUnitAbilityLevel(target, 'A0AC') then
@@ -558,7 +558,7 @@ endfunction
 function UnitRidiculeTarget takes unit caster, unit target, real time returns nothing
     local trigger trg
     local integer task
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return
     endif
     call SelectUnit(target, false)
@@ -584,7 +584,7 @@ function UnitRidiculeTarget takes unit caster, unit target, real time returns no
 endfunction
 
 function UnitInjureTarget takes unit caster, unit target, real time returns nothing
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 or GetUnitCurrentOrder(target) == OrderId("metamorphosis") then
         return
     endif
     call UnitSlowTarget(caster, target, time, 'A0CW', 'B07H')

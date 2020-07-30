@@ -107,9 +107,11 @@ function Trig_Start02_Actions takes nothing returns nothing
         return
     endif
     call RestrictTarget(caster, target, duration)
-    call UnitAddAbility(u, 'A20W')
-    call IssueTargetOrder(u, "ensnare", target)
-    call UnitRemoveAbility(u, 'A20W')
+    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+        call UnitAddAbility(u, 'A20W')
+        call IssueTargetOrder(u, "ensnare", target)
+        call UnitRemoveAbility(u, 'A20W')
+    endif
     call ReleaseDummy(u)
     set u = null
     call SaveUnitHandle(udg_ht, GetHandleId(t2), 0, target)

@@ -1,2 +1,0 @@
-function InitTrig_MagicBanSystem takes nothing returns nothing
-endfunction

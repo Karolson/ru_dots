@@ -76,7 +76,7 @@ function Trig_Komachi04_Main takes nothing returns nothing
     endif
     set i = i + 1
     call SaveInteger(udg_ht, task, 3, i)
-    if i >= 1150 or (i >= 275 and (GetUnitAbilityLevel(target, 'A17X') > 0 and GetUnitAbilityLevel(target, 'A0PF') > 0 and GetUnitAbilityLevel(target, 'A0AN') > 0)) then
+    if i >= 1150 then
         call DestroyEffect(e)
         call ReleaseTimer(t)
         call FlushChildHashtable(udg_ht, task)
@@ -100,12 +100,7 @@ function Trig_Komachi04_Actions takes nothing returns nothing
         call AbilityCoolDownResetion(caster, GetSpellAbilityId(), (150 - 25 * level) * 0.75)
     endif
     call VE_Spellcast(caster)
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 then
-        call SaveBoolean(udg_ht, task, 8, true)
-        call PauseUnit(target, true)
-    else
-        call SaveBoolean(udg_ht, task, 8, false)
-    endif
+    call PauseUnit(target, true)
     call PauseUnit(target, true)
     call PauseUnit(caster, true)
     call SetUnitInvulnerable(caster, true)

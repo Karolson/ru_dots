@@ -95,7 +95,7 @@ function Trig_Captain01_Main takes nothing returns nothing
         call SetUnitXY(v, px + 50 * Cos(a * 0.017454), py + 50 * Sin(a * 0.017454))
         if k then
             call SetUnitXY(target, px, py)
-            if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+            if IsUnitEnemy(target, GetOwningPlayer(caster)) and GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
                 call IssueImmediateOrder(target, "stop")
             endif
         else

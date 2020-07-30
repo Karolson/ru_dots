@@ -19,7 +19,6 @@ function Trig_Youmu04_Main takes nothing returns nothing
     local real px
     local real py
     local unit u
-    call SetUnitPosition(target, GetUnitX(target), GetUnitY(target))
     if i > 1 then
         if i == 10 then
             set px = ox
