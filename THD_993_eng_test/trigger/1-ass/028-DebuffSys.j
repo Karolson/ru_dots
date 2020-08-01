@@ -96,7 +96,7 @@ function UnitDebuffTargetImmidiate takes unit caster, unit target, real time, in
     local real fxtimeleft
     local integer tgttask = GetHandleId(target)
     local boolean addedeffect = false
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if not IsUnitCCImmune(target) then
         if HaveSavedReal(udg_StatusSys, debuffid, tgttask) then
             set timeleft = LoadReal(udg_StatusSys, debuffid, tgttask)
         else
@@ -253,7 +253,7 @@ function UnitDebuffTarget takes unit caster, unit target, real time, integer deb
     local real fxtimeleft
     local integer tgttask = GetHandleId(target)
     local boolean addedeffect = false
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if not IsUnitCCImmune(target) then
         if HaveSavedReal(udg_StatusSys, debuffid, tgttask) then
             set timeleft = LoadReal(udg_StatusSys, debuffid, tgttask)
         else

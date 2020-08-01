@@ -54,17 +54,15 @@ function Trig_SanaeEx_Actions takes nothing returns nothing
         return
     endif
     set r = GetRandomInt(0, 100)
-    if r < 1 + GetUnitAbilityLevel(caster, 'A0G6') then
+    if GetUnitAbilityLevel(caster, 'A0G6') > 0 and (r < 1 + GetUnitAbilityLevel(caster, 'A0G6')) and not IsUnitDead(caster) then
         set g = CreateGroup()
         call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 900.0, iff)
         loop
             set v = FirstOfGroup(g)
         exitwhen v == null
             call GroupRemoveUnit(g, v)
-            if GetWidgetLife(v) > 0.405 and IsUnitType(v, UNIT_TYPE_STRUCTURE) == false then
-                if IsUnitType(v, UNIT_TYPE_HERO) then
-                    call Trig_Sanae03_Shoot(caster, v, 1)
-                endif
+            if GetWidgetLife(v) > 0.405 and IsUnitType(v, UNIT_TYPE_STRUCTURE) == false and IsUnitType(v, UNIT_TYPE_HERO) then
+                call Trig_Sanae03_Shoot(caster, v, 1)
             endif
         endloop
         call DestroyGroup(g)

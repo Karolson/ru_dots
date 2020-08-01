@@ -107,7 +107,7 @@ function Trig_Start02_Actions takes nothing returns nothing
         return
     endif
     call RestrictTarget(caster, target, duration)
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if not IsUnitCCImmune(target) then
         call UnitAddAbility(u, 'A20W')
         call IssueTargetOrder(u, "ensnare", target)
         call UnitRemoveAbility(u, 'A20W')

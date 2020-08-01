@@ -8,7 +8,7 @@ function Trig_Nazrin04NewDeath_Actions takes nothing returns nothing
     loop
     exitwhen i >= 16
         set v = udg_PlayerHeroes[i]
-        if IsUnitAlly(udg_SK_Nazrin04New_Target, GetOwningPlayer(v)) == false and udg_SK_Nazrin04New_Attacked[GetConvertedPlayerId(GetOwningPlayer(v))] == 1 then
+        if IsUnitAlly(udg_SK_Nazrin04New_Target, GetOwningPlayer(v)) == false and udg_SK_Nazrin04New_Attacked[GetPlayerId(GetOwningPlayer(v))] == 1 then
             call SetPlayerStateBJ(GetOwningPlayer(v), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(GetOwningPlayer(v), PLAYER_STATE_RESOURCE_GOLD) + 50)
             call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Items\\ResourceItems\\ResourceEffectTarget.mdl", GetUnitX(v), GetUnitY(v)))
             call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Items\\ResourceItems\\ResourceEffectTarget.mdl", GetUnitX(v) + 100, GetUnitY(v) + 100))

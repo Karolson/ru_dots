@@ -17,7 +17,7 @@ function Trig_Cirno04_Taunt_Main takes nothing returns nothing
     local real ranX = GetRandomReal(-500, 500)
     local real ranY = GetRandomReal(-500, 500)
     local unit target = LoadUnitHandle(udg_sht, task, 2)
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if not IsUnitCCImmune(target) then
         call SelectUnit(target, false)
         call IssueTargetOrder(target, "attack", udg_SK_Cirno_Cirno)
     endif
@@ -44,7 +44,7 @@ function Trig_Cirno04_Taunt takes nothing returns nothing
     local timer t
     local integer task
     if IsUnitInGroup(target, taunted) == false then
-        if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis")   then
+        if not IsUnitCCImmune(target) then
             call SelectUnit(target, false)
             call IssueTargetOrder(target, "attack", udg_SK_Cirno_Cirno)
         endif

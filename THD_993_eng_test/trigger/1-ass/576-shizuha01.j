@@ -27,7 +27,7 @@ function Trig_shizuha01_Actions takes nothing returns nothing
         if GetUnitAbilityLevel(v, 'A0AN') == 0 then
             if GetUnitCurrentOrder(v) != OrderId("metamorphosis") then
                 call UnitDebuffTarget(caster, v, 0.5 * I2R(level), 1, true, 'A018', level, 'B04S', "ensnare", 0, "")
-                if GetUnitAbilityLevel(v, 'A17X') == 0 and GetUnitAbilityLevel(v, 'A0PF') == 0 and GetUnitAbilityLevel(v, 'A0AN') == 0 and not IsUnitIllusion(v) and IsUnitType(v, UNIT_TYPE_HERO) and udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] != null then
+                if not IsUnitCCImmune(v) and not IsUnitIllusion(v) and IsUnitType(v, UNIT_TYPE_HERO) and udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] != null then
                     set t = CreateTimer()
                     call RemoveUnit(udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))])
                     set udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] = null

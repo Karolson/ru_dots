@@ -19,11 +19,12 @@ function Trig_Youmu04_Main takes nothing returns nothing
     local real px
     local real py
     local unit u
+    call SetUnitPosition(target, GetUnitX(target), GetUnitY(target))
     if i > 1 then
         if i == 10 then
             set px = ox
             set py = oy
-            call UnitStunTarget(caster, target, 1.0, 0, 0)
+            call PauseUnit(target, true)
         else
             set px = ox + 250.0 * CosBJ(210.0 * i)
             set py = oy + 250.0 * SinBJ(210.0 * i)
@@ -48,6 +49,7 @@ function Trig_Youmu04_Main takes nothing returns nothing
         call UnitPhysicalDamageTarget(caster, target, damage * 0.2)
         call VE_Sword_Special(target, 2)
         call UnitDamageTarget(caster, target, 0, true, false, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_METAL_HEAVY_SLICE)
+        call PauseUnit(target, false)
         call DestroyEffect(AddSpecialEffectTarget("shot.mdl", caster, "chest"))
         call DestroyEffect(LoadEffectHandle(udg_Hashtable, task, 2))
         call DestroyEffect(LoadEffectHandle(udg_Hashtable, task, 3))

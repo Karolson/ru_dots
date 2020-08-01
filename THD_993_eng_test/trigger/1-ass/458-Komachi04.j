@@ -39,9 +39,7 @@ function Trig_Komachi04_Main takes nothing returns nothing
         call SetUnitVertexColor(caster, 255, 255, 255, 255)
         call SetUnitInvulnerable(caster, false)
         call PauseUnit(caster, false)
-        if LoadBoolean(udg_ht, task, 8) then
-            call PauseUnit(target, false)
-        endif
+        call PauseUnit(target, false)
         call SetUnitInvulnerable(target, false)
         call SetUnitTimeScale(caster, 1.0)
         call CE_Input(caster, target, GetUnitState(target, UNIT_STATE_LIFE) * 0.5)
@@ -100,7 +98,6 @@ function Trig_Komachi04_Actions takes nothing returns nothing
         call AbilityCoolDownResetion(caster, GetSpellAbilityId(), (150 - 25 * level) * 0.75)
     endif
     call VE_Spellcast(caster)
-    call PauseUnit(target, true)
     call PauseUnit(target, true)
     call PauseUnit(caster, true)
     call SetUnitInvulnerable(caster, true)

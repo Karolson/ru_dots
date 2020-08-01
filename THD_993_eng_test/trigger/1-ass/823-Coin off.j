@@ -105,7 +105,7 @@ function s__coin_onDamage takes nothing returns boolean
     if GetEventDamage() > 0.0 and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and IsUnitType(GetEventDamageSource(), UNIT_TYPE_HERO) or GetUnitAbilityLevel(GetEventDamageSource(), 'Aloc') > 0 then
         set u = GetPlayerCharacter(GetOwningPlayer(GetTriggerUnit()))
         if YDWEUnitHasItemOfTypeBJNull(u, 'I077') or YDWEUnitHasItemOfTypeBJNull(u, 'I04W') then
-            call UnitBuffTarget(u, u, 7, 'A1HU', 0)
+            call UnitBuffTarget(u, u, 3, 'A1HU', 0)
         endif
     endif
     return false

@@ -567,6 +567,9 @@ function GetUnitMagicRegen takes unit v returns real
     if GetUnitAbilityLevel(v, 'B075') >= 1 and IsUnitAlly(v, GetOwningPlayer(udg_SK_Neet)) == false then
         set regenmana = regenmana * (1 - (0.25 + 0.15 * GetUnitAbilityLevel(udg_SK_Neet, 'A17V')))
     endif
+    if GetUnitAbilityLevel(v, 'A0JC') >= 1 and GetUnitCurrentOrder(v) == OrderId("tranquility") then
+        set regen = regen + ((100 + GetUnitAbilityLevel(v, 'A0JC') * 50) / (8 - GetUnitAbilityLevel(v, 'A0JC'))) * 0.3 - ((100 + GetUnitAbilityLevel(v, 'A0JC') * 50) / (8 - GetUnitAbilityLevel(v, 'A0JC')))
+    endif
     return regenmana
 endfunction
 
@@ -678,7 +681,11 @@ function GetUnitLifeRegen takes unit v returns real
     if GetUnitAbilityLevel(v, 'A0I9') != 0 then
         set multiplier = multiplier * 0.5
     endif
-    return regen * multiplier
+    set regen = regen * multiplier
+    if GetUnitAbilityLevel(v, 'A0JC') >= 1 and GetUnitCurrentOrder(v) == OrderId("tranquility") then
+        set regen = regen + ((250 + GetUnitAbilityLevel(v, 'A0JC') * 125) / (8 - GetUnitAbilityLevel(v, 'A0JC'))) * multiplier - ((250 + GetUnitAbilityLevel(v, 'A0JC') * 125) / (8 - GetUnitAbilityLevel(v, 'A0JC')))
+    endif
+    return regen
 endfunction
 
 function Trig_Regeneration_Main takes nothing returns nothing

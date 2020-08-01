@@ -33,15 +33,18 @@ function AnnounceHeroBonus takes unit killer, unit dead returns boolean
         call THD_AddCredit(winner, R2I(qjc * 2))
         return false
     endif
+    if YDWEUnitHasItemOfTypeBJNull(dead, 'I07J') then
+        set loseGold = R2I(loseGold * 0.75)
+    endif
+    if YDWEUnitHasItemOfTypeBJNull(dead, 'I08Q') then
+        set loseGold = R2I(loseGold * 0.75)
+        call UnitBuffTarget(dead, dead, 180, 'A196', 0)
+    endif
+    if YDWEUnitHasItemOfTypeBJNull(dead, 'I00C') then
+        set loseGold = R2I(loseGold * 0.75)
+    endif
     if udg_GameMode / 100 == 3 then
         set loseGold = R2I(loseGold * 2.0)
-        if YDWEUnitHasItemOfTypeBJNull(dead, 'I07J') then
-            set loseGold = R2I(loseGold * 0.75)
-        endif
-        if YDWEUnitHasItemOfTypeBJNull(dead, 'I08Q') then
-            set loseGold = R2I(loseGold * 0.75)
-            call UnitBuffTarget(dead, dead, 180, 'A196', 0)
-        endif
         if GetUnitTypeId(dead) == 'E01A' then
             set loseGold = loseGold - 15
         elseif GetUnitTypeId(dead) == 'E01B' then

@@ -423,6 +423,7 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
         return
     endif
     set udg_MMD__initialized = false
+    set j = 0
     loop
         set i = 0
         loop
@@ -434,7 +435,8 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
             set i = i + 1
         exitwhen i >= 6
         endloop
-    exitwhen not udg_MMD__initialized
+        set j = j + 1
+    exitwhen not udg_MMD__initialized or j >= 6
         set udg_MMD__initialized = false
     endloop
     set udg_ADebuffSource = prev_udg_ADebuffSource

@@ -23,7 +23,7 @@ function Trig_Captain02_Target takes nothing returns boolean
         return false
     elseif GetUnitAbilityLevel(GetFilterUnit(), 'Avul') >= 1 then
         return false
-    elseif GetUnitAbilityLevel(GetFilterUnit(), 'A17X') > 0 or GetUnitAbilityLevel(GetFilterUnit(), 'A0PF') > 0 or GetUnitAbilityLevel(GetFilterUnit(), 'A0AN') > 0 or GetUnitCurrentOrder(GetFilterUnit()) == OrderId("metamorphosis") then
+    elseif IsUnitCCImmune(GetFilterUnit()) then
         return false
     endif
     return IsMobileUnit(GetFilterUnit())

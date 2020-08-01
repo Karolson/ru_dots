@@ -190,7 +190,7 @@ function Daiyousei__Skill takes nothing returns boolean
             call GroupRemoveUnit(g, w)
             if IsUnitEnemy(w, p) and GetUnitAbilityLevel(w, 'Avul') == 0 and not IsUnitType(w, UNIT_TYPE_STRUCTURE) then
                 set d = DebuffDuration(w, udg_Daiyousei__DAIYOUSEI02_ENSNARE_DURATION)
-                if GetUnitAbilityLevel(w, 'A17X') == 0 and GetUnitAbilityLevel(w, 'A0PF') == 0 and GetUnitAbilityLevel(w, 'A0AN') == 0 then
+                if not IsUnitCCImmune(w) then
                     call IssueTargetOrder(u, udg_Daiyousei__DAIYOUSEI02_ENSNARE_ORDER, w)
                 endif
                 call RestrictTarget(v, w, udg_Daiyousei__DAIYOUSEI02_ENSNARE_DURATION)

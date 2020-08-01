@@ -3,8 +3,6 @@ function Trig_Medi04_Conditions takes nothing returns boolean
         return false
     elseif IsUnitIllusion(GetSpellTargetUnit()) then
         return false
-    elseif GetUnitAbilityLevel(GetSpellTargetUnit(), 'A17X') > 0 or GetUnitAbilityLevel(GetSpellTargetUnit(), 'A0PF') > 0 or GetUnitAbilityLevel(GetSpellTargetUnit(), 'A0AN') > 0 then
-        return false
     endif
     return true
 endfunction
@@ -31,9 +29,6 @@ function Medi04_TimeOut takes nothing returns nothing
     local real i = LoadReal(udg_Hashtable, task, 1)
     local unit caster = LoadUnitHandle(udg_Hashtable, task, 5)
     local group grp
-    if GetUnitAbilityLevel(target, 'A17X') > 0 or GetUnitAbilityLevel(target, 'A0PF') > 0 or GetUnitAbilityLevel(target, 'A0AN') > 0 then
-        set i = 0
-    endif
     if i > 0 and GetWidgetLife(target) > 0.405 then
         call SaveReal(udg_Hashtable, task, 1, i - 0.1)
     else

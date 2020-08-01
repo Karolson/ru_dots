@@ -163,6 +163,9 @@ function Trig_Hero_Event_Actions takes nothing returns nothing
             set cost = cost * 0.75
             call UnitBuffTarget(dead, dead, 240 + cost, 'A196', 0)
         endif
+        if YDWEUnitHasItemOfTypeBJNull(dead, 'I00C') then
+            set cost = cost * 0.75
+        endif
     endif
     if cost < 5 then
         set cost = 5

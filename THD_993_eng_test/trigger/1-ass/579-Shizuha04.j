@@ -38,11 +38,9 @@ function Trig_Shizuha04_Go takes nothing returns nothing
                 call GroupAddUnit(m, v)
                 if GetUnitAbilityLevel(v, 'A0JA') == 0 then
                     call UnitBuffTarget(caster, v, 0.5, 'A0JA', 0)
-                    call UnitDamageTarget(caster, v, damage, true, false, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
-                else
                     call UnitPhysicalDamageTarget(caster, v, damage)
+                    set k = true
                 endif
-                set k = true
             endif
         endloop
         call DestroyGroup(g)

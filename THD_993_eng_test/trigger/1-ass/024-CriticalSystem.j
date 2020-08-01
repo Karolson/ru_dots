@@ -222,7 +222,9 @@ endfunction
 function UnitTotalReduce takes unit target, unit caster returns real
     local real demax = 1.0
     local integer i = 0
-    local boolean isTower
+    local group g = CreateGroup()
+    local unit v
+    local boolean backdoor = true
     if GetUnitAbilityLevel(target, 'A0RA') >= 1 then
         set demax = demax * (1.0 - (0.03 + 0.03 * GetUnitAbilityLevel(target, 'A0RA')))
     endif
@@ -245,18 +247,27 @@ function UnitTotalReduce takes unit target, unit caster returns real
         set demax = demax * (1.0 + 0.25)
     endif
     if udg_GameModeIsTurbo and IsUnitType(caster, UNIT_TYPE_STRUCTURE) and IsUnitType(target, UNIT_TYPE_HERO) then
+        set demax = demax * (1.0 - 0.35)
+    endif
+    if IsUnitType(target, UNIT_TYPE_STRUCTURE) then
+        call GroupEnumUnitsInRange(g, GetUnitX(target), GetUnitY(target), 1000.0, null)
         loop
-        exitwhen i == 8
-            if udg_TowerA[i] == caster or udg_TowerB[i] == caster then
-                set isTower = true
+            set v = FirstOfGroup(g)
+        exitwhen v == null
+            call GroupRemoveUnit(g, v)
+            if IsUnitEnemy(v, GetOwningPlayer(target)) and (GetUnitAbilityLevel(v, 'A18Y') > 0 or GetUnitAbilityLevel(v, 'A02F') > 0) then
+                set backdoor = false
+                exitwhen true
             endif
-            set i = i + 1
         endloop
-        if isTower then
-            set demax = demax * (1.0 - 0.35)
+        if backdoor then
+            set demax = demax * (1.0 - 0.8)
         endif
     endif
+    call DestroyGroup(g)
     set demax = demax * udg_DMG_AllDamage[GetPlayerId(GetOwningPlayer(target))]
+    set g = null
+    set v = null
     return 1.0 - demax
 endfunction
 

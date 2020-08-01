@@ -114,9 +114,7 @@ function Trig_Yuugi04_Actions takes nothing returns nothing
     call SaveReal(udg_Hashtable, task, 5, 0)
     call SaveTextTagHandle(udg_Hashtable, task, 6, tt)
     call TimerStart(t, 0.04, true, function Yuugi04_Main)
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
-        call IssueImmediateOrder(target, "stop")
-    endif
+    call IssueImmediateOrder(target, "stop")
     call CastSpell(caster, "Omae wa mou shindeiru!!!")
     set tt = null
     set t = null

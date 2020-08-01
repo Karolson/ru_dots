@@ -8,7 +8,7 @@ function Trig_Byakuren03_Clear takes nothing returns nothing
     local unit target = LoadUnitHandle(udg_ht, task, 0)
     local real tx = LoadReal(udg_ht, task, 1)
     local real ty = LoadReal(udg_ht, task, 2)
-    if IsUnitType(target, UNIT_TYPE_DEAD) == false then
+    if IsUnitType(target, UNIT_TYPE_DEAD) == false and not IsUnitCCImmune(target) then
         call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl", GetUnitX(target), GetUnitY(target)))
         call SetUnitXY(target, tx, ty)
         call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl", tx, ty))
@@ -34,7 +34,7 @@ function Trig_Byakuren03_Actions takes nothing returns nothing
     local unit e4
     local integer level = GetUnitAbilityLevel(caster, 'A0O0')
     call AbilityCoolDownResetion(caster, 'A0O0', 15 - level)
-    if IsUnitAlly(GetSpellTargetUnit(), GetTriggerPlayer()) == false then
+    if IsUnitAlly(GetSpellTargetUnit(), GetTriggerPlayer()) == false and not IsUnitCCImmune(target) then
         call CE_Input(caster, target, 150)
         if IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO) and udg_SK_BLTalismanicAvaliable[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] and IsUnitIllusionBJ(GetSpellTargetUnit()) == false then
             call Item_BLTalismanicRunningCD(GetSpellTargetUnit())

@@ -383,9 +383,13 @@ function s__Futo02__allocate takes nothing returns integer
     return this
 endfunction
 
+function IsUnitCCImmune takes unit u returns boolean
+    return GetUnitAbilityLevel(u, 'A17X') > 0 or GetUnitAbilityLevel(u, 'A0PF') > 0 or GetUnitAbilityLevel(u, 'A0AN') > 0 or GetUnitCurrentOrder(u) == OrderId("metamorphosis") or IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetWidgetLife(u) < 0.405
+endfunction
+
 function CCSystem_textshow takes string s, unit target, real outcometime returns nothing
     local texttag e
-    if IsUnitVisible(target, GetLocalPlayer()) and GetWidgetLife(target) > 0.405 and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false and GetUnitAbilityLevel(target, 'Avul') == 0 and GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 and GetUnitCurrentOrder(target) != OrderId("metamorphosis") then
+    if IsUnitVisible(target, GetLocalPlayer()) and GetUnitAbilityLevel(target, 'Avul') == 0 and not IsUnitCCImmune(target) then
         set e = CreateTextTag()
         call SetTextTagTextBJ(e, s + "! (" + R2SW(outcometime, 1, 1) + "s)", 10)
         call SetTextTagPos(e, GetUnitX(target), GetUnitY(target), 50.0)
@@ -2815,7 +2819,7 @@ function Knockback takes unit caster, unit target, real distance, real speed, re
     call SaveBoolean(udg_ht, task, 20, true)
     call SetUnitPosition(target, ox, oy)
     call SetUnitPathing(target, false)
-    if GetUnitAbilityLevel(target, 'A17X') == 0 and GetUnitAbilityLevel(target, 'A0PF') == 0 and GetUnitAbilityLevel(target, 'A0AN') == 0 then
+    if not IsUnitCCImmune(target) then
         call PauseUnit(target, true)
         call SaveBoolean(udg_ht, task, 21, true)
     else

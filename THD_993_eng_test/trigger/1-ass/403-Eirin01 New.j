@@ -57,19 +57,16 @@ function Trig_Eirin01_New_Damage takes nothing returns nothing
         set v = FirstOfGroup(g2)
     exitwhen v == null
         call GroupRemoveUnit(g2, v)
-        call DebugMsg("notype call back")
-        if IsUnitType(v, UNIT_TYPE_DEAD) == false and IsUnitType(v, UNIT_TYPE_STRUCTURE) == false and GetUnitAbilityLevel(v, 'A0IL') > 0 == false then
+        if IsUnitType(v, UNIT_TYPE_DEAD) == false and IsUnitType(v, UNIT_TYPE_STRUCTURE) == false and GetUnitAbilityLevel(v, 'A0IL') > 0 == false and not IsUnitCCImmune(v) then
             set a = Atan2(GetUnitY(v) - y, GetUnitX(v) - x)
             call SetUnitX(v, x + Cos(a) * 250)
             call SetUnitY(v, y + Sin(a) * 250)
-            call DebugMsg("call back")
         endif
     endloop
     call SaveInteger(udg_ht, task, 5, count)
     call DestroyGroup(g)
     call DestroyGroup(g2)
     if count >= countset then
-        call DebugMsg("Clear")
         call UnRegisterAreaShow(caster, 'A1BA')
         call UnitRemoveAbility(u, 'A1BB')
         call DestroyGroup(g3)

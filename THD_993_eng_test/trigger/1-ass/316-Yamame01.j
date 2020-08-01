@@ -60,7 +60,7 @@ function Yamame01_Web_Area takes nothing returns nothing
         call GroupRemoveUnit(g, v)
         if not IsUnitInGroup(v, tmpgrp) then
             call UnitDebuffTarget(caster, v, 0.8 + 0.4 * level, 0, true, 'A017', 1, 'B01R', "ensnare", 0, "")
-            if GetUnitAbilityLevel(v, 'A17X') == 0 and GetUnitAbilityLevel(v, 'A0PF') == 0  and GetUnitAbilityLevel(v, 'A0AN') == 0 and not IsUnitIllusion(v) and IsUnitType(v, UNIT_TYPE_HERO) and udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] != null then
+            if not IsUnitCCImmune(v) and not IsUnitIllusion(v) and IsUnitType(v, UNIT_TYPE_HERO) and udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] != null then
                 set t = CreateTimer()
                 call RemoveUnit(udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))])
                 set udg_BlinkEnableUnit[GetPlayerId(GetOwningPlayer(v))] = null

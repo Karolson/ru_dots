@@ -107,7 +107,7 @@ function Yukari01_Loop takes nothing returns nothing
     if v != null then
         set t2 = LoadTimerHandle(udg_sht, StringHash("Yukari01"), ctask)
         call UnitMagicDamageTarget(caster, v, 50 * GetUnitAbilityLevel(caster, 'A03F') + 1.6 * GetHeroInt(caster, true), 1)
-        if GetUnitAbilityLevel(v, 'A17X') == 0 and GetUnitAbilityLevel(v, 'A0PF') == 0 and GetUnitAbilityLevel(v, 'A0AN') == 0 then
+        if not IsUnitCCImmune(v) then
             call Yukari01_Gap_Away(caster, v)
         endif
         set e = LoadEffectHandle(udg_sht, task, 2)

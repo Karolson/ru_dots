@@ -11,6 +11,7 @@ function Trig_Suwako04_Effect_Main takes nothing returns nothing
     local integer i = LoadInteger(udg_ht, task, 3)
     local real h = (i - 20) * (i - 20)
     local unit w
+    local unit u
     call SetUnitFlyHeight(target, 450 - h, 0)
     call SaveInteger(udg_ht, task, 3, i + 1)
     if i > 40 then
@@ -29,6 +30,7 @@ function Trig_Suwako04_Effect_Main takes nothing returns nothing
     set caster = null
     set target = null
     set w = null
+    set u = null
 endfunction
 
 function Trig_Suwako04_Effect_Start takes unit caster, unit target, integer level returns nothing
@@ -54,19 +56,16 @@ function Trig_Suwako04_Effect takes nothing returns nothing
     local integer task = GetHandleId(t)
     local unit caster = LoadUnitHandle(udg_ht, task, 0)
     local integer level = LoadInteger(udg_ht, task, 0)
-    local integer i
+    local integer i = 0
     local unit h
-    if GetWidgetLife(caster) > 0.405 then
-        set i = 0
-        loop
-        exitwhen i >= 12
-            set h = udg_PlayerHeroes[i]
-            if h != null and GetWidgetLife(h) > 0.405 and IsUnitEnemy(h, GetOwningPlayer(caster)) and IsUnitVisible(h, GetOwningPlayer(caster)) then
-                call Trig_Suwako04_Effect_Start(caster, h, level)
-            endif
-            set i = i + 1
-        endloop
-    endif
+    loop
+    exitwhen i >= 12
+        set h = udg_PlayerHeroes[i]
+        if h != null and GetWidgetLife(h) > 0.405 and IsUnitEnemy(h, GetOwningPlayer(caster)) then
+            call Trig_Suwako04_Effect_Start(caster, h, level)
+        endif
+        set i = i + 1
+    endloop
     call ReleaseTimer(t)
     call FlushChildHashtable(udg_ht, task)
     set t = null
