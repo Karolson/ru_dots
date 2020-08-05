@@ -65,6 +65,7 @@ function Trig_BagetAccelerator_Move_End takes nothing returns nothing
     local real newy = ty
     call ReleaseTimer(tmove)
     call ReleaseTimer(t)
+    call SetUnitFlag(target, 3, false)
     if GetCustomState(target, 1) == 0 and GetCustomState(target, 2) == 0 and GetCustomState(target, 3) == 0 and GetCustomState(target, 5) == 0 then
         call SetUnitPathing(target, true)
         loop
@@ -93,6 +94,7 @@ function Trig_BagetAccelerator_Actions takes nothing returns nothing
     local real damage = 100.0
     local real distance = 600.0
     local real speed = 1800.0
+    call SetUnitFlag(target, 3, true)
     if mainstat == 1 then
         set damage = damage + 2.0 * GetHeroStr(caster, true)
     elseif mainstat == 2 then

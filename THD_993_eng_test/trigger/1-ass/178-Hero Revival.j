@@ -89,7 +89,7 @@ function HeroReviveSTimer_Clear takes nothing returns nothing
     local integer task = GetHandleId(t)
     local unit h = LoadUnitHandle(udg_Hashtable, task, 0)
     local sound snd = null
-    call UnitAddAbility(udg_PlayerReviveHouse[GetPlayerId(GetOwningPlayer(h))], 'Arev')
+    call UnitAddAbility(udg_PlayerReviveHouse[GetPlayerId(GetOwningPlayer(h))], 'Aawa')
     call UnitRemoveAbility(h, 'B092')
     set snd = CreateSound("THDots\\music\\"+udg_PlayerCharacterString[GetPlayerId(GetOwningPlayer(h))]+"Reborn0.0mp3",false,false,true,12700,12700,"DefaultEAXON")
     if snd != null then
@@ -108,7 +108,7 @@ function HeroReviveSTimer_Set takes nothing returns nothing
     local timer ti = GetExpiredTimer()
     local unit hero = LoadUnitHandle(udg_Hashtable, GetHandleId(ti), 0)
     local integer cd = 180 + IMaxBJ(udg_GameTime - udg_Game_BattleBeginTime, 0) / 10
-    call UnitRemoveAbility(udg_PlayerReviveHouse[GetPlayerId(GetOwningPlayer(hero))], 'Arev')
+    call UnitRemoveAbility(udg_PlayerReviveHouse[GetPlayerId(GetOwningPlayer(hero))], 'Aawa')
     call PauseTimer(ti)
     call TimerStart(ti, cd, false, function HeroReviveSTimer_Clear)
     call BroadcastMessage(udg_PlayerColors[GetPlayerId(GetOwningPlayer(hero))] + GetHeroProperName(hero) + "|r has used buyback. Next buyback: |cffffcc00" + GetTimeString_h_mM_SS_WW(IAbsBJ(udg_GameTime - udg_Game_BattleBeginTime + cd)) + "|r")

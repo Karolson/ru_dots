@@ -1474,13 +1474,6 @@ function CSS2_EndHeroSelection takes nothing returns nothing
                 call DebugMsg("THDots\\music\\"+GetCharacterString(h)+"Death0.0mp3")
             endif
         endif
-        if udg_PlayerHeroes[i] != null then
-            if i <= 5 then
-                call AddSpecialEffectTarget("team_aura_hakurei.mdx", udg_PlayerHeroes[i], "origin")
-            else
-                call AddSpecialEffectTarget("team_aura_moriya.mdx", udg_PlayerHeroes[i], "origin")
-            endif
-        endif
         if GetPlayerId(GetLocalPlayer()) == i then
             call SelectUnit(udg_PlayerHeroes[i], true)
         endif
