@@ -82,6 +82,10 @@ function Trig_Init_Abilities_Actions takes nothing returns nothing
     call FirstAbilityInit('A145')
     call FirstAbilityInit('A195')
     call FirstAbilityInit('A01L')
+    call FirstAbilityInit('A0ZI')
+    call FirstAbilityInit('A0ZG')
+    call FirstAbilityInit('A0ZH')
+    call FirstAbilityInit('A18P')
 endfunction
 
 function InitTrig_Init_Abilities takes nothing returns nothing

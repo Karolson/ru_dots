@@ -1,5 +1,15 @@
 function Trig_Initialing_Shinki_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H02J')
+    call FirstAbilityInit('A1DV')
+    call FirstAbilityInit('A1EZ')
+    call FirstAbilityInit('A1DW')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A013')
+    call FirstAbilityInit('A1DX')
+    call FirstAbilityInit('A1DY')
+    call FirstAbilityInit('A1F0')
+    call FirstAbilityInit('A1DZ')
     if h == null then
         return
     endif

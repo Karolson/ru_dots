@@ -6,7 +6,6 @@ function Jump_End takes nothing returns nothing
     call SetUnitFlag(v, 5, false)
     call DestroyEffect(e)
     call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", GetUnitX(v), GetUnitY(v)))
-    call PauseTimer(t)
     call ReleaseTimer(t)
     call FlushChildHashtable(udg_ht, task)
     set t = null

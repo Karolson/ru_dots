@@ -1,5 +1,22 @@
 function Trig_Initial_Toramaru_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H01N')
+    call FirstAbilityInit('A10O')
+    call FirstAbilityInit('A0P4')
+    call FirstAbilityInit('A0QX')
+    call FirstAbilityInit('A0QY')
+    call FirstAbilityInit('A0QZ')
+    call FirstAbilityInit('A0R0')
+    call FirstAbilityInit('A0R1')
+    call FirstAbilityInit('A0R2')
+    call FirstAbilityInit('A0P2')
+    call FirstAbilityInit('A0SS')
+    call FirstAbilityInit('A0ST')
+    call FirstAbilityInit('A0R3')
+    call FirstAbilityInit('A1GC')
+    call FirstAbilityInit('A0Z4')
+    call FirstAbilityInit('A0P3')
+    call FirstAbilityInit('A0SR')
+    call FirstAbilityInit('A0V4')
     if h == null then
         return
     endif

@@ -3,6 +3,18 @@ function Trig_Init_Nazrin_Actions takes nothing returns nothing
     local unit u
     local timer t
     local integer task
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0OO')
+    call FirstAbilityInit('A0P7')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0D8')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0I6')
+    call FirstAbilityInit('A0I7')
+    call FirstAbilityInit('A0L8')
+    call FirstAbilityInit('A0D7')
+    call FirstAbilityInit('A03Y')
+    call FirstAbilityInit('A17T')
     if h == null then
         return
     endif

@@ -1,5 +1,18 @@
 function Trig_Init_Yuyuko_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('U006')
+    call FirstAbilityInit('A0MM')
+    call FirstAbilityInit('A0MQ')
+    call FirstAbilityInit('A0MR')
+    call FirstAbilityInit('A0MS')
+    call FirstAbilityInit('A05G')
+    call FirstAbilityInit('A05D')
+    call FirstAbilityInit('A0UN')
+    call FirstAbilityInit('A0QM')
+    call FirstAbilityInit('A05B')
+    call FirstAbilityInit('A0MN')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A05C')
+    call FirstAbilityInit('A0IL')
     if h == null then
         return
     endif
@@ -42,15 +55,6 @@ function Trig_Init_Yuyuko_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Yuyuko04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Yuyuko04, Condition(function Trig_Yuyuko04_Conditions1))
     call TriggerAddAction(gg_trg_Yuyuko04, function Trig_Yuyuko04_Actions1)
-    call FirstAbilityInit('A05B')
-    call FirstAbilityInit('A05G')
-    call FirstAbilityInit('A05H')
-    call FirstAbilityInit('A05I')
-    call FirstAbilityInit('A05J')
-    call FirstAbilityInit('A05F')
-    call FirstAbilityInit('A0MS')
-    call FirstAbilityInit('A0MR')
-    call FirstAbilityInit('A0MQ')
     set h = null
 endfunction
 

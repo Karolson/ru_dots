@@ -2,6 +2,21 @@ function Trig_Initial_Komachi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('U00J')
     local timer t = CreateTimer()
     local integer i = 0
+    call FirstAbilityInit('A1EC')
+    call FirstAbilityInit('A0JK')
+    call FirstAbilityInit('A0CL')
+    call FirstAbilityInit('A0FH')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A1E3')
+    call FirstAbilityInit('A0CK')
+    call FirstAbilityInit('A1E2')
+    call FirstAbilityInit('A19D')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0CN')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1CU')
+    call FirstAbilityInit('A0CM')
 //   if h == null then
  //       set h=GetCharacterHandle('U013')
  //   endif

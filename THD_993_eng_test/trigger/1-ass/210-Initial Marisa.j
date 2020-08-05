@@ -2,6 +2,24 @@ function Trig_Initial_Marisa_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H000')
     local integer i = 0
     local timer t
+    call FirstAbilityInit('A1C0')
+    call FirstAbilityInit('A1C2')
+    call FirstAbilityInit('A1C3')
+    call FirstAbilityInit('A1C4')
+    call FirstAbilityInit('A1G2')
+    call FirstAbilityInit('A107')
+    call FirstAbilityInit('A02L')
+    call FirstAbilityInit('A02Q')
+    call FirstAbilityInit('A02M')
+    call FirstAbilityInit('A040')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A041')
+    call FirstAbilityInit('A043')
+    call FirstAbilityInit('A044')
+    call FirstAbilityInit('A045')
+    call FirstAbilityInit('A03Z')
+    call FirstAbilityInit('A042')
+    call FirstAbilityInit('A05T')
     if h == null then
         return
     endif
@@ -81,11 +99,6 @@ function Trig_Initial_Marisa_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Marisa04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Marisa04, Condition(function Trig_Marisa04_Conditions))
     call TriggerAddAction(gg_trg_Marisa04, function Trig_Marisa04_Actions)
-    call FirstAbilityInit('A043')
-    call FirstAbilityInit('A044')
-    call FirstAbilityInit('A045')
-    call FirstAbilityInit('A046')
-    call FirstAbilityInit('A047')
     set h = null
 endfunction
 

@@ -1,5 +1,25 @@
 function Trig_Init_Reisen_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O007')
+    call FirstAbilityInit('A08E')
+    call FirstAbilityInit('A12B')
+    call FirstAbilityInit('A12C')
+    call FirstAbilityInit('A12D')
+    call FirstAbilityInit('A0PJ')
+    call FirstAbilityInit('A04W')
+    call FirstAbilityInit('A12H')
+    call FirstAbilityInit('A000')
+    call FirstAbilityInit('A12I')
+    call FirstAbilityInit('A12E')
+    call FirstAbilityInit('A12J')
+    call FirstAbilityInit('A12F')
+    call FirstAbilityInit('A12K')
+    call FirstAbilityInit('A12G')
+    call FirstAbilityInit('A1B2')
+    call FirstAbilityInit('A069')
+    call FirstAbilityInit('A067')
+    call FirstAbilityInit('A18G')
+    call FirstAbilityInit('A10G')
+    call FirstAbilityInit('A16Z')
     if h == null then
         return
     endif
@@ -52,12 +72,6 @@ function Trig_Init_Reisen_Actions takes nothing returns nothing
     call AddingLBuff(0, 'A12I', 'B06N')
     call AddingLBuff(0, 'A12J', 'B06N')
     call AddingLBuff(0, 'A12K', 'B06N')
-    call FirstAbilityInit('A000')
-    call FirstAbilityInit('A12E')
-    call FirstAbilityInit('A12F')
-    call FirstAbilityInit('A12G')
-    call FirstAbilityInit('A067')
-    call FirstAbilityInit('A06B')
     set h = null
 endfunction
 

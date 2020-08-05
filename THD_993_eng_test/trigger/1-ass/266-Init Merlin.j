@@ -1,6 +1,14 @@
 function Trig_Init_Merlin_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01W')
     local integer id = GetConvertedPlayerId(GetOwningPlayer(h))
+    call FirstAbilityInit('A0O3')
+    call FirstAbilityInit('A0RS')
+    call FirstAbilityInit('A0S2')
+    call FirstAbilityInit('A0S4')
+    call FirstAbilityInit('A0SE')
+    call FirstAbilityInit('A0RX')
+    call FirstAbilityInit('A0RY')
+    call FirstAbilityInit('A084')
     if h == null then
         return
     endif
@@ -63,16 +71,6 @@ function Trig_Init_Merlin_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Merlin04_Damage, h, EVENT_UNIT_DAMAGED)
     call TriggerAddCondition(gg_trg_Merlin04_Damage, Condition(function Trig_Merlin04_Damage_Conditions))
     call TriggerAddAction(gg_trg_Merlin04_Damage, function Trig_Merlin04_Damage_Actions)
-    call FirstAbilityInit('A0S0')
-    call FirstAbilityInit('A0S1')
-    call FirstAbilityInit('A0S7')
-    call FirstAbilityInit('A0SB')
-    call FirstAbilityInit('A0SC')
-    call FirstAbilityInit('A0SD')
-    call FirstAbilityInit('A0U0')
-    call FirstAbilityInit('A0S4')
-    call FirstAbilityInit('A0S2')
-    call FirstAbilityInit('A0SE')
     set h = null
 endfunction
 

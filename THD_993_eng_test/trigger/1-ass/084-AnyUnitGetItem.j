@@ -62,6 +62,8 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
             set resist = resist + 10 * i
         elseif itmtype == 'I07D' then
             set resist = resist + 6 * i
+        elseif itmtype == 'I08X' then
+            set resist = resist + 3 * i
         endif
         set udg_DMG_AllItemMagicResist[id] = resist + udg_DMG_AllItemMagicResist[id]
         call DebugMsg("Resist:" + R2S(resist))
@@ -92,6 +94,8 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
             set armor = armor + 10 * i
         elseif itmtype == 'I04X' then
             set armor = armor + 4 * i
+        elseif itmtype == 'I08X' then
+            set resist = armor + 3 * i
         endif
         set udg_DMG_AllItemArmor[id] = armor + udg_DMG_AllItemArmor[id]
         set armor = 0

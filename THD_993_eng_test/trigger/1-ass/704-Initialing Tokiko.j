@@ -1,6 +1,18 @@
 function Trig_Initialing_Tokiko_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E02E')
     local integer k
+    call FirstAbilityInit('A09T')
+    call FirstAbilityInit('A0ZK')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0ZL')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A19Q')
+    call FirstAbilityInit('A19P')
+    call FirstAbilityInit('A19O')
+    call FirstAbilityInit('A19N')
+    call FirstAbilityInit('A0ZM')
+    call FirstAbilityInit('A0ZU')
+    call FirstAbilityInit('A0ZN')
     if h == null then
         return
     endif

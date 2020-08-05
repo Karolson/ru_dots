@@ -2,6 +2,19 @@ function Trig_Initial_Cat_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00W')
     local trigger t
     local timer t2
+    call FirstAbilityInit('A03B')
+    call FirstAbilityInit('A1CV')
+    call FirstAbilityInit('A0X8')
+    call FirstAbilityInit('A0IU')
+    call FirstAbilityInit('A1CQ')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0WJ')
+    call FirstAbilityInit('A0BM')
+    call FirstAbilityInit('A0BN')
+    call FirstAbilityInit('A0BO')
+    call FirstAbilityInit('A0BP')
+    call FirstAbilityInit('A0BQ')
+    call FirstAbilityInit('A0OZ')
     if h == null then
         return
     endif

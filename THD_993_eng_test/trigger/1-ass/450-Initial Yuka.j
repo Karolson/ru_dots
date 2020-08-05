@@ -1,5 +1,20 @@
 function Trig_Initial_Yuka_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('N00L')
+    call FirstAbilityInit('A17Y')
+    call FirstAbilityInit('A17Z')
+    call FirstAbilityInit('A180')
+    call FirstAbilityInit('A181')
+    call FirstAbilityInit('A15U')
+    call FirstAbilityInit('A15V')
+    call FirstAbilityInit('A15W')
+    call FirstAbilityInit('A15X')
+    call FirstAbilityInit('A07P')
+    call FirstAbilityInit('A0OX')
+    call FirstAbilityInit('A00X')
+    call FirstAbilityInit('A068')
+    call FirstAbilityInit('A06I')
+    call FirstAbilityInit('A0DA')
+    call FirstAbilityInit('A04I')
     if h == null then
         return
     endif

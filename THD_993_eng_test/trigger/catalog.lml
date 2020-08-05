@@ -104,6 +104,7 @@
     '103-Spawn Levelup': 'Spawn Levelup'
     '104-Spawn Units AI': 'Spawn Units AI'
     '105-Tower Attack AI': 'Tower Attack AI'
+        Disab
     '106-Refresh Order': 'Refresh Order'
     107-SoloMode: SoloMode
     108-SoloModeLevelUp: SoloModeLevelUp
@@ -934,7 +935,12 @@
     930-UnitSee: UnitSee
     931-MoneyTransfer: MoneyTransfer
     '932-Command HeroIcon': 'Command HeroIcon'
-    933-govno: govno
+    933-PreloadModels: PreloadModels
+        Run
+    '934-New Tower AI': 'New Tower AI'
+    '935-Find Yukkuri': 'Find Yukkuri'
+    936-BagetAccelerator: BagetAccelerator
+    937-govno: govno
 '2-Metakimi Shietfixes': 'Metakimi Shietfixes'
     1----------------------------: ---------------------------
         Comment

@@ -1,5 +1,23 @@
 function Trig_Initial_Satsuki_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O01B')
+    call FirstAbilityInit('A1I8')
+    call FirstAbilityInit('A1H5')
+    call FirstAbilityInit('A1H6')
+    call FirstAbilityInit('A0A1')
+    call FirstAbilityInit('A1HG')
+    call FirstAbilityInit('A1H7')
+    call FirstAbilityInit('A1H8')
+    call FirstAbilityInit('A1ID')
+    call FirstAbilityInit('A1H9')
+    call FirstAbilityInit('A1II')
+    call FirstAbilityInit('A1HA')
+    call FirstAbilityInit('A1IJ')
+    call FirstAbilityInit('A1HB')
+    call FirstAbilityInit('A1IK')
+    call FirstAbilityInit('A1HC')
+    call FirstAbilityInit('A1HD')
+    call FirstAbilityInit('A1HE')
+    call FirstAbilityInit('A1HF')
     if h == null then
         return
     endif
@@ -41,7 +59,6 @@ function Trig_Initial_Satsuki_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Satsuki_Attack, Condition(function Trig_Satsuki_Attack_Conditions))
     call TriggerAddAction(gg_trg_Satsuki_Attack, function Trig_Satsuki_Attack_Actions)
     call UnitAddAbility(h, 'A1HG')
-    call FirstAbilityInit('A17W')
 endfunction
 
 function InitTrig_Initial_Satsuki takes nothing returns nothing

@@ -3,6 +3,21 @@ function Trig_Initial_Medi_Actions takes nothing returns nothing
     local timer t = CreateTimer()
     local group g = CreateGroup()
     local integer task = GetHandleId(t)
+    call FirstAbilityInit('A0A0')
+    call FirstAbilityInit('A0EE')
+    call FirstAbilityInit('A17Y')
+    call FirstAbilityInit('A17Z')
+    call FirstAbilityInit('A180')
+    call FirstAbilityInit('A181')
+    call FirstAbilityInit('A0EF')
+    call FirstAbilityInit('A07X')
+    call FirstAbilityInit('A15U')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0FO')
+    call FirstAbilityInit('A0FM')
+    call FirstAbilityInit('A04C')
+    call FirstAbilityInit('A081')
+    call FirstAbilityInit('A17W')
     if h == null then
         return
     endif

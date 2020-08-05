@@ -1,5 +1,18 @@
 function Trig_Initial_Remilia_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O00J')
+    call FirstAbilityInit('A1IB')
+    call FirstAbilityInit('A0CD')
+    call FirstAbilityInit('A0CG')
+    call FirstAbilityInit('A0DG')
+    call FirstAbilityInit('A1ES')
+    call FirstAbilityInit('A1EP')
+    call FirstAbilityInit('A1ER')
+    call FirstAbilityInit('A0D3')
+    call FirstAbilityInit('A0RK')
+    call FirstAbilityInit('A066')
+    call FirstAbilityInit('A08J')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0IL')
     if h == null then
         return
     endif

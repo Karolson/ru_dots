@@ -1,6 +1,19 @@
 function Trig_Initial_Spider_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O008')
     local boolean firstinit = false
+    call FirstAbilityInit('A0RD')
+    call FirstAbilityInit('A08A')
+    call FirstAbilityInit('A08F')
+    call FirstAbilityInit('A08G')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A017')
+    call FirstAbilityInit('A0JW')
+    call FirstAbilityInit('A0JX')
+    call FirstAbilityInit('A0ER')
+    call FirstAbilityInit('A0FF')
+    call FirstAbilityInit('A0RJ')
+    call FirstAbilityInit('A0YX')
+    call FirstAbilityInit('A0V4')
     if h == null then
         return
     endif
@@ -32,14 +45,6 @@ function Trig_Initial_Spider_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Yamame04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Yamame04, Condition(function Trig_Yamame04_Conditions))
     call TriggerAddAction(gg_trg_Yamame04, function Trig_Yamame04_Actions)
-    call FirstAbilityInit('A08G')
-    call FirstAbilityInit('A06W')
-    call FirstAbilityInit('A08H')
-    call FirstAbilityInit('A0RE')
-    call FirstAbilityInit('A0RF')
-    call FirstAbilityInit('A0RG')
-    call FirstAbilityInit('A0RH')
-    call FirstAbilityInit('A0RI')
     set h = null
 endfunction
 

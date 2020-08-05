@@ -358,6 +358,10 @@ endfunction
 
 function Trig_Initial_Kulumi_Actions takes nothing returns nothing
     set udg_Kulumi = GetCharacterHandle(udg_Kulumi_CODE)
+    call FirstAbilityInit('A04D')
+    call FirstAbilityInit('A11G')
+    call FirstAbilityInit('A17B')
+    call FirstAbilityInit('A11K')
     call Kulumi_Init()
 endfunction
 

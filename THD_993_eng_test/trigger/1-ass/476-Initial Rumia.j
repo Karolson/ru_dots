@@ -1,5 +1,16 @@
 function Trig_Initial_Rumia_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00I')
+    call FirstAbilityInit('A07C')
+    call FirstAbilityInit('A07G')
+    call FirstAbilityInit('A07H')
+    call FirstAbilityInit('A11N')
+    call FirstAbilityInit('A11O')
+    call FirstAbilityInit('A11P')
+    call FirstAbilityInit('A11Q')
+    call FirstAbilityInit('A11R')
+    call FirstAbilityInit('A0QV')
+    call FirstAbilityInit('A07J')
+    call FirstAbilityInit('A0MM')
     if h == null then
         return
     endif
@@ -46,9 +57,6 @@ function Trig_Initial_Rumia_Actions takes nothing returns nothing
     set gg_trg_Rumia04_Lost = CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Rumia04_Lost, h, EVENT_UNIT_DEATH)
     call TriggerAddAction(gg_trg_Rumia04_Lost, function Trig_Rumia04_Lost_Actions)
-    call FirstAbilityInit('A04G')
-    call FirstAbilityInit('A07K')
-    call FirstAbilityInit('A07H')
     call AddingLBuff(0, 'A11O', 'B06J')
     call AddingLBuff(0, 'A11P', 'B06J')
     call AddingLBuff(0, 'A11Q', 'B06J')

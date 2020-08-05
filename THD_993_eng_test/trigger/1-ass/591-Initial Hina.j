@@ -2,6 +2,18 @@ function Trig_Initial_Hina_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H00X')
     local timer t
     local integer task
+    call FirstAbilityInit('A070')
+    call FirstAbilityInit('A0E4')
+    call FirstAbilityInit('A0IB')
+    call FirstAbilityInit('A0DZ')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0E8')
+    call FirstAbilityInit('A182')
+    call FirstAbilityInit('A0JL')
+    call FirstAbilityInit('A0E9')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0EB')
+    call FirstAbilityInit('A0EY')
     if h == null then
         return
     endif

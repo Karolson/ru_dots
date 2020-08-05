@@ -34,7 +34,7 @@ function Trig_Byakuren03_Actions takes nothing returns nothing
     local unit e4
     local integer level = GetUnitAbilityLevel(caster, 'A0O0')
     call AbilityCoolDownResetion(caster, 'A0O0', 15 - level)
-    if IsUnitAlly(GetSpellTargetUnit(), GetTriggerPlayer()) == false and not IsUnitCCImmune(target) then
+    if IsUnitAlly(GetSpellTargetUnit(), GetTriggerPlayer()) == false then
         call CE_Input(caster, target, 150)
         if IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO) and udg_SK_BLTalismanicAvaliable[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] and IsUnitIllusionBJ(GetSpellTargetUnit()) == false then
             call Item_BLTalismanicRunningCD(GetSpellTargetUnit())
@@ -87,12 +87,14 @@ function Trig_Byakuren03_Actions takes nothing returns nothing
             call SetUnitXY(e4, tx, ty)
             set udg_SK_Byakuren02_Record = 0
         endif
-        set t = CreateTimer()
-        set task = GetHandleId(t)
-        call SaveUnitHandle(udg_ht, task, 0, target)
-        call SaveReal(udg_ht, task, 1, tx)
-        call SaveReal(udg_ht, task, 2, ty)
-        call TimerStart(t, 3.0, false, function Trig_Byakuren03_Clear)
+        if not IsUnitCCImmune(target) then
+            set t = CreateTimer()
+            set task = GetHandleId(t)
+            call SaveUnitHandle(udg_ht, task, 0, target)
+            call SaveReal(udg_ht, task, 1, tx)
+            call SaveReal(udg_ht, task, 2, ty)
+            call TimerStart(t, 3.0, false, function Trig_Byakuren03_Clear)
+        endif
     endif
     set caster = null
     set target = null

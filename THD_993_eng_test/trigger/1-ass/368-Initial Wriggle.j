@@ -1,5 +1,19 @@
 function Trig_Initial_Wriggle_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00A')
+    call FirstAbilityInit('A09N')
+    call FirstAbilityInit('A0FW')
+    call FirstAbilityInit('A0VU')
+    call FirstAbilityInit('A08T')
+    call FirstAbilityInit('A04D')
+    call FirstAbilityInit('A0VV')
+    call FirstAbilityInit('A09R')
+    call FirstAbilityInit('A1AR')
+    call FirstAbilityInit('A09L')
+    call FirstAbilityInit('A0FY')
+    call FirstAbilityInit('A0FZ')
+    call FirstAbilityInit('A0JS')
+    call FirstAbilityInit('A0JT')
+    call FirstAbilityInit('A0JU')
     if h == null then
         return
     endif
@@ -39,14 +53,6 @@ function Trig_Initial_Wriggle_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Wriggle04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Wriggle04, Condition(function Wriggle04_Conditions))
     call TriggerAddAction(gg_trg_Wriggle04, function Wriggle04_Actions)
-    call FirstAbilityInit('A0VU')
-    call FirstAbilityInit('A0VV')
-    call FirstAbilityInit('A08T')
-    call FirstAbilityInit('A0D5')
-    call FirstAbilityInit('A0JP')
-    call FirstAbilityInit('A09L')
-    call FirstAbilityInit('A09Q')
-    call FirstAbilityInit('A09P')
     set h = null
 endfunction
 

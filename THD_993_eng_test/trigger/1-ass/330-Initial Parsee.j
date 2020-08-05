@@ -1,5 +1,12 @@
 function Trig_Initial_Parsee_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01U')
+    call FirstAbilityInit('A0W5')
+    call FirstAbilityInit('A0W6')
+    call FirstAbilityInit('A03Q')
+    call FirstAbilityInit('A0PM')
+    call FirstAbilityInit('A15S')
+    call FirstAbilityInit('A0RO')
+    call FirstAbilityInit('A0PO')
     if h == null then
         return
     endif

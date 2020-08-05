@@ -1,5 +1,17 @@
 function Trig_Initial_Yukari_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00F')
+    call FirstAbilityInit('A117')
+    call FirstAbilityInit('A0GL')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A03F')
+    call FirstAbilityInit('A07W')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A04L')
+    call FirstAbilityInit('A0QI')
+    call FirstAbilityInit('A06P')
+    call FirstAbilityInit('A0IQ')
+    call FirstAbilityInit('A0IY')
+    call FirstAbilityInit('A0JH')
     if h == null then
         return
     endif
@@ -28,11 +40,6 @@ function Trig_Initial_Yukari_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Yukari04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Yukari04, Condition(function Trig_Yukari04_Conditions))
     call TriggerAddAction(gg_trg_Yukari04, function Trig_Yukari04_Actions)
-    call FirstAbilityInit('A0JL')
-    call FirstAbilityInit('A0QI')
-    call FirstAbilityInit('A0JH')
-    call FirstAbilityInit('A07W')
-    call FirstAbilityInit('A06P')
     set h = null
 endfunction
 

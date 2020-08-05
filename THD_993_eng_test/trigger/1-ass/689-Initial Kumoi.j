@@ -1,5 +1,11 @@
 function Trig_Initial_Kumoi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E03K')
+    call FirstAbilityInit('A10C')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A10D')
+    call FirstAbilityInit('A10E')
+    call FirstAbilityInit('A10L')
+    call FirstAbilityInit('A111')
     if h == null then
         return
     endif

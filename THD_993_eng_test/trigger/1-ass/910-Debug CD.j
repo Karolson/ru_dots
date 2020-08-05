@@ -10,6 +10,7 @@ function Trig_Debug_CD_Actions takes nothing returns nothing
     call SetUnitLifePercentBJ(udg_PlayerHeroes[i], 100)
     call SetUnitManaPercentBJ(udg_PlayerHeroes[i], 100)
     call UnitResetCooldown(udg_PlayerHeroes[i])
+    call UnitResetCooldown(udg_PlayerReviveHouse[i])
 endfunction
 
 function InitTrig_Debug_CD takes nothing returns nothing

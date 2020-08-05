@@ -39,7 +39,7 @@ function YukaFlower_Aura takes nothing returns nothing
     local integer delta
     set bj_groupCountUnits = 0
     call GroupEnumUnitsOfPlayer(g, GetOwningPlayer(caster), filter)
-    set delta = bj_groupCountUnits * 4 - currentbonus
+    set delta = bj_groupCountUnits * 2 - currentbonus
     set bj_groupCountUnits = 0
     if delta > 0 then
         call UnitAddAttackDamage(caster, delta)

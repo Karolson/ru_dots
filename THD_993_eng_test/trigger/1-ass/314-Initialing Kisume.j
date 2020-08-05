@@ -1,5 +1,12 @@
 function Trig_Initialing_Kisume_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01V')
+    call FirstAbilityInit('A0GL')
+    call FirstAbilityInit('A0R8')
+    call FirstAbilityInit('A08L')
+    call FirstAbilityInit('A0R9')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0RA')
+    call FirstAbilityInit('A0RB')
     if h == null then
         return
     endif

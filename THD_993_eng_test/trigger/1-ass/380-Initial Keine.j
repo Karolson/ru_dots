@@ -2,6 +2,21 @@ function Trig_Initial_Keine_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01A')
     local player w = GetOwningPlayer(h)
     local integer task = GetHandleId(h)
+    call FirstAbilityInit('A11D')
+    call FirstAbilityInit('A0VZ')
+    call FirstAbilityInit('A0M7')
+    call FirstAbilityInit('A0M5')
+    call FirstAbilityInit('A0M8')
+    call FirstAbilityInit('A0M6')
+    call FirstAbilityInit('A0M9')
+    call FirstAbilityInit('A0MA')
+    call FirstAbilityInit('A0QI')
+    call FirstAbilityInit('A0MC')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0MB')
+    call FirstAbilityInit('A0MH')
+    call FirstAbilityInit('A0MG')
+    call FirstAbilityInit('A0MF')
     if h == null then
         return
     endif
@@ -51,10 +66,6 @@ function Trig_Initial_Keine_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Keine04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Keine04, Condition(function Trig_Keine_04_Conditions))
     call TriggerAddAction(gg_trg_Keine04, function Trig_Keine_04_Actions)
-    call FirstAbilityInit('A0MC')
-    call FirstAbilityInit('A0MH')
-    call FirstAbilityInit('A0MG')
-    call FirstAbilityInit('A0MF')
     set h = null
 endfunction
 

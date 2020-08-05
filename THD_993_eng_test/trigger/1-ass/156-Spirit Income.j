@@ -31,7 +31,7 @@ function Trig_Spirit_Income_Conditions takes nothing returns boolean
     local string str01
     if GetUnitTypeId(u) == 'n05K' then
         if THD_GetSpirit(PLY) < cost then
-            call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "____!__15______")
+            call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "Not enough faith! Need 15 faith to cast")
             call RemoveUnit(u)
             call AddUnitToStock(caster, GetUnitTypeId(u), 1, 1)
             set u = null
@@ -48,7 +48,7 @@ function Trig_Spirit_Income_Conditions takes nothing returns boolean
         endif
     elseif GetUnitTypeId(u) == 'n05J' then
         if THD_GetSpirit(PLY) < cost then
-            call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "____!__15______")
+            call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "Not enough faith! Need 15 faith to cast")
             call RemoveUnit(u)
             call AddUnitToStock(caster, GetUnitTypeId(u), 1, 1)
             set u = null
@@ -57,11 +57,11 @@ function Trig_Spirit_Income_Conditions takes nothing returns boolean
             set str01 = ""
             return false
         endif
-        set str01 = "__"
+        set str01 = "Experience"
         call Income_Exp_Start(caster)
     elseif GetUnitTypeId(u) == 'n05I' then
         if THD_GetSpirit(PLY) < cost then
-            call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "____!__15______")
+            call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "Not enough faith! Need 15 faith to cast")
             call RemoveUnit(u)
             call AddUnitToStock(caster, GetUnitTypeId(u), 1, 1)
             set u = null
@@ -70,7 +70,7 @@ function Trig_Spirit_Income_Conditions takes nothing returns boolean
             set str01 = ""
             return false
         endif
-        set str01 = "__"
+        set str01 = "Points"
         if IsUnitAlly(caster, udg_PlayerA[0]) then
             set udg_GameSetting_Gold_A = udg_GameSetting_Gold_A + 1
         else
@@ -85,7 +85,7 @@ function Trig_Spirit_Income_Conditions takes nothing returns boolean
     endif
     call RemoveUnit(u)
     call THD_AddSpirit(GetOwningPlayer(GetSellingUnit()), -cost)
-    call BroadcastMessageFriend(udg_PN[GetPlayerId(PLY)] + "___|cff8000ff____ - " + str01 + "|r!", PLY)
+    call BroadcastMessageFriend(udg_PN[GetPlayerId(PLY)] + " has invested in |cff8000ff" + str01 + "|r!", PLY)
     set caster = null
     set u = null
     set tower = null

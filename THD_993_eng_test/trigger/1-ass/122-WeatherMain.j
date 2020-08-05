@@ -73,7 +73,6 @@ function NewWeather_Snow takes nothing returns nothing
             endif
             set i = i + 1
         endloop
-        call PauseTimer(t)
         call ReleaseTimer(t)
         call FlushChildHashtable(udg_ht, task)
     endif
@@ -134,7 +133,6 @@ function NewWeather_Fog takes nothing returns nothing
             endif
             set i = i + 1
         endloop
-        call PauseTimer(t)
         call ReleaseTimer(t)
         call FlushChildHashtable(udg_ht, task)
     endif
@@ -157,7 +155,6 @@ function Weather_Exp takes nothing returns nothing
     local unit u = LoadUnitHandle(udg_ht, task, 1)
     local integer i = 0
     if GetWidgetLife(u) >= 0.405 == false then
-        call PauseTimer(t)
         call FlushChildHashtable(udg_ht, task)
         call ReleaseTimer(t)
     else
@@ -259,7 +256,6 @@ function NewWeatherTime_Main takes nothing returns nothing
         call BroadcastMessage("Weather ended, next weather: " + udg_NewWeather_WeatherName[udg_NewWeather_WID])
         call BroadcastMessage(udg_NewWeather_WeatherInfo[udg_NewWeather_WID])
         call TimerDialogSetTitle(udg_NewWeather_TD, "Next: " + udg_NewWeather_WeatherName[udg_NewWeather_WID])
-        call PauseTimer(t)
         call ReleaseTimer(t)
         call FlushChildHashtable(udg_ht, task)
         set udg_NewWeather_CT = null
@@ -474,11 +470,7 @@ function NewWeather_Init takes nothing returns nothing
     set udg_NewWeather_WeatherInfo[9] = "Reduces girls' CC duration by 30%, but increases damage by 30%"
     set udg_NewWeather_WeatherInfo[10] = "Decreases girls' damage by 20%, but increases CC duration by 40%."
     set udg_Weather_Region = Rect(-2025.0, -18142.0, 15237.0, -2144.0)
-    call AddUnitToStockBJ('n02P', udg_BaseA[0], 1, 1)
-    call AddUnitToStockBJ('n02P', udg_BaseB[0], 1, 1)
     call WeatherMain_Init()
-    call TriggerRegisterUnitEvent(gg_trg_WeatherTimeChange, udg_BaseA[0], EVENT_UNIT_SELL)
-    call TriggerRegisterUnitEvent(gg_trg_WeatherTimeChange, udg_BaseB[0], EVENT_UNIT_SELL)
 endfunction
 
 function Trig_WeatherMain_Actions takes nothing returns nothing

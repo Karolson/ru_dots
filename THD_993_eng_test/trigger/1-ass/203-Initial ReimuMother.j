@@ -729,6 +729,13 @@ endfunction
 
 function Trig_Initial_ReimuMother_Actions takes nothing returns nothing
     set udg_ReimuMother = GetCharacterHandle(udg_ReimuMother_CODE)
+    call FirstAbilityInit('A1GB')
+    call FirstAbilityInit('A1CC')
+    call FirstAbilityInit('Arav')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1CB')
+    call FirstAbilityInit('A1CD')
+    call FirstAbilityInit('A1G1')
     call ReimuMother_Init()
     call UnitAddAbility(udg_ReimuMother, 'A1C0')
     call UnitAddAbility(udg_ReimuMother, 'A1C2')

@@ -107,9 +107,8 @@ function DestroyTimer_WW takes timer ti returns nothing
 endfunction
 
 function FlushTimer_WW takes timer ti returns nothing
-    call PauseTimer(ti)
     call FlushChildHashtable(udg_Hashtable, GetHandleId(ti))
-    call DestroyTimer(ti)
+    call ReleaseTimer(ti)
 endfunction
 
 function FlushTrigger takes trigger t returns nothing

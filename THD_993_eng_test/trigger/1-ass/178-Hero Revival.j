@@ -111,7 +111,7 @@ function HeroReviveSTimer_Set takes nothing returns nothing
     call UnitRemoveAbility(udg_PlayerReviveHouse[GetPlayerId(GetOwningPlayer(hero))], 'Arev')
     call PauseTimer(ti)
     call TimerStart(ti, cd, false, function HeroReviveSTimer_Clear)
-    call BroadcastMessage(udg_PlayerColors[GetPlayerId(GetOwningPlayer(hero))] + GetHeroProperName(hero) + "|r has used buyback. Next buyback: |cffffcc00  " + GetTimeString_h_mM_SS_WW(IAbsBJ(udg_GameTime - udg_Game_BattleBeginTime + cd)) + "|r")
+    call BroadcastMessage(udg_PlayerColors[GetPlayerId(GetOwningPlayer(hero))] + GetHeroProperName(hero) + "|r has used buyback. Next buyback: |cffffcc00" + GetTimeString_h_mM_SS_WW(IAbsBJ(udg_GameTime - udg_Game_BattleBeginTime + cd)) + "|r")
     set ti = null
     set hero = null
 endfunction

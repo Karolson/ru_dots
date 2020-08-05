@@ -1,5 +1,17 @@
 function Trig_Initial_Youmu_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O00B')
+    call FirstAbilityInit('A0BD')
+    call FirstAbilityInit('A1IF')
+    call FirstAbilityInit('A05X')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A05Y')
+    call FirstAbilityInit('A0RV')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A064')
+    call FirstAbilityInit('A0E0')
+    call FirstAbilityInit('A065')
+    call FirstAbilityInit('A0E1')
     if h == null then
         return
     endif
@@ -40,10 +52,6 @@ function Trig_Initial_Youmu_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Youmu04, Condition(function Trig_Youmu04_Conditions))
     call TriggerAddAction(gg_trg_Youmu04, function Trig_Youmu04_Actions)
     call UnitAddAbility(h, 'A1IF')
-    call FirstAbilityInit('A0E1')
-    call FirstAbilityInit('A063')
-    call FirstAbilityInit('A0RV')
-    call FirstAbilityInit('A0E0')
     set h = null
 endfunction
 

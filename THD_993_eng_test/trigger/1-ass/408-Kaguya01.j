@@ -747,12 +747,6 @@ function KaguyaX_Init takes unit h returns nothing
     call UnitAddBonusDmg(h, 2000)
     call SetPlayerAbilityAvailable(GetOwningPlayer(h), 'A1BQ', false)
     call TimerStart(t, 0.5, true, function KaguyaX_Illusion_Property)
-    call FirstAbilityInit('A1BT')
-    call FirstAbilityInit('A1BU')
-    call FirstAbilityInit('A1BV')
-    call FirstAbilityInit('A1BW')
-    call FirstAbilityInit('A0X5')
-    call FirstAbilityInit('A0OK')
     set trg = null
     set t = null
 endfunction

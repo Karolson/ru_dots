@@ -1,5 +1,14 @@
 function Trig_Initial_Yuugi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H00K')
+    call FirstAbilityInit('A03Q')
+    call FirstAbilityInit('A0RM')
+    call FirstAbilityInit('A11C')
+    call FirstAbilityInit('A08B')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A118')
+    call FirstAbilityInit('A08C')
+    call FirstAbilityInit('A08D')
+    call FirstAbilityInit('A17W')
     if h == null then
         return
     endif
@@ -48,19 +57,6 @@ function Trig_Initial_Yuugi_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Yuugi04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Yuugi04, Condition(function Trig_Yuugi04_Conditions))
     call TriggerAddAction(gg_trg_Yuugi04, function Trig_Yuugi04_Actions)
-    call FirstAbilityInit('A0RM')
-    call FirstAbilityInit('A0H6')
-    call FirstAbilityInit('A0H7')
-    call FirstAbilityInit('A0H8')
-    call FirstAbilityInit('A0H9')
-    call FirstAbilityInit('A0O6')
-    call FirstAbilityInit('A0O7')
-    call FirstAbilityInit('A0O8')
-    call FirstAbilityInit('A0O9')
-    call FirstAbilityInit('A0OA')
-    call FirstAbilityInit('A0OB')
-    call FirstAbilityInit('A0OC')
-    call FirstAbilityInit('A0OD')
     set h = null
 endfunction
 

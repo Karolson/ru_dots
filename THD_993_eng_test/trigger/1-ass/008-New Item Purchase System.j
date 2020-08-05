@@ -1,3 +1,14 @@
+function GetItemMaxCharges takes integer id returns integer
+    if id == 'I02P' or id == 'I02S' or id == 'I02T' or id == 'I02R' or id == 'I02Q' or id == 'I02U' or id == 'I02N' or id == 'I03J' then
+        return 12
+    elseif id == 'I00R' or id == 'I00T' or id == 'I00S' then
+        return 1
+    elseif id == 'dust' then
+        return 2
+    endif
+    return 0
+endfunction
+
 function Key_Id_U2I takes nothing returns integer
     return StringHash("Id_U2I")
 endfunction
@@ -16,13 +27,8 @@ endfunction
 
 function UnitAddItemTry takes unit u, integer id returns boolean
     local integer i = 0
-    local integer max
+    local integer max = GetItemMaxCharges(id)
     local item it
-    if id == 'dust' then
-        set max = 2
-    else
-        set max = 12
-    endif
     loop
         set it = UnitItemInSlot(u, i)
         if GetItemTypeId(it) == id and GetItemCharges(it) < max then

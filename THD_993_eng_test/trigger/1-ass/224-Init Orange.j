@@ -1,5 +1,32 @@
 function Trig_Init_Orange_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01I')
+    call FirstAbilityInit('A0XB')
+    call FirstAbilityInit('A08W')
+    call FirstAbilityInit('A0UL')
+    call FirstAbilityInit('A15K')
+    call FirstAbilityInit('A08P')
+    call FirstAbilityInit('A15M')
+    call FirstAbilityInit('A15N')
+    call FirstAbilityInit('A15O')
+    call FirstAbilityInit('A15P')
+    call FirstAbilityInit('A114')
+    call FirstAbilityInit('A115')
+    call FirstAbilityInit('A116')
+    call FirstAbilityInit('A0TQ')
+    call FirstAbilityInit('A0Z3')
+    call FirstAbilityInit('A10W')
+    call FirstAbilityInit('A10X')
+    call FirstAbilityInit('A10Y')
+    call FirstAbilityInit('A10Z')
+    call FirstAbilityInit('A0LP')
+    call FirstAbilityInit('A193')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0EP')
+    call FirstAbilityInit('A0TM')
+    call FirstAbilityInit('A0QV')
+    call FirstAbilityInit('A04D')
+    call FirstAbilityInit('A04K')
+    call FirstAbilityInit('A0TO')
     if h == null then
         return
     endif
@@ -48,9 +75,6 @@ function Trig_Init_Orange_Actions takes nothing returns nothing
     call TriggerAddAction(gg_trg_Orange04_Attack, function Trig_Orange04_Attack_Actions)
     call DisableTrigger(gg_trg_Orange04_Attack)
     call UnitInitAddAttack(h)
-    call FirstAbilityInit('A0EP')
-    call FirstAbilityInit('A04K')
-    call FirstAbilityInit('A0EI')
     set h = null
 endfunction
 

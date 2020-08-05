@@ -1,5 +1,15 @@
 function Trig_Init_Lunar_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00O')
+    call FirstAbilityInit('A19S')
+    call FirstAbilityInit('A19T')
+    call FirstAbilityInit('A0FX')
+    call FirstAbilityInit('A06L')
+    call FirstAbilityInit('A0BE')
+    call FirstAbilityInit('A0BT')
+    call FirstAbilityInit('A0CU')
+    call FirstAbilityInit('A0CV')
+    call FirstAbilityInit('A0TF')
+    call FirstAbilityInit('A19U')
     if h == null then
         return
     endif
@@ -41,8 +51,6 @@ function Trig_Init_Lunar_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Lunar04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Lunar04, Condition(function Trig_Lunar04_Conditions))
     call TriggerAddAction(gg_trg_Lunar04, function Trig_Lunar04_Actions)
-    call FirstAbilityInit('A19U')
-    call FirstAbilityInit('A19T')
     call AddingLBuff(0, 'A19T', 'B009')
     call AddingLBuff(0, 'A0BE', 0)
     set h = null

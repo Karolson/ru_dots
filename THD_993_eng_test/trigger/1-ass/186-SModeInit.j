@@ -243,4 +243,4 @@ function Trig_SModeInit takes nothing returns nothing
 endfunction
 
 function InitTrig_SModeInit takes nothing returns nothing
-endfunction
+endfunction 

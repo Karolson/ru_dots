@@ -1,5 +1,22 @@
 function Trig_Initialing_Miko_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E02J')
+    call FirstAbilityInit('A1HX')
+    call FirstAbilityInit('A1HW')
+    call FirstAbilityInit('A183')
+    call FirstAbilityInit('A0V1')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0VL')
+    call FirstAbilityInit('A185')
+    call FirstAbilityInit('A0UY')
+    call FirstAbilityInit('A0UX')
+    call FirstAbilityInit('A186')
+    call FirstAbilityInit('A686')
+    call FirstAbilityInit('A0UH')
+    call FirstAbilityInit('A0UO')
+    call FirstAbilityInit('A04D')
+    call FirstAbilityInit('A187')
+    call FirstAbilityInit('A1I2')
     if h == null then
         return
     endif
@@ -41,7 +58,6 @@ function Trig_Initialing_Miko_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Miko04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Miko04, Condition(function Trig_Miko04_Conditions))
     call TriggerAddAction(gg_trg_Miko04, function Trig_Miko04_Actions)
-    call FirstAbilityInit('A0UH')
     set h = null
 endfunction
 

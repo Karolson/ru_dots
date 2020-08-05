@@ -1,5 +1,18 @@
 function Trig_Initial_Mokou_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('N00J')
+    call FirstAbilityInit('A052')
+    call FirstAbilityInit('A053')
+    call FirstAbilityInit('A054')
+    call FirstAbilityInit('A056')
+    call FirstAbilityInit('A057')
+    call FirstAbilityInit('A058')
+    call FirstAbilityInit('A04U')
+    call FirstAbilityInit('A04V')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A00N')
+    call FirstAbilityInit('A00G')
+    call FirstAbilityInit('A00B')
+    call FirstAbilityInit('A059')
     if h == null then
         set h = GetCharacterHandle('N04L')
     endif
@@ -68,15 +81,6 @@ function Trig_Initial_Mokou_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Mokou04_End, h, EVENT_UNIT_HERO_REVIVE_FINISH)
     call TriggerAddCondition(gg_trg_Mokou04_End, Condition(function Trig_Mokou04_End_Conditions))
     call TriggerAddAction(gg_trg_Mokou04_End, function Trig_Mokou04_End_Actions)
-    call FirstAbilityInit('A04X')
-    call FirstAbilityInit('A04Y')
-    call FirstAbilityInit('A04Z')
-    call FirstAbilityInit('A050')
-    call FirstAbilityInit('A051')
-    call FirstAbilityInit('A053')
-    call FirstAbilityInit('A054')
-    call FirstAbilityInit('A055')
-    call FirstAbilityInit('A04V')
     set h = null
 endfunction
 

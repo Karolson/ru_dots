@@ -3,6 +3,16 @@ function Trig_Initial_Utsuho_Actions takes nothing returns nothing
     local timer t = CreateTimer()
     local group g = CreateGroup()
     local integer task = GetHandleId(t)
+    call FirstAbilityInit('A0X8')
+    call FirstAbilityInit('A05Z')
+    call FirstAbilityInit('A060')
+    call FirstAbilityInit('A076')
+    call FirstAbilityInit('A0QN')
+    call FirstAbilityInit('A074')
+    call FirstAbilityInit('A077')
+    call FirstAbilityInit('A078')
+    call FirstAbilityInit('A079')
+    call FirstAbilityInit('A07B')
     if h == null then
         return
     endif
@@ -29,11 +39,6 @@ function Trig_Initial_Utsuho_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Utsuho04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Utsuho04, Condition(function Trig_Utsuho04_Conditions))
     call TriggerAddAction(gg_trg_Utsuho04, function Trig_Utsuho04_Actions)
-    call FirstAbilityInit('A074')
-    call FirstAbilityInit('A075')
-    call FirstAbilityInit('A078')
-    call FirstAbilityInit('A077')
-    call FirstAbilityInit('A07A')
     set h = null
     set t = null
     set g = null

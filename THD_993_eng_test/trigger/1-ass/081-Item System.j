@@ -118,16 +118,9 @@ function Trig_Item_Auto_Stack takes nothing returns nothing
     local item temp = null
     local integer w = GetItemTypeId(pick)
     local integer get = GetItemCharges(pick)
-    local integer has
-    local integer max
+    local integer max = GetItemMaxCharges(w)
+    local integer has = max
     local integer i = 0
-    if w == 'dust' then
-        set max = 2
-        set has = 2
-    else
-        set max = 12
-        set has = 12
-    endif
     loop
     exitwhen i >= bj_MAX_INVENTORY
         set temp = UnitItemInSlot(u, i)

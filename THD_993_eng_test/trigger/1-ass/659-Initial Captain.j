@@ -2,6 +2,25 @@ function Trig_Initial_Captain_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00Q')
     local player p
     local timer t = CreateTimer()
+    call FirstAbilityInit('A0AB')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0AA')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0A6')
+    call FirstAbilityInit('A0A8')
+    call FirstAbilityInit('A0A9')
+    call FirstAbilityInit('A1A3')
+    call FirstAbilityInit('A1AX')
+    call FirstAbilityInit('A0AG')
+    call FirstAbilityInit('A1AW')
+    call FirstAbilityInit('A0AF')
+    call FirstAbilityInit('A0AI')
+    call FirstAbilityInit('A0RP')
+    call FirstAbilityInit('A0AH')
+    call FirstAbilityInit('A10O')
+    call FirstAbilityInit('A10I')
+    call FirstAbilityInit('A10J')
     if h == null then
         return
     endif
@@ -79,10 +98,6 @@ function Trig_Initial_Captain_Actions takes nothing returns nothing
     call RegisterAnyUnitDamage(gg_trg_Captain04_CallBack)
     call TriggerRegisterPlayerUnitEvent(gg_trg_Captain04_CallBack, p, EVENT_PLAYER_UNIT_SPELL_FINISH, null)
     call TriggerAddCondition(gg_trg_Captain04_CallBack, Condition(function Trig_Captain04_CallBack_Conditions))
-    call FirstAbilityInit('A0H6')
-    call FirstAbilityInit('A0H7')
-    call FirstAbilityInit('A0H8')
-    call FirstAbilityInit('A0H9')
     set h = null
 endfunction
 

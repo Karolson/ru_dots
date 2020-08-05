@@ -665,6 +665,10 @@ endfunction
 
 function Trig_Initial_Kagerou_Actions takes nothing returns nothing
     set udg_Kagerou = GetCharacterHandle(udg_Kagerou_CODE)
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('Arav')
+    call FirstAbilityInit('A1HT')
+    call FirstAbilityInit('A1I6')
     call DebugMsg("Initial Kagerou0")
     call Kagerou_Init()
 endfunction

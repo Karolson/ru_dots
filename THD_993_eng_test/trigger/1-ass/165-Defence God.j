@@ -5,50 +5,6 @@ function Trig_Defence_God_Conditions takes nothing returns boolean
     return t
 endfunction
 
-function Thunderstrike_CineFilterSS_Clear takes nothing returns nothing
-    local timer t = GetExpiredTimer()
-    local integer task = GetHandleId(t)
-    local integer switch = LoadInteger(udg_ht, task, 0)
-    if switch == 0 then
-        call SaveInteger(udg_ht, task, 0, 1)
-        call SetCineFilterTexture("ReplaceableTextures\\CameraMasks\\White_mask.blp")
-        call SetCineFilterBlendMode(BLEND_MODE_BLEND)
-        call SetCineFilterTexMapFlags(TEXMAP_FLAG_NONE)
-        call SetCineFilterStartUV(0, 0, 1, 1)
-        call SetCineFilterEndUV(0, 0, 1, 1)
-        call SetCineFilterStartColor(0, 140, 255, 240)
-        call SetCineFilterEndColor(0, 140, 255, 0)
-        call SetCineFilterDuration(1.2)
-        call DisplayCineFilter(true)
-        call TimerStart(t, 1.5, false, function Thunderstrike_CineFilterBL_Clear)
-    else
-        call FlushChildHashtable(udg_ht, task)
-        call FogEnable(true)
-        call FogMaskEnable(true)
-        call DisplayCineFilter(false)
-        call ReleaseTimer(t)
-    endif
-    set t = null
-endfunction
-
-function Thunderstrike_CineFilterSS_Start takes nothing returns nothing
-    local timer t = CreateTimer()
-    local integer task = GetHandleId(t)
-    local integer switch = 0
-    call SaveInteger(udg_ht, task, 0, switch)
-    call SetCineFilterTexture("ReplaceableTextures\\CameraMasks\\White_mask.blp")
-    call SetCineFilterBlendMode(BLEND_MODE_BLEND)
-    call SetCineFilterTexMapFlags(TEXMAP_FLAG_NONE)
-    call SetCineFilterStartUV(0, 0, 1, 1)
-    call SetCineFilterEndUV(0, 0, 1, 1)
-    call SetCineFilterStartColor(0, 140, 255, 0)
-    call SetCineFilterEndColor(0, 140, 255, 240)
-    call SetCineFilterDuration(0.2)
-    call DisplayCineFilter(true)
-    call TimerStart(t, 0.4, false, function Thunderstrike_CineFilterBL_Clear)
-    set t = null
-endfunction
-
 function Trig_Defence_God_Actions takes nothing returns nothing
     local integer cost = 15
     local unit caster = GetSellingUnit()
@@ -78,16 +34,16 @@ function Trig_Defence_God_Actions takes nothing returns nothing
     call StartSound(gg_snd_RollingThunder1)
     call RemoveUnitFromStockBJ('n02M', udg_BaseB[0])
     call AddUnitToStockBJ('n02M', udg_BaseB[0], 0, 1)
-    call RemoveUnitFromStockBJ('n02M', gg_unit_h01Q_0120)
-    call AddUnitToStockBJ('n02M', gg_unit_h01Q_0120, 0, 1)
-    call RemoveUnitFromStockBJ('n02M', gg_unit_h01Q_0121)
-    call AddUnitToStockBJ('n02M', gg_unit_h01Q_0121, 0, 1)
-    call RemoveUnitFromStockBJ('n02M', gg_unit_h01Q_0122)
-    call AddUnitToStockBJ('n02M', gg_unit_h01Q_0122, 0, 1)
-    call RemoveUnitFromStockBJ('n02M', gg_unit_h01Q_0123)
-    call AddUnitToStockBJ('n02M', gg_unit_h01Q_0123, 0, 1)
-    call RemoveUnitFromStockBJ('n02M', gg_unit_h01Q_0124)
-    call AddUnitToStockBJ('n02M', gg_unit_h01Q_0124, 0, 1)
+    call RemoveUnitFromStockBJ('n02M', gg_unit_H01Q_0120)
+    call AddUnitToStockBJ('n02M', gg_unit_H01Q_0120, 0, 1)
+    call RemoveUnitFromStockBJ('n02M', gg_unit_H01Q_0121)
+    call AddUnitToStockBJ('n02M', gg_unit_H01Q_0121, 0, 1)
+    call RemoveUnitFromStockBJ('n02M', gg_unit_H01Q_0122)
+    call AddUnitToStockBJ('n02M', gg_unit_H01Q_0122, 0, 1)
+    call RemoveUnitFromStockBJ('n02M', gg_unit_H01Q_0123)
+    call AddUnitToStockBJ('n02M', gg_unit_H01Q_0123, 0, 1)
+    call RemoveUnitFromStockBJ('n02M', gg_unit_H01Q_0124)
+    call AddUnitToStockBJ('n02M', gg_unit_H01Q_0124, 0, 1)
     call TriggerSleepAction(2)
     set i = 0
     loop

@@ -3,6 +3,18 @@ function Trig_Initial_Byakuren_Actions takes nothing returns nothing
     local player w = GetOwningPlayer(h)
     local timer t
     local integer task
+    call FirstAbilityInit('A0P4')
+    call FirstAbilityInit('A0O2')
+    call FirstAbilityInit('A0O1')
+    call FirstAbilityInit('A0NZ')
+    call FirstAbilityInit('A11W')
+    call FirstAbilityInit('A11X')
+    call FirstAbilityInit('A11Y')
+    call FirstAbilityInit('A11Z')
+    call FirstAbilityInit('A120')
+    call FirstAbilityInit('A0O0')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A123')
     if h == null then
         return
     endif

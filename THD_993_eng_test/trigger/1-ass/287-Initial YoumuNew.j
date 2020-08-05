@@ -382,7 +382,7 @@ function YoumuNew__Skill takes nothing returns boolean
                             call AddUnitAnimationProperties(caster, "upgrade first", true)
                         endif
                         set udg_SK_YoumuNewEx[p] = udg_SK_YoumuNewExLast[p]
-                        call AddTimedEffectToPoint(cx, cy, 1.0, " Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl")
+                        call AddTimedEffectToPoint(cx, cy, 1.0, "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl")
                         call GroupClear(g)
                     else
                         if (uy - cy) * Sin(GetUnitFacing(caster) / 180 * 3.14) + (ux - cx) * Cos(GetUnitFacing(caster) / 180 * 3.14) > 0 then
@@ -403,7 +403,7 @@ function YoumuNew__Skill takes nothing returns boolean
                                 endif
                             endif
                         endif
-                        call AddTimedEffectToPoint(ux, uy, 1.0, " Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl")
+                        call AddTimedEffectToPoint(ux, uy, 1.0, "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl")
                         call GroupRemoveUnit(g, u)
                     endif
                 endif
@@ -452,6 +452,9 @@ endfunction
 
 function Trig_Initial_YoumuNew_Actions takes nothing returns nothing
     set udg_YoumuNew = GetCharacterHandle(udg_YoumuNew_CODE)
+    call FirstAbilityInit('A1GM')
+    call FirstAbilityInit('Arav')
+    call FirstAbilityInit('A1D4')
     call YoumuNew_Init()
 endfunction
 

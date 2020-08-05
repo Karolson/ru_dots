@@ -1,5 +1,14 @@
 function Trig_Init_Suwako_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H012')
+    call FirstAbilityInit('A032')
+    call FirstAbilityInit('A0FK')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0FI')
+    call FirstAbilityInit('A17R')
+    call FirstAbilityInit('A0X7')
+    call FirstAbilityInit('A17Q')
+    call FirstAbilityInit('A0FL')
+    call FirstAbilityInit('A0LL')
     if h == null then
         set h = GetCharacterHandle('H01X')
     endif

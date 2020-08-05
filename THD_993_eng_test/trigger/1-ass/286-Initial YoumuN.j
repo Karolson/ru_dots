@@ -4,6 +4,20 @@ endfunction
 
 function Trig_Initial_YoumuN_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O019')
+    call FirstAbilityInit('A1IF')
+    call FirstAbilityInit('A1GM')
+    call FirstAbilityInit('A0DJ')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1GG')
+    call FirstAbilityInit('A1GJ')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A1GH')
+    call FirstAbilityInit('A0RV')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A1GI')
+    call FirstAbilityInit('A0E0')
+    call FirstAbilityInit('A1GK')
+    call FirstAbilityInit('A1GL')
     if h == null then
         return
     endif
@@ -43,11 +57,6 @@ function Trig_Initial_YoumuN_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_YoumuN04, Condition(function Trig_YoumuN04_Conditions))
     call TriggerAddAction(gg_trg_YoumuN04, function Trig_YoumuN04_Actions)
     call UnitAddAbility(h, 'A1GM')
-    call FirstAbilityInit('A0E1')
-    call FirstAbilityInit('A063')
-    call FirstAbilityInit('A0RV')
-    call FirstAbilityInit('A0E0')
-    call FirstAbilityInit('A1GJ')
     set h = null
 endfunction
 

@@ -1,5 +1,16 @@
 function Trig_Init_Lyrica_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E020')
+    call FirstAbilityInit('A0TR')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0TS')
+    call FirstAbilityInit('A0BD')
+    call FirstAbilityInit('A0TT')
+    call FirstAbilityInit('A0N0')
+    call FirstAbilityInit('A0UU')
+    call FirstAbilityInit('A0TZ')
+    call FirstAbilityInit('A0UK')
+    call FirstAbilityInit('A0UJ')
     if h == null then
         return
     endif
@@ -58,9 +69,6 @@ function Trig_Init_Lyrica_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Lyrica04, Condition(function Trig_Lyrica04_Conditions))
     call TriggerAddAction(gg_trg_Lyrica04, function Trig_Lyrica04_Actions)
     call SetPlayerTechResearched(GetOwningPlayer(h), 'R00B', 2)
-    call FirstAbilityInit('A0TZ')
-    call FirstAbilityInit('A0UU')
-    call FirstAbilityInit('A0UJ')
     set h = null
 endfunction
 

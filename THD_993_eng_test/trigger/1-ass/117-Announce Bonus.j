@@ -189,7 +189,7 @@ function AnnounceHeroBonus takes unit killer, unit dead returns boolean
         endif
         if udg_FlagFirst then
             set udg_FlagFirst = false
-            set msg = "|cffffcc00Additional 150 points have been rewarded for the first overthrow!|r"
+            set msg = "|cffffcc00Additional 150 points have been rewarded for the first blood!|r"
             call BroadcastMessage(msg)
             set giveGold = giveGold + 150
         endif
@@ -244,7 +244,7 @@ function AnnounceHeroBonus takes unit killer, unit dead returns boolean
         set msg = null
         return false
     endif
-    set msg = udg_PN[GetPlayerId(loser)] + " has been taken by a UFO"
+    set msg = udg_PN[GetPlayerId(loser)] + " has been taken by UFO"
     call BroadcastMessage(msg)
     set winner = null
     set loser = null

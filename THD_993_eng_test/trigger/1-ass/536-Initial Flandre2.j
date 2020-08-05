@@ -312,7 +312,7 @@ function s__Flandre2_04_trg_onAttack_Conditions takes nothing returns boolean
     local unit s = GetEventDamageSource()
     local unit d = GetTriggerUnit()
     local integer playerId = StringHash("Player" + I2S(GetPlayerId(GetOwningPlayer(s))))
-    if GetUnitTypeId(s) != udg_Flandre2__FLANDRE2_04_UNIT_TYPEID or not HaveSavedInteger(udg_sht, playerId, StringHash("Flandre2_04")) then
+    if not HaveSavedInteger(udg_sht, playerId, StringHash("Flandre2_04")) then
         set s = null
         set d = null
         return false
@@ -480,6 +480,13 @@ endfunction
 
 function Trig_Initial_Flandre22_Actions takes nothing returns nothing
     call Flandre2_Init(GetCharacterHandle(udg_FLANDRE2_CODE))
+    call FirstAbilityInit('A062')
+    call FirstAbilityInit('A0EI')
+    call FirstAbilityInit('A0EJ')
+    call FirstAbilityInit('A0EK')
+    call FirstAbilityInit('A0EQ')
+    call FirstAbilityInit('A1EL')
+    call FirstAbilityInit('A1EM')
 endfunction
 
 function InitTrig_Initial_Flandre2 takes nothing returns nothing

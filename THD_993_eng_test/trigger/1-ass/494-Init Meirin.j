@@ -1,6 +1,17 @@
 function Trig_Init_Meirin_Actions takes nothing returns nothing
     local integer i
     local unit h = GetCharacterHandle('E013')
+    call FirstAbilityInit('A0GC')
+    call FirstAbilityInit('A0GA')
+    call FirstAbilityInit('A0GB')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0SJ')
+    call FirstAbilityInit('A1Z0')
+    call FirstAbilityInit('A0GD')
+    call FirstAbilityInit('A0AN')
+    call FirstAbilityInit('A0G7')
+    call FirstAbilityInit('A11T')
     if h == null then
         set h = GetCharacterHandle('E03J')
     endif

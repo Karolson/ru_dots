@@ -1,5 +1,14 @@
 function Trig_Init_Start_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E03L')
+    call FirstAbilityInit('A19T')
+    call FirstAbilityInit('A0BE')
+    call FirstAbilityInit('A10V')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A10M')
+    call FirstAbilityInit('A10N')
+    call FirstAbilityInit('A20W')
+    call FirstAbilityInit('A10S')
     if h == null then
         return
     endif
@@ -28,7 +37,6 @@ function Trig_Init_Start_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Start03, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Start03, Condition(function Trig_Start03_Conditions))
     call TriggerAddAction(gg_trg_Start03, function Trig_Start03_Actions)
-    call FirstAbilityInit('A10Q')
     set h = null
 endfunction
 

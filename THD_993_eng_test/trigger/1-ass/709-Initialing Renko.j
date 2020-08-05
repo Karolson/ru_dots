@@ -1,5 +1,24 @@
 function Trig_Initialing_Renko_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H01Z')
+    call FirstAbilityInit('A0ZO')
+    call FirstAbilityInit('A0ZP')
+    call FirstAbilityInit('A0ZQ')
+    call FirstAbilityInit('A12Q')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A12R')
+    call FirstAbilityInit('A14F')
+    call FirstAbilityInit('A1AU')
+    call FirstAbilityInit('A0QV')
+    call FirstAbilityInit('A14G')
+    call FirstAbilityInit('A14H')
+    call FirstAbilityInit('A12S')
+    call FirstAbilityInit('A0UD')
+    call FirstAbilityInit('A14I')
+    call FirstAbilityInit('A14J')
+    call FirstAbilityInit('A14K')
+    call FirstAbilityInit('A14D')
+    call FirstAbilityInit('A14L')
+    call FirstAbilityInit('A14M')
     if h == null then
         return
     endif

@@ -1,5 +1,15 @@
 function Trig_Initialing_Hatate_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O00V')
+    call FirstAbilityInit('A05N')
+    call FirstAbilityInit('A08N')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A08O')
+    call FirstAbilityInit('A09B')
+    call FirstAbilityInit('A0D4')
+    call FirstAbilityInit('A0D9')
+    call FirstAbilityInit('A0E5')
+    call FirstAbilityInit('A0E6')
+    call FirstAbilityInit('A0I2')
     if h == null then
         return
     endif

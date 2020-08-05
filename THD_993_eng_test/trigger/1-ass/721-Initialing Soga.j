@@ -1,5 +1,14 @@
 function Trig_Initialing_Soga_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H026')
+    call FirstAbilityInit('A0PE')
+    call FirstAbilityInit('A0PY')
+    call FirstAbilityInit('A0PA')
+    call FirstAbilityInit('A19X')
+    call FirstAbilityInit('A19Y')
+    call FirstAbilityInit('A00M')
+    call FirstAbilityInit('A19Z')
+    call FirstAbilityInit('A1A2')
+    call FirstAbilityInit('A1A0')
     if h == null then
         return
     endif
@@ -34,7 +43,6 @@ function Trig_Initialing_Soga_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Soga04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Soga04, Condition(function Trig_Soga04_Conditions))
     call TriggerAddAction(gg_trg_Soga04, function Trig_Soga04_Actions)
-    call FirstAbilityInit('A00O')
     set h = null
 endfunction
 

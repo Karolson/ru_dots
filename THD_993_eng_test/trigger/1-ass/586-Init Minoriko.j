@@ -2,6 +2,16 @@ function Trig_Init_Minoriko_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H01I')
     local player w
     local integer task
+    call FirstAbilityInit('A0JF')
+    call FirstAbilityInit('A0JG')
+    call FirstAbilityInit('A0UZ')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0JI')
+    call FirstAbilityInit('A0L6')
+    call FirstAbilityInit('A0JJ')
+    call FirstAbilityInit('A0JN')
+    call FirstAbilityInit('A06A')
+    call FirstAbilityInit('A06C')
     if h == null then
         set h = GetCharacterHandle('H01Y')
     endif

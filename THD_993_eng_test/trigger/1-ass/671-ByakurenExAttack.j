@@ -55,7 +55,7 @@ function Trig_ByakurenExAttack_Damaged takes nothing returns nothing
     else
         call UnitHealingTarget(caster, caster, heal)
     endif
-    call DestroyEffect(AddSpecialEffect("Abilities \\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl", GetUnitX(target), GetUnitY(target)))
+    call DestroyEffect(AddSpecialEffect("Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl", GetUnitX(target), GetUnitY(target)))
     call TriggerRemoveAction(trg, LoadTriggerActionHandle(udg_ht, task, 1))
     call DestroyTrigger(trg)
     call FlushChildHashtable(udg_ht, task)

@@ -4,7 +4,6 @@ function NewWeather_HW takes nothing returns nothing
     local unit u = LoadUnitHandle(udg_ht, task, 1)
     local integer cnt = LoadInteger(udg_ht, task, 2)
     if cnt == 0 then
-        call PauseTimer(t)
         set udg_NewWeather_HWT[GetPlayerId(GetOwningPlayer(u))] = null
         call ReleaseTimer(t)
         call FlushChildHashtable(udg_ht, task)

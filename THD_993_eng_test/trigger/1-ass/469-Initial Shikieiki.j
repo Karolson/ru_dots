@@ -1,5 +1,19 @@
 function Trig_Initial_Shikieiki_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00V')
+    call FirstAbilityInit('A1ED')
+    call FirstAbilityInit('A0B7')
+    call FirstAbilityInit('A0B0')
+    call FirstAbilityInit('A0B8')
+    call FirstAbilityInit('A0I1')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0I4')
+    call FirstAbilityInit('A0SY')
+    call FirstAbilityInit('A0SZ')
+    call FirstAbilityInit('A194')
+    call FirstAbilityInit('A00K')
+    call FirstAbilityInit('A00W')
+    call FirstAbilityInit('A08V')
+    call FirstAbilityInit('A0BG')
     if h == null then
         return
     endif

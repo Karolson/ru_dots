@@ -3273,3 +3273,7 @@ GCU_CurrentY: real
 GCU_CurrentPick: unit
 GCU_AnyGroup: group
 GCU_CurrentDistance: real
+yukkuriGirl: unit
+yukkuriYukkuri: unit
+yukkuriItem: item
+yukkuriBoolean: boolean

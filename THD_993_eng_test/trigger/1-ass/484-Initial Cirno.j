@@ -1,5 +1,23 @@
 function Trig_Initial_Cirno_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E009')
+    call FirstAbilityInit('A11O')
+    call FirstAbilityInit('A11P')
+    call FirstAbilityInit('A11Q')
+    call FirstAbilityInit('A11R')
+    call FirstAbilityInit('A0TE')
+    call FirstAbilityInit('A0MZ')
+    call FirstAbilityInit('A0MY')
+    call FirstAbilityInit('A0MX')
+    call FirstAbilityInit('A03W')
+    call FirstAbilityInit('A06F')
+    call FirstAbilityInit('A03X')
+    call FirstAbilityInit('A04J')
+    call FirstAbilityInit('A057')
+    call FirstAbilityInit('A056')
+    call FirstAbilityInit('A058')
+    call FirstAbilityInit('A0MW')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0C6')
     if h == null then
         return
     endif
@@ -54,9 +72,6 @@ function Trig_Initial_Cirno_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Cirno04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Cirno04, Condition(function Trig_Cirno04_Conditions))
     call TriggerAddAction(gg_trg_Cirno04, function Trig_Cirno04_Actions)
-    call FirstAbilityInit('A06F')
-    call FirstAbilityInit('A058')
-    call FirstAbilityInit('A0C6')
     set h = null
 endfunction
 

@@ -378,6 +378,10 @@ endfunction
 
 function Trig_Initial_ReisenNew_Actions takes nothing returns nothing
     set udg_ReisenNew = GetCharacterHandle(udg_ReisenNew_CODE)
+    call FirstAbilityInit('A12H')
+    call FirstAbilityInit('A12I')
+    call FirstAbilityInit('A12J')
+    call FirstAbilityInit('A12K')
     call ReisenNew_Init()
 endfunction
 

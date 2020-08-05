@@ -1,6 +1,15 @@
 function Trig_Initialing_Reisen2_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E02S')
     local timer t = CreateTimer()
+    call FirstAbilityInit('A090')
+    call FirstAbilityInit('A092')
+    call FirstAbilityInit('A0B5')
+    call FirstAbilityInit('A0BA')
+    call FirstAbilityInit('A08Z')
+    call FirstAbilityInit('A09T')
+    call FirstAbilityInit('A091')
+    call FirstAbilityInit('A0AX')
+    call FirstAbilityInit('A095')
     if h == null then
         return
     endif
@@ -49,13 +58,6 @@ function Trig_Initialing_Reisen2_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Reisen204, Condition(function Trig_Reisen204_Conditions))
     call TriggerAddAction(gg_trg_Reisen204, function Trig_Reisen204_Actions)
     call AddingLBuff(0, 'A09T', 'B07F')
-    call FirstAbilityInit('A09T')
-    call FirstAbilityInit('A0AX')
-    call FirstAbilityInit('A0B5')
-    call FirstAbilityInit('A0BA')
-    call FirstAbilityInit('A0AV')
-    call FirstAbilityInit('A0B9')
-    call FirstAbilityInit('A0BA')
     set h = null
     set t = null
 endfunction

@@ -72,8 +72,7 @@ endfunction
 function HiddenSummon_CD takes nothing returns nothing
     local timer t = GetExpiredTimer()
     call BroadcastMessage("Surprise attack is ready!")
-    call PauseTimer(t)
-    call DestroyTimer(t)
+    call ReleaseTimer(t)
     set t = null
 endfunction
 

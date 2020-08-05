@@ -1,5 +1,17 @@
 function Trig_Initial_Flandre_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('U007')
+    call FirstAbilityInit('A06J')
+    call FirstAbilityInit('A1F2')
+    call FirstAbilityInit('A19K')
+    call FirstAbilityInit('A08J')
+    call FirstAbilityInit('A19I')
+    call FirstAbilityInit('A0EH')
+    call FirstAbilityInit('A0EQ')
+    call FirstAbilityInit('A0IA')
+    call FirstAbilityInit('A0FV')
+    call FirstAbilityInit('A0JV')
+    call FirstAbilityInit('A06M')
+    call FirstAbilityInit('A06R')
     if h == null then
         set h = GetCharacterHandle('U00W')
     endif

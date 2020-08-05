@@ -32,6 +32,12 @@ function Trig_Initialing_Seiga_Actions takes nothing returns nothing
     local integer task = GetHandleId(t)
     local real x = GetUnitX(h)
     local real y = GetUnitY(h)
+    call FirstAbilityInit('A1FJ')
+    call FirstAbilityInit('A1FI')
+    call FirstAbilityInit('A1FK')
+    call FirstAbilityInit('A1FL')
+    call FirstAbilityInit('A1FH')
+    call FirstAbilityInit('A1FM')
     if h == null then
         return
     endif

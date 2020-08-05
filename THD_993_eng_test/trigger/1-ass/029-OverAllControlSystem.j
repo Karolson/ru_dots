@@ -546,8 +546,7 @@ function Ridicule_Desurice_Conditions takes nothing returns boolean
         call FlushChildHashtable(udg_ht, task)
         call DisableTrigger(trg)
         call DestroyTrigger(trg)
-        call PauseTimer(t)
-        call DestroyTimer(t)
+        call ReleaseTimer(t)
     endif
     set t = null
     set trg = null

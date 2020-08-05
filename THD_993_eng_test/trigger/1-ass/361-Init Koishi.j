@@ -1,5 +1,13 @@
 function Trig_Init_Koishi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E010')
+    call FirstAbilityInit('A0GT')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0GJ')
+    call FirstAbilityInit('A0ZB')
+    call FirstAbilityInit('A0I0')
+    call FirstAbilityInit('A0DQ')
+    call FirstAbilityInit('A0IP')
+    call FirstAbilityInit('A0DY')
     if h == null then
         return
     endif
@@ -30,12 +38,6 @@ function Trig_Init_Koishi_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Koishi04_DS, Condition(function Trig_Koishi04_DS_Conditions))
     call TriggerAddAction(gg_trg_Koishi04_DS, function Trig_Koishi04_DS_Actions)
     call DisableTrigger(gg_trg_Koishi04_DS)
-    call FirstAbilityInit('A0DS')
-    call FirstAbilityInit('A0DT')
-    call FirstAbilityInit('A0DU')
-    call FirstAbilityInit('A0DV')
-    call FirstAbilityInit('A0DW')
-    call FirstAbilityInit('A0DX')
     set h = null
 endfunction
 

@@ -2,6 +2,22 @@ function Trig_Initial_Eirin_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O006')
     local timer t = CreateTimer()
     local integer task = GetHandleId(t)
+    call FirstAbilityInit('A0OU')
+    call FirstAbilityInit('A1BA')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1BB')
+    call FirstAbilityInit('A083')
+    call FirstAbilityInit('A085')
+    call FirstAbilityInit('A086')
+    call FirstAbilityInit('A0YZ')
+    call FirstAbilityInit('A0Z0')
+    call FirstAbilityInit('A087')
+    call FirstAbilityInit('A12L')
+    call FirstAbilityInit('A0WI')
+    call FirstAbilityInit('A0VK')
+    call FirstAbilityInit('A0UF')
+    call FirstAbilityInit('A088')
     if h == null then
         return
     endif
@@ -48,13 +64,6 @@ function Trig_Initial_Eirin_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Eirin04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerRegisterUnitEvent(gg_trg_Eirin04, h, EVENT_UNIT_HERO_SKILL)
     call TriggerAddCondition(gg_trg_Eirin04, Condition(function Eirin04_bufftarget))
-    call FirstAbilityInit('A03S')
-    call FirstAbilityInit('A085')
-    call FirstAbilityInit('A0Z0')
-    call FirstAbilityInit('A0YZ')
-    call FirstAbilityInit('A087')
-    call FirstAbilityInit('A12L')
-    call FirstAbilityInit('A0RT')
     set h = null
     set t = null
 endfunction

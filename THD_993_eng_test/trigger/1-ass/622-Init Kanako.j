@@ -2,6 +2,20 @@ function Trig_Init_Kanako_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('U00L')
     local timer t = CreateTimer()
     local integer task = GetHandleId(t)
+    call FirstAbilityInit('A00I')
+    call FirstAbilityInit('A0F7')
+    call FirstAbilityInit('A0F1')
+    call FirstAbilityInit('A0F4')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0F6')
+    call FirstAbilityInit('A0FB')
+    call FirstAbilityInit('A0FE')
+    call FirstAbilityInit('A0F8')
+    call FirstAbilityInit('A0FC')
+    call FirstAbilityInit('A0F0')
+    call FirstAbilityInit('A0F9')
+    call FirstAbilityInit('A172')
     if h == null then
         return
     endif

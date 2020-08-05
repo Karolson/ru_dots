@@ -41,7 +41,7 @@ function Trig_Suwako02_Main takes nothing returns nothing
         call DestroyEffect(AddSpecialEffect("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl", GetUnitX(caster), GetUnitY(caster)))
         call ReleaseTimer(t)
         call FlushChildHashtable(udg_Hashtable, task)
-        call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A0TI', true)
+        call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A032', true)
         call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A0FI', true)
         call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A0FL', true)
         call UnitRemoveAbility(caster, 'A0LL')
@@ -66,7 +66,7 @@ function Trig_Suwako02_Actions takes nothing returns nothing
     call SaveReal(udg_Hashtable, task, 2, 40 + 40 * level + GetHeroInt(caster, true) * 0.5)
     call SaveInteger(udg_Hashtable, task, 3, 0)
     call TimerStart(t, 0.02, true, function Trig_Suwako02_Main)
-    call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A0TI', false)
+    call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A032', false)
     call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A0FI', false)
     call SetPlayerAbilityAvailable(GetOwningPlayer(caster), 'A0FL', false)
     set t = null

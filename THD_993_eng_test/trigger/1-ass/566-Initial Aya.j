@@ -1,6 +1,20 @@
 function Trig_Initial_Aya_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E008')
     local integer task = GetHandleId(h)
+    call FirstAbilityInit('A05Q')
+    call FirstAbilityInit('A08Q')
+    call FirstAbilityInit('A0LG')
+    call FirstAbilityInit('A0LH')
+    call FirstAbilityInit('A05K')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1CK')
+    call FirstAbilityInit('A1CS')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A05L')
+    call FirstAbilityInit('A05S')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A05N')
+    call FirstAbilityInit('A05O')
     if h == null then
         return
     endif
@@ -32,7 +46,6 @@ function Trig_Initial_Aya_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Aya04, Condition(function Trig_Aya04_Learn_Conditions))
     call TriggerAddAction(gg_trg_Aya04, function Trig_Aya04_Learn_Actions)
     call AddingLBuff(0, 'A05N', 'B00Z')
-    call FirstAbilityInit('A1CK')
     set h = null
 endfunction
 

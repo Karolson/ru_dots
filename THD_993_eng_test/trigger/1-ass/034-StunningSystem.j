@@ -15,7 +15,9 @@ function UnitStunTarget takes unit caster, unit target, real time, integer a, in
         set outcometime = 5.0
     endif
     if outcometime > 0 then
-        call CCSystem_textshow("Stun", target, outcometime)
+        if b != 'B05K' then
+            call CCSystem_textshow("Stun", target, outcometime)
+        endif
         set outcomelevel = R2I(outcometime * 20)
         set w = NewDummy(GetOwningPlayer(target), GetUnitX(target), GetUnitY(target), 0)
         if GetUnitTypeId(target) == 'U006' and udg_YuyukoBool[GetPlayerId(GetOwningPlayer(target))] then

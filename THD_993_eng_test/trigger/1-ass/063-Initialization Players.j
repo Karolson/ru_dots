@@ -116,16 +116,16 @@ function Trig_Initialization_Players_Actions takes nothing returns nothing
     call ForForce(udg_TeamA, function Trig_Initialization_Players_Func078A)
     call ForForce(udg_TeamB, function Trig_Initialization_Players_Func079A)
     call ForForce(udg_OnlinePlayers, function Trig_Initialization_Players_Func080A)
-    set udg_PlayerReviveHouse[0] = gg_unit_h01Q_0033
-    set udg_PlayerReviveHouse[1] = gg_unit_h01Q_0048
-    set udg_PlayerReviveHouse[2] = gg_unit_h01Q_0059
-    set udg_PlayerReviveHouse[3] = gg_unit_h01Q_0118
-    set udg_PlayerReviveHouse[4] = gg_unit_h01Q_0119
-    set udg_PlayerReviveHouse[6] = gg_unit_h01Q_0120
-    set udg_PlayerReviveHouse[7] = gg_unit_h01Q_0121
-    set udg_PlayerReviveHouse[8] = gg_unit_h01Q_0122
-    set udg_PlayerReviveHouse[9] = gg_unit_h01Q_0123
-    set udg_PlayerReviveHouse[10] = gg_unit_h01Q_0124
+    set udg_PlayerReviveHouse[0] = gg_unit_H01Q_0033
+    set udg_PlayerReviveHouse[1] = gg_unit_H01Q_0048
+    set udg_PlayerReviveHouse[2] = gg_unit_H01Q_0059
+    set udg_PlayerReviveHouse[3] = gg_unit_H01Q_0118
+    set udg_PlayerReviveHouse[4] = gg_unit_H01Q_0119
+    set udg_PlayerReviveHouse[6] = gg_unit_H01Q_0120
+    set udg_PlayerReviveHouse[7] = gg_unit_H01Q_0121
+    set udg_PlayerReviveHouse[8] = gg_unit_H01Q_0122
+    set udg_PlayerReviveHouse[9] = gg_unit_H01Q_0123
+    set udg_PlayerReviveHouse[10] = gg_unit_H01Q_0124
     set udg_OnlinePlayerSum = CountPlayersInForceBJ(udg_OnlinePlayers)
     call DebugMsg("Number of games:" + I2S(udg_OnlinePlayerSum))
     call DestroyTrigger(GetTriggeringTrigger())

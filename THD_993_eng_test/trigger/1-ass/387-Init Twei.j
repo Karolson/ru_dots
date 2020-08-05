@@ -1,5 +1,14 @@
 function Trig_Init_Twei_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O00N')
+    call FirstAbilityInit('A0N2')
+    call FirstAbilityInit('A03T')
+    call FirstAbilityInit('A0N4')
+    call FirstAbilityInit('A08E')
+    call FirstAbilityInit('A12B')
+    call FirstAbilityInit('A12C')
+    call FirstAbilityInit('A12D')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0N5')
     if h == null then
         return
     endif

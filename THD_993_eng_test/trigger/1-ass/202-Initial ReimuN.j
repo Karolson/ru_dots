@@ -1,5 +1,19 @@
 function Trig_Initial_ReimuN_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H02D')
+    call FirstAbilityInit('A0T4')
+    call FirstAbilityInit('A048')
+    call FirstAbilityInit('A049')
+    call FirstAbilityInit('A04A')
+    call FirstAbilityInit('A04B')
+    call FirstAbilityInit('A1G5')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A1G6')
+    call FirstAbilityInit('A0CC')
+    call FirstAbilityInit('A1G7')
+    call FirstAbilityInit('A1GC')
+    call FirstAbilityInit('A1GA')
+    call FirstAbilityInit('A1G9')
+    call FirstAbilityInit('A1G8')
     if h == null then
         return
     endif

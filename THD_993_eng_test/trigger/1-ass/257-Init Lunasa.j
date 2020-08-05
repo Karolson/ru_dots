@@ -1,6 +1,15 @@
 function Trig_Init_Lunasa_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01N')
     local integer id = GetConvertedPlayerId(GetOwningPlayer(h))
+    call FirstAbilityInit('A0V5')
+    call FirstAbilityInit('A0OH')
+    call FirstAbilityInit('A0LM')
+    call FirstAbilityInit('A04D')
+    call FirstAbilityInit('A0OK')
+    call FirstAbilityInit('A0V2')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0DS')
+    call FirstAbilityInit('A0A1')
     call DebugMsg(GetHeroProperName(h) + " skill initialization completed")
     call SetHeroLifeIncreaseValue(h, 26)
     call SetHeroManaIncreaseValue(h, 2)
@@ -27,10 +36,6 @@ function Trig_Init_Lunasa_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Lunasa04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Lunasa04, Condition(function Trig_Lunasa04_Conditions))
     call TriggerAddAction(gg_trg_Lunasa04, function Trig_Lunasa04_Actions)
-    call FirstAbilityInit('A0OK')
-    call FirstAbilityInit('A0V5')
-    call FirstAbilityInit('A0V4')
-    call FirstAbilityInit('A0V6')
     set h = null
 endfunction
 

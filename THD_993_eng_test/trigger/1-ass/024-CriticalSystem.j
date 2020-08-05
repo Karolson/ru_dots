@@ -37,8 +37,7 @@ function BattleDetectEnd takes nothing returns nothing
     local unit u = LoadUnitHandle(udg_ht, GetHandleId(t), 1)
     call GroupRemoveUnit(udg_smodehs, u)
     call FlushChildHashtable(udg_ht, GetHandleId(t))
-    call PauseTimer(t)
-    call DestroyTimer(t)
+    call ReleaseTimer(t)
     set t = null
     set u = null
 endfunction

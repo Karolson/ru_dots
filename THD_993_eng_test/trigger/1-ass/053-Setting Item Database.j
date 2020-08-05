@@ -779,6 +779,12 @@ function Trig_Setting_Item_Database_Actions takes nothing returns nothing
     call ItemRegisterDataDefence('I033', 4400, 0, 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataAttack('I033', 60, 0, 0, 15, 0, 0)
     call ItemRegisterDataStat('I033', 0, 0, 0)
+    call ItemRegisterDataDefence('I05B', 800, 0, 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataAttack('I05B', 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataStat('I05B', 0, 0, 0)
+    call ItemRegisterDataDefence('I08X', 2800, 150, 120, 0, 0, 3, 3, 0)
+    call ItemRegisterDataAttack('I08X', 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataStat('I08X', 5, 5, 5)
 endfunction
 
 function InitTrig_Setting_Item_Database takes nothing returns nothing

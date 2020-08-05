@@ -3,6 +3,19 @@ function Trig_Init_Satori_Actions takes nothing returns nothing
     local player w = GetOwningPlayer(h)
     local integer task = GetHandleId(h)
     local integer i
+    call FirstAbilityInit('A118')
+    call FirstAbilityInit('A0IW')
+    call FirstAbilityInit('A08R')
+    call FirstAbilityInit('A0IX')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1FD')
+    call FirstAbilityInit('A0VX')
+    call FirstAbilityInit('A0J0')
+    call FirstAbilityInit('A1CI')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IZ')
+    call FirstAbilityInit('A0J5')
+    call FirstAbilityInit('A00L')
     if h == null then
         return
     endif
@@ -41,12 +54,6 @@ function Trig_Init_Satori_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Satori04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Satori04, Condition(function Trig_Satori04_Conditions))
     call TriggerAddAction(gg_trg_Satori04, function Trig_Satori04_Actions)
-    call FirstAbilityInit('A0J0')
-    call FirstAbilityInit('A0J5')
-    call FirstAbilityInit('A0J1')
-    call FirstAbilityInit('A0J2')
-    call FirstAbilityInit('A0J3')
-    call FirstAbilityInit('A0J4')
     set h = null
     set w = null
 endfunction

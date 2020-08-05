@@ -406,6 +406,16 @@ endfunction
 
 function Trig_Initial_KomachiN_Actions takes nothing returns nothing
 local unit h = GetCharacterHandle('U013')
+    call FirstAbilityInit('A1EG')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A1E9')
+    call FirstAbilityInit('A00A')
+    call FirstAbilityInit('A1E5')
+    call FirstAbilityInit('A1E3')
+    call FirstAbilityInit('A1E2')
+    call FirstAbilityInit('A1ED')
+    call FirstAbilityInit('A1E4')
+    call FirstAbilityInit('A1EC')
 if h == null then
 return
 endif

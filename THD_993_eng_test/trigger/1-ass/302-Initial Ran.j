@@ -1,5 +1,21 @@
 function Trig_Initial_Ran_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00G')
+    call FirstAbilityInit('A0MM')
+    call FirstAbilityInit('A0NW')
+    call FirstAbilityInit('A0TH')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0TK')
+    call FirstAbilityInit('A0TL')
+    call FirstAbilityInit('A08M')
+    call FirstAbilityInit('A117')
+    call FirstAbilityInit('A0ES')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0EG')
+    call FirstAbilityInit('A0EH')
+    call FirstAbilityInit('A0DO')
+    call FirstAbilityInit('A0OM')
+    call FirstAbilityInit('A0EM')
+    call FirstAbilityInit('A0EN')
     if h == null then
         return
     endif
@@ -27,12 +43,6 @@ function Trig_Initial_Ran_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Ran04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Ran04, Condition(function Trig_Ran_04_Conditions))
     call TriggerAddAction(gg_trg_Ran04, function Ran04_Actions)
-    call FirstAbilityInit('A0ES')
-    call FirstAbilityInit('A0ET')
-    call FirstAbilityInit('A0EU')
-    call FirstAbilityInit('A0EM')
-    call FirstAbilityInit('A0EN')
-    call FirstAbilityInit('A0EO')
     set h = null
 endfunction
 

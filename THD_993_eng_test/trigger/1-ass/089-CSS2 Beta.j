@@ -927,6 +927,7 @@ function CSS2_ClearDestructable takes nothing returns nothing
 endfunction
 
 function CSS2_DestroyCSS takes nothing returns nothing
+    call DisableTrigger(LoadTriggerHandle(udg_cssht, StringHash("CSS2"), 0))
     call DestroyTrigger(LoadTriggerHandle(udg_cssht, StringHash("CSS2"), 0))
     call EnumDestructablesInRect(udg_MapRegionScreen, null, function CSS2_ClearDestructable)
     call FlushParentHashtable(udg_cssht)
@@ -1101,8 +1102,7 @@ function CSS2_Repick takes nothing returns nothing
     if GetTriggerEventId() == EVENT_GAME_TIMER_EXPIRED then
         set p = null
         set t = GetExpiredTimer()
-        call PauseTimer(t)
-        call DestroyTimer(t)
+        call ReleaseTimer(t)
         set t = null
         call DisableTrigger(GetTriggeringTrigger())
         call DestroyTrigger(GetTriggeringTrigger())
@@ -1143,8 +1143,7 @@ function CSS2_Swap takes nothing returns nothing
         set p = null
         set g = null
         set command = ""
-        call PauseTimer(GetExpiredTimer())
-        call DestroyTimer(GetExpiredTimer())
+        call ReleaseTimer(GetExpiredTimer())
         call DisableTrigger(GetTriggeringTrigger())
         call DestroyTrigger(GetTriggeringTrigger())
         return
@@ -1475,6 +1474,31 @@ function CSS2_EndHeroSelection takes nothing returns nothing
                 call DebugMsg("THDots\\music\\"+GetCharacterString(h)+"Death0.0mp3")
             endif
         endif
+        if udg_PlayerHeroes[i] != null then
+            if i <= 5 then
+                call AddSpecialEffectTarget("team_aura_hakurei.mdx", udg_PlayerHeroes[i], "origin")
+            else
+                call AddSpecialEffectTarget("team_aura_moriya.mdx", udg_PlayerHeroes[i], "origin")
+            endif
+        endif
+        if GetPlayerId(GetLocalPlayer()) == i then
+            call SelectUnit(udg_PlayerHeroes[i], true)
+        endif
+        if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_EMPTY then
+            call RemoveUnit(udg_PlayerReviveHouse[i])
+        else
+            call UnitRemoveAbility(udg_PlayerReviveHouse[i], 'Aral')
+            call UnitRemoveAbility(udg_PlayerReviveHouse[i], 'ARal')
+            call UnitRemoveAbility(udg_PlayerReviveHouse[i], 'Amov')
+            call SuspendHeroXP(udg_PlayerReviveHouse[i], true)
+            call TriggerRegisterUnitEvent(gg_trg_WeatherTimeChange, udg_PlayerReviveHouse[i], EVENT_UNIT_SPELL_EFFECT)
+            if i < 5 then
+                call UnitAddAbility(udg_PlayerReviveHouse[i], 'A01C')
+            else
+                call UnitAddAbility(udg_PlayerReviveHouse[i], 'A01D')
+            endif
+            call SetUnitOwner(udg_PlayerReviveHouse[i], Player(i), true)
+        endif
         set i = i + 1
         if i == 5 then
             set i = 6
@@ -1552,7 +1576,7 @@ function CSS2_MainTimer takes nothing returns nothing
             set task = GetHandleId(t2)
             call SaveTimerDialogHandle(udg_cssht, task, 1, u)
             call SaveTimerHandle(udg_cssht, task, 2, t)
-            call TimerStart(t2, 7.0, false, function CSS2_ExitStage2)
+            call TimerStart(t2, 5.0, false, function CSS2_ExitStage2)
         endif
     elseif LoadBoolean(udg_cssht, StringHash("CSS2"), 2) then
         call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, "The game is loading information, you may experience a slight delay.")

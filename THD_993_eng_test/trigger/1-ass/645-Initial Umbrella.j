@@ -2,6 +2,18 @@ function Trig_Initial_Umbrella_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E00X')
     local timer t
     local integer task
+    call FirstAbilityInit('A0C3')
+    call FirstAbilityInit('A1GA')
+    call FirstAbilityInit('A1G9')
+    call FirstAbilityInit('A0C4')
+    call FirstAbilityInit('A0LS')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0C8')
+    call FirstAbilityInit('A0LT')
+    call FirstAbilityInit('A0Z7')
+    call FirstAbilityInit('A0C7')
+    call FirstAbilityInit('Abun')
     if h == null then
         set h = GetCharacterHandle('E03D')
     endif
@@ -63,11 +75,6 @@ function Trig_Initial_Umbrella_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Kogasa04_Cancel, h, EVENT_UNIT_ISSUED_TARGET_ORDER)
     call TriggerRegisterUnitEvent(gg_trg_Kogasa04_Cancel, h, EVENT_UNIT_ISSUED_POINT_ORDER)
     call TriggerAddCondition(gg_trg_Kogasa04_Cancel, Condition(function Trig_Kogasa04_Cancel_Condition))
-    call FirstAbilityInit('A0C4')
-    call FirstAbilityInit('A0LT')
-    call FirstAbilityInit('A0C9')
-    call FirstAbilityInit('A0SH')
-    call FirstAbilityInit('A0SG')
     set h = null
 endfunction
 

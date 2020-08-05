@@ -160,7 +160,7 @@ function Teleport_Effect takes unit caster, real tx, real ty, boolean isTP, bool
             if target == gg_unit_n023_0006 or target == gg_unit_n03O_0079 then
                 set toFountain = true
             endif
-            if GetUnitTypeId(target) == 'h01Q' and IsUnitAlly(target, GetOwningPlayer(caster)) then
+            if GetUnitTypeId(target) == 'H01Q' and IsUnitAlly(target, GetOwningPlayer(caster)) then
                 set target = GetUnitBase(caster)
                 set toFountain = true
             endif

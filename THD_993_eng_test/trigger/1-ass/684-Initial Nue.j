@@ -2,6 +2,13 @@ function Trig_Initial_Nue_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H01J')
     local player w = GetOwningPlayer(h)
     local integer task = GetHandleId(h)
+    call FirstAbilityInit('A0LZ')
+    call FirstAbilityInit('A0M1')
+    call FirstAbilityInit('A0DW')
+    call FirstAbilityInit('A0M2')
+    call FirstAbilityInit('A0MM')
+    call FirstAbilityInit('A0M4')
+    call FirstAbilityInit('A0V4')
     if h == null then
         return
     endif

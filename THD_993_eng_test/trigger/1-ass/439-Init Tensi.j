@@ -1,5 +1,16 @@
 function Trig_Init_Tensi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H002')
+    call FirstAbilityInit('A071')
+    call FirstAbilityInit('A0W4')
+    call FirstAbilityInit('A0P8')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0T6')
+    call FirstAbilityInit('A0LI')
+    call FirstAbilityInit('A073')
+    call FirstAbilityInit('A03R')
+    call FirstAbilityInit('A0AJ')
+    call FirstAbilityInit('A0AK')
+    call FirstAbilityInit('A0MK')
     if h == null then
         return
     endif
@@ -31,10 +42,6 @@ function Trig_Init_Tensi_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Tensi04, h, EVENT_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_Tensi04, Condition(function Trig_Tensi04_Conditions))
     call TriggerAddAction(gg_trg_Tensi04, function Trig_Tensi04_Actions)
-    call FirstAbilityInit('A072')
-    call FirstAbilityInit('A0MK')
-    call FirstAbilityInit('A0AL')
-    call FirstAbilityInit('A0AK')
     set h = null
 endfunction
 

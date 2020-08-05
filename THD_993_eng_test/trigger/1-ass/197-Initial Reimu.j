@@ -3,6 +3,16 @@ function Trig_Initial_Reimu_Actions takes nothing returns nothing
     local timer t
     local integer task
     local integer i = 0
+    call FirstAbilityInit('A0T4')
+    call FirstAbilityInit('A048')
+    call FirstAbilityInit('A049')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A04A')
+    call FirstAbilityInit('A04D')
+    call FirstAbilityInit('A04E')
+    call FirstAbilityInit('A04B')
+    call FirstAbilityInit('A0CC')
     if h == null then
         call TriggerExecute(gg_trg_Initial_ReimuN)
         return
@@ -81,10 +91,6 @@ function Trig_Initial_Reimu_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Reimu04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Reimu04, Condition(function Trig_Reimu04_Conditions))
     call TriggerAddAction(gg_trg_Reimu04, function Trig_Reimu04_Actions)
-    call FirstAbilityInit('A04E')
-    call FirstAbilityInit('A0CC')
-    call FirstAbilityInit('A010')
-    call FirstAbilityInit('A04D')
     set h = null
     set t = null
 endfunction

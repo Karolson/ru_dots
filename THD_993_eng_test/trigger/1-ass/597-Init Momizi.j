@@ -1,6 +1,10 @@
 function Trig_Init_Momizi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('O00A')
     local unit u
+    call FirstAbilityInit('A09U')
+    call FirstAbilityInit('A09V')
+    call FirstAbilityInit('A189')
+    call FirstAbilityInit('A0QO')
     if h == null then
         return
     endif

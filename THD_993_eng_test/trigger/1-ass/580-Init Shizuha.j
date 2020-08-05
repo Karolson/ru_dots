@@ -2,6 +2,18 @@ function Trig_Init_Shizuha_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H01H')
     local player w = GetOwningPlayer(h)
     local integer task = GetHandleId(h)
+    call FirstAbilityInit('A0E5')
+    call FirstAbilityInit('A0J8')
+    call FirstAbilityInit('A0JD')
+    call FirstAbilityInit('A00C')
+    call FirstAbilityInit('A0AN')
+    call FirstAbilityInit('A018')
+    call FirstAbilityInit('A0JC')
+    call FirstAbilityInit('A0JM')
+    call FirstAbilityInit('A0G8')
+    call FirstAbilityInit('A0G9')
+    call FirstAbilityInit('A0J6')
+    call FirstAbilityInit('A0JA')
     if h == null then
         set h = GetCharacterHandle('H02F')
     endif

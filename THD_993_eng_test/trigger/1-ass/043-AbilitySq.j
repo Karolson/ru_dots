@@ -19,8 +19,7 @@ function UnRegisterAreaShow takes unit u, integer iAbility returns nothing
             set i = i + 1
         endloop
         call FlushChildHashtable(udg_ht, task)
-        call PauseTimer(t)
-        call DestroyTimer(t)
+        call ReleaseTimer(t)
         call SaveTimerHandle(udg_Hashtable_CastSq, GetHandleId(u), iAbility, null)
         call DebugMsg("AreaShow Removed Successfully")
     else

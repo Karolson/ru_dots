@@ -1,5 +1,21 @@
 function Trig_Initialing_Akyu_Actions takes nothing returns nothing
     set udg_SK_Akyu = GetCharacterHandle('E02Y')
+    call FirstAbilityInit('A14F')
+    call FirstAbilityInit('A14G')
+    call FirstAbilityInit('A14H')
+    call FirstAbilityInit('A1AU')
+    call FirstAbilityInit('A0QH')
+    call FirstAbilityInit('A0P1')
+    call FirstAbilityInit('A0P5')
+    call FirstAbilityInit('A0PE')
+    call FirstAbilityInit('A0IV')
+    call FirstAbilityInit('A0P0')
+    call FirstAbilityInit('A0PF')
+    call FirstAbilityInit('A0P6')
+    call FirstAbilityInit('A0PA')
+    call FirstAbilityInit('A0PY')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0QI')
     if udg_SK_Akyu == null then
         return
     endif
@@ -38,8 +54,6 @@ function Trig_Initialing_Akyu_Actions takes nothing returns nothing
     call AddingLBuff(0, 'A0PE', 'B07V')
     call AddingLBuff(0, 'A0PY', 'B07R')
     call AddingLBuff(0, 'A0PA', 'B081')
-    call FirstAbilityInit('A0PY')
-    call FirstAbilityInit('A0PA')
 endfunction
 
 function InitTrig_Initialing_Akyu takes nothing returns nothing

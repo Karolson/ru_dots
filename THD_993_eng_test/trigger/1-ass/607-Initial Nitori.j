@@ -1,6 +1,17 @@
 function Trig_Initial_Nitori_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H00M')
     local timer t = CreateTimer()
+    call FirstAbilityInit('A094')
+    call FirstAbilityInit('A0V4')
+    call FirstAbilityInit('A0GF')
+    call FirstAbilityInit('A0LL')
+    call FirstAbilityInit('A0GH')
+    call FirstAbilityInit('A17F')
+    call FirstAbilityInit('A0LK')
+    call FirstAbilityInit('A0GG')
+    call FirstAbilityInit('A097')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0OE')
     if h == null then
         return
     endif

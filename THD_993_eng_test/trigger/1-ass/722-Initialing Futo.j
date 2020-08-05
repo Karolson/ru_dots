@@ -1040,6 +1040,17 @@ endfunction
 
 function Trig_Initialing_Futo_Actions takes nothing returns nothing
     set udg_Futo = GetCharacterHandle(udg_Futo_CODE)
+    call FirstAbilityInit('A0UG')
+    call FirstAbilityInit('A1DM')
+    call FirstAbilityInit('A1DN')
+    call FirstAbilityInit('A1DO')
+    call FirstAbilityInit('A1DP')
+    call FirstAbilityInit('A1DQ')
+    call FirstAbilityInit('A1DR')
+    call FirstAbilityInit('A1DS')
+    call FirstAbilityInit('A1DT')
+    call FirstAbilityInit('A1DU')
+    call FirstAbilityInit('Aloc')
     call Futo_Init()
 endfunction
 

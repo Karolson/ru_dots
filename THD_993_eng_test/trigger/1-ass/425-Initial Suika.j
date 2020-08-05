@@ -14,6 +14,23 @@ function Trig_Initial_Suika_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H00L')
     local timer t
     local integer task
+    call FirstAbilityInit('A04X')
+    call FirstAbilityInit('A04Y')
+    call FirstAbilityInit('A04Z')
+    call FirstAbilityInit('A050')
+    call FirstAbilityInit('A051')
+    call FirstAbilityInit('A10B')
+    call FirstAbilityInit('A05R')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('Avul')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0BC')
+    call FirstAbilityInit('A05W')
+    call FirstAbilityInit('A02I')
+    call FirstAbilityInit('A15T')
+    call FirstAbilityInit('A1F7')
+    call FirstAbilityInit('A05V')
+    call FirstAbilityInit('A0HZ')
     if h == null then
         return
     endif
@@ -48,11 +65,6 @@ function Trig_Initial_Suika_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Suika04, Condition(function Trig_Suika04_Conditions))
     call TriggerAddAction(gg_trg_Suika04, function Trig_Suika04_Actions)
     call AddingLBuff(0, 'A15T', 'BHtv')
-    call FirstAbilityInit('A0EA')
-    call FirstAbilityInit('A0IN')
-    call FirstAbilityInit('A0DF')
-    call FirstAbilityInit('A0BC')
-    call FirstAbilityInit('A0BB')
     set h = null
 endfunction
 

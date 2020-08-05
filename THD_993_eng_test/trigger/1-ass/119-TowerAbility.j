@@ -366,9 +366,6 @@ function InitTrig_TowerAbility takes nothing returns nothing
     set udg_TowerGroup = CreateGroup()
     set udg_TowerGroup2 = CreateGroup()
     set udg_TowerGroup3 = CreateGroup()
-    call RegisterAnyUnitDamage(t)
-    call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(t, Condition(function TowerAI_Stage_1_Conditions))
     set udg_TowerA[0] = gg_unit_h02M_0043
     set udg_TowerA[1] = gg_unit_h02L_0073
     set udg_TowerA[2] = gg_unit_h027_0068
@@ -403,7 +400,6 @@ function InitTrig_TowerAbility takes nothing returns nothing
         set udg_TowerB[6] = null
         set udg_TowerB[7] = null
     endif
-    call TimerStart(tm, 0.5, true, function TowerAI_Stage2_and_3)
     set t = null
     set tm = null
 endfunction

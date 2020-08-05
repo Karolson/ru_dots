@@ -3,6 +3,22 @@ function Trig_Initial_Letty_Actions takes nothing returns nothing
     local integer i = 0
     local timer t
     local integer task
+    call FirstAbilityInit('A02L')
+    call FirstAbilityInit('A02Q')
+    call FirstAbilityInit('A107')
+    call FirstAbilityInit('A040')
+    call FirstAbilityInit('A041')
+    call FirstAbilityInit('A03Z')
+    call FirstAbilityInit('A042')
+    call FirstAbilityInit('A0XC')
+    call FirstAbilityInit('A0XB')
+    call FirstAbilityInit('A08W')
+    call FirstAbilityInit('A0UL')
+    call FirstAbilityInit('A15K')
+    call FirstAbilityInit('A08P')
+    call FirstAbilityInit('A114')
+    call FirstAbilityInit('A115')
+    call FirstAbilityInit('A116')
     if h == null then
         return
     endif
@@ -82,8 +98,6 @@ function Trig_Initial_Letty_Actions takes nothing returns nothing
     call AddingLBuff(0, 'A114', 'B01U')
     call AddingLBuff(0, 'A115', 'B01U')
     call AddingLBuff(0, 'A116', 'B01U')
-    call FirstAbilityInit('A093')
-    call FirstAbilityInit('A1XC')
     set h = null
     set t = null
 endfunction

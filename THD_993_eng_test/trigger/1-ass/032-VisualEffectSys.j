@@ -18,7 +18,6 @@ function VE_Sword_Special takes unit target, integer id returns nothing
 endfunction
 
 function VE_Spellcast takes unit caster returns nothing
-    call DebugMsg("SpellCastEffect")
     call CreateUnit(GetOwningPlayer(caster), 'u012', GetUnitX(caster), GetUnitY(caster), GetRandomInt(0, 360))
 endfunction
 

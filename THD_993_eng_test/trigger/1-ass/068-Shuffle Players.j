@@ -6,16 +6,16 @@ function Trig_Shuffle_Players_Actions takes nothing returns nothing
     local integer numa
     local integer numb
     call SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, false)
-    set u[0] = gg_unit_h01Q_0033
-    set u[1] = gg_unit_h01Q_0120
-    set u[2] = gg_unit_h01Q_0048
-    set u[3] = gg_unit_h01Q_0121
-    set u[4] = gg_unit_h01Q_0059
-    set u[5] = gg_unit_h01Q_0122
-    set u[6] = gg_unit_h01Q_0118
-    set u[7] = gg_unit_h01Q_0123
-    set u[8] = gg_unit_h01Q_0119
-    set u[9] = gg_unit_h01Q_0124
+    set u[0] = gg_unit_H01Q_0033
+    set u[1] = gg_unit_H01Q_0120
+    set u[2] = gg_unit_H01Q_0048
+    set u[3] = gg_unit_H01Q_0121
+    set u[4] = gg_unit_H01Q_0059
+    set u[5] = gg_unit_H01Q_0122
+    set u[6] = gg_unit_H01Q_0118
+    set u[7] = gg_unit_H01Q_0123
+    set u[8] = gg_unit_H01Q_0119
+    set u[9] = gg_unit_H01Q_0124
     call SetUnitOwner(u[0], Player(5), true)
     call SetUnitOwner(u[1], Player(11), true)
     call SetUnitOwner(u[2], Player(5), true)

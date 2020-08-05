@@ -43,7 +43,11 @@ function Trig_Suwako01_Main takes nothing returns nothing
             call GroupRemoveUnit(g, v)
             if IsUnitType(v, UNIT_TYPE_DEAD) == false and IsUnitType(v, UNIT_TYPE_STRUCTURE) == false then
                 call DestroyEffect(AddSpecialEffectTarget("Objects\\Spawnmodels\\Human\\HumanBlood\\HumanBloodPriest.mdl", v, "origin"))
-                call UnitStunTarget(caster, v, 0.15, 0, 'B05K')
+                if i / 2 * 2 == i then
+                    call UnitStunTarget(caster, v, 0.15, 0, 'B05K')
+                else
+                    call UnitStunTarget(caster, v, 0.15, 0, 0)
+                endif
                 if level == 1 then
                     call UnitPhysicalDamageTarget(caster, v, 10 + GetHeroInt(caster, true) * 1.4 / 11)
                     call Trig_Suwako03_ManaRe(caster, 10 + GetHeroInt(caster, true) * 1.4 / 11)

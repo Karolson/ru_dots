@@ -6,7 +6,7 @@ function Trig_CenterData_Deletion_Actions takes nothing returns nothing
         set v = FirstOfGroup(g)
     exitwhen v == null
         call GroupRemoveUnit(g, v)
-        call KillUnit(v)
+        call RemoveUnit(v)
     endloop
     call DestroyGroup(g)
     set g = null

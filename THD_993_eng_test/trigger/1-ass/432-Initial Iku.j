@@ -1,5 +1,24 @@
 function Trig_Initial_Iku_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('U003')
+    call FirstAbilityInit('A10B')
+    call FirstAbilityInit('A15T')
+    call FirstAbilityInit('A0OY')
+    call FirstAbilityInit('A04O')
+    call FirstAbilityInit('A00J')
+    call FirstAbilityInit('A033')
+    call FirstAbilityInit('A01G')
+    call FirstAbilityInit('A1EV')
+    call FirstAbilityInit('A1EW')
+    call FirstAbilityInit('A04S')
+    call FirstAbilityInit('A0A3')
+    call FirstAbilityInit('A04T')
+    call FirstAbilityInit('A09Z')
+    call FirstAbilityInit('A00Y')
+    call FirstAbilityInit('A012')
+    call FirstAbilityInit('A04R')
+    call FirstAbilityInit('A0A4')
+    call FirstAbilityInit('A0IL')
+    call FirstAbilityInit('A0B6')
     if h == null then
         return
     endif
@@ -33,12 +52,6 @@ function Trig_Initial_Iku_Actions takes nothing returns nothing
     call TriggerRegisterUnitEvent(gg_trg_Iku04, h, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Iku04, Condition(function Trig_Iku04_Conditions))
     call TriggerAddAction(gg_trg_Iku04, function Trig_Iku04_Actions)
-    call FirstAbilityInit('A04P')
-    call FirstAbilityInit('A04T')
-    call FirstAbilityInit('A0A3')
-    call FirstAbilityInit('A04R')
-    call FirstAbilityInit('A0B6')
-    call FirstAbilityInit('A0OY')
     call SetPlayerAbilityAvailable(GetOwningPlayer(h), 'A1ET', false)
     set h = null
 endfunction

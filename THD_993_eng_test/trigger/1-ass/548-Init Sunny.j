@@ -1,5 +1,11 @@
 function Trig_Init_Sunny_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E01D')
+    call FirstAbilityInit('A1HG')
+    call FirstAbilityInit('A0NB')
+    call FirstAbilityInit('A0VA')
+    call FirstAbilityInit('A0VY')
+    call FirstAbilityInit('Aloc')
+    call FirstAbilityInit('A1IH')
     if h == null then
         return
     endif
