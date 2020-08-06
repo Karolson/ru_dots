@@ -6,7 +6,6 @@ function Trig_Initial_ReimuN_Actions takes nothing returns nothing
     call FirstAbilityInit('A04A')
     call FirstAbilityInit('A04B')
     call FirstAbilityInit('A1G5')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A1G6')
     call FirstAbilityInit('A0CC')
     call FirstAbilityInit('A1G7')

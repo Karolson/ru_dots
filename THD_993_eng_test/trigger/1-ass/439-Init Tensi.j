@@ -3,7 +3,6 @@ function Trig_Init_Tensi_Actions takes nothing returns nothing
     call FirstAbilityInit('A071')
     call FirstAbilityInit('A0W4')
     call FirstAbilityInit('A0P8')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0T6')
     call FirstAbilityInit('A0LI')
     call FirstAbilityInit('A073')

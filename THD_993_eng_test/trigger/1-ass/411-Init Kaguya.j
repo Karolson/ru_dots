@@ -13,7 +13,6 @@ function Trig_Init_Kaguya_Actions takes nothing returns nothing
     call FirstAbilityInit('A1BM')
     call FirstAbilityInit('A1CP')
     call FirstAbilityInit('A1CT')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0X5')
     call FirstAbilityInit('A0OK')
     call FirstAbilityInit('A09Z')

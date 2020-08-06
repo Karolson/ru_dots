@@ -16,7 +16,6 @@ function Trig_Initial_Cirno_Actions takes nothing returns nothing
     call FirstAbilityInit('A056')
     call FirstAbilityInit('A058')
     call FirstAbilityInit('A0MW')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0C6')
     if h == null then
         return

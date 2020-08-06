@@ -14,7 +14,6 @@ function Trig_Initialing_Akyu_Actions takes nothing returns nothing
     call FirstAbilityInit('A0P6')
     call FirstAbilityInit('A0PA')
     call FirstAbilityInit('A0PY')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0QI')
     if udg_SK_Akyu == null then
         return

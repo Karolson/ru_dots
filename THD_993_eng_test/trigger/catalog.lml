@@ -941,7 +941,8 @@
     '935-Find Yukkuri': 'Find Yukkuri'
     936-BagetAccelerator: BagetAccelerator
     937-AttachTeamAuras: AttachTeamAuras
-    938-govno: govno
+    938-InitFirstAbilityDummy: InitFirstAbilityDummy
+    939-govno: govno
 '2-Metakimi Shietfixes': 'Metakimi Shietfixes'
     1----------------------------: ---------------------------
         Comment

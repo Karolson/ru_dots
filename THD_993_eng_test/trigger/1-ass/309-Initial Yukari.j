@@ -5,7 +5,6 @@ function Trig_Initial_Yukari_Actions takes nothing returns nothing
     call FirstAbilityInit('A0V4')
     call FirstAbilityInit('A03F')
     call FirstAbilityInit('A07W')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A04L')
     call FirstAbilityInit('A0QI')
     call FirstAbilityInit('A06P')

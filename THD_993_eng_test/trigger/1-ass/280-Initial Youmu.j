@@ -7,7 +7,6 @@ function Trig_Initial_Youmu_Actions takes nothing returns nothing
     call FirstAbilityInit('A0V4')
     call FirstAbilityInit('A05Y')
     call FirstAbilityInit('A0RV')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A064')
     call FirstAbilityInit('A0E0')
     call FirstAbilityInit('A065')

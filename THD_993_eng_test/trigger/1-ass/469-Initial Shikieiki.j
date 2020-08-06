@@ -5,7 +5,6 @@ function Trig_Initial_Shikieiki_Actions takes nothing returns nothing
     call FirstAbilityInit('A0B0')
     call FirstAbilityInit('A0B8')
     call FirstAbilityInit('A0I1')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0I4')
     call FirstAbilityInit('A0SY')
     call FirstAbilityInit('A0SZ')

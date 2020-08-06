@@ -12,7 +12,6 @@ function Trig_Initial_Aya_Actions takes nothing returns nothing
     call FirstAbilityInit('A0V4')
     call FirstAbilityInit('A05L')
     call FirstAbilityInit('A05S')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A05N')
     call FirstAbilityInit('A05O')
     if h == null then

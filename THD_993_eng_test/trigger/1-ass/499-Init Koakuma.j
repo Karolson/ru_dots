@@ -5,7 +5,6 @@ function Trig_Init_Koakuma_Actions takes nothing returns nothing
     call FirstAbilityInit('A05F')
     call FirstAbilityInit('A05A')
     call FirstAbilityInit('A0MT')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0NO')
     call FirstAbilityInit('A15Y')
     call FirstAbilityInit('A15Z')

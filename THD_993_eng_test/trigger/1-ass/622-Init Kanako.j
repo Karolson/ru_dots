@@ -6,7 +6,6 @@ function Trig_Init_Kanako_Actions takes nothing returns nothing
     call FirstAbilityInit('A0F7')
     call FirstAbilityInit('A0F1')
     call FirstAbilityInit('A0F4')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A0F6')
     call FirstAbilityInit('A0FB')

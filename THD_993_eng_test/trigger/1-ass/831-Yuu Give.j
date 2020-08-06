@@ -432,22 +432,24 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
     endloop
     set i = 0
     loop
-        set max = GetItemMaxCharges(GetItemTypeId(UnitItemInSlot(toUnit, i)))
-        if max > 0 then
-            set Item = YDWEGetItemOfTypeFromUnitBJNull(fromUnit, GetItemTypeId(UnitItemInSlot(toUnit, i)))
-            if Item != null then
-                set chargesDelta = IMinBJ(GetItemCharges(Item), max - GetItemCharges(UnitItemInSlot(toUnit, i)))
-                call AddItemCharges(UnitItemInSlot(toUnit, i), chargesDelta)
-                if (GetItemCharges(Item) - chargesDelta) == 0 then
-                    call UnitRemoveItem(fromUnit, Item)
-                    call RemoveItem(Item)
-                else
-                    call AddItemCharges(Item, -chargesDelta)
+        if UnitItemInSlot(toUnit, i) != null then
+            set max = GetItemMaxCharges(GetItemTypeId(UnitItemInSlot(toUnit, i)))
+            if max > 0 then
+                set Item = YDWEGetItemOfTypeFromUnitBJNull(fromUnit, GetItemTypeId(UnitItemInSlot(toUnit, i)))
+                if Item != null then
+                    set chargesDelta = IMinBJ(GetItemCharges(Item), max - GetItemCharges(UnitItemInSlot(toUnit, i)))
+                    call AddItemCharges(UnitItemInSlot(toUnit, i), chargesDelta)
+                    if (GetItemCharges(Item) - chargesDelta) == 0 then
+                        call UnitRemoveItem(fromUnit, Item)
+                        call RemoveItem(Item)
+                    else
+                        call AddItemCharges(Item, -chargesDelta)
+                    endif
                 endif
             endif
         endif
         set i = i + 1
-    exitwhen i >= 6
+    exitwhen i > 5
     endloop
     set i = 0
     loop
@@ -465,7 +467,7 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
             endloop
         endif
         set i = i + 1
-    exitwhen i >= 6
+    exitwhen i > 5
     endloop
     set toUnit = null
     set fromUnit = null

@@ -3,7 +3,6 @@ function Trig_Init_Start_Actions takes nothing returns nothing
     call FirstAbilityInit('A19T')
     call FirstAbilityInit('A0BE')
     call FirstAbilityInit('A10V')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A10M')
     call FirstAbilityInit('A10N')

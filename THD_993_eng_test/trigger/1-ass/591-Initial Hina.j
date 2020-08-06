@@ -6,7 +6,6 @@ function Trig_Initial_Hina_Actions takes nothing returns nothing
     call FirstAbilityInit('A0E4')
     call FirstAbilityInit('A0IB')
     call FirstAbilityInit('A0DZ')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0E8')
     call FirstAbilityInit('A182')
     call FirstAbilityInit('A0JL')

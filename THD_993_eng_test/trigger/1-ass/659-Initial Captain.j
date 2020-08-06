@@ -5,8 +5,6 @@ function Trig_Initial_Captain_Actions takes nothing returns nothing
     call FirstAbilityInit('A0AB')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A0AA')
-    call FirstAbilityInit('Aloc')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0A6')
     call FirstAbilityInit('A0A8')
     call FirstAbilityInit('A0A9')

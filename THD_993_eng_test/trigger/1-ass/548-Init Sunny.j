@@ -4,7 +4,6 @@ function Trig_Init_Sunny_Actions takes nothing returns nothing
     call FirstAbilityInit('A0NB')
     call FirstAbilityInit('A0VA')
     call FirstAbilityInit('A0VY')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A1IH')
     if h == null then
         return

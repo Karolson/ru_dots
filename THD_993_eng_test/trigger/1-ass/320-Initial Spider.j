@@ -5,7 +5,6 @@ function Trig_Initial_Spider_Actions takes nothing returns nothing
     call FirstAbilityInit('A08A')
     call FirstAbilityInit('A08F')
     call FirstAbilityInit('A08G')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A017')
     call FirstAbilityInit('A0JW')
     call FirstAbilityInit('A0JX')

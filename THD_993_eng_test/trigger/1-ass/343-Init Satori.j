@@ -12,7 +12,6 @@ function Trig_Init_Satori_Actions takes nothing returns nothing
     call FirstAbilityInit('A0VX')
     call FirstAbilityInit('A0J0')
     call FirstAbilityInit('A1CI')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IZ')
     call FirstAbilityInit('A0J5')
     call FirstAbilityInit('A00L')

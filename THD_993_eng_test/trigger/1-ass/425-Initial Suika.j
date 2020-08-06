@@ -21,8 +21,6 @@ function Trig_Initial_Suika_Actions takes nothing returns nothing
     call FirstAbilityInit('A051')
     call FirstAbilityInit('A10B')
     call FirstAbilityInit('A05R')
-    call FirstAbilityInit('Aloc')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A0BC')
     call FirstAbilityInit('A05W')

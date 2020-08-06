@@ -4,7 +4,6 @@ function Trig_Initial_Eirin_Actions takes nothing returns nothing
     local integer task = GetHandleId(t)
     call FirstAbilityInit('A0OU')
     call FirstAbilityInit('A1BA')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A1BB')
     call FirstAbilityInit('A083')

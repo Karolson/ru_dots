@@ -75,6 +75,7 @@ function Trig_Init_Abilities_HideButtons takes nothing returns nothing
 endfunction
 
 function Trig_Init_Abilities_Actions takes nothing returns nothing
+    set udg_AbilityInitDummy = CreateUnit(Player(15), 'h00D', 19450.0, -2100.0, 0)
     call ForForce(bj_FORCE_ALL_PLAYERS, function Trig_Init_Abilities_HideButtons)
     call FirstAbilityInit('A0UM')
     call FirstAbilityInit('A0RV')

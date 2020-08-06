@@ -13,7 +13,6 @@ function Trig_Initial_YoumuN_Actions takes nothing returns nothing
     call FirstAbilityInit('A0V4')
     call FirstAbilityInit('A1GH')
     call FirstAbilityInit('A0RV')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A1GI')
     call FirstAbilityInit('A0E0')
     call FirstAbilityInit('A1GK')

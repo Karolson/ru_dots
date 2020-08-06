@@ -18,8 +18,8 @@ function Trig_WeatherTimeChange_Actions takes nothing returns nothing
             set a = 0
             set max = 5
         else
-            set a = 5
-            set max = 10
+            set a = 6
+            set max = 11
         endif
         loop
             call UnitRemoveAbility(udg_PlayerReviveHouse[a], 'A01B')

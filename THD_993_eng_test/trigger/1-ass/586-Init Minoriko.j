@@ -5,7 +5,6 @@ function Trig_Init_Minoriko_Actions takes nothing returns nothing
     call FirstAbilityInit('A0JF')
     call FirstAbilityInit('A0JG')
     call FirstAbilityInit('A0UZ')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0JI')
     call FirstAbilityInit('A0L6')
     call FirstAbilityInit('A0JJ')

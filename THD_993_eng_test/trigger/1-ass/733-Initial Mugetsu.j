@@ -430,7 +430,6 @@ function Trig_Initial_Mugetsu_Actions takes nothing returns nothing
     set udg_Mugetsu = GetCharacterHandle(udg_MUGETSU_CODE)
     call FirstAbilityInit('A188')
     call FirstAbilityInit('A0YP')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0V4')
     call Mugetsu_Init()
 endfunction

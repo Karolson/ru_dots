@@ -9,7 +9,6 @@ function Trig_Initial_Ran_Actions takes nothing returns nothing
     call FirstAbilityInit('A08M')
     call FirstAbilityInit('A117')
     call FirstAbilityInit('A0ES')
-    call FirstAbilityInit('Avul')
     call FirstAbilityInit('A0EG')
     call FirstAbilityInit('A0EH')
     call FirstAbilityInit('A0DO')

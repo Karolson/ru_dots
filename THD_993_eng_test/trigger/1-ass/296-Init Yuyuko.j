@@ -10,7 +10,6 @@ function Trig_Init_Yuyuko_Actions takes nothing returns nothing
     call FirstAbilityInit('A0QM')
     call FirstAbilityInit('A05B')
     call FirstAbilityInit('A0MN')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A05C')
     call FirstAbilityInit('A0IL')
     if h == null then

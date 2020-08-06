@@ -4,7 +4,6 @@ function Trig_Initialing_Miko_Actions takes nothing returns nothing
     call FirstAbilityInit('A1HW')
     call FirstAbilityInit('A183')
     call FirstAbilityInit('A0V1')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A0VL')
     call FirstAbilityInit('A185')

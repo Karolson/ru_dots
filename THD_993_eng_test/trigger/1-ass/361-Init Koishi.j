@@ -1,7 +1,6 @@
 function Trig_Init_Koishi_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('E010')
     call FirstAbilityInit('A0GT')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0GJ')
     call FirstAbilityInit('A0ZB')
     call FirstAbilityInit('A0I0')

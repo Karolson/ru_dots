@@ -3,7 +3,6 @@ function Trig_Initialing_Shinki_Actions takes nothing returns nothing
     call FirstAbilityInit('A1DV')
     call FirstAbilityInit('A1EZ')
     call FirstAbilityInit('A1DW')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A013')
     call FirstAbilityInit('A1DX')

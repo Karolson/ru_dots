@@ -3,7 +3,6 @@ function Trig_Init_Nazrin_Actions takes nothing returns nothing
     local unit u
     local timer t
     local integer task
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0OO')
     call FirstAbilityInit('A0P7')
     call FirstAbilityInit('A0V4')

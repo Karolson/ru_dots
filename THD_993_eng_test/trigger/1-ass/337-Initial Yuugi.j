@@ -4,7 +4,6 @@ function Trig_Initial_Yuugi_Actions takes nothing returns nothing
     call FirstAbilityInit('A0RM')
     call FirstAbilityInit('A11C')
     call FirstAbilityInit('A08B')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A118')
     call FirstAbilityInit('A08C')
     call FirstAbilityInit('A08D')

@@ -1050,7 +1050,6 @@ function Trig_Initialing_Futo_Actions takes nothing returns nothing
     call FirstAbilityInit('A1DS')
     call FirstAbilityInit('A1DT')
     call FirstAbilityInit('A1DU')
-    call FirstAbilityInit('Aloc')
     call Futo_Init()
 endfunction
 

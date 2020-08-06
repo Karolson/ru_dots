@@ -7,7 +7,6 @@ function Trig_Initial_Umbrella_Actions takes nothing returns nothing
     call FirstAbilityInit('A1G9')
     call FirstAbilityInit('A0C4')
     call FirstAbilityInit('A0LS')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0IL')
     call FirstAbilityInit('A0C8')
     call FirstAbilityInit('A0LT')

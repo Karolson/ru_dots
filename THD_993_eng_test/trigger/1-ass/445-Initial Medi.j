@@ -12,7 +12,6 @@ function Trig_Initial_Medi_Actions takes nothing returns nothing
     call FirstAbilityInit('A0EF')
     call FirstAbilityInit('A07X')
     call FirstAbilityInit('A15U')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0FO')
     call FirstAbilityInit('A0FM')
     call FirstAbilityInit('A04C')

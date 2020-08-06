@@ -4,7 +4,6 @@ function Trig_Init_Meirin_Actions takes nothing returns nothing
     call FirstAbilityInit('A0GC')
     call FirstAbilityInit('A0GA')
     call FirstAbilityInit('A0GB')
-    call FirstAbilityInit('Aloc')
     call FirstAbilityInit('A0V4')
     call FirstAbilityInit('A0SJ')
     call FirstAbilityInit('A1Z0')

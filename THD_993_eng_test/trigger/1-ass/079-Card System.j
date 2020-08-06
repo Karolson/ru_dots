@@ -104,8 +104,8 @@ function Trig_Card_System_Actions takes nothing returns boolean
             set i = 0
             set max = 5
         else
-            set i = 5
-            set max = 10
+            set i = 6
+            set max = 11
         endif
         loop
             call UnitRemoveAbility(udg_PlayerReviveHouse[i], cardid)

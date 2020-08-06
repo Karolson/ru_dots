@@ -100,8 +100,8 @@ function ThunderStrike_Stun takes nothing returns nothing
     local integer i
     local integer max
     if GetPlayerId(GetOwningPlayer(caster)) < 5 then
-        set i = 5
-        set max = 10
+        set i = 6
+        set max = 11
     else
         set i = 0
         set max = 5
@@ -144,8 +144,8 @@ function Trig_Defence_BL_Actions takes nothing returns nothing
         call BroadcastMessageFriend(udg_PN[GetPlayerId(PLY)] + " casts Hakurei Binding Enchantment!", PLY)
         call Thunderstrike_CineFilterBL_Start()
     else
-        set i = 5
-        set max = 10
+        set i = 6
+        set max = 11
         set dummyid = 'A02J'
         set trueid = 'A01D'
         call BroadcastMessageFriend(udg_PN[GetPlayerId(PLY)] + " casts God's Wrath!", PLY)

@@ -266,7 +266,6 @@ function Trig_Initial_Daiyousei_Actions takes nothing returns nothing
     call FirstAbilityInit('A04J')
     call FirstAbilityInit('A057')
     call FirstAbilityInit('Aprg')
-    call FirstAbilityInit('Avul')
     call Daiyousei_Init()
 endfunction
 

@@ -21,7 +21,7 @@ function Trig_BagetAccelerator_Move takes nothing returns nothing
     local unit target = LoadUnitHandle(udg_ht, task, 1)
     local real damage = LoadReal(udg_ht, task, 2)
     local real speed = LoadReal(udg_ht, task, 3)
-    local real angle = GetUnitFacing(target) * bj_DEGTORAD
+    local real angle = LoadReal(udg_ht, task, 4)
     local group g = CreateGroup()
     local unit v
     local player p = GetOwningPlayer(caster)
@@ -32,6 +32,7 @@ function Trig_BagetAccelerator_Move takes nothing returns nothing
     local timer teffect = CreateTimer()
     call SaveEffectHandle(udg_ht, GetHandleId(teffect), 0, AddSpecialEffect("Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl", tx + 15.0 * Cos(angle + bj_PI), ty + 15.0 * Sin(angle + bj_PI)))
     call TimerStart(teffect, 0.1, false, function Trig_BagetAccelerator_Destroy_Effect)
+    call SetUnitFacing(target, angle * bj_RADTODEG)
     call SetUnitX(target, txnext)
     call SetUnitY(target, tynext)
     call GroupEnumUnitsInRangeFix(g, tx, ty, 80.0)
@@ -102,14 +103,12 @@ function Trig_BagetAccelerator_Actions takes nothing returns nothing
     elseif mainstat == 3 then
         set damage = damage + 2.0 * GetHeroInt(caster, true)
     endif
-    if IsUnitEnemy(target, GetOwningPlayer(caster)) then
-        call UnitMagicDamageTarget(caster, target, damage, 1)
-    endif
     call SetUnitPathing(target, false)
     call SaveUnitHandle(udg_ht, task, 0, caster)
     call SaveUnitHandle(udg_ht, task, 1, target)
     call SaveReal(udg_ht, task, 2, damage)
     call SaveReal(udg_ht, task, 3, speed * 0.01)
+    call SaveReal(udg_ht, task, 4, GetUnitFacing(target) * bj_DEGTORAD)
     call TimerStart(t, 0.01, true, function Trig_BagetAccelerator_Move)
     call SaveTimerHandle(udg_ht, taskend, 0, t)
     call TimerStart(tend, distance / speed, false, function Trig_BagetAccelerator_Move_End)

@@ -37,6 +37,7 @@ endfunction
 function Trig_Game_Start_Actions takes nothing returns boolean
     local integer i = 0
     local timer t = CreateTimer()
+    call RemoveUnit(udg_AbilityInitDummy)
     call CameraInit()
     call SetSkyModel("Environment\\Sky\\Sky\\SkyLight.mdl")
     call SetTimeOfDayScale(0.5)

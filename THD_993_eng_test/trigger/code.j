@@ -2167,8 +2167,7 @@ function DebugMsg takes string msg returns nothing
 endfunction
 
 function FirstAbilityInit takes integer abid returns nothing
-    call UnitAddAbility(gg_unit_h00D_0013, abid)
-    call UnitRemoveAbility(gg_unit_h00D_0013, abid)
+    call UnitAddAbility(udg_AbilityInitDummy, abid)
 endfunction
 
 function CountOnlineTeam takes nothing returns nothing
