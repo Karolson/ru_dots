@@ -39,9 +39,11 @@ function s__grayalpaca_destroy takes integer this returns nothing
 endfunction
 
 function s__grayalpaca_onPickup takes nothing returns boolean
-    if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetItemTypeId(GetManipulatedItem()) == udg_ItemID and udg_GrayAlpacaCount[GetPlayerId(GetTriggerPlayer())] == 0 and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer() or GetItemPlayer(GetManipulatedItem()) == Player(15) then
-        call s__grayalpaca_create(GetTriggerUnit())
-        call s__grayalpaca_tempRemove(udg_s__grayalpaca_stack[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+    if GetItemTypeId(GetManipulatedItem()) == udg_ItemID or GetItemTypeId(GetManipulatedItem()) == 'I090' then
+        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and udg_GrayAlpacaCount[GetPlayerId(GetTriggerPlayer())] == 0 and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer() or GetItemPlayer(GetManipulatedItem()) == Player(15) then
+            call s__grayalpaca_create(GetTriggerUnit())
+            call s__grayalpaca_tempRemove(udg_s__grayalpaca_stack[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+        endif
     endif
     return false
 endfunction
@@ -50,7 +52,7 @@ function s__grayalpaca_onDelayedCheck takes nothing returns nothing
     local unit u = LoadUnitHandle(udg_ht, GetHandleId(GetExpiredTimer()), 0)
     call FlushChildHashtable(udg_ht, GetHandleId(GetExpiredTimer()))
     call ReleaseTimer(GetExpiredTimer())
-    if not YDWEUnitHasItemOfTypeBJNull(u, udg_ItemID) then
+    if not YDWEUnitHasItemOfTypeBJNull(u, udg_ItemID) and not YDWEUnitHasItemOfTypeBJNull(u, 'I090') then
         call s__grayalpaca_destroy(udg_s__grayalpaca_stack[GetPlayerId(GetOwningPlayer(u))])
         set udg_GrayAlpacaCount[GetPlayerId(GetOwningPlayer(u))] = 0
     endif
@@ -59,11 +61,13 @@ endfunction
 
 function s__grayalpaca_onDrop takes nothing returns boolean
     local timer t
-    if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetItemTypeId(GetManipulatedItem()) == udg_ItemID and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer() then
-        set t = CreateTimer()
-        call SaveUnitHandle(udg_ht, GetHandleId(t), 0, GetTriggerUnit())
-        call TimerStart(t, 0.0, false, function s__grayalpaca_onDelayedCheck)
-        set t = null
+    if GetItemTypeId(GetManipulatedItem()) == udg_ItemID or GetItemTypeId(GetManipulatedItem()) == 'I090' then
+        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer() then
+            set t = CreateTimer()
+            call SaveUnitHandle(udg_ht, GetHandleId(t), 0, GetTriggerUnit())
+            call TimerStart(t, 0.0, false, function s__grayalpaca_onDelayedCheck)
+            set t = null
+        endif
     endif
     return false
 endfunction
@@ -72,11 +76,11 @@ function s__grayalpaca_onDamage takes nothing returns boolean
     local unit u
     if GetEventDamage() > 0.0 then
         set u = GetPlayerCharacter(GetOwningPlayer(GetTriggerUnit()))
-        if YDWEUnitHasItemOfTypeBJNull(u, udg_ItemID) then
+        if YDWEUnitHasItemOfTypeBJNull(u, udg_ItemID) or YDWEUnitHasItemOfTypeBJNull(u, 'I090') then
             call s__grayalpaca_tempRemove(udg_s__grayalpaca_stack[GetPlayerId(GetOwningPlayer(u))])
         endif
         set u = GetPlayerCharacter(GetOwningPlayer(GetEventDamageSource()))
-        if YDWEUnitHasItemOfTypeBJNull(u, udg_ItemID) then
+        if YDWEUnitHasItemOfTypeBJNull(u, udg_ItemID) or YDWEUnitHasItemOfTypeBJNull(u, 'I090') then
             call s__grayalpaca_tempRemove(udg_s__grayalpaca_stack[GetPlayerId(GetOwningPlayer(u))])
         endif
     endif

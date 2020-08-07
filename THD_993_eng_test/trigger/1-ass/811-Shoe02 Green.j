@@ -1,5 +1,15 @@
 function Trig_Shoe02_Green_Conditions takes nothing returns boolean
-    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetItemTypeId(GetManipulatedItem()) == 'I03A' and udg_SK_Li_Shoe02_Green[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] == 0 and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer()
+    if GetItemTypeId(GetManipulatedItem()) == 'I03A' or GetItemTypeId(GetManipulatedItem()) == 'I091' then
+        if not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) then
+            return false
+        elseif udg_SK_Li_Shoe02_Green[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] != 0 then
+            return false
+        elseif GetItemPlayer(GetManipulatedItem()) != GetTriggerPlayer() then
+            return false
+        else 
+            return true
+        endif
+    endif
 endfunction
 
 function Trig_Shoe02_Green_Actions takes nothing returns nothing

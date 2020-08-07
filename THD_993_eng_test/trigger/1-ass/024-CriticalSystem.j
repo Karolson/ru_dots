@@ -81,7 +81,7 @@ function UnitHealingTarget takes unit caster, unit target, real damage returns n
     if GetUnitAbilityLevel(target, 'A0CW') != 0 then
         set outcomedamage = outcomedamage * 0.5
     endif
-    if YDWEUnitHasItemOfTypeBJNull(target, 'I039') then
+    if YDWEUnitHasItemOfTypeBJNull(target, 'I039') or YDWEUnitHasItemOfTypeBJNull(target, 'I092') then
         set outcomedamage = outcomedamage * 1.2
     endif
     if GetUnitAbilityLevel(target, 'B09U') != 0 then

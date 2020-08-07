@@ -225,6 +225,9 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
             if itmtype == 'I031' then
                 set actualtime = actualtime * 0.9
             endif
+            if itmtype == 'I090' then
+                set actualtime = actualtime * 0.9
+            endif
             if itmtype == 'I00H' then
                 set actualtime = actualtime * 0.9
             endif

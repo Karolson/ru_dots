@@ -1,5 +1,9 @@
 function Trig_Shoe02_GreenDrop_Conditions takes nothing returns boolean
-    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetItemTypeId(GetManipulatedItem()) == 'I03A' and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer()
+    if GetItemTypeId(GetManipulatedItem()) == 'I03A' or GetItemTypeId(GetManipulatedItem()) == 'I091' then
+        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetItemPlayer(GetManipulatedItem()) == GetTriggerPlayer() then
+            return true
+        endif
+    endif
 endfunction
 
 function Trig_Shoe02_GreenDrop_Main takes nothing returns nothing
@@ -7,7 +11,7 @@ function Trig_Shoe02_GreenDrop_Main takes nothing returns nothing
     local integer task = GetHandleId(t)
     local unit caster = LoadUnitHandle(udg_ht, task, 0)
     local integer k = GetConvertedPlayerId(GetOwningPlayer(caster))
-    if YDWEGetInventoryIndexOfItemTypeBJNull(caster, 'I03A') == 0 then
+    if YDWEGetInventoryIndexOfItemTypeBJNull(caster, 'I03A') == 0 and YDWEGetInventoryIndexOfItemTypeBJNull(caster, 'I091') == 0 then
         set udg_SK_Li_Shoe02_Green[k] = 0
         call UnitRemoveAbility(caster, 'A17L')
         call DebugMsg("Green Llama Effect End")

@@ -200,7 +200,7 @@ function UnitMagicDamageTarget takes unit caster, unit target, real damage, inte
     else
         set resist = GetUnitMagicResist(target)
     endif
-    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I08T') then
+    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I08T') or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I093') then
         set resist = resist - 4
     endif
     if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I06N') then

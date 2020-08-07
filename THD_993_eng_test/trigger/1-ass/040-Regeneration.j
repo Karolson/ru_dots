@@ -672,7 +672,7 @@ function GetUnitLifeRegen takes unit v returns real
         endif
     endif
     set regen = regen + GetHeroStr(v, true) * 0.04
-    if YDWEUnitHasItemOfTypeBJNull(v, 'I039') then
+    if YDWEUnitHasItemOfTypeBJNull(v, 'I039') or YDWEUnitHasItemOfTypeBJNull(v, 'I092') then
         set multiplier = multiplier * 1.2
     endif
     if GetUnitAbilityLevel(v, 'A0CW') != 0 then

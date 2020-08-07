@@ -30,6 +30,8 @@ function Trig_BagetAccelerator_Move takes nothing returns nothing
     local real txnext = tx + speed * Cos(angle)
     local real tynext = ty + speed * Sin(angle)
     local timer teffect = CreateTimer()
+    call SetUnitFlag(target, 3, true)
+    call SetUnitPathing(target, false)
     call SaveEffectHandle(udg_ht, GetHandleId(teffect), 0, AddSpecialEffect("Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl", tx + 15.0 * Cos(angle + bj_PI), ty + 15.0 * Sin(angle + bj_PI)))
     call TimerStart(teffect, 0.1, false, function Trig_BagetAccelerator_Destroy_Effect)
     call SetUnitFacing(target, angle * bj_RADTODEG)
@@ -53,6 +55,17 @@ function Trig_BagetAccelerator_Move takes nothing returns nothing
     set teffect = null
 endfunction
 
+function Trig_BagetAccelerator_Flag_Clear takes nothing returns nothing
+    local timer t = GetExpiredTimer()
+    local integer task = GetHandleId(t)
+    local unit target = LoadUnitHandle(udg_ht, task, 0)
+    call SetUnitFlag(target, 3, false)
+    call ReleaseTimer(t)
+    call FlushChildHashtable(udg_ht, task)
+    set target = null
+    set t = null
+endfunction
+
 function Trig_BagetAccelerator_Move_End takes nothing returns nothing
     local timer t = GetExpiredTimer()
     local integer task = GetHandleId(t)
@@ -66,8 +79,7 @@ function Trig_BagetAccelerator_Move_End takes nothing returns nothing
     local real newy = ty
     call ReleaseTimer(tmove)
     call ReleaseTimer(t)
-    call SetUnitFlag(target, 3, false)
-    if GetCustomState(target, 1) == 0 and GetCustomState(target, 2) == 0 and GetCustomState(target, 3) == 0 and GetCustomState(target, 5) == 0 then
+    if GetCustomState(target, 1) == 0 and GetCustomState(target, 2) == 0 and GetCustomState(target, 5) == 0 then
         call SetUnitPathing(target, true)
         loop
         exitwhen not IsTerrainPathable(newx, newy, PATHING_TYPE_WALKABILITY)
@@ -78,6 +90,9 @@ function Trig_BagetAccelerator_Move_End takes nothing returns nothing
     endif
     call FlushChildHashtable(udg_ht, task)
     call FlushChildHashtable(udg_ht, taskmove)
+    set t = CreateTimer()
+    call SaveUnitHandle(udg_ht, GetHandleId(t), 0, target)
+    call TimerStart(t, 0.1, false, function Trig_BagetAccelerator_Flag_Clear)
     set t = null
     set tmove = null
     set target = null
@@ -86,16 +101,27 @@ endfunction
 function Trig_BagetAccelerator_Actions takes nothing returns nothing
     local unit caster = GetTriggerUnit()
     local unit target = GetSpellTargetUnit()
-    local timer t = CreateTimer()
-    local integer task = GetHandleId(t)
-    local timer tend = CreateTimer()
-    local integer taskend = GetHandleId(tend)
+    local timer t
+    local integer task
+    local timer tend
+    local integer taskend
     local integer mainstat = LoadInteger(udg_HeroDatabase, GetUnitTypeId(caster), 'PRIM')
     local real angle = (GetUnitFacing(target) - 180.0) * bj_DEGTORAD
     local real damage = 100.0
     local real distance = 600.0
     local real speed = 1800.0
-    call SetUnitFlag(target, 3, true)
+    if IsUnitEnemy(target, GetOwningPlayer(caster)) and udg_SK_BLTalismanicAvaliable[GetConvertedPlayerId(GetOwningPlayer(target))] and not IsUnitIllusion(target) then
+        call Item_BLTalismanicRunningCD(target)
+        set caster = null
+        set target = null
+        set t = null
+        set tend = null
+        return
+    endif
+    set t = CreateTimer()
+    set task = GetHandleId(t)
+    set tend = CreateTimer()
+    set taskend = GetHandleId(tend)
     if mainstat == 1 then
         set damage = damage + 2.0 * GetHeroStr(caster, true)
     elseif mainstat == 2 then
@@ -103,7 +129,6 @@ function Trig_BagetAccelerator_Actions takes nothing returns nothing
     elseif mainstat == 3 then
         set damage = damage + 2.0 * GetHeroInt(caster, true)
     endif
-    call SetUnitPathing(target, false)
     call SaveUnitHandle(udg_ht, task, 0, caster)
     call SaveUnitHandle(udg_ht, task, 1, target)
     call SaveReal(udg_ht, task, 2, damage)
