@@ -30,7 +30,7 @@ function Trig_Iku03_Main takes nothing returns nothing
     if i < j and d > 60 and not IsUnitType(target, UNIT_TYPE_DEAD) then
         set px = ox + (15.0 + 2.0 * GetUnitAbilityLevel(uz, 'A00Y')) * Cos(a)
         set py = oy + (15.0 + 2.0 * GetUnitAbilityLevel(uz, 'A00Y')) * Sin(a)
-        if IsTerrainPathable(px, py, PATHING_TYPE_WALKABILITY) or IsUnitInRange(caster, target, 60.0) then
+        if IsTerrainPathable(px, py, PATHING_TYPE_WALKABILITY) or IsUnitInRange(caster, target, 60.0) or IsUnitCCImmune(target) then
             call SaveInteger(udg_ht, task, 1, 20)
         else
             if GetUnitTypeId(target) == 'n006' == false then

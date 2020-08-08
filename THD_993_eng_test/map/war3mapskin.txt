@@ -28,11 +28,11 @@ PLAYER_VICTORIOUS=%s |cffffcc00WON!|r
 RESOURCE_UBERTIP_GOLD=Points are automatically added to your stock every second in-game. Also occasionally dropped by enemy creeps.
 RESOURCE_UBERTIP_LUMBER=Faith is automatically added to your team's stock every minute. Your team gains 5 faith every minute. Killing enemy girl grants +5 faith.
 RESOURCE_UBERTIP_SUPPLY=Power drops randomly from creeps. Increases a girl's primary attribute by 1 up to a maximum of 30.  You lose 1/3 of power upon death. Half of lost power is dropped on the ground.
-RESOURCE_UBERTIP_UPKEEP=v0.993 testo-build50 by Karolson, Metakimi|nSpecial edition for thdots.ru|n
+RESOURCE_UBERTIP_UPKEEP=v0.993 testo-build51 by Karolson, Metakimi|nSpecial edition for thdots.ru|n
 RESOURCE_UBERTIP_UPKEEP_INFO=Press ALT+H to see information about translation|n
 REVIVE_AT_ALTAR=You can spend up some points to revive from the shrine.
-UPKEEP_LOW=993 testo-build50
-UPKEEP_NONE=993 testo-build50
+UPKEEP_LOW=993 testo-build51
+UPKEEP_NONE=993 testo-build51
 [Terrain]
 MaxHeight=3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712
 MaxSlope=90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90

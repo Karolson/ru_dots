@@ -23,7 +23,7 @@ function Trig_Iku02_Repel_Main takes nothing returns nothing
         call DestroyEffect(AddSpecialEffect("Abilities\\Weapons\\SteamMissile\\SteamMissile.mdl", ox, oy))
         set px = ox + 30.0 * Cos(a * 0.017454)
         set py = oy + 30.0 * Sin(a * 0.017454)
-        if IsTerrainPathable(px, py, PATHING_TYPE_WALKABILITY) then
+        if IsTerrainPathable(px, py, PATHING_TYPE_WALKABILITY) or IsUnitCCImmune(target) then
             call SaveInteger(udg_ht, task, 1, 0)
         else
             call SetUnitXY(target, px, py)
