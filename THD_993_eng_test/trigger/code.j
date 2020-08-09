@@ -3700,26 +3700,17 @@ function IsUnitAlive takes unit u returns boolean
 endfunction
 
 function IsUnitInvulnerable takes unit u returns boolean
-    local real CurrentHealth = GetWidgetLife(u)
-    local real CurrentMana = GetUnitState(u, UNIT_STATE_MANA)
-    local boolean k
-    if GetUnitAbilityLevel(u, 'Avul') > 0 or GetUnitAbilityLevel(u, 'Bvul') > 0 then
-        return true
-    endif
-    call SetWidgetLife(u, CurrentHealth + 0.01)
-    if CurrentHealth != GetWidgetLife(u) then
-        call UnitDamageTarget(u, u, 0.01, false, true, null, null, null)
-        set k = GetWidgetLife(u) == CurrentHealth + 0.01
+    local boolean b
+    local unit w = NewDummy(GetOwningPlayer(u), GetUnitX(u), GetUnitY(u), 0)
+    call UnitAddAbility(w, 'A03G')
+    if IssueTargetOrder(w, "channel", u) then
+        set b = false
     else
-        call UnitDamageTarget(u, u, 0.01, false, true, null, null, null)
-        set k = GetWidgetLife(u) == CurrentHealth
+        set b = true
     endif
-    if k then
-        set k = not (GetUnitState(u, UNIT_STATE_MANA) != CurrentMana)
-    endif
-    call SetWidgetLife(u, CurrentHealth)
-    call SetUnitState(u, UNIT_STATE_MANA, CurrentMana)
-    return k
+    call ReleaseDummy(w)
+    set w = null
+    return b
 endfunction
 
 function H2I takes agent h returns integer

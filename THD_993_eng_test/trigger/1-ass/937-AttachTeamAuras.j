@@ -3,6 +3,7 @@ function Trig_AttachTeamAuras_Actions takes nothing returns nothing
     local unit v
     local integer i = 0
     local string s
+    local boolean isInvulnerable
     loop
         set g = CreateGroup()
         call GroupEnumUnitsOfPlayer(g, Player(i), null)
@@ -11,7 +12,8 @@ function Trig_AttachTeamAuras_Actions takes nothing returns nothing
         exitwhen v == null
             call GroupRemoveUnit(g, v)
             if (IsUnitType(v, UNIT_TYPE_HERO) or IsUnitIllusion(v)) and not IsUnitType(v, UNIT_TYPE_STRUCTURE) and not IsUnitDead(v) then
-                if LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0) == null or LoadInteger(udg_TimerSys, GetHandleId(v), 1) != GetUnitTypeId(v) or IsUnitInvulnerable(v) != LoadBoolean(udg_TimerSys, GetHandleId(v), 2) then
+                set isInvulnerable = IsUnitInvulnerable(v)
+                if LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0) == null or LoadInteger(udg_TimerSys, GetHandleId(v), 1) != GetUnitTypeId(v) or isInvulnerable != LoadBoolean(udg_TimerSys, GetHandleId(v), 2) then
                     call DestroyEffect(LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0))
                     if udg_AuraOff[GetPlayerId(GetLocalPlayer())] then
                         set s = ""
@@ -22,11 +24,7 @@ function Trig_AttachTeamAuras_Actions takes nothing returns nothing
                     endif
                     call SaveEffectHandle(udg_TimerSys, GetHandleId(v), 0, AddSpecialEffectTarget(s, v, "origin"))
                     call SaveInteger(udg_TimerSys, GetHandleId(v), 1, GetUnitTypeId(v))
-                    if IsUnitInvulnerable(v) then
-                        call SaveBoolean(udg_TimerSys, GetHandleId(v), 2, true)
-                    else
-                        call SaveBoolean(udg_TimerSys, GetHandleId(v), 2, false)
-                    endif
+                    call SaveBoolean(udg_TimerSys, GetHandleId(v), 2, isInvulnerable)
                 endif
             endif
         endloop
