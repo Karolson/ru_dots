@@ -64,7 +64,6 @@ function Trig_AurasToggle takes nothing returns nothing
         endif
     exitwhen i > 10
     endloop
-    call Trig_AttachTeamAuras_Actions()
     set g = null
 endfunction
 
