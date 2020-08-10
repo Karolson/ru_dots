@@ -1051,6 +1051,8 @@ function Trig_PreloadModels_Actions4 takes nothing returns nothing
     call UnitAddAbility(u, 'A027')
     call UnitAddAbility(u, 'A02R')
     call UnitAddAbility(u, 'A031')
+    call UnitAddAbility(u, 'AUim')
+    call UnitAddAbility(u, 'AEmb')
     call UnitAddAbility(u, 'Avul')
     call UnitAddAbility(u, 'Aloc')
     call RemoveUnit(u)

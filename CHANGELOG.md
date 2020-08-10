@@ -1,3 +1,12 @@
+## testo-build54:
+
+    Baget Accelerator:
+        Каст ренж 600
+
+## testo-build53:
+
+    Исправлены лаги и инаба
+
 ## testo-build52:
 
     Исправлен ульт Когасы

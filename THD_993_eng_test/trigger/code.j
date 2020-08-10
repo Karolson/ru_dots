@@ -2325,7 +2325,7 @@ function ReleaseDummy takes unit u returns nothing
     else
         call ShowUnit(u, false)
         call SetUnitExploded(u, true)
-        call KillUnit(u)
+        call RemoveUnit(u)
     endif
     set t = null
 endfunction
@@ -3700,17 +3700,7 @@ function IsUnitAlive takes unit u returns boolean
 endfunction
 
 function IsUnitInvulnerable takes unit u returns boolean
-    local boolean b
-    local unit w = NewDummy(GetOwningPlayer(u), GetUnitX(u), GetUnitY(u), 0)
-    call UnitAddAbility(w, 'A03G')
-    if IssueTargetOrder(w, "channel", u) then
-        set b = false
-    else
-        set b = true
-    endif
-    call ReleaseDummy(w)
-    set w = null
-    return b
+    return GetUnitAbilityLevel(u, 'Avul') > 0 or GetUnitAbilityLevel(u, 'Bvul') > 0 or GetUnitAbilityLevel(u, 'BUim') > 0 or GetUnitAbilityLevel(u, 'Bust') > 0 or GetUnitAbilityLevel(u, 'Bcyc') > 0 or GetUnitAbilityLevel(u, 'Bcy2') > 0
 endfunction
 
 function H2I takes agent h returns integer
