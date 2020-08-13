@@ -171,7 +171,7 @@ function Trig_Setting_Item_System_Table_2_Actions takes nothing returns nothing
     call HC_Formula_Begin(i, 3, 'I095')
     call HC_Formula_SetResourceAB(0, 0)
     call HC_Formula_SetMaterialA('I036', 1, 'I04F', 1, 'I096', 1)
-    call HC_Formula_SetMaterialB('I04T', 1, 0, 0, 0, 0)
+    call HC_Formula_SetMaterialB('I011', 1, 0, 0, 0, 0)
     call HC_Formula_End()
     set i = i + 1
     call TriggerExecute(gg_trg_Setting_Item_System_Table_3)

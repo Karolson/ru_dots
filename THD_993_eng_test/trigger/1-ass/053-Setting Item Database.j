@@ -470,7 +470,7 @@ function Trig_Setting_Item_Database_Actions takes nothing returns nothing
     call ItemRegisterDataDefence('I08S', 1000, 0, 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataAttack('I08S', 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataStat('I08S', 0, 0, 0)
-    call ItemRegisterDataDefence('I03G', 650, 0, 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataDefence('I03G', 450, 0, 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataAttack('I03G', 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataStat('I03G', 0, 0, 0)
     call ItemRegisterDataDefence('I03T', 600, 0, 0, 0, 0, 0, 0, 0)
@@ -788,7 +788,7 @@ function Trig_Setting_Item_Database_Actions takes nothing returns nothing
     call ItemRegisterDataDefence('I026', 4100, 0, 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataAttack('I026', 30, 0, 0, 0, 0, 0)
     call ItemRegisterDataStat('I026', 10, 10, 10)
-    call ItemRegisterDataDefence('I033', 4400, 0, 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataDefence('I033', 4200, 0, 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataAttack('I033', 60, 0, 0, 15, 0, 0)
     call ItemRegisterDataStat('I033', 0, 0, 0)
     call ItemRegisterDataDefence('I05B', 800, 0, 0, 0, 0, 0, 0, 0)
@@ -800,6 +800,15 @@ function Trig_Setting_Item_Database_Actions takes nothing returns nothing
     call ItemRegisterDataDefence('I08Y', 2000, 0, 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataAttack('I08Y', 0, 0, 0, 0, 0, 0)
     call ItemRegisterDataStat('I08Y', 0, 0, 0)
+    call ItemRegisterDataDefence('I096', 500, 0, 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataAttack('I096', 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataStat('I096', 0, 0, 0)
+    call ItemRegisterDataDefence('I095', 4000, 0, 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataAttack('I095', 25, 60, 0, 0, 0, 0)
+    call ItemRegisterDataStat('I095', 0, 0, 0)
+    call ItemRegisterDataDefence('I094', 4000, 0, 0, 0, 0, 0, 0, 0)
+    call ItemRegisterDataAttack('I094', 25, 60, 0, 0, 0, 0)
+    call ItemRegisterDataStat('I094', 0, 0, 0)
 endfunction
 
 function InitTrig_Setting_Item_Database takes nothing returns nothing

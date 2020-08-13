@@ -60,9 +60,6 @@ function ClearAllNegativeBuff takes unit u, boolean ult returns nothing
     if GetUnitAbilityLevel(u, 'B00D') >= 1 then
         call UnitRemoveAbility(u, 'B00D')
     endif
-    if GetUnitAbilityLevel(u, 'A0B0') >= 1 then
-        call UnitRemoveAbility(u, 'A0B0')
-    endif
     call UnitRemoveAbility(u, 'A0A1')
     call UnitRemoveAbility(u, 'A0V4')
     call UnitRemoveAbility(u, 'B01R')

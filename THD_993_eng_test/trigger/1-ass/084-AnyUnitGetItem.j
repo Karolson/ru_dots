@@ -168,9 +168,9 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
         elseif itmtype == 'I08V' then
             set attack = attack + 20 * i
         elseif itmtype == 'I094' then
-            set attack = attack + 27 * i
+            set attack = attack + 25 * i
         elseif itmtype == 'I095' then
-            set attack = attack + 27 * i
+            set attack = attack + 25 * i
         elseif itmtype == 'I026' then
             set attack = attack + 30 * i
         elseif itmtype == 'I033' then
@@ -207,9 +207,9 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
         elseif itmtype == 'I075' then
             set attackspeed = attackspeed + 0.3 * i
         elseif itmtype == 'I094' then
-            set attackspeed = attackspeed + 0.4 * i
+            set attackspeed = attackspeed + 0.6 * i
         elseif itmtype == 'I095' then
-            set attackspeed = attackspeed + 0.4 * i
+            set attackspeed = attackspeed + 0.6 * i
         endif
         set udg_DMG_AllItemAttackSpeed[id] = attackspeed + udg_DMG_AllItemAttackSpeed[id]
         set attackspeed = 0

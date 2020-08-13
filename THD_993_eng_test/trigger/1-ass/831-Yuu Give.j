@@ -415,6 +415,7 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
         return
     endif
     set udg_yukkuriBoolean = false
+    set udg_DisableTeleportFix = true
     loop
         set i = 0
         loop
@@ -430,6 +431,7 @@ function YuuGive_GiveItem takes unit toUnit, unit fromUnit returns nothing
     exitwhen not udg_yukkuriBoolean or j >= 6
         set udg_yukkuriBoolean = false
     endloop
+    set udg_DisableTeleportFix = false
     set i = 0
     loop
         if UnitItemInSlot(toUnit, i) != null then

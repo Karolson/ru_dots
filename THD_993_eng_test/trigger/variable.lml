@@ -3280,3 +3280,4 @@ yukkuriBoolean: boolean
 AbilityInitDummy: unit
 AuraOff: boolean
     Array : 12
+DisableTeleportFix: boolean

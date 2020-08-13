@@ -26,7 +26,7 @@ function InitTrig_Ati09_LeafDagger_Actions takes nothing returns nothing
     local real angle
     local location targetLoc = Location(GetUnitX(caster) - GetUnitX(target), GetUnitY(caster) - GetUnitY(target))
     local location vLoc
-    call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 300.0, iff)
+    call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 400.0, iff)
     call GroupRemoveUnit(g, target)
     loop
         set v = FirstOfGroup(g)

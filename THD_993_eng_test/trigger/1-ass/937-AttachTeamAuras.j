@@ -2,16 +2,19 @@ function Trig_AttachTeamAuras_Actions takes nothing returns nothing
     local group g = CreateGroup()
     local unit v
     local string s
-    local boolean isInvulnerable
-    local integer i = LoadInteger(udg_TimerSys, GetHandleId(GetExpiredTimer()), 0)
+    local integer task = GetHandleId(GetExpiredTimer())
+    local integer i = LoadInteger(udg_TimerSys, task, 0)
     call GroupEnumUnitsOfPlayer(g, Player(i), null)
     loop
         set v = FirstOfGroup(g)
     exitwhen v == null
         call GroupRemoveUnit(g, v)
         if (IsUnitType(v, UNIT_TYPE_HERO) or IsUnitIllusion(v)) and not IsUnitType(v, UNIT_TYPE_STRUCTURE) and not IsUnitDead(v) then
-            set isInvulnerable = IsUnitInvulnerable(v)
-            if LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0) == null or LoadInteger(udg_TimerSys, GetHandleId(v), 1) != GetUnitTypeId(v) or isInvulnerable != LoadBoolean(udg_TimerSys, GetHandleId(v), 2) then
+            if LoadBoolean(udg_TimerSys, task, 1) then
+                call DestroyEffect(LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0))
+                call FlushChildHashtable(udg_TimerSys, GetHandleId(v))
+            endif
+            if LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0) == null or LoadInteger(udg_TimerSys, GetHandleId(v), 1) != GetUnitTypeId(v) then
                 call DestroyEffect(LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0))
                 if udg_AuraOff[GetPlayerId(GetLocalPlayer())] then
                     set s = ""
@@ -22,12 +25,18 @@ function Trig_AttachTeamAuras_Actions takes nothing returns nothing
                 endif
                 call SaveEffectHandle(udg_TimerSys, GetHandleId(v), 0, AddSpecialEffectTarget(s, v, "origin"))
                 call SaveInteger(udg_TimerSys, GetHandleId(v), 1, GetUnitTypeId(v))
-                call SaveBoolean(udg_TimerSys, GetHandleId(v), 2, isInvulnerable)
             endif
         endif
     endloop
+    call SaveBoolean(udg_TimerSys, task, 1, false)
     call DestroyGroup(g)
     set g = null
+endfunction
+
+function Trig_AurasRefresh takes nothing returns nothing
+    local timer t = LoadTimerHandle(udg_TimerSys, GetHandleId(GetExpiredTimer()), 0)
+    call SaveBoolean(udg_TimerSys, GetHandleId(t), 1, true)
+    set t = null
 endfunction
 
 function Trig_AttachTeamAuras_Death takes nothing returns nothing
@@ -41,40 +50,35 @@ endfunction
 
 function Trig_AurasToggle takes nothing returns nothing
     local integer pid = GetPlayerId(GetTriggerPlayer())
+    local timer t
     local integer i = 0
-    local group g
-    local unit v
     set udg_AuraOff[pid] = not udg_AuraOff[pid]
     loop
-        set g = CreateGroup()
-        call GroupEnumUnitsOfPlayer(g, Player(i), null)
-        loop
-            set v = FirstOfGroup(g)
-        exitwhen v == null
-            call GroupRemoveUnit(g, v)
-            if IsUnitType(v, UNIT_TYPE_HERO) or IsUnitIllusion(v) then
-                call DestroyEffect(LoadEffectHandle(udg_TimerSys, GetHandleId(v), 0))
-                call FlushChildHashtable(udg_TimerSys, GetHandleId(v))
-            endif
-        endloop
-        call DestroyGroup(g)
+        set t = LoadTimerHandle(udg_TimerSys, GetHandleId(GetTriggeringTrigger()), i)
+        call SaveBoolean(udg_TimerSys, GetHandleId(t), 1, true)
         set i = i + 1
         if i == 5 then
             set i = 6
         endif
     exitwhen i > 10
     endloop
-    set g = null
+    set t = null
 endfunction
 
 function InitTrig_AttachTeamAuras_InitTimer takes nothing returns nothing
     local timer expired = GetExpiredTimer()
+    local integer pid = LoadInteger(udg_TimerSys, GetHandleId(expired), 0)
     local timer t = CreateTimer()
-    call SaveInteger(udg_TimerSys, GetHandleId(t), 0, LoadInteger(udg_TimerSys, GetHandleId(expired), 0))
+    local timer trefresh = CreateTimer()
+    call SaveInteger(udg_TimerSys, GetHandleId(t), 0, pid)
     call TimerStart(t, 0.05, true, function Trig_AttachTeamAuras_Actions)
+    call SaveTimerHandle(udg_TimerSys, GetHandleId(trefresh), 0, t)
+    call TimerStart(trefresh, 1.267, true, function Trig_AurasRefresh)
+    call SaveTimerHandle(udg_TimerSys, LoadInteger(udg_TimerSys, GetHandleId(expired), 1), pid, t)
     call FlushChildHashtable(udg_TimerSys, GetHandleId(expired))
     call ReleaseTimer(expired)
     set t = null
+    set trefresh = null
     set expired = null
 endfunction
 
@@ -103,6 +107,7 @@ function InitTrig_AttachTeamAuras takes nothing returns nothing
     loop
         set t = CreateTimer()
         call SaveInteger(udg_TimerSys, GetHandleId(t), 0, i)
+        call SaveInteger(udg_TimerSys, GetHandleId(t), 1, GetHandleId(aurastoggle_trig))
         call TimerStart(t, 0.02, false, function InitTrig_AttachTeamAuras_InitTimer)
         set i = i + 1
         if i == 5 then

@@ -113,7 +113,7 @@ function Trig_Setting_Item_System_Table_3_Actions takes nothing returns nothing
     call HC_Formula_Begin(i, 3, 'I033')
     call HC_Formula_SetResourceAB(0, 0)
     call HC_Formula_SetMaterialA('I04F', 1, 'I01C', 1, 'I01U', 1)
-    call HC_Formula_SetMaterialB('I01V', 1, 'I03G', 1, 0, 0)
+    call HC_Formula_SetMaterialB('I03G', 1, 0, 0, 0, 0)
     call HC_Formula_End()
     set i = i + 1
     call HC_Formula_Begin(i, 3, 'I08X')

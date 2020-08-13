@@ -60,6 +60,7 @@ function UnitMagicDamageTarget takes unit caster, unit target, real damage, inte
     local unit damageunit = udg_A_MagicDamageUnit[k]
     local unit hero = GetPlayerCharacter(GetOwningPlayer(caster))
     local real alldam = damage
+    local real fullresist = 0.0
     local real resist = 0.0
     local real magictrate = 0.0
     local real demax = 0.0
@@ -193,25 +194,22 @@ function UnitMagicDamageTarget takes unit caster, unit target, real damage, inte
     set demax = UnitTotalReduce(target, caster)
     set alldam = alldam * (1 - demax)
     if GetUnitTypeId(target) == 'h00H' or GetUnitTypeId(target) == 'h00F' or GetUnitTypeId(target) == 'h00G' or GetUnitTypeId(target) == 'h00E' then
-        set resist = GetUnitAbilityResists(target, 'A18Y', 2.0 + R2I(udg_GameTime / 600))
+        set fullresist = GetUnitAbilityResists(target, 'A18Y', 2.0 + R2I(udg_GameTime / 600))
     endif
     if GetUnitTypeId(target) == 'e00E' or GetUnitTypeId(target) == 'e00C' or GetUnitTypeId(target) == 'e00B' or GetUnitTypeId(target) == 'e00D' then
-        set resist = GetUnitAbilityResists(target, 'A01X', 5.0) + GetUnitAbilityResists(target, 'A01X', R2I(udg_GameTime / 600))
+        set fullresist = GetUnitAbilityResists(target, 'A01X', 5.0) + GetUnitAbilityResists(target, 'A01X', R2I(udg_GameTime / 600))
     else
-        set resist = GetUnitMagicResist(target)
+        set fullresist = GetUnitMagicResist(target)
+    endif
+    set resist = fullresist
+    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I06N') then
+        set resist = resist - fullresist * 0.4
+    endif
+    if GetUnitAbilityLevel(GetPlayerCharacter(GetOwningPlayer(caster)), 'A10T') >= 1 then
+        set resist = resist - fullresist * 0.35
     endif
     if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I08T') or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I093') then
         set resist = resist - 4
-    endif
-    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I06N') then
-        if resist > 0 then
-            set resist = resist * (1 - 0.4)
-        endif
-    endif
-    if GetUnitAbilityLevel(GetPlayerCharacter(GetOwningPlayer(caster)), 'A10T') >= 1 then
-        if resist > 0 then
-            set resist = resist * (1 - 0.35)
-        endif
     endif
     set resist = GetMagicResistTrueValue(resist)
     if GetUnitAbilityLevel(target, 'A0FY') > 0 then

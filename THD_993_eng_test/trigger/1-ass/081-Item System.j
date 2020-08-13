@@ -1,11 +1,11 @@
-function Teleport_FixDoubleClick takes item it, unit u, trigger t returns nothing
+function Teleport_FixDoubleClick takes item it, unit u returns nothing
     local unit base
     if GetItemTypeId(it) == 'I00A' or GetItemTypeId(it) == 'I090' or GetItemTypeId(it) == 'I091' or GetItemTypeId(it) == 'I092' or GetItemTypeId(it) == 'I093' or GetItemTypeId(it) == 'I02P' or GetItemTypeId(it) == 'I077' then
         set base = GetUnitBase(u)
         call SetItemPosition(it, GetUnitX(base), GetUnitY(base))
-        call DisableTrigger(t)
+        call DisableTrigger(gg_trg_Item_System)
         call UnitAddItem(u, it)
-        call EnableTrigger(t)
+        call EnableTrigger(gg_trg_Item_System)
     endif
     set base = null
 endfunction
@@ -89,7 +89,7 @@ function Trig_Item_Check_Owner takes nothing returns boolean
     endif
     if who != p then
         call UnitRemoveItem(u, thing)
-        call DisplayTextToPlayer(p, 0, 0, "This item is not yours")
+        call DisplayTextToPlayer(p, 0, 0, "This item belongs to " + udg_PN[GetPlayerId(who)])
         set who = null
         set thing = null
         set u = null
@@ -174,7 +174,9 @@ function Trig_Item_System_Try_Craft takes unit hero, unit yukkuri, item w return
     endif
     call ExecuteFunc("HC_FlushRegisters")
     set udg_HC_Lock = true
-    call Teleport_FixDoubleClick(w, hero, GetTriggeringTrigger())
+    if not udg_DisableTeleportFix then
+        call Teleport_FixDoubleClick(w, hero)
+    endif
     loop
     exitwhen i >= n
         if not HC_IsValidSN(i) then
