@@ -1,3 +1,8 @@
+## testo-build57:
+
+    Red Sword of Distortion:
+        Собирается из Tax-collecting Yin Yang Orb вместо Ice Cube
+
 ## testo-build56:
 
     Исправлено перемешивание и отмена тп у юккури
