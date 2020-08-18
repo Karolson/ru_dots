@@ -129,6 +129,8 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
             set attack = attack + 5 * i
         elseif itmtype == 'I04T' then
             set attack = attack + 22 * i
+        elseif itmtype == 'I06Y' then
+            set attack = attack + 22 * i
         elseif itmtype == 'I04Q' then
             set attack = attack + 32 * i
         elseif itmtype == 'I08M' then

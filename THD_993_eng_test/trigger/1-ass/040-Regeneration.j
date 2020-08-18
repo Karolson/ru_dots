@@ -532,6 +532,7 @@ function GetUnitMagicRegen takes unit v returns real
     set regen = regen + GetUnitItemMagicRegen_Single(v, 'I04A', 2.0)
     set regen = regen + GetUnitItemMagicRegen_Single(v, 'I07Z', 1.0)
     set regen = regen + GetUnitItemMagicRegen_Single(v, 'I04X', 3.0)
+    set regen = regen + GetUnitItemMagicRegen_Single(v, 'I097', 4.0)
     if GetUnitAbilityLevel(v, 'B070') >= 1 then
         set regen = regen + 1
     endif
@@ -561,7 +562,7 @@ function GetUnitMagicRegen takes unit v returns real
     endif
     set regenmana = 0.25 + GetHeroInt(v, true) * 0.04
     set regenmana = regenmana + regen
-    if YDWEUnitHasItemOfTypeBJNull(v, 'I03B') then
+    if YDWEUnitHasItemOfTypeBJNull(v, 'I03B') or YDWEUnitHasItemOfTypeBJNull(v, 'I097') then
         set regenmana = regenmana + regenmana * 0.3
     endif
     if GetUnitAbilityLevel(v, 'B075') >= 1 and IsUnitAlly(v, GetOwningPlayer(udg_SK_Neet)) == false then

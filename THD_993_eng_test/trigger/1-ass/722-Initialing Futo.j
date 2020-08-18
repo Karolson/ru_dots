@@ -2,12 +2,14 @@ function s__FutoEx_create takes unit caster returns integer
     local integer aID = GetSpellAbilityId()
     set udg_Futo___FutoEx_Flag = not udg_Futo___FutoEx_Flag
     if udg_Futo___FutoEx_Flag then
+        call DisplayTimedTextToPlayer(GetTriggerPlayer(),0,0,4.,"Yin")
         call DebugMsg("Yin")
         if GetUnitTypeId(udg_s__FutoEx_FutoExEffectUnit) != 'n058' then
             call IssueImmediateOrder(udg_s__FutoEx_FutoExEffectUnit, "robogoblin")
             call SetUnitFlyHeight(udg_s__FutoEx_FutoExEffectUnit, -50, 100)
         endif
     else
+        call DisplayTimedTextToPlayer(GetTriggerPlayer(),0,0,4.,"Yang")
         call DebugMsg("Yang")
         if GetUnitTypeId(udg_s__FutoEx_FutoExEffectUnit) != 'n05C' then
             call IssueImmediateOrder(udg_s__FutoEx_FutoExEffectUnit, "unrobogoblin")
@@ -377,6 +379,7 @@ function s__Futo03_create takes unit caster, real x, real y returns integer
         call TimerStart(t, 0.1, true, function sc__Futo03_flyup)
         call SetPlayerAbilityAvailable(GetOwningPlayer(caster), udg_Futo___Futo03_ID, false)
         call UnitAddAbility(caster, udg_Futo___Futo03_SETLOC_ID)
+        call SetUnitAbilityLevel(caster, udg_Futo___Futo03_SETLOC_ID, udg_s__Futo03_alvl[this])
     else
         if HaveSavedInteger(udg_ht, GetHandleId(caster), GetHandleId(caster) + udg_Futo___Futo03_HASHTABLE_OFFSET) == false then
             call SetPlayerAbilityAvailable(GetOwningPlayer(caster), udg_Futo___Futo03_ID, true)
@@ -487,7 +490,7 @@ function s__Futo03_flyup takes nothing returns nothing
         call SetPlayerAbilityAvailable(GetOwningPlayer(udg_s__Futo03_caster[this]), udg_Futo___Futo03_ID, true)
         call UnitRemoveAbility(udg_s__Futo03_caster[this], udg_Futo___Futo03_SETLOC_ID)
         set udg_s__Futo03_radian[this] = Atan2(GetLocationY(udg_s__Futo03_des[this]) - GetUnitY(udg_s__Futo03_ship[this]), GetLocationX(udg_s__Futo03_des[this]) - GetUnitX(udg_s__Futo03_ship[this]))
-        set udg_s__Futo03_speed[this] = DistanceBetweenPoints(loc, udg_s__Futo03_des[this]) / udg_Futo___Futo03_MOVE_DURATION * 0.01
+        set udg_s__Futo03_speed[this] = DistanceBetweenPoints(loc, udg_s__Futo03_des[this]) / (udg_Futo___Futo03_MOVE_DURATION + (0.2 * udg_s__Futo03_alvl[this])) * 0.01
         call RemoveSavedInteger(udg_ht, GetHandleId(t), 0)
         call ReleaseTimer(t)
         set t = CreateTimer()
@@ -532,7 +535,7 @@ function s__Futo03_move takes nothing returns nothing
         call SetUnitY(udg_s__Futo03_ship[this], GetUnitY(udg_s__Futo03_ship[this]) + Sin(udg_s__Futo03_radian[this]) * udg_s__Futo03_speed[this])
     endif
     set udg_s__Futo03_moveTimercount[this] = udg_s__Futo03_moveTimercount[this] + 0.01
-    if theDes or udg_s__Futo03_moveTimercount[this] > udg_Futo___Futo03_MOVE_DURATION then
+    if theDes or udg_s__Futo03_moveTimercount[this] > (udg_Futo___Futo03_MOVE_DURATION + (0.2 * udg_s__Futo03_alvl[this])) then
         set ox = GetUnitX(udg_s__Futo03_ship[this])
         set oy = GetUnitY(udg_s__Futo03_ship[this])
         if udg_s__Futo03_yinyang[this] then
@@ -656,10 +659,6 @@ function s__Futo04_create takes unit caster, real x, real y returns integer
         set udg_s__Futo04_speed[this] = udg_Futo___Futo04_SPEED + udg_Futo___Futo04_SPEED * (RMinBJ(udg_s__Futo04_readyTimercount[this], udg_Futo___Futo04_VALID_MAX_DURATION) / udg_Futo___Futo04_VALID_MAX_DURATION)
         set t = CreateTimer()
         set distance = DistanceBetweenPoints(Location(x, y), GetUnitLoc(caster))
-        if distance > 700 then
-            set udg_s__Futo04_damage[this] = udg_s__Futo04_damage[this] * 0.5
-            set udg_s__Futo04_damageadd[this] = udg_s__Futo04_damageadd[this] * 0.5
-        endif
         set udg_s__Futo04_movetimes[this] = R2I(distance / udg_s__Futo04_speed[this])
         call SaveInteger(udg_ht, GetHandleId(t), 0, this)
         call TimerStart(t, 0.01, true, function sc__Futo04_cast)

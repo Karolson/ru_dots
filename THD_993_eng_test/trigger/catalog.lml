@@ -62,6 +62,7 @@
     '061-Master Initialization': 'Master Initialization'
     '062-Master Trigger': 'Master Trigger'
     '063-Initialization Players': 'Initialization Players'
+        Run
     '064-Initialization UDG': 'Initialization UDG'
         Run
     '065-Initialization Locations': 'Initialization Locations'
@@ -943,6 +944,7 @@
     936-BagetAccelerator: BagetAccelerator
     937-AttachTeamAuras: AttachTeamAuras
     938-govno: govno
+    939-Cross: Cross
 '2-Metakimi Shietfixes': 'Metakimi Shietfixes'
     1----------------------------: ---------------------------
         Comment

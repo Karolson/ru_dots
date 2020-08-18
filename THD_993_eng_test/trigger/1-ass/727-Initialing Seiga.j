@@ -6,6 +6,7 @@ function SeigaEX_Main takes nothing returns nothing
     local real y = LoadReal(udg_ht, task, 1)
     local real px = GetUnitX(h)
     local real py = GetUnitY(h)
+    call SetUnitPathing(h, false)
     if IsTerrainPathable(px, py, PATHING_TYPE_FLYABILITY) then
         call SetUnitX(h, x)
         call SetUnitY(h, y)
@@ -26,17 +27,12 @@ function SeigaEX_Main takes nothing returns nothing
     set h = null
 endfunction
 
-function Seiga_Fix_Pathing takes nothing returns nothing
-    call SetUnitPathing(GetTriggerUnit(), false)
-endfunction
-
 function Trig_Initialing_Seiga_Actions takes nothing returns nothing
     local unit h = GetCharacterHandle('H02K')
     local timer t = CreateTimer()
     local integer task = GetHandleId(t)
     local real x = GetUnitX(h)
     local real y = GetUnitY(h)
-    local trigger seiga_fix_pathing
     call FirstAbilityInit('A1FJ')
     call FirstAbilityInit('A1FI')
     call FirstAbilityInit('A1FK')
@@ -75,9 +71,6 @@ function Trig_Initialing_Seiga_Actions takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Seiga04, Condition(function Trig_Seiga04_Conditions))
     call TriggerAddAction(gg_trg_Seiga04, function Trig_Seiga04_Actions)
     call SetUnitPathing(h, false)
-    set seiga_fix_pathing = CreateTrigger()
-    call TriggerRegisterUnitEvent(seiga_fix_pathing, h, EVENT_UNIT_HERO_REVIVE_FINISH)
-    call TriggerAddAction(seiga_fix_pathing, function Seiga_Fix_Pathing)
     call SetHeroLifeIncreaseValue(h, 25)
     call SaveReal(udg_ht, task, 0, x)
     call SaveReal(udg_ht, task, 1, y)

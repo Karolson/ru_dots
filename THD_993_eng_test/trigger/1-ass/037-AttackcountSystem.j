@@ -107,7 +107,7 @@ function Trig_AttackcountSystem_Actions takes nothing returns nothing
     endif
     if GetUnitAbilityLevel(caster, 'B09M') > 0 then
         call DebugMsg("weaken Physical Damage ")
-        set alldam = alldam * (1 - (0.08 + 0.03 * GetUnitAbilityLevel(caster, 'B09M')))
+        set alldam = alldam * (1 - (0.08 + 0.04 * GetUnitAbilityLevel(caster, 'B09M')))
     endif
     if GetUnitAbilityLevel(target, 'A155') >= 1 then
         set alldam = 0
@@ -153,6 +153,9 @@ function Trig_AttackcountSystem_Actions takes nothing returns nothing
     if GetUnitAbilityLevel(target, 'B058') >= 1 and GetRandomInt(0, 100) <= 36 then
         set alldam = alldam * (1 - GetUnitAbilityLevel(udg_SK_Twei04_Twei, 'A0N5') * 0.12)
         call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Undead\\VampiricAura\\VampiricAuraTarget.mdl", GetUnitX(target), GetUnitY(target)))
+    endif
+    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(caster)), 'I06Y') then
+        set alldam = alldam * 1.12
     endif
     set demax = UnitTotalReduce(target, hero)
     if GetUnitAbilityLevel(target, 'A08V') >= 1 and IsUnitType(caster, UNIT_TYPE_STRUCTURE) == false then

@@ -1,6 +1,6 @@
 function Teleport_FixDoubleClick takes item it, unit u returns nothing
     local unit base
-    if GetItemTypeId(it) == 'I00A' or GetItemTypeId(it) == 'I090' or GetItemTypeId(it) == 'I091' or GetItemTypeId(it) == 'I092' or GetItemTypeId(it) == 'I093' or GetItemTypeId(it) == 'I02P' or GetItemTypeId(it) == 'I077' then
+    if GetItemTypeId(it) == 'I00A' or GetItemTypeId(it) == 'I090' or GetItemTypeId(it) == 'I091' or GetItemTypeId(it) == 'I092' or GetItemTypeId(it) == 'I093' or GetItemTypeId(it) == 'I097' or GetItemTypeId(it) == 'I02P' or GetItemTypeId(it) == 'I077' then
         set base = GetUnitBase(u)
         call SetItemPosition(it, GetUnitX(base), GetUnitY(base))
         call DisableTrigger(gg_trg_Item_System)

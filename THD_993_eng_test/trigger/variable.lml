@@ -1952,7 +1952,7 @@ Futo___Futo02_DAMAGE_BASE: real
 Futo___Futo02_DAMAGE_SCALC: real
     Def   : 5
 Futo___Futo02_DAMAGE_INT: real
-    Def   : .25
+    Def   : 0.35
 Futo___Futo02_COUNTER_DAMAGE_BASE: real
     Def   : 40
 Futo___Futo02_COUNTER_DAMAGE_SCALC: real
@@ -1960,7 +1960,7 @@ Futo___Futo02_COUNTER_DAMAGE_SCALC: real
 Futo___Futo02_COUNTER_DAMAGE_INT: real
     Def   : 1.
 Futo___Futo02_COUNTER_STUN_DURATION: real
-    Def   : .3
+    Def   : 1.00
 Futo___Futo02_PERIOD: real
     Def   : 1
 Futo___Futo02_CD_BASE: real
@@ -1976,7 +1976,7 @@ Futo___Futo03_SHIP_ID: integer
 Futo___Futo03_HASHTABLE_OFFSET: integer
     Def   : 8190*3
 Futo___Futo03_FLYUP_DURATION: real
-    Def   : 4.
+    Def   : 6.00
 Futo___Futo03_MOVE_DURATION: real
     Def   : .5
 Futo___Futo03_RANGE: real
@@ -1988,7 +1988,7 @@ Futo___Futo03_PROTECT_SCALC: real
 Futo___Futo03_PROTECT_INT: real
     Def   : 1.
 Futo___Futo03_PROTECT_DURATION: real
-    Def   : 4.
+    Def   : 5.00
 Futo___Futo03_CD_BASE: real
     Def   : 40
 Futo___Futo03_CD_DECREASE: real
@@ -3281,3 +3281,4 @@ AbilityInitDummy: unit
 AuraOff: boolean
     Array : 12
 DisableTeleportFix: boolean
+HakureiPick: boolean

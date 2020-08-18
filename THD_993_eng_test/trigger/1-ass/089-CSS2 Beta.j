@@ -421,18 +421,9 @@ function CSS2_SetupBanMode takes nothing returns nothing
 endfunction
 
 function CSS2_SetupDraftMode takes nothing returns nothing
-    local integer htask = StringHash("DraftModeOrder")
-    call SaveInteger(udg_cssht, htask, 0, 0)
-    call SaveInteger(udg_cssht, htask, 1, 0)
-    call SaveInteger(udg_cssht, htask, 2, 5)
-    call SaveInteger(udg_cssht, htask, 3, 6)
-    call SaveInteger(udg_cssht, htask, 4, 1)
-    call SaveInteger(udg_cssht, htask, 5, 2)
-    call SaveInteger(udg_cssht, htask, 6, 7)
-    call SaveInteger(udg_cssht, htask, 7, 8)
-    call SaveInteger(udg_cssht, htask, 8, 3)
-    call SaveInteger(udg_cssht, htask, 9, 4)
-    call SaveInteger(udg_cssht, htask, 10, 9)
+    if GetRandomInt(0, 1) == 0 then
+        set udg_HakureiPick = true
+    endif
 endfunction
 
 function CSS2_BanModeUpdateStatus takes nothing returns boolean
@@ -455,20 +446,15 @@ function CSS2_BanModeUpdateStatus takes nothing returns boolean
 endfunction
 
 function CSS2_DraftModeUpdateStatus takes nothing returns boolean
-    local integer mtask = StringHash("DraftModeOrder")
-    local integer newnode = LoadInteger(udg_cssht, mtask, 0) + 1
-    local player p
-    if not HaveSavedInteger(udg_cssht, mtask, newnode) then
-        set p = null
+    if LoadInteger(udg_cssht, StringHash("PreparedPlayerSum"), 0) >= 10 then
         return false
     endif
-    call SaveInteger(udg_cssht, mtask, 0, newnode)
-    set p = GetSortedPlayer(LoadInteger(udg_cssht, mtask, newnode))
-    call SaveInteger(udg_cssht, mtask, 0, newnode)
-    if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-        call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, udg_PN[GetPlayerId(p)] + " picks their character")
+    set udg_HakureiPick = not udg_HakureiPick
+    if udg_HakureiPick then
+        call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, "|cffff0000Hakurei team|r picks their character")
+    else
+        call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, "|cff00ff00Moriya team|r picks their character")
     endif
-    set p = null
     return true
 endfunction
 
@@ -709,18 +695,31 @@ function CSS2_BanDraftModeTimeOut takes nothing returns nothing
     local player p
     local boolean continue
     local integer i
-    if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 then
-        set mtask = StringHash("DraftModeOrder")
-        set currentnode = LoadInteger(udg_cssht, mtask, 0)
-        set p = GetSortedPlayer(LoadInteger(udg_cssht, mtask, currentnode))
-        set pid = GetPlayerId(p)
-        if udg_PlayerHeroList[pid] == 0 then
-            call CSS2_SelectCharacterForPlayer(p, CSS2_GetRandomCharacter(), false, false)
+    local integer max
+    if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
+        if udg_HakureiPick then
+            set i = 0
+            set max = 5
+        else
+            set i = 6
+            set max = 11
         endif
-        call CSS2_SetPlayerPrepared(p)
+        loop
+            set p = Player(i)
+            if udg_PlayerHeroList[i] <= 0 then
+                set udg_RandomPicked[i] = true
+                call CSS2_SelectCharacterForPlayer(p, CSS2_GetRandomCharacter(), false, false)
+            endif
+            if not LoadBoolean(udg_cssht, GetHandleId(p), 1) then
+                call CSS2_SetPlayerPrepared(p)
+                exitwhen true
+            endif
+            set i = i + 1
+        exitwhen i > max
+        endloop
         set continue = CSS2_DraftModeUpdateStatus()
         if continue then
-            call TimerStart(t, 20.0, false, function CSS2_BanDraftModeTimeOut)
+            call TimerStart(t, 30.0, false, function CSS2_BanDraftModeTimeOut)
         endif
     elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 6 then
         set mtask = StringHash("BanModeOrder")
@@ -801,8 +800,8 @@ function CSS2_OnClick takes nothing returns boolean
         set tm = null
         set p = null
         return false
-    elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 and p != GetSortedPlayer(LoadInteger(udg_cssht, StringHash("DraftModeOrder"), LoadInteger(udg_cssht, StringHash("DraftModeOrder"), 0))) then
-        if LoadBoolean(udg_cssht, StringHash("CSS2"), 5) then
+    elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (not isbanstage and (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5) then
+        if LoadBoolean(udg_cssht, StringHash("CSS2"), 5) and ((udg_HakureiPick and pid > 5) or (not udg_HakureiPick and pid < 5)) then
             set t = null
             set e = null
             set s = ""
@@ -832,15 +831,15 @@ function CSS2_OnClick takes nothing returns boolean
         return false
     endif
     if index < 200 then
-        if index == 0 or available or ((udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 and index != 100) or (GetPlayerName(p) == "blankname10" or GetPlayerName(p) == "blankname11" and index != 100) then
+        if index == 0 or available or (((udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5) and index != 100) or (GetPlayerName(p) == "blankname10" or GetPlayerName(p) == "blankname11" and index != 100) then
             call CSS2_SelectCharacterForPlayer(p, index, true, false)
         elseif index == 100 and pindex >= 0 then
-            if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
+            if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (not isbanstage and (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5) then
                 call CSS2_SetPlayerPrepared(p)
                 set continue = CSS2_DraftModeUpdateStatus()
                 if continue then
                     set tm = LoadTimerHandle(udg_cssht, StringHash("BanDraftTimer"), 0)
-                    call TimerStart(tm, 20.0, false, function CSS2_BanDraftModeTimeOut)
+                    call TimerStart(tm, 30.0, false, function CSS2_BanDraftModeTimeOut)
                 endif
             elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 6 then
                 set mtask = StringHash("BanModeOrder")
@@ -873,7 +872,7 @@ function CSS2_OnClick takes nothing returns boolean
                 if udg_PlayerHeroList[pid] == 0 then
                     call CSS2_SelectCharacterForPlayer(p, 0, false, false)
                 endif
-                if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 and not udg_CSS2_BanSelected[pid] and isbanstage then
+                if ((udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5) and not udg_CSS2_BanSelected[pid] and isbanstage then
                     set udg_CSS2_BanSelected[pid] = true
                     call CSS2_BanCharacter(udg_PlayerHeroList[pid])
                     set d1 = LoadDestructableHandle(udg_cssht, ptask, 5)
@@ -1532,9 +1531,17 @@ function CSS2_EndBanStage takes nothing returns nothing
             set i = 6
         endif
     endloop
-    call TimerDialogSetTitle(w, "Character selection")
     call SaveBoolean(udg_cssht, StringHash("CSS2"), 4, false)
-    call TimerStart(t, 45.0, false, function CSS2_End)
+    call TimerDialogSetTitle(w, "Character selection")
+    if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
+        call CSS2_SetupDraftMode()
+        call SaveBoolean(udg_cssht, StringHash("CSS2"), 5, true)
+        call SaveTimerHandle(udg_cssht, StringHash("BanDraftTimer"), 0, t)
+        call CSS2_DraftModeUpdateStatus()
+        call TimerStart(t, 30.0, false, function CSS2_BanDraftModeTimeOut)
+    else
+        call TimerStart(t, 45.0, false, function CSS2_End)
+    endif
     set w = null
     set t = null
     set d1 = null
@@ -1635,15 +1642,15 @@ function CSS2_ShufflePlayers takes nothing returns nothing
         set w = LoadTimerDialogHandle(udg_cssht, ttask, 4)
         call TimerDialogDisplay(w, true)
         call SaveBoolean(udg_cssht, StringHash("CSS2"), 3, false)
-        if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 then
+        if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
             call TimerDialogSetTitle(w, "Character ban")
             call SaveBoolean(udg_cssht, StringHash("CSS2"), 4, true)
             call TimerStart(t, 60.0, false, function CSS2_EndBanStage)
-        elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
+        elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 then
             call CSS2_SetupDraftMode()
             call SaveTimerHandle(udg_cssht, StringHash("BanDraftTimer"), 0, t)
             call CSS2_DraftModeUpdateStatus()
-            call TimerStart(t, 20.0, false, function CSS2_BanDraftModeTimeOut)
+            call TimerStart(t, 30.0, false, function CSS2_BanDraftModeTimeOut)
         elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 6 then
             call CSS2_SetupBanMode()
             call CSS2_Setup_BanPick_Board()
@@ -1736,16 +1743,16 @@ function CSS2_Setup takes nothing returns boolean
         call SaveBoolean(udg_cssht, StringHash("CSS2"), 3, true)
         call SaveBoolean(udg_cssht, task2, 2, true)
         call TimerStart(t2, 25.0, false, function CSS2_ShufflePlayers)
-    elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 then
+    elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 3 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
         call TimerDialogSetTitle(w, "Character ban")
         call SaveBoolean(udg_cssht, StringHash("CSS2"), 4, true)
         call TimerStart(t2, 60.0, false, function CSS2_EndBanStage)
-    elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
+    elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 then
         call CSS2_SetupDraftMode()
         call SaveBoolean(udg_cssht, StringHash("CSS2"), 5, true)
         call SaveTimerHandle(udg_cssht, StringHash("BanDraftTimer"), 0, t2)
         call CSS2_DraftModeUpdateStatus()
-        call TimerStart(t2, 20.0, false, function CSS2_BanDraftModeTimeOut)
+        call TimerStart(t2, 30.0, false, function CSS2_BanDraftModeTimeOut)
     elseif (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 6 then
         call CSS2_SetupBanMode()
         call CSS2_Setup_BanPick_Board()

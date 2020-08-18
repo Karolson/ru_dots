@@ -1053,6 +1053,8 @@ function Trig_PreloadModels_Actions4 takes nothing returns nothing
     call UnitAddAbility(u, 'A031')
     call UnitAddAbility(u, 'AUim')
     call UnitAddAbility(u, 'AEmb')
+    call UnitAddAbility(u, 'A03L')
+    call UnitAddAbility(u, 'A03I')
     call UnitAddAbility(u, 'Avul')
     call UnitAddAbility(u, 'Aloc')
     call RemoveUnit(u)
@@ -1900,6 +1902,11 @@ function Trig_PreloadModels_Actions6 takes nothing returns nothing
     call RemoveItem(CreateItem('I040', 19450.0, -2100.0))
     call RemoveItem(CreateItem('I08X', 19450.0, -2100.0))
     call RemoveItem(CreateItem('I05B', 19450.0, -2100.0))
+    call RemoveItem(CreateItem('I092', 19450.0, -2100.0))
+    call RemoveItem(CreateItem('I091', 19450.0, -2100.0))
+    call RemoveItem(CreateItem('I090', 19450.0, -2100.0))
+    call RemoveItem(CreateItem('I097', 19450.0, -2100.0))
+    call RemoveItem(CreateItem('I093', 19450.0, -2100.0))
 endfunction
 
 function InitTrig_PreloadModels takes nothing returns nothing

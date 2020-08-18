@@ -20,7 +20,7 @@ function Trig_LifeRenge_Actions takes nothing returns nothing
     exitwhen v == null
         call GroupRemoveUnit(g, v)
         if GetUnitAbilityLevel(v, 'A1CR') == 0 then
-            call UnitHealingTarget(caster, v, 225 + udg_GameTime * 3 / 60)
+            call UnitHealingTarget(caster, v, 400 + udg_GameTime * 3 / 60)
         endif
     endloop
     call DestroyGroup(g)

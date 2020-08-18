@@ -112,8 +112,10 @@ function GetUnitMagicResist takes unit v returns real
     set resist = resist + GetUnitAbilityResists(v, 'A14C', -1.25)
     set resist = resist + GetUnitAbilityResists(v, 'A082', -5.0)
     set resist = resist + GetUnitAbilityResists(v, 'B00D', -7)
-    set resist = resist + GetUnitAbilityResists(v, 'A0AH', -7)
     set resist = resist + GetUnitAbilityResists(v, 'A10P', -7)
+    if GetUnitAbilityLevel(v, 'A0AH') >= 1 or GetUnitAbilityLevel(v, 'A03I') >= 1 then
+        set resist = resist - 7
+    endif
     if GetUnitAbilityLevel(v, 'A04J') >= 1 then
         set resist = resist - 1.5 - 1.5 * GetUnitAbilityLevel(v, 'A04J')
     endif

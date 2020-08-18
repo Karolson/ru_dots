@@ -1,10 +1,12 @@
 function Trig_Ati03_YYY_Conditions takes nothing returns boolean
-    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())), 'I04T') != true then
-        return false
-    elseif IsUnitAlly(GetKillingUnit(), GetOwningPlayer(GetTriggerUnit())) then
-        return false
-    elseif GetUnitTypeId(GetTriggerUnit()) == 'n01Y' then
-        return false
+    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I04T')==true or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I06Y')==true then
+        if IsUnitAlly(GetKillingUnit(), GetOwningPlayer(GetTriggerUnit())) then
+            return false
+        elseif GetUnitTypeId(GetTriggerUnit()) == 'n01Y' then
+            return false
+        endif
+    else
+        return false  
     endif
     return true
 endfunction
