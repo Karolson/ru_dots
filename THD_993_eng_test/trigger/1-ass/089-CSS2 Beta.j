@@ -835,6 +835,7 @@ function CSS2_OnClick takes nothing returns boolean
             call CSS2_SelectCharacterForPlayer(p, index, true, false)
         elseif index == 100 and pindex >= 0 then
             if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (not isbanstage and (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5) then
+                call SaveInteger(udg_cssht, htask, udg_PlayerHeroList[pid], 1)
                 call CSS2_SetPlayerPrepared(p)
                 set continue = CSS2_DraftModeUpdateStatus()
                 if continue then
