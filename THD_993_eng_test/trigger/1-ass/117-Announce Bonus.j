@@ -157,31 +157,31 @@ function AnnounceHeroBonus takes unit killer, unit dead returns boolean
             set msg = udg_PN[GetPlayerId(winner)] + " has successfully overthrown " + udg_PN[GetPlayerId(loser)] + " the Genocider"
             call BroadcastMessage(msg)
         elseif bonus == 11 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Ownage streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Ownage streak"
             call BroadcastMessage(msg)
         elseif bonus == 10 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Beyond Godlike streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Beyond Godlike streak"
             call BroadcastMessage(msg)
         elseif bonus == 9 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Godlike streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Godlike streak"
             call BroadcastMessage(msg)
         elseif bonus == 8 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Monster Kill streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Monster Kill streak"
             call BroadcastMessage(msg)
         elseif bonus == 7 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Wicked Sick streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Wicked Sick streak"
             call BroadcastMessage(msg)
         elseif bonus == 6 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Unstoppable streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Unstoppable streak"
             call BroadcastMessage(msg)
         elseif bonus == 5 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Mega Kill streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Mega Kill streak"
             call BroadcastMessage(msg)
         elseif bonus == 4 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Dominating streak"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Dominating streak"
             call BroadcastMessage(msg)
         elseif bonus == 3 then
-            set msg = udg_PN[GetPlayerId(winner)] + " has just ended " + udg_PN[GetPlayerId(loser)] + " Killing Spree"
+            set msg = udg_PN[GetPlayerId(winner)] + " just ended " + udg_PN[GetPlayerId(loser)] + " Killing Spree"
             call BroadcastMessage(msg)
         else
             set msg = udg_PN[GetPlayerId(winner)] + " has defeated " + udg_PN[GetPlayerId(loser)]

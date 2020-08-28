@@ -1,5 +1,5 @@
 function Trig_Ati03_YYY_Conditions takes nothing returns boolean
-    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I04T')==true or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I06Y')==true then
+    if YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I04T')==true or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I06Y')==true or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I098')==true or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I099')==true or YDWEUnitHasItemOfTypeBJNull(GetPlayerCharacter(GetOwningPlayer(GetKillingUnit())),'I09A')==true then
         if IsUnitAlly(GetKillingUnit(), GetOwningPlayer(GetTriggerUnit())) then
             return false
         elseif GetUnitTypeId(GetTriggerUnit()) == 'n01Y' then

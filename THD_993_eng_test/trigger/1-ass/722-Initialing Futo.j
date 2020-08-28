@@ -419,7 +419,7 @@ function s__Futo03_protectHero takes integer this returns nothing
         set v = FirstOfGroup(g)
     exitwhen v == null
         call GroupRemoveUnit(g, v)
-        if IsUnitAlly(v, GetOwningPlayer(udg_s__Futo03_caster[this])) and IsUnitType(v, UNIT_TYPE_HERO) and not IsUnitInGroup(v, udg_s__Futo03_byship[this]) then
+        if IsUnitAlly(v, GetOwningPlayer(udg_s__Futo03_caster[this])) and IsUnitType(v, UNIT_TYPE_HERO) and not IsUnitType(v, UNIT_TYPE_STRUCTURE) and not IsUnitInGroup(v, udg_s__Futo03_byship[this]) then
             set t = CreateTimer()
             call SaveUnitHandle(udg_ht, GetHandleId(t), 0, v)
             call UnitAddAbility(v, 'A0UG')
@@ -474,7 +474,7 @@ function s__Futo03_flyup takes nothing returns nothing
                     set v = FirstOfGroup(g)
                 exitwhen v == null
                     call GroupRemoveUnit(g, v)
-                    if IsUnitAlly(v, GetOwningPlayer(udg_s__Futo03_caster[this])) and IsUnitType(v, UNIT_TYPE_HERO) then
+                    if IsUnitAlly(v, GetOwningPlayer(udg_s__Futo03_caster[this])) and IsUnitType(v, UNIT_TYPE_HERO) and not IsUnitType(v, UNIT_TYPE_STRUCTURE) then
                         call IssueImmediateOrder(v, "stop")
                         call SetUnitInvulnerable(v, true)
                         call ShowUnit(v, false)

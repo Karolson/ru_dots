@@ -16,7 +16,7 @@ function Trig_Initialization_CMDFunc001A takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(gg_trg_Command_Move_Speed, GetEnumPlayer(), "-ms", true)
     call TriggerRegisterPlayerChatEvent(gg_trg_Command_GetResist, GetEnumPlayer(), "-gr", true)
     call TriggerRegisterPlayerChatEvent(gg_trg_Command_Happy, GetEnumPlayer(), "-battledetect", true)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Command_WeatherInfo, GetEnumPlayer(), "-weatherinfo", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Command_WeatherInfo, GetEnumPlayer(), "-wi", true)
     call TriggerRegisterPlayerChatEvent(gg_trg_Command_VisualEffect, GetEnumPlayer(), "-veon", true)
     call TriggerRegisterPlayerChatEvent(gg_trg_Command_VisualEffect, GetEnumPlayer(), "-veoff", true)
     call TriggerRegisterPlayerChatEvent(gg_trg_Command_Fun, GetEnumPlayer(), "-custombgm", true)

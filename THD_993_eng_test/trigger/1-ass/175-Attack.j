@@ -3,7 +3,9 @@ function Trig_Attack_Conditions takes nothing returns boolean
         if IsUnitAlly(GetOrderTargetUnit(), GetTriggerPlayer()) then
             return true
         elseif THD_GetItemOwner(GetOrderTargetItem()) != GetTriggerPlayer() and IsPlayerAlly(THD_GetItemOwner(GetOrderTargetItem()), GetTriggerPlayer()) then
-            return true
+            if GetPlayerId(THD_GetItemOwner(GetOrderTargetItem())) >= 0 and GetPlayerId(THD_GetItemOwner(GetOrderTargetItem())) < bj_MAX_PLAYERS then
+                return true
+            endif
         endif
     endif
     return false

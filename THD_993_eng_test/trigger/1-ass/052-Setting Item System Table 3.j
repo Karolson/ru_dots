@@ -146,6 +146,21 @@ function Trig_Setting_Item_System_Table_3_Actions takes nothing returns nothing
     call HC_Formula_SetResourceAB(0, 0)
     call HC_Formula_SetMaterialA('I03B', 1, 'I08Y', 1, 0, 0)
     call HC_Formula_End()
+    set i = i + 1
+    call HC_Formula_Begin(i, 3, 'I098')
+    call HC_Formula_SetResourceAB(0, 0)
+    call HC_Formula_SetMaterialA('I04T', 1, 'I095', 1, 'I096', 1)
+    call HC_Formula_End()
+    set i = i + 1
+    call HC_Formula_Begin(i, 3, 'I098')
+    call HC_Formula_SetResourceAB(0, 0)
+    call HC_Formula_SetMaterialA('I04T', 1, 'I094', 1, 'I096', 1)
+    call HC_Formula_End()
+    set i = i + 1
+    call HC_Formula_Begin(i, 3, 'I09A')
+    call HC_Formula_SetResourceAB(0, 0)
+    call HC_Formula_SetMaterialA('I033', 1, 'I04T', 1, 'I03G', 1)
+    call HC_Formula_End()
     set i = i + 1  
     call DebugMsg("Number of items with recipes: " + I2S(i - 1000))
 endfunction

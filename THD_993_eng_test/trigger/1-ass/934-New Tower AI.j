@@ -4,7 +4,7 @@ function Trig_New_Tower_AI_Aggro takes unit caster, unit target returns nothing
     local integer i
     local unit prevTarget
     local timer t
-    if not IsUnitType(caster, UNIT_TYPE_HERO) or not IsUnitType(target, UNIT_TYPE_HERO) or not IsUnitEnemy(target, GetOwningPlayer(caster)) then
+    if not IsUnitType(caster, UNIT_TYPE_HERO) or not IsUnitType(target, UNIT_TYPE_HERO) or not IsUnitEnemy(target, GetOwningPlayer(caster)) or IsUnitDead(caster) or IsUnitDead(target) or IsUnitInvulnerable(caster) or IsUnitHidden(caster) then
         return
     endif
     set g = CreateGroup()
@@ -18,7 +18,9 @@ function Trig_New_Tower_AI_Aggro takes unit caster, unit target returns nothing
             if (v == udg_TowerA[i] or v == udg_TowerB[i]) and IsUnitEnemy(v, GetOwningPlayer(caster)) and IsUnitVisible(caster, GetOwningPlayer(v)) then
                 set prevTarget = LoadUnitHandle(udg_Hashtable, StringHash("Tower_AI"), GetHandleId(v))
                 if caster != prevTarget and (prevTarget == null or IsUnitDead(prevTarget) or IsUnitInvulnerable(prevTarget) or IsUnitHidden(prevTarget) or not IsUnitInRange(v, prevTarget, 700.0) or not IsUnitType(prevTarget, UNIT_TYPE_HERO)) then
-                    call IssueTargetOrder(v, "attack", caster)
+                    if IssueTargetOrder(v, "attack", caster) then
+                        call SaveUnitHandle(udg_Hashtable, StringHash("Tower_AI"), GetHandleId(v), caster)
+                    endif
                 endif
             endif
             set i = i + 1
@@ -41,7 +43,19 @@ function Trig_New_Tower_AI_Any_Damage_Actions takes nothing returns nothing
 endfunction
 
 function Trig_New_Tower_AI_Acquire_Target_Actions takes nothing returns nothing
-    call SaveUnitHandle(udg_Hashtable, StringHash("Tower_AI"), GetHandleId(GetTriggerUnit()), GetEventTargetUnit())
+    local unit prevTarget = LoadUnitHandle(udg_Hashtable, StringHash("Tower_AI"), GetHandleId(GetTriggerUnit()))
+    if prevTarget == GetEventTargetUnit() then
+        set prevTarget = null
+        return
+    endif
+    if IsUnitType(prevTarget, UNIT_TYPE_HERO) and not IsUnitDead(prevTarget) and not IsUnitInvulnerable(prevTarget) and not IsUnitHidden(prevTarget) and IsUnitInRange(GetTriggerUnit(), prevTarget, 700.0) then
+        if not IssueTargetOrder(GetTriggerUnit(), "attack", prevTarget) then
+            call SaveUnitHandle(udg_Hashtable, StringHash("Tower_AI"), GetHandleId(GetTriggerUnit()), GetEventTargetUnit())
+        endif
+    else
+        call SaveUnitHandle(udg_Hashtable, StringHash("Tower_AI"), GetHandleId(GetTriggerUnit()), GetEventTargetUnit())
+    endif
+    set prevTarget = null
 endfunction
 
 function InitTrig_New_Tower_AI takes nothing returns nothing

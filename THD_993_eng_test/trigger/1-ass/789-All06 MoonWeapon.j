@@ -35,8 +35,9 @@ endfunction
 
 function Trig_All06_MoonWeapon_Conditions takes nothing returns boolean
     local boolean itemtypem = YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I095')
+    local boolean itemtypen = YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I098')
     local boolean targettype
-    if itemtypem == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I094') == false then
+    if itemtypem == false and itemtypen == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I094') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I099') == false then
         return false
     elseif IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) then
         return false
@@ -49,7 +50,7 @@ function Trig_All06_MoonWeapon_Conditions takes nothing returns boolean
     endif
     call DebugMsg("MoonWeapon01")
     set targettype = IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
-    if itemtypem then
+    if itemtypem or itemtypen then
         if targettype == false then
             call Trig_All06_MoonWeapon_Actions(false)
         endif

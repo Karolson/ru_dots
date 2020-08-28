@@ -437,7 +437,7 @@ function Trig_Setup_Game_Info_Board_Actions takes nothing returns nothing
     call MultiboardReleaseItem(field)
     set field = null
     set udg_GIB_PlayerRow[0] = row
-    if ModuloInteger(udg_GameMode, 100) / 10 == 5 then
+    if ModuloInteger(udg_GameMode, 100) / 10 == 6 then
         set row = row + 1
         set column = 0
         set field = MultiboardGetItem(board, row, column)

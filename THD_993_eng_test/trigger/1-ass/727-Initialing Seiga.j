@@ -68,6 +68,7 @@ function Trig_Initialing_Seiga_Actions takes nothing returns nothing
     call DestroyTrigger(gg_trg_Seiga04)
     set gg_trg_Seiga04 = CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Seiga04, h, EVENT_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(gg_trg_Seiga04, h, EVENT_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_Seiga04, Condition(function Trig_Seiga04_Conditions))
     call TriggerAddAction(gg_trg_Seiga04, function Trig_Seiga04_Actions)
     call SetUnitPathing(h, false)

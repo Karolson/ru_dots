@@ -25,8 +25,7 @@ function Trig_Renko04_Actions takes nothing returns nothing
     local real time
     local timer t
     local integer task
-    local integer renko_buff_count = LoadInteger(udg_sht, StringHash("RenkoEx"), GetHandleId(caster))
-    call AbilityCoolDownResetion(caster, 'A14D', 45 - 5 * level - renko_buff_count * 3)
+    call AbilityCoolDownResetion(caster, 'A14D', 45 - 5 * level)
     call Trig_RenkoEx_TurnsOn(caster)
     set time = 8.0
     if udg_SK_Renko_LastSpell == 2 then

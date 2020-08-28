@@ -95,7 +95,7 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
         elseif itmtype == 'I04X' then
             set armor = armor + 4 * i
         elseif itmtype == 'I08X' then
-            set resist = armor + 3 * i
+            set armor = armor + 3 * i
         endif
         set udg_DMG_AllItemArmor[id] = armor + udg_DMG_AllItemArmor[id]
         set armor = 0
@@ -173,10 +173,16 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
             set attack = attack + 25 * i
         elseif itmtype == 'I095' then
             set attack = attack + 25 * i
+        elseif itmtype == 'I098' then
+            set attack = attack + 50 * i
+        elseif itmtype == 'I099' then
+            set attack = attack + 50 * i
         elseif itmtype == 'I026' then
             set attack = attack + 30 * i
         elseif itmtype == 'I033' then
             set attack = attack + 60 * i
+        elseif itmtype == 'I09A' then
+            set attack = attack + 85 * i
         endif
         set udg_DMG_AllItemAttack[id] = attack + udg_DMG_AllItemAttack[id]
         set attack = 0
@@ -211,6 +217,10 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
         elseif itmtype == 'I094' then
             set attackspeed = attackspeed + 0.6 * i
         elseif itmtype == 'I095' then
+            set attackspeed = attackspeed + 0.6 * i
+        elseif itmtype == 'I098' then
+            set attackspeed = attackspeed + 0.6 * i
+        elseif itmtype == 'I099' then
             set attackspeed = attackspeed + 0.6 * i
         endif
         set udg_DMG_AllItemAttackSpeed[id] = attackspeed + udg_DMG_AllItemAttackSpeed[id]
@@ -274,6 +284,8 @@ function Trig_AnyUnitGetItem_Actions takes nothing returns nothing
             elseif itmtype == 'I08P' then
                 set drink = drink * (1 - 0.09)
             elseif itmtype == 'I033' then
+                set drink = drink * (1 - 0.15)
+            elseif itmtype == 'I09A' then
                 set drink = drink * (1 - 0.15)
             endif
             if i == 1 then

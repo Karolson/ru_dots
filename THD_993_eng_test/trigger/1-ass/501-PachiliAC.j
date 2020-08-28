@@ -30,11 +30,7 @@ function Trig_PachiliAC_Main takes nothing returns nothing
     exitwhen v == null
         call GroupRemoveUnit(g, v)
         if IsUnitType(v, UNIT_TYPE_STRUCTURE) == false then
-            if udg_NewDebuffSys then
-                call UnitSlowTargetMspd(caster, v, 15 + 5 * level, 1.0, 3, 0)
-            else
-                call UnitSlowTarget(caster, v, 1, 'A16L' + level, 'B06Y')
-            endif
+            call UnitSlowTargetMspd(caster, v, 15 + 5 * level, 1.0, 3, 0)
             call Public_PacQ_MagicDamage(caster, v, 18 + level * 18 + 0.8 * GetHeroInt(caster, true), 5)
         endif
     endloop
@@ -83,11 +79,7 @@ function Trig_PachiliAC_Actions takes nothing returns nothing
     exitwhen v == null
         call GroupRemoveUnit(g, v)
         if IsUnitType(v, UNIT_TYPE_STRUCTURE) == false then
-            if udg_NewDebuffSys then
-                call UnitSlowTargetMspd(caster, v, 15 + 5 * level, 1.0, 3, 0)
-            else
-                call UnitSlowTarget(caster, v, 1, 'A16L' + level, 'B06Y')
-            endif
+            call UnitSlowTargetMspd(caster, v, 15 + 5 * level, 1.0, 3, 0)
             call Public_PacQ_MagicDamage(caster, v, 18 + level * 18 + 0.8 * GetHeroInt(caster, true), 5)
         endif
     endloop

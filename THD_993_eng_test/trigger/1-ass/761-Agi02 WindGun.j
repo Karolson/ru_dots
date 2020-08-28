@@ -1,5 +1,5 @@
 function Trig_Agi02_WindGun_Conditions takes nothing returns boolean
-    if YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I04F') == false then
+    if YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I04F') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I094') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I095') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I099') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I098') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I09A') == false and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I033') == false then
         return false
     elseif IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetEventDamageSource())) then
         return false
@@ -20,7 +20,11 @@ endfunction
 function Trig_Agi02_WindGun_Actions takes nothing returns nothing
     local unit caster = GetEventDamageSource()
     local unit target = GetTriggerUnit()
-    call UnitPhysicalDamageTarget_Item(caster, target, 48)
+    if YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I04F') == true then
+        call UnitPhysicalDamageTarget_Item(caster, target, 48)
+    else
+        call UnitPhysicalDamageTarget_Item(caster, target, 25) 
+    endif  
     set caster = null
     set target = null
 endfunction

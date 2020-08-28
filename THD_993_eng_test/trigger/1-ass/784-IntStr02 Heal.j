@@ -4,8 +4,11 @@ endfunction
 
 function Trig_IntStr02_Heal_Actions takes nothing returns nothing
     local unit caster = GetTriggerUnit()
-    call UnitHealingTarget(caster, GetSpellTargetUnit(), 180 + IMaxBJ(GetHeroStr(caster, true), IMaxBJ(GetHeroAgi(caster, true), GetHeroInt(caster, true))) * 2.0)
+    local unit target = GetSpellTargetUnit()
+    call UnitHealingTarget(caster, GetSpellTargetUnit(), 200 + GetHeroLevel(caster) * 20.0)
+    call UnitBuffTarget(caster, target, 5.0, 'A03N', 'B06B')
     set caster = null
+    set target = null
 endfunction
 
 function InitTrig_IntStr02_Heal takes nothing returns nothing

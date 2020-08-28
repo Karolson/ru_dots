@@ -35,8 +35,7 @@ function Trig_Renko02_Actions takes nothing returns nothing
     local timer t = CreateTimer()
     local integer task = GetHandleId(t)
     local real damage = 15 + 25 * level + GetUnitAttack(caster) * 0.35
-    local integer renko_buff_count = LoadInteger(udg_sht, StringHash("RenkoEx"), GetHandleId(caster))
-    call AbilityCoolDownResetion(caster, 'A12R', 11 - 1.5 * level - renko_buff_count * 0.4)
+    call AbilityCoolDownResetion(caster, 'A12R', 11 - 1.5 * level)
     call Trig_RenkoEx_TurnsOn(caster)
     set u = CreateUnit(GetOwningPlayer(caster), 'e02F', ox + 300 * Cos(a), oy + 300 * Sin(a), bj_RADTODEG * a + 90)
     set m = CreateGroup()

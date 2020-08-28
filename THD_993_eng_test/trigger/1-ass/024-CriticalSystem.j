@@ -465,6 +465,15 @@ function GetUnitArmor takes unit v returns real
         if GetUnitAbilityLevel(v, 'A175') > 0 then
             set armor = armor - 6
         endif
+        if GetUnitAbilityLevel(v, 'A173') > 0 then
+            set armor = armor - 5
+        endif
+        if GetUnitAbilityLevel(v, 'A14V') > 0 then
+            set armor = armor + 5
+        endif
+        if GetUnitAbilityLevel(v, 'A03M') > 0 then
+            set armor = armor + 5
+        endif
         if GetUnitAbilityLevel(v, 'A0RM') == 1 then
             set armor = armor + 8
         elseif GetUnitAbilityLevel(v, 'A0RM') == 2 then

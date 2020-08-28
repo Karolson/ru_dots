@@ -11,8 +11,7 @@ function Trig_Renko03_Actions takes nothing returns nothing
     local filterfunc f = Filter(function Trig_Renko01_Target02)
     local unit v
     local real damage = 15 + 25 * level + GetUnitAttack(caster) * 0.35
-    local integer renko_buff_count = LoadInteger(udg_sht, StringHash("RenkoEx"), GetHandleId(caster))
-    call AbilityCoolDownResetion(caster, 'A12S', 11 - 1.5 * level - renko_buff_count * 0.4)
+    call AbilityCoolDownResetion(caster, 'A12S', 11 - 1.5 * level)
     call Trig_RenkoEx_TurnsOn(caster)
     call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl", ox, oy))
     if udg_SK_Renko_LastSpell == 3 then

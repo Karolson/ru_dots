@@ -404,8 +404,10 @@ function s__ReimuMother_ULT03_create takes unit caster returns integer
     loop
         set v = FirstOfGroup(g)
     exitwhen v == null
-        call DestroyLightning(AddLightningEx("HWPB", true, GetUnitX(caster), GetUnitY(caster), 100, GetUnitX(v), GetUnitY(v), 100))
-        set udg_s__ReimuMother_ULT03_i[u3] = udg_s__ReimuMother_ULT03_i[u3] + 1
+        if GetWidgetLife(v) > 0.405 and not IsUnitType(v, UNIT_TYPE_STRUCTURE) and not IsUnitType(v, UNIT_TYPE_PEON) then
+            call DestroyLightning(AddLightningEx("HWPB", true, GetUnitX(caster), GetUnitY(caster), 100, GetUnitX(v), GetUnitY(v), 100))
+            set udg_s__ReimuMother_ULT03_i[u3] = udg_s__ReimuMother_ULT03_i[u3] + 1
+        endif
         call GroupRemoveUnit(g, v)
     endloop
     call AddTimedEffectToUnit(caster, udg_ReimuMother__ReimuMotherULT03_TIME, "Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl", "origin")

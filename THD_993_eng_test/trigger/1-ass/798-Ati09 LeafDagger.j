@@ -1,5 +1,5 @@
 function InitTrig_Ati09_LeafDagger_Conditions takes nothing returns boolean
-    if YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I033') != true then
+    if YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I033') != true and YDWEUnitHasItemOfTypeBJNull(GetEventDamageSource(), 'I09A') != true then
         return false
     elseif GetEventDamage() == 0 then
         return false

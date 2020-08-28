@@ -696,6 +696,7 @@ function CSS2_BanDraftModeTimeOut takes nothing returns nothing
     local boolean continue
     local integer i
     local integer max
+    local boolean played_locked = false
     if (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 4 or (udg_GameMode - udg_GameMode / 100 * 100) / 10 == 5 then
         if udg_HakureiPick then
             set i = 0
@@ -706,17 +707,36 @@ function CSS2_BanDraftModeTimeOut takes nothing returns nothing
         endif
         loop
             set p = Player(i)
-            if udg_PlayerHeroList[i] <= 0 then
-                set udg_RandomPicked[i] = true
-                call CSS2_SelectCharacterForPlayer(p, CSS2_GetRandomCharacter(), false, false)
-            endif
-            if not LoadBoolean(udg_cssht, GetHandleId(p), 1) then
+            if udg_PlayerHeroList[i] > 0 and not LoadBoolean(udg_cssht, GetHandleId(p), 1) then
                 call CSS2_SetPlayerPrepared(p)
+                set played_locked = true
                 exitwhen true
             endif
             set i = i + 1
         exitwhen i > max
         endloop
+        if udg_HakureiPick then
+            set i = 0
+            set max = 5
+        else
+            set i = 6
+            set max = 11
+        endif
+        if not played_locked then
+            loop
+                set p = Player(i)
+                if udg_PlayerHeroList[i] <= 0 then
+                    set udg_RandomPicked[i] = true
+                    call CSS2_SelectCharacterForPlayer(p, CSS2_GetRandomCharacter(), false, false)
+                endif
+                if not LoadBoolean(udg_cssht, GetHandleId(p), 1) then
+                    call CSS2_SetPlayerPrepared(p)
+                    exitwhen true
+                endif
+                set i = i + 1
+            exitwhen i > max
+            endloop
+        endif
         set continue = CSS2_DraftModeUpdateStatus()
         if continue then
             call TimerStart(t, 30.0, false, function CSS2_BanDraftModeTimeOut)
