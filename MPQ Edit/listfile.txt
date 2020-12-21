@@ -1,3 +1,5 @@
+(attributes)
+(listfile)
 16x16Default.tga
 16x16Unflyable.tga
 2df_skill_09_1.blp
@@ -12,6 +14,16 @@
 Abilities\Spells\Human\Thunderclap\ThunderclapTarget.mdl
 AbilityOutLine.mdx
 AirWave.mdx
+Arrow_Blue.blp
+Arrow_Blue.mdx
+Arrow_Green.blp
+Arrow_Green.mdx
+Arrow_Red.blp
+Arrow_Red.mdx
+Arrow_Violet.blp
+Arrow_Violet.mdx
+Arrow_Yellow.blp
+Arrow_Yellow.mdx
 AuraNuke.mdx
 ball_blue.mdx
 ball_green.mdx
@@ -24,12 +36,13 @@ BatAppear.mdx
 beamribbon_blue.blp
 belt.mdx
 Big JapaneseCharry.mdx
-blackholespell.mdx
+BlackHoleSpell.mdx
 BlackSmokeWings.mdx
+BlackWings.blp
 BlackWings.mdx
 Blank.blp
 blss.mdx
-bottlemissile.mdx
+BottleMissile.mdx
 Brilliance.mdx
 BTNSakuya00.blp
 Butterfly_Blue.BLP
@@ -42,9 +55,19 @@ Butterfly_Yellow.BLP
 Butterfly_Yellow.mdx
 byc.mdx
 cart.mdx
+CharacterSelection.mdx
 chazi.mdx
 CloudOfFog.mdx
+CustomBars\default.blp
+CustomBars\Healthbar.blp
+CustomBars\HPBar100.mdx
+CustomBars\HPBarHero.mdx
+CustomBars\HPBarRegular.mdx
+CustomBars\HPDividers.mdx
+CustomBars\MPBarHero.mdx
+CustomBars\MPBarRegular.mdx
 dagger.mdx
+Devil doors.mdx
 DISBTNSakuya00.blp
 DMlianB.blp
 DMlianB.mdx
@@ -52,8 +75,11 @@ DMlianG.blp
 DMlianG.mdx
 DMlianR.blp
 DMlianR.mdx
+Dojo1.mdx
+Dojo2.mdx
+Doodads\Doodads.slk
 Drill.mdx
-dummy.mdx
+Dummy.mdx
 ElunesBlessing.mdx
 EnergyHands.mdx
 FinalSpark_Short.mdx
@@ -68,16 +94,25 @@ Generic-Loading-BotLeft.blp
 Generic-Loading-BotRight.blp
 Generic-Loading-TopLeft.blp
 Generic-Loading-TopRight.blp
-GhostBall.mdx
+GhostBall.MDX
 Glow.mdx
 GlowingRunes2.mdx
 Good person.blp
 Good person.mdx
 GreenLaserMissile.mdx
 GreenShotExplod.mdx
+HealStar.mdx
+HeiStack1.blp
+HeiStack1.mdx
+HeiStack2.blp
+HeiStack2.mdx
 HFLogo.blp
 Hieda no Akyuu.blp
+hijiri byakuren2-1.blp
 hijiri byakuren2-1.MDX
+hijiri byakuren4-1.blp
+hijiri byakuren4-2.blp
+hijiri byakuren4-4.blp
 hijiri byakuren4.MDx
 himawari.blp
 HitBoxGreen.MDX
@@ -86,17 +121,21 @@ HitBoxRed.MDX
 HitBoxYellow.MDX
 horse.mdx
 hourse.blp
+howling_sfx.mdx
 HRK.blp
 HRK.mdx
 HRK_Bad.blp
 HRK_Bad.mdx
 HSB.blp
 HSB.mdx
-icenova.mdx
+HumanSpellRune.mdx
+IceNova.mdx
 IconBase.mdx
 IconBaseAdditive.mdx
 IconBaseBlend.mdx
+IonCannon.mdx
 IonCannonBeam.mdx
+Kisume.mdx
 Koishi04.mdx
 KoishiProjectile.mdx
 Komachi Soul.mdx
@@ -118,45 +157,52 @@ Lens.blp
 Lens.mdx
 lhq.mdx
 Light.mdx
+LightCircle45g.mdx
 LightColumn.mdx
 LightningTarget.mdx
-lily1-1.mdx
-lily1-2.mdx
+lily1-1.MDx
+lily1-2.MDx
 lily2-1.MDx
 lily2-2.MDx
-lily3-1.mdx
-lily3-2.mdx
+lily3-1.MDx
+lily3-2.MDx
 lily4-1.MDx
 lily4-2.MDx
 lily5.MDx
 lmfzw.blp
 LoadingScreen.mdx
+LoadingScreenBL.blp
+LoadingScreenBR.blp
+LoadingScreenTL.blp
+LoadingScreenTR.blp
 magicb.mdx
 MagicShell.blp
 MagicShell.mdx
-marisastars.mdx
+marisastars.MDX
 MasterSpark.mdx
 meizi.blp
-meizi.mdx
+meizi.MDX
 mizuhasi Parsee1.mdx
 Moon cake.blp
 Moon cake.mdx
-moriya_suwako2.mdx
+moriya_suwako2.mdX
 mugetsu1.mdx
 musicnote.blp
-musicnote_merlin.mdx
+musicnote_merlin.mdX
 musicnote_merlin02.mdx
 musicnote_Purple.blp
 musicnote_red.blp
 MusicTarget.mdx
 MusicTargetLoop.mdx
 Nazrin04.mdx
-nebula.mdx
+Nebula.mdx
+NEDeathSmall.mdx
 Neutral_23.mdx
 NewDirtEX.mdx
 nitori_1.blp
 NuclearExplosion.mdx
 null.mdx
+Objects\InventoryItems\TreasureChest\treasurechest.mdl\pickle.mdx
 PathTextures\Shrine.tga
 Ping urn.mdx
 PlantForm.mdx
@@ -166,9 +212,10 @@ Power.blp
 Power.mdx
 QB.blp
 QB.mdx
+qiming light.mdx
 quietmoon.blp
 quietmoon.mdx
-quietmoon2.mdx
+quietmoon2.MDX
 RedLaser.mdx
 RedLaserX.mdx
 Reimu04.mdx
@@ -186,7 +233,7 @@ ReplaceableTextures\CommandButtons\BTN_Cirno.blp
 ReplaceableTextures\CommandButtons\BTN_Flan2.blp
 ReplaceableTextures\CommandButtons\BTN_Flandre.blp
 ReplaceableTextures\CommandButtons\BTN_Futo.blp
-ReplaceableTextures\CommandButtons\BTN_Herange.blp
+ReplaceableTextures\CommandButtons\BTN_Herange.BLP
 ReplaceableTextures\CommandButtons\BTN_Houjuu Nue.blp
 ReplaceableTextures\CommandButtons\BTN_iku.blp
 ReplaceableTextures\CommandButtons\BTN_Keine.blp
@@ -197,7 +244,7 @@ ReplaceableTextures\CommandButtons\BTN_letty.blp
 ReplaceableTextures\CommandButtons\BTN_Lily.blp
 ReplaceableTextures\CommandButtons\BTN_Lunar.blp
 ReplaceableTextures\CommandButtons\BTN_Lunasa.BLP
-ReplaceableTextures\CommandButtons\BTN_Makoto.blp
+ReplaceableTextures\CommandButtons\BTN_Makoto.BLP
 ReplaceableTextures\CommandButtons\BTN_marisa.blp
 ReplaceableTextures\CommandButtons\BTN_medi.blp
 ReplaceableTextures\CommandButtons\BTN_Miko.blp
@@ -241,8 +288,10 @@ ReplaceableTextures\CommandButtons\BTN_Yuugi.blp
 ReplaceableTextures\CommandButtons\BTN_yuyuko.blp
 ReplaceableTextures\CommandButtons\BTNalice.blp
 ReplaceableTextures\CommandButtons\BTNaya-W.blp
+ReplaceableTextures\CommandButtons\BTNBagetAccelerator.blp
 ReplaceableTextures\CommandButtons\BTNbirdornament.blp
 ReplaceableTextures\CommandButtons\BTNchushou.blp
+ReplaceableTextures\CommandButtons\BTNClownShop.blp
 ReplaceableTextures\CommandButtons\BTNCNMblue.blp
 ReplaceableTextures\CommandButtons\BTNCNMgreen.blp
 ReplaceableTextures\CommandButtons\BTNCNMKing.blp
@@ -267,13 +316,16 @@ ReplaceableTextures\CommandButtons\BTNHina.blp
 ReplaceableTextures\CommandButtons\BTNHJ.blp
 ReplaceableTextures\CommandButtons\BTNitem6Ball.blp
 ReplaceableTextures\CommandButtons\BTNitem9Ball.blp
+ReplaceableTextures\CommandButtons\BTNitemAlpacaOfTruth.blp
 ReplaceableTextures\CommandButtons\BTNitemapple.blp
 ReplaceableTextures\CommandButtons\BTNitemBanana.blp
+ReplaceableTextures\CommandButtons\BTNitemBanzi.blp
 ReplaceableTextures\CommandButtons\BTNitemBaozi.blp
 ReplaceableTextures\CommandButtons\BTNitemBird.blp
 ReplaceableTextures\CommandButtons\BTNitemBoatMark.blp
 ReplaceableTextures\CommandButtons\BTNitemBone.blp
 ReplaceableTextures\CommandButtons\BTNitemBroom.blp
+ReplaceableTextures\CommandButtons\BTNitemBrotherSharp.blp
 ReplaceableTextures\CommandButtons\BTNitemButtCream.blp
 ReplaceableTextures\CommandButtons\BTNitemCake.blp
 ReplaceableTextures\CommandButtons\BTNitemCamara.blp
@@ -290,7 +342,10 @@ ReplaceableTextures\CommandButtons\BTNitemCatEar.blp
 ReplaceableTextures\CommandButtons\BTNitemCatFoot.blp
 ReplaceableTextures\CommandButtons\BTNitemCherryBranch.blp
 ReplaceableTextures\CommandButtons\BTNitemCherryLeaf.blp
+ReplaceableTextures\CommandButtons\BTNitemChestPlate.blp
 ReplaceableTextures\CommandButtons\BTNitemCirnoClaymore.blp
+ReplaceableTextures\CommandButtons\BTNitemCorn.blp
+ReplaceableTextures\CommandButtons\BTNitemCracked6Ball.blp
 ReplaceableTextures\CommandButtons\BTNitemCross.blp
 ReplaceableTextures\CommandButtons\BTNitemCucumber.blp
 ReplaceableTextures\CommandButtons\BTNitemcursepaper.blp
@@ -309,6 +364,7 @@ ReplaceableTextures\CommandButtons\BTNitemfritebox.blp
 ReplaceableTextures\CommandButtons\BTNitemFrock.blp
 ReplaceableTextures\CommandButtons\BTNitemFrog.blp
 ReplaceableTextures\CommandButtons\BTNitemFrozenFrog.blp
+ReplaceableTextures\CommandButtons\BTNitemGap.blp
 ReplaceableTextures\CommandButtons\BTNitemGhostBalloon.blp
 ReplaceableTextures\CommandButtons\BTNitemGlue.blp
 ReplaceableTextures\CommandButtons\BTNitemGodRightHand.blp
@@ -316,6 +372,8 @@ ReplaceableTextures\CommandButtons\BTNitemGranGrimoire.blp
 ReplaceableTextures\CommandButtons\BTNitemgrapes.blp
 ReplaceableTextures\CommandButtons\BTNitemGreenDam.blp
 ReplaceableTextures\CommandButtons\BTNitemGreenTea.blp
+ReplaceableTextures\CommandButtons\BTNitemGreenUmbrella.blp
+ReplaceableTextures\CommandButtons\BTNitemGreyTwinSerpents.blp
 ReplaceableTextures\CommandButtons\BTNitemGuiltyMask.blp
 ReplaceableTextures\CommandButtons\BTNitemHakkero.blp
 ReplaceableTextures\CommandButtons\BTNitemHakureiAmulet.blp
@@ -330,12 +388,16 @@ ReplaceableTextures\CommandButtons\BTNitemHuntingCap.blp
 ReplaceableTextures\CommandButtons\BTNitemIce.blp
 ReplaceableTextures\CommandButtons\BTNitemicecap.blp
 ReplaceableTextures\CommandButtons\BTNitemikucloth.blp
+ReplaceableTextures\CommandButtons\BTNitemInabaIllusionWeapon.blp
 ReplaceableTextures\CommandButtons\BTNitemJealousEye.blp
 ReplaceableTextures\CommandButtons\BTNitemJuice.blp
+ReplaceableTextures\CommandButtons\BTNitemKafziel.blp
 ReplaceableTextures\CommandButtons\BTNitemKnife.blp
 ReplaceableTextures\CommandButtons\BTNitemkoishihat.blp
+ReplaceableTextures\CommandButtons\BTNitemLeafSword.blp
 ReplaceableTextures\CommandButtons\BTNitemLunaChip.blp
 ReplaceableTextures\CommandButtons\BTNitemlunarclap.blp
+ReplaceableTextures\CommandButtons\BTNitemLunchBox.blp
 ReplaceableTextures\CommandButtons\BTNitemMagicGuideBook.blp
 ReplaceableTextures\CommandButtons\BTNitemMarisaHat.blp
 ReplaceableTextures\CommandButtons\BTNitemMask.blp
@@ -351,6 +413,7 @@ ReplaceableTextures\CommandButtons\BTNitemMushroomPie.blp
 ReplaceableTextures\CommandButtons\BTNitemMushroomSoup.blp
 ReplaceableTextures\CommandButtons\BTNitemneetwood.blp
 ReplaceableTextures\CommandButtons\BTNitemNiceBoat.blp
+ReplaceableTextures\CommandButtons\BTNitemNoProblem.blp
 ReplaceableTextures\CommandButtons\BTNitemNuclearStick.blp
 ReplaceableTextures\CommandButtons\BTNitemNueBow.blp
 ReplaceableTextures\CommandButtons\BTNitemPad.blp
@@ -364,6 +427,7 @@ ReplaceableTextures\CommandButtons\BTNitemPurpleUmbrella.blp
 ReplaceableTextures\CommandButtons\BTNitemQuant.blp
 ReplaceableTextures\CommandButtons\BTNitemRaven.blp
 ReplaceableTextures\CommandButtons\BTNitemRecipe.blp
+ReplaceableTextures\CommandButtons\BTNitemRestlessYatagarasu.blp
 ReplaceableTextures\CommandButtons\BTNitemRibbon.blp
 ReplaceableTextures\CommandButtons\BTNitemRocket.blp
 ReplaceableTextures\CommandButtons\BTNitemRocketDiagram.blp
@@ -386,12 +450,14 @@ ReplaceableTextures\CommandButtons\BTNitemThunderSword.blp
 ReplaceableTextures\CommandButtons\BTNitemTicket.blp
 ReplaceableTextures\CommandButtons\BTNitemToramaruLight.blp
 ReplaceableTextures\CommandButtons\BTNitemUmbanana.blp
+ReplaceableTextures\CommandButtons\BTNitemVerity.blp
 ReplaceableTextures\CommandButtons\BTNitemviolin.blp
 ReplaceableTextures\CommandButtons\BTNitemWaterMelon.blp
 ReplaceableTextures\CommandButtons\BTNitemWindAmulet.blp
 ReplaceableTextures\CommandButtons\BTNitemWindBird.blp
 ReplaceableTextures\CommandButtons\BTNitemWindGun.blp
 ReplaceableTextures\CommandButtons\BTNitemWing.blp
+ReplaceableTextures\CommandButtons\BTNitemWrench.blp
 ReplaceableTextures\CommandButtons\BTNitemwrigglelight.blp
 ReplaceableTextures\CommandButtons\BTNitemYatagarasu.blp
 ReplaceableTextures\CommandButtons\BTNitemYukkuri.blp
@@ -413,7 +479,7 @@ ReplaceableTextures\CommandButtons\BTNkulumi-F.blp
 ReplaceableTextures\CommandButtons\BTNKulumi.blp
 ReplaceableTextures\CommandButtons\BTNKumoi.blp
 ReplaceableTextures\CommandButtons\BTNLotusLight.blp
-ReplaceableTextures\CommandButtons\BTNLyrica.blp
+ReplaceableTextures\CommandButtons\BTNLyrica.BLP
 ReplaceableTextures\CommandButtons\BTNmarisa-D.blp
 ReplaceableTextures\CommandButtons\BTNmarisa-EX.blp
 ReplaceableTextures\CommandButtons\BTNmarisa-R.blp
@@ -425,10 +491,12 @@ ReplaceableTextures\CommandButtons\BTNmedi-R.blp
 ReplaceableTextures\CommandButtons\BTNmedi-W.blp
 ReplaceableTextures\CommandButtons\BTNmeidi-D-off.blp
 ReplaceableTextures\CommandButtons\BTNmeirin.blp
-ReplaceableTextures\CommandButtons\BTNMerlin.blp
+ReplaceableTextures\CommandButtons\BTNMerlin.BLP
+ReplaceableTextures\CommandButtons\BTNMima.blp
 ReplaceableTextures\CommandButtons\BTNminoriko.blp
 ReplaceableTextures\CommandButtons\BTNMonkey.blp
 ReplaceableTextures\CommandButtons\BTNmouse.blp
+ReplaceableTextures\CommandButtons\BTNMrYang.blp
 ReplaceableTextures\CommandButtons\BTNnazilin-D.blp
 ReplaceableTextures\CommandButtons\BTNnazilin-E1.blp
 ReplaceableTextures\CommandButtons\BTNnazilin-E2.blp
@@ -455,6 +523,7 @@ ReplaceableTextures\CommandButtons\BTNSakuya04.blp
 ReplaceableTextures\CommandButtons\BTNsatori.blp
 ReplaceableTextures\CommandButtons\BTNSatsuki Rin.blp
 ReplaceableTextures\CommandButtons\BTNseiga.blp
+ReplaceableTextures\CommandButtons\BTNSeija.blp
 ReplaceableTextures\CommandButtons\BTNshanghai.blp
 ReplaceableTextures\CommandButtons\BTNshikieiki.blp
 ReplaceableTextures\CommandButtons\BTNShinki.blp
@@ -509,6 +578,12 @@ ReplaceableTextures\CommandButtons\BTNSkillFuto02.blp
 ReplaceableTextures\CommandButtons\BTNSkillFuto03.blp
 ReplaceableTextures\CommandButtons\BTNSkillFuto04.blp
 ReplaceableTextures\CommandButtons\BTNSkillFutoEx.blp
+ReplaceableTextures\CommandButtons\BTNSkillHei0.blp
+ReplaceableTextures\CommandButtons\BTNSkillHei1.blp
+ReplaceableTextures\CommandButtons\BTNSkillHei2.blp
+ReplaceableTextures\CommandButtons\BTNSkillHei3.blp
+ReplaceableTextures\CommandButtons\BTNSkillHei4.blp
+ReplaceableTextures\CommandButtons\BTNSkillHei5.blp
 ReplaceableTextures\CommandButtons\BTNSkillIku01Off.blp
 ReplaceableTextures\CommandButtons\BTNSkillIku01On.blp
 ReplaceableTextures\CommandButtons\BTNSkillIku03.blp
@@ -548,6 +623,10 @@ ReplaceableTextures\CommandButtons\BTNSkillMeiling04.blp
 ReplaceableTextures\CommandButtons\BTNSkillMeirinEX.blp
 ReplaceableTextures\CommandButtons\BTNskillMerlin03.blp
 ReplaceableTextures\CommandButtons\BTNSkillMerlinEx.blp
+ReplaceableTextures\CommandButtons\BTNSkillMokou01.blp
+ReplaceableTextures\CommandButtons\BTNSkillMokou02.blp
+ReplaceableTextures\CommandButtons\BTNSkillMokou03.blp
+ReplaceableTextures\CommandButtons\BTNSkillMokou04.blp
 ReplaceableTextures\CommandButtons\BTNSkillMomizi01.blp
 ReplaceableTextures\CommandButtons\BTNSkillMomizi02.blp
 ReplaceableTextures\CommandButtons\BTNSkillMomizi03.blp
@@ -648,7 +727,9 @@ ReplaceableTextures\CommandButtons\BTNtuzigu-F.blp
 ReplaceableTextures\CommandButtons\BTNtuzigu-R.blp
 ReplaceableTextures\CommandButtons\BTNtuzigu-W.blp
 ReplaceableTextures\CommandButtons\BTNutsuho.blp
+ReplaceableTextures\CommandButtons\BTNyoshika.blp
 ReplaceableTextures\CommandButtons\BTNyuetu.blp
+ReplaceableTextures\CommandButtons\BTNYukkuriProper.blp
 ReplaceableTextures\CommandButtons\BTNyuri.blp
 ReplaceableTextures\CommandButtons\BTNYuuka01.blp
 ReplaceableTextures\CommandButtons\BTNYuuka02.blp
@@ -656,15 +737,20 @@ ReplaceableTextures\CommandButtons\BTNYuuka03.blp
 ReplaceableTextures\CommandButtons\BTNYuuka04.blp
 ReplaceableTextures\CommandButtons\BTNYuukaEx.blp
 ReplaceableTextures\CommandButtons\BTNzhulu-W.blp
-ReplaceableTextures\CommandButtons\hexie.blp
+ReplaceableTextures\CommandButtons\HeXie.blp
+ReplaceableTextures\CommandButtons\hongmo huojian.blp
 ReplaceableTextures\CommandButtons\PASBTNdayaojingE.blp
 ReplaceableTextures\CommandButtons\PASBTNmedi-EX.blp
+ReplaceableTextures\CommandButtons\PASBTNTewi-E.blp
 ReplaceableTextures\CommandButtons\PASBTNtuzigu-EX.blp
 ReplaceableTextures\CommandButtons\PASSakuya00.blp
+ReplaceableTextures\CommandButtons\PASSBTNkillHeiInnate.blp
+ReplaceableTextures\CommandButtonsDisabled\btnkuangcao.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN-huanyue.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN-Kagerou.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN_Akyuu.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN_aya.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTN_BlackChina.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN_byakuren.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN_Captain.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN_Chen.blp
@@ -725,8 +811,10 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTN_Yuugi.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTN_yuyuko.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNalice.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNaya-W.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNBagetAccelerator.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNbirdornament.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNchushou.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNClownShop.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNCNMblue.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNCNMgreen.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNCNMKing.blp
@@ -751,6 +839,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNHina.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNHJ.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitem6Ball.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitem9Ball.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemAlpacaOfTruth.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemapple.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBanana.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBaozi.blp
@@ -758,6 +847,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBird.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBoatMark.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBone.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBroom.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemBrotherSharp.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemButtCream.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCake.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCamara.blp
@@ -774,7 +864,10 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCatEar.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCatFoot.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCherryBranch.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCherryLeaf.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemChestPlate.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCirnoClaymore.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCorn.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCracked6Ball.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCross.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemCucumber.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemcursepaper.blp
@@ -793,6 +886,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemfritebox.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemFrock.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemFrog.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemFrozenFrog.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGap.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGhostBalloon.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGlue.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGodRightHand.blp
@@ -800,6 +894,8 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGranGrimoire.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemgrapes.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGreenDam.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGreenTea.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGreenUmbrella.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGreyTwinSerpents.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemGuiltyMask.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemHakkero.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemHakureiAmulet.blp
@@ -814,12 +910,16 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemHuntingCap.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemIce.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemicecap.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemikucloth.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemInabaIllusionWeapon.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemJealousEye.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemJuice.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemKafziel.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemKnife.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemkoishihat.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemLeafSword.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemLunaChip.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemlunarclap.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemLunchBox.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemMagicGuideBook.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemMarisaHat.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemMask.blp
@@ -835,6 +935,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemMushroomPie.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemMushroomSoup.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemneetwood.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemNiceBoat.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemNoProblem.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemNuclearStick.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemNueBow.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemPad.blp
@@ -848,6 +949,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemPurpleUmbrella.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemQuant.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemRaven.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemRecipe.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemRestlessYatagarasu.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemRibbon.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemRocket.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemRocketDiagram.blp
@@ -870,12 +972,14 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNitemThunderSword.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemTicket.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemToramaruLight.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemUmbanana.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemVerity.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemviolin.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemWaterMelon.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemWindAmulet.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemWindBird.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemWindGun.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemWing.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNitemWrench.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemwrigglelight.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemYatagarasu.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNitemYukkuri.blp
@@ -910,9 +1014,11 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNmedi-W.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNmeidi-D-off.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNmeirin.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNMerlin.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNMima.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNminoriko.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNMonkey.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNmouse.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNMrYang.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNnazilin-D.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNnazilin-E1.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNnazilin-E2.blp
@@ -938,6 +1044,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNSakuya04.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNsatori.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSatsuki Rin.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNseiga.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSeija.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNshanghai.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNshikieiki.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNShinki.blp
@@ -992,6 +1099,12 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillFuto02.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillFuto03.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillFuto04.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillFutoEx.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillHei0.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillHei1.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillHei2.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillHei3.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillHei4.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillHei5.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillIku01Off.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillIku01On.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillIku03.blp
@@ -1031,6 +1144,10 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMeiling04.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMeirinEX.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNskillMerlin03.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMerlinEx.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMokou01.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMokou02.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMokou03.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMokou04.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMomizi01.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMomizi02.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNSkillMomizi03.blp
@@ -1131,7 +1248,10 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNtuzigu-F.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNtuzigu-R.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNtuzigu-W.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNutsuho.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNyoshika.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNYoumu03.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNyuetu.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNYukkuriProper.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNyuri.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNYuuka01.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNYuuka02.blp
@@ -1139,7 +1259,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISBTNYuuka03.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNYuuka04.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNYuukaEx.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNzhulu-W.blp
-ReplaceableTextures\CommandButtonsDisabled\DIShexie.blp
+ReplaceableTextures\CommandButtonsDisabled\DISHeXie.blp
 ReplaceableTextures\CommandButtonsDisabled\DIShongmo huojian.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASBTNdayaojingE.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASBTNkulumi-E.blp
@@ -1154,6 +1274,7 @@ ReplaceableTextures\CommandButtonsDisabled\DISPASBTNTewi-E.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASBTNTewi-W.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASBTNtuzigu-EX.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASSakuya00.blp
+ReplaceableTextures\CommandButtonsDisabled\DISPASSBTNkillHeiInnate.blp
 ReplaceableTextures\PassiveButtons\PASBTNkulumi-E.blp
 ReplaceableTextures\PassiveButtons\PASBTNkulumi-R.blp
 ReplaceableTextures\PassiveButtons\PASBTNkulumi-W.blp
@@ -1163,6 +1284,9 @@ ReplaceableTextures\PassiveButtons\PASBTNreisen-R2.blp
 ReplaceableTextures\PassiveButtons\PASBTNSkillReisen-R.blp
 ReplaceableTextures\PassiveButtons\PASBTNTewi-E.blp
 ReplaceableTextures\PassiveButtons\PASBTNTewi-W.blp
+ReplaceableTextures\Selection\SelectionCircleLarge.blp
+ReplaceableTextures\Selection\SelectionCircleMed.blp
+ReplaceableTextures\Selection\SelectionCircleSmall.blp
 ReplaceableTextures\Weather\fall.blp
 ReplaceableTextures\Weather\rail.blp
 ReplaceableTextures\Weather\rail2.blp
@@ -1175,18 +1299,30 @@ Sad people.blp
 Sad people.mdx
 SakuraWave.mdx
 Sakuya_KnifeB.blp
+Satsuki Rin.blp
+Satsuki Rin.mdx
+scripts\war3map.j
 se_Kill.mp3
 se_miss.wav
 SelfbuffFX.mdx
 Shadow.mdx
 shanghai_0.blp
 shanghai_0.mdx
+shanghai_body.blp
 shanghai_c.mdx
+shanghai_head.blp
+shizuha red.mdx
 shizuha_a.mdx
 Shockwave_blue.mdx
-shot.mdx
+Shot.mdx
 Shot_02.mdx
+Shot_Blue.mdx
+Shot_Green.mdx
+Shot_Red.mdx
+Shot_Violet.mdx
+Shot_Yellow.mdx
 Sirius.mdx
+sizuha red.blp
 small.blp
 smileys_9.blp
 smileys_9.mdx
@@ -1210,11 +1346,14 @@ smileys_sweat.blp
 smileys_sweat.mdx
 Soldiers far green.blp
 Soldiers far green.mdx
+Soldiers far red.blp
 Soldiers near green.blp
 Soldiers near green.mdx
+Soldiers near red.blp
 soldiers siege green.mdx
 spbs.blp
 spbs.mdx
+Spin.mdx
 Spirit.blp
 Splats\LightningData.slk
 SQ.blp
@@ -1222,19 +1361,394 @@ SQ.mdx
 ssss.blp
 ssss.mdx
 SuikaFog.mdx
-sun.blp
-sun.mdx
-sunflower.mdx
+Sun.blp
+Sun.mdx
+sunflower.MDX
 Sweet potato_1.mdx
 tensi_stone.mdx
 TerrainArt\Ashenvale\Ashen_Leaves.blp
 TerrainArt\Weather.slk
 Textures\BeamRibbon_red.blp
 THDOTA.blp
+THDots\Hero\alice.mdx
+THDots\Hero\aya.mdx
+THDotS\Hero\blsss_01.mdx
+THDots\Hero\chen.mdx
+THDots\Hero\Cirno.mdx
+THDotS\Hero\daiyousei.mdx
+THDots\Hero\eirin.mdx
+THDots\Hero\Flandre.mdx
+THDotS\Hero\hakurei reimu Senior.mdx
+THDots\Hero\hakurei reimu.mdx
+THDots\Hero\Himekaidou Hatate.mdx
+THDots\Hero\hina.mdx
+THDots\Hero\hiziri byakuren.mdx
+THDots\Hero\Houjuu Nue.mdx
+THDots\Hero\iku.mdx
+THDots\Hero\Imaizumi Kagerou.mdx
+THDots\Hero\kaguya Alice.mdx
+THDots\Hero\kaguya.mdx
+THDots\Hero\kanako.mdx
+THDots\Hero\keine.mdx
+THDots\Hero\keine_2.mdx
+THDots\Hero\koakuma.mdx
+THDots\Hero\kogasa.mdx
+THDotS\Hero\kogasa_Garen.mdx
+THDots\Hero\komachi.mdx
+THDots\Hero\komachi_Sirius1.mdx
+THDots\Hero\komeiji koishi.mdx
+THDots\Hero\koumajou densetsu flandre.mdx
+THDots\Hero\koumajou densetsu youmu.mdx
+THDotS\Hero\kumoi.mdx
+THDotS\Hero\Kurumi.mdx
+THDots\Hero\letty.mdx
+THDots\Hero\lily black.mdx
+THDots\Hero\lily white.mdx
+THDots\Hero\Lunar Child.mdx
+THDots\Hero\lunasa prismriver.mdx
+THDots\Hero\lyrica prismriver.mdx
+THDots\Hero\Marisa1.mdx
+THDots\Hero\medicine.mdx
+THDots\Hero\meirin4.mdx
+THDots\Hero\merlin prismriver.mdx
+THDots\Hero\miko.mdx
+THDots\Hero\Mima.mdx
+THDots\hero\minamitsu.mdx
+THDots\Hero\minoriko ex.mdx
+THDots\Hero\minoriko.mdx
+THDots\Hero\mizuhasi Parsee.mdx
+THDots\Hero\Mokou.mdx
+THDots\Hero\Momizi.mdx
+THDots\hero\mononobe no futo.mdx
+THDots\Hero\Mop Sakuya.mdx
+THDotS\Hero\mugetsu.mdx
+THDots\Hero\mystia apron.mdx
+THDots\Hero\Mystia.mdx
+THDots\Hero\nazrin.mdx
+THDots\Hero\Neutral_1.mdx
+THDots\Hero\Neutral_12.mdx
+THDots\Hero\Neutral_13.mdx
+THDots\Hero\Neutral_14.mdx
+THDots\Hero\Neutral_15.mdx
+THDots\Hero\Neutral_16.mdx
+THDots\Hero\Neutral_17.mdx
+THDots\Hero\Neutral_2.mdx
+THDots\Hero\Neutral_3.mdx
+THDots\Hero\Neutral_41.mdx
+THDots\Hero\Neutral_5.mdx
+THDots\Hero\Neutral_6.mdx
+THDots\Hero\Neutral_7.mdx
+THDots\Hero\Neutral_8.mdx
+THDots\Hero\Neutral_9.mdx
+THDots\Hero\nitori.mdx
+THDots\Hero\Okazaki Yumemi.mdx
+THDots\Hero\Patchouli.mdx
+THDots\Hero\ran.mdx
+THDotS\Hero\reisen violent.mdx
+THDots\Hero\reisen.mdx
+THDotS\Hero\Reisen_2.mdx
+THDots\Hero\remilia.mdx
+THDots\Hero\rin.mdx
+THDots\Hero\Rumia EX.mdx
+THDots\Hero\rumia.mdx
+THDots\Hero\Sakuya.mdx
+THDots\Hero\Sanae1.mdx
+THDots\Hero\satori.mdx
+THDots\Hero\seiga kaku.mdx
+THDots\Hero\Seija Kijin.mdx
+THDots\Hero\shinki.mdx
+THDots\Hero\shizuha.mdx
+THDots\Hero\siki eiki.mdx
+THDots\Hero\Soga no Tojiko.mdx
+THDots\Hero\Soldiers far red.mdx
+THDots\Hero\Soldiers near red.mdx
+THDotS\Hero\sssss_01.mdx
+THDotS\Hero\star.mdx
+THDots\Hero\Student mokou.mdx
+THDots\Hero\Student sanae.mdx
+THDots\Hero\Student suwako.mdx
+THDots\Hero\suika.mdx
+THDots\Hero\sunny milk.mdx
+THDots\Hero\suwako.mdx
+THDots\Hero\suwako_2.mdx
+THDots\Hero\tensi.mdx
+THDots\Hero\tokiko.mdx
+THDots\Hero\toramaru_syou.mdx
+THDots\Hero\twei.mdx
+THDotS\Hero\unzan-1.mdx
+THDots\Hero\Usami Renko.mdx
+THDots\Hero\Utsuho.mdx
+THDots\Hero\yamame.mdx
+THDots\Hero\yoshika miyako.mdx
+THDots\Hero\youmu.mdx
+THDots\Hero\yuka.mdx
+THDots\Hero\yukari.mdx
+THDots\Hero\yuugi.mdx
+THDots\Hero\Yuyuko1.mdx
+THDotS\textures\alice.blp
+THDotS\textures\aya.blp
+THDotS\textures\blss.blp
+THDotS\Textures\blsss.blp
+THDotS\textures\chen big.blp
+THDotS\textures\chen.blp
+THDotS\textures\Cirno.blp
+THDotS\Textures\daiyousei.blp
+THDotS\textures\Drill.blp
+THDotS\textures\eirin.blp
+THDotS\textures\Flandre Maid.blp
+THDotS\textures\Flandre.blp
+THDotS\textures\Futatsuiwa Mamizou.blp
+THDotS\Textures\garen_sword_blur_01.blp
+THDotS\Textures\garen_sword_blur_glow.blp
+THDotS\textures\gr001.blp
+THDotS\textures\gr002.blp
+THDotS\textures\gr003.blp
+THDotS\textures\gr004.blp
+THDotS\textures\gr005.blp
+THDotS\textures\gr006.blp
+THDotS\textures\hakurei reimu Futatsuiwa Mamizou .blp
+THDotS\Textures\hakurei reimu Senior.blp
+THDotS\textures\hakurei reimu.blp
+THDotS\textures\Hata no kokoro_1.blp
+THDotS\textures\Hata no kokoro_2.blp
+THDotS\textures\hijiri byakuren2-1.blp
+THDotS\textures\hijiri byakuren4-1.blp
+THDotS\textures\hijiri byakuren4-2.blp
+THDotS\textures\hijiri byakuren4-4.blp
+THDotS\textures\Himekaidou Hatate MIKU.blp
+THDotS\textures\Himekaidou Hatate.blp
+THDotS\textures\hina.blp
+THDotS\textures\hiziri byakuren.blp
+THDotS\textures\hiziri byakuren_gz.blp
+THDotS\textures\Horikawa Raiko.blp
+THDotS\textures\Houjuu Nue Exorcist.blp
+THDotS\textures\Houjuu Nue.blp
+THDotS\textures\ibara_kasen.blp
+THDotS\textures\iku.blp
+THDotS\textures\Imaizumi Kagerou Horo.blp
+THDotS\textures\Imaizumi Kagerou.blp
+THDotS\textures\inaba tei.blp
+THDotS\Textures\kaguya Alice.blp
+THDotS\textures\kaguya.blp
+THDotS\textures\kanako Small.blp
+THDotS\textures\kanako.blp
+THDotS\textures\Kasodani Kyouko.blp
+THDotS\textures\kazami yuka.blp
+THDotS\textures\keine.blp
+THDotS\textures\keine_2.BLP
+THDotS\textures\kisume Attack on Titan .blp
+THDotS\textures\kisume.blp
+THDotS\textures\koakuma.blp
+THDotS\textures\kogasa.blp
+THDotS\Textures\kogasa_Garen.blp
+THDotS\textures\komachi.blp
+THDotS\Textures\komachi_Sirius.blp
+THDotS\Textures\komeiji koishi Cherry.blp
+THDotS\textures\komeiji koishi.blp
+THDotS\Textures\koumajou densetsu flandre.blp
+THDots\textures\koumajou densetsu youmu.blp
+THDotS\Textures\kumoi.blp
+THDotS\Textures\Kurumi.blp
+THDotS\textures\letty.blp
+THDotS\textures\lily black.blp
+THDotS\textures\lily white.blp
+THDotS\textures\Lunar Child.blp
+THDotS\textures\marisa.blp
+THDotS\textures\Medicine.blp
+THDotS\Textures\meirin black.blp
+THDotS\textures\meirin Hei-Meiling.blp
+THDotS\textures\meirin.blp
+THDotS\textures\miko.blp
+THDotS\textures\Mima.blp
+THDotS\textures\minamitsu Bloodthirsty dark Emperor.blp
+THDotS\textures\minamitsu.blp
+THDotS\textures\minoriko.blp
+THDotS\textures\mizuhasi Parsee.blp
+THDotS\textures\mokou.blp
+THDotS\textures\momizi.blp
+THDotS\textures\mononobe no futo_black.blp
+THDotS\textures\mononobe no futo_White.blp
+THDotS\Textures\mugetsu.blp
+THDotS\textures\musicnote.blp
+THDotS\textures\mystia apron.blp
+THDotS\textures\Mystia.blp
+THDotS\textures\nazrin.blp
+THDotS\textures\Neutral_0.blp
+THDotS\textures\Neutral_1.blp
+THDotS\textures\Neutral_12.blp
+THDotS\textures\Neutral_13.blp
+THDotS\textures\Neutral_14.blp
+THDotS\textures\Neutral_15.blp
+THDotS\textures\Neutral_16.blp
+THDotS\textures\Neutral_17.blp
+THDotS\textures\Neutral_2.blp
+THDotS\textures\Neutral_3.blp
+THDotS\textures\Neutral_4.blp
+THDotS\textures\Neutral_5.blp
+THDotS\textures\Neutral_6.blp
+THDotS\textures\Neutral_7.blp
+THDotS\textures\Neutral_8.blp
+THDotS\textures\Neutral_9.blp
+THDotS\textures\nitori_n_body.blp
+THDotS\textures\nitori_n_head.blp
+THDotS\textures\Okazaki Yumemi.blp
+THDotS\textures\Patchouli.blp
+THDotS\textures\princess_wriggle.BLP
+THDotS\textures\ran Small.blp
+THDotS\textures\ran.blp
+THDotS\Textures\reisen violent.blp
+THDotS\Textures\reisen violent_2.blp
+THDotS\textures\reisen.blp
+THDotS\Textures\Reisen_2.blp
+THDotS\textures\remilia.blp
+THDotS\textures\rin.blp
+THDotS\textures\Rumia EX.blp
+THDotS\textures\rumia.blp
+THDotS\textures\sakuya.blp
+THDotS\textures\sanae.blp
+THDotS\textures\saoling.blp
+THDotS\textures\satori.blp
+THDotS\textures\Satsuki Rin.blp
+THDotS\textures\seiga kaku.blp
+THDotS\textures\Seija Kijin.blp
+THDotS\textures\Sekibanki.blp
+THDotS\textures\Shinki The God of destruction and regeneration.blp
+THDots\Textures\Shinki.blp
+THDotS\textures\siki eiki.blp
+THDotS\Textures\sizuha red.blp
+thdots\textures\sizuha.blp
+THDotS\textures\Soga no Tojiko.blp
+THDotS\textures\Soldiers far red.blp
+THDotS\textures\Soldiers near red.blp
+THDotS\Textures\sssss.blp
+THDotS\Textures\star.blp
+THDotS\textures\Student mokou.blp
+THDotS\textures\Student sanae.blp
+THDotS\textures\Student suwako.blp
+THDotS\textures\suika.blp
+THDotS\textures\Sukuna Shinmyoumaru.blp
+THDotS\textures\sunny milk.blp
+THDotS\textures\suwako big.blp
+THDotS\textures\suwako Cherno Alpha.blp
+THDotS\textures\suwako.blp
+THDotS\textures\tensi Laurel.blp
+THDotS\textures\tensi.blp
+THDotS\textures\tokiko.blp
+THDotS\textures\toramaru_syou.blp
+THDotS\textures\Tsukumo benben.blp
+THDotS\textures\Tsukumo Yatsuhashi.blp
+THDotS\Textures\unzan.blp
+THDotS\textures\Usami Renko.blp
+THDotS\textures\Utsuho Black Rock Shooter.blp
+THDotS\textures\Utsuho.blp
+THDotS\textures\Wakasagihime.blp
+THDotS\textures\wriggle.blp
+THDotS\textures\Yamame Attack on Titan.blp
+THDotS\textures\Yamame.blp
+THDotS\textures\yoshika miyako.blp
+THDotS\textures\youmu Knife mad Sword crazy.blp
+THDots\textures\youmu.blp
+THDotS\textures\yukari.blp
+THDotS\textures\yukkuri.blp
+THDotS\textures\yukkuri_face.blp
+THDotS\textures\yuugi.blp
+THDotS\textures\yuyuko.blp
+THDotS\textures\zombie fairy.blp
+THDotS\VisualEffect\AttackBa.mdx
+THDotS\VisualEffect\AttackBb.mdx
+THDotS\VisualEffect\AttackBc02.mdx
+THDotS\VisualEffect\hitBa000.blp
+THDotS\VisualEffect\hitBa001.blp
+THDotS\VisualEffect\hitBa002.blp
+THDotS\VisualEffect\hitBa003.blp
+THDotS\VisualEffect\hitBa004.blp
+THDotS\VisualEffect\hitBa005.blp
+THDotS\VisualEffect\hitBa006.blp
+THDotS\VisualEffect\hitBa007.blp
+THDotS\VisualEffect\hitBa008.blp
+THDotS\VisualEffect\hitBa009.blp
+THDotS\VisualEffect\hitBa010.blp
+THDotS\VisualEffect\hitBb000.blp
+THDotS\VisualEffect\hitBb001.blp
+THDotS\VisualEffect\hitBb002.blp
+THDotS\VisualEffect\hitBb003.blp
+THDotS\VisualEffect\hitBb004.blp
+THDotS\VisualEffect\hitBb005.blp
+THDotS\VisualEffect\hitBb006.blp
+THDotS\VisualEffect\hitBb007.blp
+THDotS\VisualEffect\hitBb008.blp
+THDotS\VisualEffect\hitBb009.blp
+THDotS\VisualEffect\hitBb010.blp
+THDotS\VisualEffect\hitBb011.blp
+THDotS\VisualEffect\hitBb012.blp
+THDotS\VisualEffect\hitBb013.blp
+THDotS\VisualEffect\hitBb014.blp
+THDotS\VisualEffect\hitBc000.blp
+THDotS\VisualEffect\hitBc001.blp
+THDotS\VisualEffect\hitBc002.blp
+THDotS\VisualEffect\hitBc003.blp
+THDotS\VisualEffect\hitBc004.blp
+THDotS\VisualEffect\hitBc005.blp
+THDotS\VisualEffect\hitBc006.blp
+THDotS\VisualEffect\hitBc007.blp
+THDotS\VisualEffect\hitBc008.blp
+THDotS\VisualEffect\hitBc009.blp
+THDotS\VisualEffect\hitBc010.blp
+THDotS\VisualEffect\hitBc011.blp
+THDotS\VisualEffect\hitBc012.blp
+THDotS\VisualEffect\hitBc013.blp
+THDotS\VisualEffect\hitBc014.blp
+THDotS\VisualEffect\hitBc015.blp
+THDotS\VisualEffect\hitBc016.blp
+THDotS\VisualEffect\hitBc017.blp
+THDotS\VisualEffect\ringAc000.blp
+THDotS\VisualEffect\SpellCall.mdx
+THDotS\VisualEffect\spellCall005.blp
+THDotS\VisualEffect\spellCall006.blp
+THDotS\VisualEffect\spellCall007.blp
+THDotS\VisualEffect\spellCall008.blp
+THDotS\VisualEffect\spellCall009.blp
+THDotS\VisualEffect\spellCall010.blp
+THDotS\VisualEffect\spellCall011.blp
+THDotS\VisualEffect\spellCall012.blp
+THDotS\VisualEffect\spellCall013.blp
+THDotS\VisualEffect\spellCall014.blp
+THDotS\VisualEffect\spellCall015.blp
+THDotS\VisualEffect\spellCall016.blp
+THDotS\VisualEffect\spellCall017.blp
+THDotS\VisualEffect\spellCall018.blp
+THDotS\VisualEffect\spellCall019.blp
+THDotS\VisualEffect\spellCall020.blp
+THDotS\VisualEffect\spellCall021.blp
+THDotS\VisualEffect\spellCall022.blp
+THDotS\VisualEffect\spellCall023.blp
+THDotS\VisualEffect\spellCall024.blp
+THDotS\VisualEffect\spellCall025.blp
+THDotS\VisualEffect\spellCall026.blp
+THDotS\VisualEffect\spellCall027.blp
+THDotS\VisualEffect\spellCall028.blp
+THDotS\VisualEffect\spellCall029.blp
+THDotS\VisualEffect\spellCall030.blp
+THDotS\VisualEffect\spellCall031.blp
+THDotS\VisualEffect\spellCall032.blp
+THDotS\VisualEffect\spellCall033.blp
+THDotS\VisualEffect\spellCall034.blp
+THDotS\VisualEffect\spellCall035.blp
+THDotS\VisualEffect\spellCall036.blp
+THDotS\VisualEffect\spellCall037.blp
+THDotS\VisualEffect\spellCall038.blp
+THDotS\VisualEffect\spellCall039.blp
+THDotS\VisualEffect\spellCall040.blp
+THDotS\VisualEffect\spellCall041.blp
+THDotS\VisualEffect\spellCall042.blp
+THDotS\VisualEffect\spellCall043.blp
+THDotS\VisualEffect\spellCall044.blp
+THDotS\VisualEffect\spellCall045.blp
+THDotS\VisualEffect\spellCall046.blp
 TimeAura.mdx
 TimeAuraTarget.mdx
 Title2.blp
-tokiko1.mdx
+tokiko1.mdX
 toramaru_0.mdx
 toramaru_3.mdx
 U(listfile)
@@ -1248,10 +1762,13 @@ UI\Console\Orc\OrcUITile03.blp
 UI\Console\Orc\OrcUITile04.blp
 UI\Cursor\OrcCursor.blp
 UI\Feedback\Cooldown\UI-Cooldown-Indicator.mdx
+UI\Feedback\XpBar\human-bigbar-fill.blp
 UI\HelpStrings.txt
 UI\MiniMap\minimap-hero.blp
 UI\Widgets\EscMenu\Orc\orc-cinematic-border.blp
 UI\Widgets\EscMenu\Orc\orc-options-menu-border.blp
+UI\Widgets\ToolTips\Human\ToolTipGoldIcon.blp
+UI\Widgets\ToolTips\Human\ToolTipLumberIcon.blp
 UltimateWindFlash.mdx
 Underground_Stones.blp
 Units\AbilityBuffData.slk
@@ -1307,25 +1824,40 @@ Units\UnitData.slk
 Units\UnitUI.slk
 Units\UnitWeapons.slk
 Units\UpgradeData.slk
-Usami Renko_D.MDX
+Usami Renko_D.mdx
 Usami Renko_F.mdx
-Usami Renko_W.MDX
+Usami Renko_R.mdx
+Usami Renko_W.mdx
 UUZ.mdx
 Villain.blp
 Villain.mdx
+VioletBomb.mdx
+VioletLight.mdx
+VioletPunch.mdx
+VioletShield.mdx
+VioletSlow.mdx
 wan.mdx
 war3map.doo
+war3map.imp
 war3map.j
 war3map.mmp
 war3map.shd
 war3map.w3a
 war3map.w3b
+war3map.w3c
 war3map.w3d
 war3map.w3e
+war3map.w3h
 war3map.w3i
+war3map.w3q
+war3map.w3r
+war3map.w3s
 war3map.w3t
 war3map.w3u
+war3map.wct
 war3map.wpm
+war3map.wtg
+war3map.wts
 war3mapExtra.txt
 war3mapImported\[bricks]pillar1.mdx
 war3mapImported\[log] wall_edge.mdx
@@ -1349,15 +1881,22 @@ war3mapImported\flower1.mdx
 war3mapImported\flower2.mdx
 war3mapImported\flower3.mdx
 war3mapImported\Glow.mdx
+war3mapImported\ha0.mp3
+war3mapImported\ha1.mp3
 war3mapImported\hakurei reimu yukkuri.mdx
 war3mapImported\hanwu.mdx
 war3mapImported\Hieda no Akyuu.mdx
 war3mapImported\hongwu.mdx
 war3mapImported\huangsha.mdx
+war3mapImported\junbinasai.mp3
+war3mapImported\kakattana.mp3
 war3mapImported\komachi_1.mdx
 war3mapImported\Light.mdx
 war3mapImported\LightCircle45g.mdx
+war3mapImported\Lords_Rock4.mdx
 war3mapImported\Moonlight.mdx
+war3mapImported\muda.mp3
+war3mapImported\mudada.mp3
 war3mapImported\nuclearexplosion_star.mdx
 war3mapImported\Overcast days.mdx
 war3mapImported\PianoChorus01.mp3
@@ -1367,6 +1906,7 @@ war3mapImported\PianoChorus02c.mp3
 war3mapImported\PianoChorus03a.mp3
 war3mapImported\PianoChorusE.mp3
 war3mapImported\PianoChorusF#.mp3
+war3mapImported\rainbow2.blp
 war3mapImported\Sunlight.mdx
 war3mapImported\Tram_2.mdx
 war3mapImported\TrumpetChorus-01.mp3
@@ -1376,6 +1916,7 @@ war3mapImported\TrumpetChorusA#.mp3
 war3mapImported\TrumpetChorusD.mp3
 war3mapImported\Underground Stone_Rock4.mdx
 war3mapImported\Underground Stone_Rock8.mdx
+war3mapImported\Underground_Stones.blp
 war3mapImported\ViolinChorus01.mp3
 war3mapImported\ViolinChorus02.mp3
 war3mapImported\ViolinChorusF#.mp3
@@ -1391,23 +1932,30 @@ war3mapImported\Yuugi.mp3
 war3mapImported\zuanshichen.mdx
 war3mapMap.blp
 war3mapMisc.txt
-WAR3MAPPREVIEW.tga
+war3mapPreview.tga
 war3mapSkin.txt
+war3mapUnits.doo
 Wife.blp
 Wife.mdx
 Wisp1.mdx
+Wriggle.blp
+Wriggle.mdx
 yinyang.blp
 yinyangdisabled.blp
 ymh.mdx
 you.mdx
 youmu_Six clean chopped.blp
 ysf.blp
+Yukari04LockOnA.mdx
+Yukari04LockOnB.mdx
 Yukari04Rune.MDX
+Yukkuri.blp
 Yukkuri.mdx
+yukkuri_face.blp
 yuyufan.blp
 yuyufan.mdx
 yyy.blp
-yyy.mdx
+yyy.MDX
 z_NewImported\Marisa_yukkuri.mdx
 zon.blp
-zon.mdx
+zon.MDX

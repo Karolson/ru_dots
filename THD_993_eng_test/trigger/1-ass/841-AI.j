@@ -1,2 +1,0 @@
-function InitTrig_AI takes nothing returns nothing
-endfunction
