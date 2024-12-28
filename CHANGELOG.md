@@ -1,3 +1,433 @@
+## 996.07:
+
+    Убраны криты на физ скилах
+    Возвращена жинкела
+    Кагуя убрано уменьшение урона/хила на ульте
+    Соки +1 брони
+    Мисочка -10 урона на тарелке
+    Исправлен скейл хп 3 скила Мурасы
+    --------------------------------------
+    Removed crits on physical abilities
+    Restored Jinkela
+    Kaguya removed damage/heal reduction on ult
+    Soku +1 armor
+    Futo -10 damage on plates
+    Fixed Murasa 3rd skill HP bonus
+
+## 996.06:
+
+    Murasa 1st skill: New: Hook range +10 for each STR
+    Murasa 1st skill: 90/135/180/225 pure --> 100/150/200/250 + [200% STR] physical
+    Murasa 2nd skill: 120/160/200/240 magic --> 120/160/200/240 + [180% STR] physical
+    Murasa 3rd skill: 20/30/40/50 + [2 * LVL] ATK bonus --> 20/30/40/50 + [2 * LVL] + [70% STR] ATK bonus
+    Murasa 4th skill: 20/75/120 + [20% ATK] + [20% INT](40% in code) magic --> 20/75/120 + [20% ATK] + [20% INT] --> 20/75/120 + [20% ATK] + [40% STR] physical
+
+## 996.05:
+
+    New old item
+    Magical Girl Detector (or Newbie Detector in ancient DotS)
+    Recipe:
+    Historian Textbook - 1000
+    Total - 2000
+
+    Can be upgraded 5 times, buy recipe to upgrade.
+
+    Stats: +8[+3] all stats
+    Active: Creates 3 incubators with 200[+100]HP, 40~40[+10] Damage, 370[+38] movement speed.
+    The incubators will multiply every 12[-2] attacks. Lasts 30 seconds.
+    Cooldown: 100 sec
+
+    Marisa 3rd Skill Explosion standby 0.75s ---> deleted (ready to explode instantly)
+    Sunny ult projectile base dmg bug 100 ---> 50
+    Sunny ult projectile scale 30% ---> 20%
+    Sunny 2nd skill scale 190% ---> 150% 
+    Minako 1st and 3rd skills now slows for 50% instead of stun.
+    Hei Meiling shield scale 175% ---> 100%
+    Kinemochi Mallet 500 range ---> 250 range (+now stuns only after hit)
+    Added +1 mana regeneration Kourindou Dress
+    Nigasanae passive sound effect volume 127 ---> 150
+    Melee girls with agility primary attribute now have +0.24 armor for each AGI point (other girls 0.12)
+    Medicine ult cooldown 140/110/80 ---> 130/110/90
+    Koishi now doesnt stop after activation 1st skill
+    Youmu now doesnt stop after activation 3rd skill
+    Youmu 1st now apply 2 armor break stacks. Stacks are applied before skill damage.
+    Youmu ult now apply 3/4/5 armor break stacks. Stacks are applied before skill damage slash.
+      On level 1 1st, 3rd, 5th slash apply stack, level 2 add stack in 2nd slash, and all slashes apply stack on level 3.
+
+## 996.03:
+
+    Исправлено что юккури иногда пожирала предметы
+    Исправлено пропадание курсора
+    Исправлено что Конкордия не давала урона скиллам
+    Исправлена иконка зеленой карточки
+    Исправлено отсутствие отмены погоды в фонтане
+    -------------------------------------------------------------------------------------
+    Fixed yukkuri sometimes devouring items
+    Fixed cursor disappearing
+    Fixed Concordia not adding damage to skills
+    Fixed green card icon
+    Fixed girl fountains not having weather dissipation
+
+## 996.02:
+
+    Удален -df
+    --------------------------------------
+    Removed -df
+
+## 996.01:
+
+    Нажатие на рецепт в магазине открывает меню откуда можно купить все составляющие предмета
+    Последний предмет из рецепта теперь можно купить даже с полным инвентарем
+
+    Заменены некоторые стандартные рисунки интерфейса
+
+    Кулдаун способности карточки у девочек 105->30 сек
+
+    Мариса:
+        Прирост интеллекта 2.5->3.0
+
+    Токико:
+        Исправлено что иннейт не работал на расходники
+
+    Новый предмет - Concordia:
+        +300 урона
+        Нельзя выложить
+        Выпадает при смерти
+        Рецепт в Steel Making Accessories:
+            Little Screwdriver x 2 - 2000 x 2
+            Рецепт - 2000
+            Итого - 6000
+    ------------------------------------------------------------------------------------------------------------
+    Clicking on a recipe in a shop opens a menu from where you can buy all the components of the item
+    The last item of the recipe can now be bought even with a full inventory
+
+    Replaced some default UI images
+
+    Girl's card ability cooldown 105->30 sec
+
+    Marisa:
+        Intelligence per level 2.5->3.0
+
+    Tokiko:
+        Fixed that innate didn't work for consumables
+
+    New Item - Concordia:
+        +300 damage
+        Cannot be dropped
+        Drops on death
+        Recipe in Steel Making Accessories:
+            Little Screwdriver x 2 - 2000 x 2
+            Recipe - 2000
+            Total - 6000
+
+## 995.16:
+
+    Алиса:
+        Исправлен возможный краш при отсоединении кукол
+
+    Мариса:
+        Увеличена скорость поворота
+        Исправлено что 2 скилл применялся при неполном повороте
+        2 скилл применяется только на точку вместо точки или юнита
+
+    Ююко:
+        Урон ульта от недостающего хп 35->40%
+    -------------------------------------------------------------------------------
+    Alice:
+        Fixed possible crash on doll detach
+
+    Marisa:
+        Increased turn speed
+        Fixed 2nd skill being cast while not fully turned
+        2nd skill can only target a point instead of a point or a unit
+
+    Yuyuko:
+        Ultimate damage from missing HP 35->40%
+
+## 995.15:
+
+    Жинкела удалена
+    ----------------
+    Jinkela removed
+
+## 995.14:
+
+    Поддержка интеграции с дискордом (требует новый dods.mix)
+    Исправлена формула потери голды при смерти (https://discord.com/channels/228540940137005059/694191269303418951/931480743035670539)
+
+    Myon Balloon:
+        Исправлено что кулдаун был 28 вместо 25
+
+    Nightshade Dress:
+        Броня 27 -> 18
+        Убран из рецепта Sailor Uniform (стоимость 5200 -> 4750)
+        Добавлена активка Myon Balloon
+
+    Шизуха:
+        Исправлены онхит эффекты на ульте
+
+    Кагеро:
+        Исправлена пассивка на 2 скилле
+
+    Новый dods.mix:
+        Добавлена интеграция с дискордом
+        Исправлено что после игры не обновлялись статусы хостов
+
+    Новый WFE:
+        Лимит фпс в лобби
+        Отображение уровней возле хпбаров
+        Отображение скилов у союзников
+    ---------------------------------------------------------------
+    Support Discord integration (requires new dods.mix)
+    Fixed gold lost on death formula (https://discord.com/channels/228540940137005059/694191269303418951/931480743035670539)
+
+    Myon Balloon:
+        Fixed cooldown being 28 instead of 25
+
+    Nightshade Dress:
+        Armor 27 -> 18
+        Removed Sailor Uniform from recipe (cost 5200 -> 4750)
+        Added Myon Balloon active
+
+    Shizuha:
+        Fixed onhit effects on the ultimate
+
+    Kagerou:
+        Fixed 2nd skill passive
+
+    New dods.mix:
+        Added Discord integration
+        Fixed lobby states not updating after a game
+
+    New WFE:
+        FPS limit in lobby
+        Shows hero level near HP bar
+        Shows ally skills
+
+## 995.13:
+
+    Мико иннейтом дешит в сторону применения не подбегая сначала к точке
+    ------------------------------
+    Miko's innate dashes towards the target point without running to it first
+
+## 995.12:
+
+    Исправлены десинки обсов
+    ------------------------------
+    Fixed observer desyncs
+
+## 995.11:
+
+    Исправлены баги Фая:
+        Исправлено что некоторые предметы не были перенесены в новый магазин
+        Исправлено что кд карточек был 240 вместо 220
+        Исправлено отсутствие эмодзи Нигасанае
+        Исправлены дальности и урон койлов в описаниях Нигасанае
+
+    Куруми:
+        Исправлено что хп гроба было на 100 больше чем в описании
+
+    Новый предмет - Jinkela:
+        +140 хп
+        +10 маг резиста
+        +10 атаки
+        Пассивка: Увеличивает броню союзников и зданий вокруг на 5 и их скорость атаки на 10% (радиус 900).
+        Активка: Увеличивает скорость союзников и зданий вокруг на 40% и их скорость атаки на 30% на 5 секунд (радиус 600). Кулдаун 50 сек
+
+        Рецепт в Kourindou Branch Office:
+            Bone Flute - 2200
+            Sailor Uniform - 450
+            Lunarite - 1500
+            Итого - 4150
+    ---------------------------------------------------------------------------------------------------------------------------------
+    Fixed Fai's bugs:
+        Fixed that some items weren't moved to a new shop
+        Fixed card cooldowns being 240 instead of 220
+        Fixed missing Nigasanae emoji
+        Fixed description of Nigasanae's coil damage and range
+
+    Kurumi:
+        Fixed coffin HP being 100 more than in the description
+
+    New Item - Jinkela:
+        +140 HP
+        +10 magic resistance
+        +10 attack
+        Passive: Nearby allies and buildings gain 5 armor and 10% attack speed (900 range).
+        Active: Nearby allies and buildings gain 40% movement speed and 30% attack speed for 5 seconds (600 range). Cooldown: 50 sec
+
+        Recipe in Kourindou Branch Office:
+            Bone Flute - 2200
+            Sailor Uniform - 450
+            Lunarite - 1500
+            Total - 4150
+
+## 995.10.5:
+
+    Пофиксил Марисе баг где у неё ломался иннейт при использовании в облачную погоду.
+
+## 995.10.4:
+
+    Мариса 3й скилл
+    * Исправил ошибку в описании количества снижаемого мр.
+    * Убрал коллижн облака, теперь сквозь него можно проходить.
+    * Теперь когда кидаешь скил в непроходимую область, он более адекватно работает.
+    * Баг с хиляющими лесными миньонами убран.
+    * Аптайм взрыва: 2s ---> 0.75s
+    * HP испарений: 100/150/200/250 ---> 30/60/90/120
+
+## 995.10.3:
+
+    Мариса 3й скилл
+    * Поправил таймер взрыва
+    * Починил хп бар
+    * Первые 2 секунды облако дружественно(его могут ломать только противники), затем все.
+    * Облако ломается только магическими спеллами
+
+## 995.10.2:
+
+    Сделан откат версии с сохранением сфа и багфиксов.
+    Скейлинг от инты на дополнительном уроне  с койлов убран. 30%INT-->0%INT
+
+    Оригинальный блинк на месте
+
+    Пофикшен баг с отсутсвием кд редакшена Мико Сендай на 3ем скилле.
+
+    Мариса
+    Иннейт:
+    - Теперь активный. КД: 10s. Длительность перезаряжающего бафа 7s. Исчезает при использовании.
+    - Хаккеро дополнительно на 10% усиляет магический урон Марисы.
+    Новый скил 3й скил:
+    Мариса бросает гриб в выбранное место. Гриб начинает выделять ядовитые испарения. Через две секунды враги в испарениях начинают терять магическое сопротивление и скорость передвижения. Также испарения становятся легковоспламеняющимися.
+    Испарения можно развеять передвигающими способностями и уроном.
+    Легковоспламеняющиеся — если испарения развеять, они взорвутся, нанеся врагам магический урон.
+    Испарения длятся 10 секунд.
+    HP испарений: 100/150/200/250
+    Замедление: 5/10/15/20%
+    Снижение магического сопротивления: 1/3/5/7
+    Магический урон взрыва: 40/100/160/220 + [200% INT]
+    AOE: 250
+    Дальность: 700
+    Перезарядка: 13/11/9/7s
+    Стоимость: 65/80/95/110
+
+## 995.09:
+
+    Возвращена старая монетка
+    Исправлены описания койлов Нигасанае
+    Исправлены десинки обсов
+
+## 995.08:
+
+    Rain Goddess Adamantine:
+        Исправлено что во время действия добавлял чару пассивку
+
+    Shinigami Coins:
+        Совсем не выпадает
+
+## 995.07:
+
+    Нигасанае:
+        Ульт - урон 30/45/60+[40% of INT] -> 30/50/70+[100% of INT]
+
+    Shinigami Coins:
+        Точно не выпадает
+
+## 995.06:
+
+    Добавлен таймер байбека рядом с игровым временем
+
+    Shinigami Coins:
+        Ренж 800 -> 1250
+        Исправлено выпадение при касте некоторых абилок
+
+    Frost Cap:
+        Исправлено что эффект был виден на невидимых юнитах
+
+    Cross:
+        Исправлено что во время действия добавлял чару пассивку
+
+## 995.05:
+
+    Исправлено что монетка перемещалась слотами
+    Исправлено уменьшение урона у ульта Кагуи
+
+## 995.04:
+
+    Нигасанае:
+        1 скилл - урон стака 20/30/40/50+[150% of INT] -> 10/20/30/40+[30% of INT]
+        Добавлен спецэффект при касте ульта
+
+## 995.03:
+
+    Shinigami Coins:
+        Исправлено выпадение при уроне после смерти
+        При уроне нельзя блинкаться
+
+## 995.02:
+
+    Нигасанае:
+        Ульт - урон 40/80/120+[100% of INT] -> 30/45/60+[40% of INT]
+        Можно забанить
+
+    Shinigami Coins:
+        Добавлены иконка и отсчет при получении урона
+        При получении урона до блинка, дополнительно накладывает сайленс на 2 секунды при блинке
+        При возвращении от получения урона сбивается применение скилов
+
+## 995.01:
+
+    Добавлен новый магазин куда перемещены следующие предметы: Leaf Dagger, Leaf Sword, Inaba Illusion Weapon, Kine Mochi Mallet
+    Исправлено что у юккури-марисы не было кнопки быстрой сборки
+    Исправлены фейзы
+    Кд карточек 240->220
+    Добавлено эмодзи Нигасанае
+
+    Суйка:
+        Исправлен баг с иммунитетом к контролю во время ульта
+
+    Шизуха:
+        Ульт - Убрано ограничение на хиты в секунду
+        Исправлено что иннейт атаковал фонтан
+
+    Минако:
+        Исправлена зеленая иконка в таблице
+
+    Кагеро:
+        Начальная ловкость увеличена на 1
+
+    Новый персонаж - Нигасанае:
+        Иннейт - сказать Н-слово
+        1 скилл - Дает 3 скилла, которые могут нанести АОЕ магический урон на трех разных расстояниях в направлении ее взгляда. При попадании несколько раз наносится дополнительный урон. Урон 70/140/210/280 + [150% of INT], урон от стака 20/30/40/50 + [150% of INT], длительность стака 8 сек, кд 10 сек, мана 75/80/85/90
+        2 скилл - Дает души при убийстве юнитов, которые пассивно дают урон. При смерти теряется 40% душ. Максимум душ 11/14/17/20, урон от души 1/2/3/4
+        3 скилл - Уменьшает броню врагов в радиусе 1200 на 4/5/6/7
+        Ульт - Испускает из Нигасанае линии, замедляющие и наносящие магический урон. Количество линий зависит от накопленных душ. Всегда вызывается при смерти. Урон линии 40/80/120 + [100% of INT], замедление 20/25/30% кд 120/110/100 сек, мана 150/175/200
+
+    Нигасанае нельзя забанить
+
+## 994.27.1:
+
+    Thundercloud Scarf теперь замедляет на 80% на 2 секунды
+    ZUN's Glasses при получение маг урона активируется и работает в течении 2х секунд. CD: 20s
+    PAD теперь содержит заколку (1900->2200) вместо Glue и имеет её эффекты
+
+    Новый предмет - Kine Mochi Mallet:
+        Recipe: PAD - 2200, Inaba Medicinal Scepter - 2700
+        Total - 6400
+        Stats: +30 damage,+15% attack speed, +300 HP, +5 HP regen
+        Unique Passive: Blocks 50% physical damage from non-hero sources.
+        Unique Passive: Reduces duration of debuffs by 35%.
+        Unique Passive: Medicinal Scepter - Basic attacks have 25%/10% chance to stun an enemy for 1/0.4 sec (melee)/(ranged).
+        Active: Bash YOU!: Stun for 2 sec. Cast range: 500 Cooldown: 40 sec, Mana: 50
+
+    Alpaca (Green-Browed Super Jump):
+        Некоторые персонажи будут быстрее поворачиваться
+        Добавлена активная способность: 10%/20% (melee/range) скорости передвижение и возможность проходить сквозь небо, землю и аллаха на 3 секунды. CD: 8 sec
+
+## 994.25:
+
+    Снова выключена озвучка
+
 ## 994.24:
 
     -onword включен по умолчанию (-offword выключить)

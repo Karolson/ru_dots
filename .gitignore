@@ -1,2 +1,3 @@
 .*
 !.gitignore
+Optimizer/*.w3x

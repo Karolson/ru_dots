@@ -16,8 +16,8 @@
 
 ## w3x2lni
 
-Удобен чтобы делать diff между версиями через To Lni, в прочих функциях были баги
-Ссылка[w3x2lni](https://www.hiveworkshop.com/threads/w3x2lni-v2-7-2.305201/) (загуглить w3x2lni на hiveworkshop.com если ссылка не работает)
+Удобен чтобы делать diff между версиями через To Lni, в прочих функциях были баги  
+[Ссылка](https://www.hiveworkshop.com/threads/w3x2lni-v2-7-2.305201/) (загуглить w3x2lni на hiveworkshop.com если ссылка не работает)
 
 ## Через MPQ Editor
 
